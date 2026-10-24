@@ -1,0 +1,139 @@
+{
+  "schema": "genosapiens.challenge-publication-sources/v1",
+  "reviewed_on": "2026-10-24",
+  "website_revision": "60e1c30e337ce6fe01813040dbe49979eb8c50aa",
+  "sources": [
+    {
+      "title": "Track 1 submission guidance",
+      "url": "https://huggingface.co/spaces/SageBio/rare-disease-real-kid-mva-hackathon-2026/blob/60e1c30e337ce6fe01813040dbe49979eb8c50aa/tabs/submit_track1.py",
+      "revision": "60e1c30e337ce6fe01813040dbe49979eb8c50aa",
+      "source_date": null,
+      "sha256": "685a3b6d57ef3a1c49a8be47845b10d77cb576ed2d30b5a90879b09707659b86"
+    },
+    {
+      "title": "Track 2 submission guidance",
+      "url": "https://huggingface.co/spaces/SageBio/rare-disease-real-kid-mva-hackathon-2026/blob/60e1c30e337ce6fe01813040dbe49979eb8c50aa/tabs/submit_track2.py",
+      "revision": "60e1c30e337ce6fe01813040dbe49979eb8c50aa",
+      "source_date": null,
+      "sha256": "f48d576ab052df34527222b7693f956e15e5376ef68eddedcf0c4f04736bf65c"
+    },
+    {
+      "title": "October 13 rules",
+      "url": "https://huggingface.co/spaces/SageBio/rare-disease-real-kid-mva-hackathon-2026/blob/60e1c30e337ce6fe01813040dbe49979eb8c50aa/tabs/rules.py",
+      "revision": "60e1c30e337ce6fe01813040dbe49979eb8c50aa",
+      "source_date": "2026-10-13",
+      "sha256": "16aa61b9580abc21e6ea69e994cdb27341e1b85b1d00a57da889520a94295906"
+    },
+    {
+      "title": "Methods description workbook",
+      "url": "https://huggingface.co/spaces/SageBio/rare-disease-real-kid-mva-hackathon-2026/blob/60e1c30e337ce6fe01813040dbe49979eb8c50aa/static/templates/methods_description_form.xlsx",
+      "revision": "60e1c30e337ce6fe01813040dbe49979eb8c50aa",
+      "source_date": null,
+      "sha256": "61aab080a2868a3b724e76692b83c24812112e305cd3a8b03f8f91a6b2414441"
+    },
+    {
+      "title": "Rare Disease, Real Kid: MVA Hackathon 2026 - Dataset",
+      "url": "https://huggingface.co/datasets/SageBio/mva-hackathon-2026-data/blob/9f155b06551c3a16b6ccc1eb3e06ac4f84ebd24c/README.md",
+      "revision": "9f155b06551c3a16b6ccc1eb3e06ac4f84ebd24c",
+      "source_date": null,
+      "reviewed_on": "2026-10-24",
+      "sha256": "9ab27d460615d1a72ac56d02a265cf4210b58f67fcc6b72a745d9d348547d546"
+    },
+    {
+      "title": "Track2",
+      "url": "https://huggingface.co/spaces/SageBio/rare-disease-real-kid-mva-hackathon-2026/discussions/13",
+      "source_date": "2026-08-31",
+      "event_id": "6a960a9b85c0714e5308a4a9",
+      "content_sha256": "680e08f7fb17059a37728d2e62b1204fa1235538b8e847eb225f2f2472e44c40"
+    },
+    {
+      "title": "[Announcement] Hackathon Updates",
+      "url": "https://huggingface.co/spaces/SageBio/rare-disease-real-kid-mva-hackathon-2026/discussions/10",
+      "source_date": "2026-08-29",
+      "event_id": "6a92329044bdec8ae2cddfd8",
+      "content_sha256": "832d75291fdd9a31d61e974afb4f4ba55947b7e42050e8ca167be6f51a36ecfd"
+    },
+    {
+      "title": "One week to go!! Prizes and recognition for each track: MVA Hackathon 2026",
+      "url": "https://huggingface.co/spaces/SageBio/rare-disease-real-kid-mva-hackathon-2026/discussions/28",
+      "source_date": "2026-10-16",
+      "event_id": "6ad29a105232fa43fecf32d9",
+      "content_sha256": "617bef636b1b428928f439ee701c9298e9084d9df01e36a5a485316becbbbf95"
+    }
+  ],
+  "workbook_sha256": "61aab080a2868a3b724e76692b83c24812112e305cd3a8b03f8f91a6b2414441",
+  "mandatory_acknowledgment": "This work was made possible through the Hackathon, organized by Sage Bionetworks in partnership with the MVA Society, Hugging Face, and BEACON (The Benchmarking, Evaluation, and Assessment Consortium for Science), with prize sponsorship from AWS and Anthropic. We are deeply grateful to the child and their family who generously contributed their data and their story to advance research into this rare disease. We acknowledge their trust in making this Hackathon possible.",
+  "official_dataset_citation": {
+    "applicable": false,
+    "text": null,
+    "status": "not-required-for-source-only-release",
+    "scope": "Source code and methods without controlled data or case reports",
+    "source_url": "https://huggingface.co/spaces/SageBio/rare-disease-real-kid-mva-hackathon-2026/discussions/13",
+    "source_event_id": "6a960a9b85c0714e5308a4a9",
+    "later_publications_using_data": "Official Synapse reference required when available",
+    "scope_decision": "Participant approved the dataset page citation for this release on 2026-10-24"
+  },
+  "dataset_access_citation": {
+    "text": "Sage Bionetworks. Rare Disease, Real Kid: MVA Hackathon 2026 - Dataset. Hugging Face, revision 9f155b06551c3a16b6ccc1eb3e06ac4f84ebd24c. Reviewed 2026-10-24.",
+    "source_url": "https://huggingface.co/datasets/SageBio/mva-hackathon-2026-data/blob/9f155b06551c3a16b6ccc1eb3e06ac4f84ebd24c/README.md",
+    "status": "verified-access-page"
+  },
+  "ai_disclosure": {
+    "status": "participant-reported",
+    "reported_on": "2026-10-24",
+    "text": "Participant-reported AI use:\n\n1. VCF structure assessment: OpenAI API, model identifier Luna/6, commercial terms. Data sharing disabled. No training on inputs or outputs. No feedback provided.\n\n2. Coding: OpenAI Pro 200 plan. The coding assistant had no access to input, output, or controlled data. Data sharing disabled. Improve model unchecked. No feedback provided.",
+    "entries": [
+      {
+        "provider": "OpenAI API",
+        "plan_or_tier": "commercial terms",
+        "model_identifier": "Luna/6",
+        "data_handling": [
+          "Data sharing disabled.",
+          "No training on inputs or outputs.",
+          "No feedback provided."
+        ]
+      },
+      {
+        "provider": "OpenAI",
+        "plan_or_tier": "OpenAI Pro 200 plan",
+        "data_handling": [
+          "The coding assistant had no access to input, output, or controlled data.",
+          "Data sharing disabled.",
+          "Improve model unchecked.",
+          "No feedback provided."
+        ]
+      }
+    ]
+  },
+  "current_notice": {
+    "deletion_confirmation_contact_source": "https://huggingface.co/spaces/SageBio/rare-disease-real-kid-mva-hackathon-2026/blob/22726e3eeb1b007c754c01a4d8113d32be913a3c/tabs/rules.py",
+    "source_dates": [
+      "2026-10-13",
+      "2026-10-16"
+    ],
+    "deletion_deadline": "2026-11-23",
+    "historical_registration_bindings": "unchanged"
+  },
+  "requirements": {
+    "official": [
+      "Separate challenge report",
+      "Applicable commercial generative-AI disclosure",
+      "Required acknowledgment",
+      "Dataset citation for later publications using the data"
+    ],
+    "recommendations": [
+      "Repository methods description"
+    ],
+    "project_choices": [
+      "Separate Track 1 and Track 2 README summaries",
+      "Detailed methods with abstracts of at most 500 words",
+      "Complete workbook topic coverage"
+    ]
+  },
+  "exceptions": [
+    "Exact participant-reported AI disclosure",
+    "Mandatory acknowledgment",
+    "Official source titles",
+    "Identifiers and integrity bindings"
+  ]
+}

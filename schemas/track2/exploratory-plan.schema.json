@@ -1,0 +1,842 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "mode",
+    "policy",
+    "resources",
+    "objectives",
+    "routes",
+    "genetic_selections",
+    "scenario_job_bindings",
+    "excluded_scenarios",
+    "coverage",
+    "runtime_images"
+  ],
+  "properties": {
+    "schema": {
+      "const": "genosapiens.track2-exploratory-plan/v1"
+    },
+    "mode": {
+      "const": "native_exploratory"
+    },
+    "policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "sha256"
+      ],
+      "properties": {
+        "path": {
+          "type": "string"
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      }
+    },
+    "resources": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "sha256",
+        "build_id"
+      ],
+      "properties": {
+        "path": {
+          "type": "string"
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "build_id": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      }
+    },
+    "objectives": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "objective_id",
+          "scenario_id",
+          "gene_id",
+          "gene_symbol",
+          "kind",
+          "mechanism",
+          "desired_modulation",
+          "authority",
+          "evidence_basis",
+          "mechanism_decision_sha256",
+          "source_evidence_ids",
+          "policy_sha256",
+          "assumptions",
+          "limitations",
+          "known_conflicts"
+        ],
+        "properties": {
+          "objective_id": {
+            "type": "string"
+          },
+          "scenario_id": {
+            "type": "string"
+          },
+          "gene_id": {
+            "type": "string"
+          },
+          "gene_symbol": {
+            "type": "string"
+          },
+          "kind": {
+            "const": "restoration_or_compensation_hypothesis"
+          },
+          "mechanism": {
+            "const": "loss_of_function"
+          },
+          "desired_modulation": {
+            "const": "increase"
+          },
+          "authority": {
+            "const": "machine"
+          },
+          "evidence_basis": {
+            "enum": [
+              "policy_prediction",
+              "curated_mechanism"
+            ]
+          },
+          "mechanism_decision_sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "source_evidence_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "policy_sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "assumptions": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "limitations": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "known_conflicts": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "routes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "objective_id",
+          "route",
+          "planned_state",
+          "reason_codes",
+          "request_id"
+        ],
+        "properties": {
+          "objective_id": {
+            "type": "string"
+          },
+          "route": {
+            "enum": [
+              "qualified_target_drug_linkage",
+              "lincs_cell_specific_expression"
+            ]
+          },
+          "planned_state": {
+            "enum": [
+              "executable",
+              "unavailable"
+            ]
+          },
+          "reason_codes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "request_id": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "genetic_selections": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "job_id",
+          "gene_id",
+          "cell_id",
+          "selected",
+          "method",
+          "exclusions",
+          "cell_metadata",
+          "drug_signature_ids",
+          "drug_exclusions"
+        ],
+        "properties": {
+          "job_id": {
+            "type": "string"
+          },
+          "gene_id": {
+            "type": "string"
+          },
+          "cell_id": {
+            "type": "string"
+          },
+          "selected": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "oe": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "sig_id",
+                  "pert_id",
+                  "pert_type",
+                  "pert_iname",
+                  "cell_id",
+                  "pert_dose_unit",
+                  "pert_time_unit",
+                  "mapping_reason",
+                  "gene_id",
+                  "pert_dose",
+                  "pert_time",
+                  "distil_nsample",
+                  "distil_cc_q75",
+                  "tas"
+                ],
+                "properties": {
+                  "sig_id": {
+                    "type": "string"
+                  },
+                  "pert_id": {
+                    "type": "string"
+                  },
+                  "pert_type": {
+                    "type": "string"
+                  },
+                  "pert_iname": {
+                    "type": "string"
+                  },
+                  "cell_id": {
+                    "type": "string"
+                  },
+                  "pert_dose_unit": {
+                    "type": "string"
+                  },
+                  "pert_time_unit": {
+                    "type": "string"
+                  },
+                  "mapping_reason": {
+                    "type": "string"
+                  },
+                  "gene_id": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "pert_dose": {
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  },
+                  "pert_time": {
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  },
+                  "distil_nsample": {
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  },
+                  "distil_cc_q75": {
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  },
+                  "tas": {
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  }
+                }
+              },
+              "kd": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "sig_id",
+                  "pert_id",
+                  "pert_type",
+                  "pert_iname",
+                  "cell_id",
+                  "pert_dose_unit",
+                  "pert_time_unit",
+                  "mapping_reason",
+                  "gene_id",
+                  "pert_dose",
+                  "pert_time",
+                  "distil_nsample",
+                  "distil_cc_q75",
+                  "tas"
+                ],
+                "properties": {
+                  "sig_id": {
+                    "type": "string"
+                  },
+                  "pert_id": {
+                    "type": "string"
+                  },
+                  "pert_type": {
+                    "type": "string"
+                  },
+                  "pert_iname": {
+                    "type": "string"
+                  },
+                  "cell_id": {
+                    "type": "string"
+                  },
+                  "pert_dose_unit": {
+                    "type": "string"
+                  },
+                  "pert_time_unit": {
+                    "type": "string"
+                  },
+                  "mapping_reason": {
+                    "type": "string"
+                  },
+                  "gene_id": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "pert_dose": {
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  },
+                  "pert_time": {
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  },
+                  "distil_nsample": {
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  },
+                  "distil_cc_q75": {
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  },
+                  "tas": {
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          "method": {
+            "enum": [
+              "paired_oe_kd",
+              "kd_only_reversal",
+              "oe_only_matching",
+              null
+            ]
+          },
+          "exclusions": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "sig_id",
+                "direction",
+                "reason"
+              ],
+              "properties": {
+                "sig_id": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "direction": {
+                  "enum": [
+                    "oe",
+                    "kd"
+                  ]
+                },
+                "reason": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "cell_metadata": {
+            "type": [
+              "object",
+              "null"
+            ]
+          },
+          "drug_signature_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "drug_exclusions": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "sig_id",
+                "reason"
+              ],
+              "properties": {
+                "sig_id": {
+                  "type": "string"
+                },
+                "reason": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "scenario_job_bindings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "scenario_id",
+          "objective_id",
+          "job_id"
+        ],
+        "properties": {
+          "scenario_id": {
+            "type": "string"
+          },
+          "objective_id": {
+            "type": "string"
+          },
+          "job_id": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "excluded_scenarios": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "scenario_id",
+          "gene_id",
+          "outcome",
+          "reasons",
+          "mechanism_decision_sha256",
+          "policy_sha256",
+          "objective_ids"
+        ],
+        "properties": {
+          "scenario_id": {
+            "type": "string"
+          },
+          "gene_id": {
+            "type": "string"
+          },
+          "outcome": {
+            "enum": [
+              "eligible",
+              "unresolved",
+              "excluded"
+            ]
+          },
+          "reasons": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "mechanism_decision_sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "policy_sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "objective_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "coverage": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "objective_id",
+          "gene_id",
+          "selections",
+          "reason_codes"
+        ],
+        "properties": {
+          "objective_id": {
+            "type": "string"
+          },
+          "gene_id": {
+            "type": "string"
+          },
+          "selections": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "gene_id",
+                "cell_id",
+                "selected",
+                "method",
+                "exclusions",
+                "cell_metadata",
+                "drug_signature_ids",
+                "drug_exclusions"
+              ],
+              "properties": {
+                "gene_id": {
+                  "type": "string"
+                },
+                "cell_id": {
+                  "type": "string"
+                },
+                "selected": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "oe": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "sig_id",
+                        "pert_id",
+                        "pert_type",
+                        "pert_iname",
+                        "cell_id",
+                        "pert_dose_unit",
+                        "pert_time_unit",
+                        "mapping_reason",
+                        "gene_id",
+                        "pert_dose",
+                        "pert_time",
+                        "distil_nsample",
+                        "distil_cc_q75",
+                        "tas"
+                      ],
+                      "properties": {
+                        "sig_id": {
+                          "type": "string"
+                        },
+                        "pert_id": {
+                          "type": "string"
+                        },
+                        "pert_type": {
+                          "type": "string"
+                        },
+                        "pert_iname": {
+                          "type": "string"
+                        },
+                        "cell_id": {
+                          "type": "string"
+                        },
+                        "pert_dose_unit": {
+                          "type": "string"
+                        },
+                        "pert_time_unit": {
+                          "type": "string"
+                        },
+                        "mapping_reason": {
+                          "type": "string"
+                        },
+                        "gene_id": {
+                          "type": [
+                            "string",
+                            "null"
+                          ]
+                        },
+                        "pert_dose": {
+                          "type": [
+                            "number",
+                            "null"
+                          ]
+                        },
+                        "pert_time": {
+                          "type": [
+                            "number",
+                            "null"
+                          ]
+                        },
+                        "distil_nsample": {
+                          "type": [
+                            "number",
+                            "null"
+                          ]
+                        },
+                        "distil_cc_q75": {
+                          "type": [
+                            "number",
+                            "null"
+                          ]
+                        },
+                        "tas": {
+                          "type": [
+                            "number",
+                            "null"
+                          ]
+                        }
+                      }
+                    },
+                    "kd": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "sig_id",
+                        "pert_id",
+                        "pert_type",
+                        "pert_iname",
+                        "cell_id",
+                        "pert_dose_unit",
+                        "pert_time_unit",
+                        "mapping_reason",
+                        "gene_id",
+                        "pert_dose",
+                        "pert_time",
+                        "distil_nsample",
+                        "distil_cc_q75",
+                        "tas"
+                      ],
+                      "properties": {
+                        "sig_id": {
+                          "type": "string"
+                        },
+                        "pert_id": {
+                          "type": "string"
+                        },
+                        "pert_type": {
+                          "type": "string"
+                        },
+                        "pert_iname": {
+                          "type": "string"
+                        },
+                        "cell_id": {
+                          "type": "string"
+                        },
+                        "pert_dose_unit": {
+                          "type": "string"
+                        },
+                        "pert_time_unit": {
+                          "type": "string"
+                        },
+                        "mapping_reason": {
+                          "type": "string"
+                        },
+                        "gene_id": {
+                          "type": [
+                            "string",
+                            "null"
+                          ]
+                        },
+                        "pert_dose": {
+                          "type": [
+                            "number",
+                            "null"
+                          ]
+                        },
+                        "pert_time": {
+                          "type": [
+                            "number",
+                            "null"
+                          ]
+                        },
+                        "distil_nsample": {
+                          "type": [
+                            "number",
+                            "null"
+                          ]
+                        },
+                        "distil_cc_q75": {
+                          "type": [
+                            "number",
+                            "null"
+                          ]
+                        },
+                        "tas": {
+                          "type": [
+                            "number",
+                            "null"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                },
+                "method": {
+                  "enum": [
+                    "paired_oe_kd",
+                    "kd_only_reversal",
+                    "oe_only_matching",
+                    null
+                  ]
+                },
+                "exclusions": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "sig_id",
+                      "direction",
+                      "reason"
+                    ],
+                    "properties": {
+                      "sig_id": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      },
+                      "direction": {
+                        "enum": [
+                          "oe",
+                          "kd"
+                        ]
+                      },
+                      "reason": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                },
+                "cell_metadata": {
+                  "type": [
+                    "object",
+                    "null"
+                  ]
+                },
+                "drug_signature_ids": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "drug_exclusions": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "sig_id",
+                      "reason"
+                    ],
+                    "properties": {
+                      "sig_id": {
+                        "type": "string"
+                      },
+                      "reason": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "reason_codes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "runtime_images": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "diagnosis",
+        "discovery"
+      ],
+      "properties": {
+        "diagnosis": {
+          "type": "string",
+          "pattern": "@sha256:[0-9a-f]{64}$"
+        },
+        "discovery": {
+          "type": "string",
+          "pattern": "@sha256:[0-9a-f]{64}$"
+        }
+      }
+    }
+  }
+}

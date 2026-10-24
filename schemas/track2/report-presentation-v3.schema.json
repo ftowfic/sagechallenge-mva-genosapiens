@@ -1,0 +1,168 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Track 2 challenge presentation",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "policy",
+    "policy_sha256",
+    "input_origin",
+    "classification",
+    "source_kind",
+    "scientific_policy",
+    "derived_policy",
+    "calibration",
+    "sources",
+    "artifacts",
+    "summary",
+    "selections",
+    "figures",
+    "supplements"
+  ],
+  "properties": {
+    "narrative_version": {
+      "type": "integer",
+      "enum": [1, 2]
+    },
+    "schema": {
+      "const": "genosapiens.track2-report-presentation/v3"
+    },
+    "policy": {
+      "type": "object"
+    },
+    "policy_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "input_origin": {
+      "enum": [
+        "published_patient_genotype",
+        "diagnosis_guided_vcf"
+      ]
+    },
+    "classification": {
+      "enum": [
+        "public",
+        "controlled"
+      ]
+    },
+    "source_kind": {
+      "enum": [
+        "study",
+        "native"
+      ]
+    },
+    "scientific_policy": {
+      "$ref": "#/$defs/reference"
+    },
+    "derived_policy": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "calibration": {
+      "anyOf": [
+        {
+          "type": "null"
+        },
+        {
+          "$ref": "#/$defs/reference"
+        }
+      ]
+    },
+    "sources": {
+      "type": "object"
+    },
+    "artifacts": {
+      "type": "object"
+    },
+    "summary": {
+      "type": "object"
+    },
+    "selections": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "figures": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "label",
+          "caption",
+          "png",
+          "svg",
+          "data",
+          "provenance"
+        ],
+        "properties": {
+          "label": {
+            "type": "string",
+            "minLength": 1
+          },
+          "caption": {
+            "type": "string",
+            "minLength": 1
+          },
+          "png": {
+            "$ref": "#/$defs/reference"
+          },
+          "svg": {
+            "$ref": "#/$defs/reference"
+          },
+          "data": {
+            "$ref": "#/$defs/reference"
+          },
+          "provenance": {
+            "type": "object"
+          }
+        }
+      }
+    },
+    "supplements": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "title",
+          "artifact"
+        ],
+        "properties": {
+          "title": {
+            "type": "string",
+            "minLength": 1
+          },
+          "artifact": {
+            "$ref": "#/$defs/reference"
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "reference": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "sha256"
+      ],
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,133 @@
+{
+  "schema": "genosapiens.clinvar-grch38",
+  "resource_id": "clinvar-grch38-2026-08-22",
+  "release": "2026-08-22",
+  "release_date": "2026-08-22",
+  "assembly": "GRCh38",
+  "reference_binding": {
+    "role": "public_annotation_benchmark",
+    "identity_id": "grch38-no-alt-hs38d1-public-native-v1"
+  },
+  "license": "NCBI-DATA-USE",
+  "license_url": "https://www.ncbi.nlm.nih.gov/clinvar/docs/maintenance_use/",
+  "published_checksum_source": "https://ftp.ncbi.nlm.nih.gov/pub/clinvar/vcf_GRCh38/archive_2.0/2026/clinvar_20260822.vcf.gz.md5",
+  "required_info_fields": [
+    "ALLELEID",
+    "CLNHGVS",
+    "CLNDN",
+    "CLNDISDB",
+    "CLNVI",
+    "CLNSIG",
+    "CLNSIGCONF",
+    "CLNREVSTAT",
+    "ONCREVSTAT",
+    "SCIREVSTAT"
+  ],
+  "required_review_fields": [
+    "CLNREVSTAT",
+    "ONCREVSTAT",
+    "SCIREVSTAT"
+  ],
+  "required_index_contigs": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+    "21",
+    "22",
+    "X",
+    "Y",
+    "MT",
+    "NT_113889.1",
+    "NT_113891.3",
+    "NT_187576.1",
+    "NT_187633.1",
+    "NT_187661.1",
+    "NT_187693.1",
+    "NW_009646201.1"
+  ],
+  "artifacts": [
+    {
+      "role": "vcf",
+      "url": "https://ftp.ncbi.nlm.nih.gov/pub/clinvar/vcf_GRCh38/archive_2.0/2026/clinvar_20260822.vcf.gz",
+      "path": "releases/clinvar/2026-08-22/clinvar_20260822.vcf.gz",
+      "size_bytes": 193420805,
+      "sha256": "d66b75c1cc433dd63471444fbf980fbc6ee07d6060f3b62b8f1910d52650933d",
+      "publisher_md5": "a3a9897df14f14277f257bb6cd32ebbb"
+    },
+    {
+      "role": "tbi",
+      "url": "https://ftp.ncbi.nlm.nih.gov/pub/clinvar/vcf_GRCh38/archive_2.0/2026/clinvar_20260822.vcf.gz.tbi",
+      "path": "releases/clinvar/2026-08-22/clinvar_20260822.vcf.gz.tbi",
+      "size_bytes": 610582,
+      "sha256": "4bc81ef519b77ea8c89b6345bb74537a408ad3466dc19f29a4025d61e771cbbb",
+      "publisher_md5": null
+    }
+  ],
+  "sentinels": [
+    {
+      "category": "pathogenic",
+      "chromosome": "1",
+      "position": 1048977,
+      "variation_id": "1322937",
+      "reference": "CAG",
+      "alternate": "C",
+      "allele_id": "1019103",
+      "clinical_significance": "Pathogenic",
+      "conflicting_significance": null,
+      "review_status": "criteria_provided,_multiple_submitters,_no_conflicts",
+      "condition_names": "Congenital_myasthenic_syndrome_8",
+      "condition_identifiers": "MONDO:MONDO:0014052,MedGen:C3808739,OMIM:615120,Orphanet:590",
+      "clinical_sources": "ClinGen:CA509358",
+      "clinical_hgvs": "NC_000001.11:g.1048978_1048979del"
+    },
+    {
+      "category": "benign",
+      "chromosome": "1",
+      "position": 930204,
+      "variation_id": "1170208",
+      "reference": "G",
+      "alternate": "A",
+      "allele_id": "1153702",
+      "clinical_significance": "Benign",
+      "conflicting_significance": null,
+      "review_status": "criteria_provided,_multiple_submitters,_no_conflicts",
+      "condition_names": "SAMD11-related_disorder|not_provided",
+      "condition_identifiers": ".|MedGen:C3661900",
+      "clinical_sources": "ClinGen:CA502429",
+      "clinical_hgvs": "NC_000001.11:g.930204G>A"
+    },
+    {
+      "category": "conflicting",
+      "chromosome": "1",
+      "position": 930200,
+      "variation_id": "1043045",
+      "reference": "G",
+      "alternate": "A",
+      "allele_id": "1023510",
+      "clinical_significance": "Conflicting_classifications_of_pathogenicity",
+      "conflicting_significance": "Uncertain_significance_(1)|Likely_benign_(1)",
+      "review_status": "criteria_provided,_conflicting_classifications",
+      "condition_names": "not_provided|not_specified",
+      "condition_identifiers": "MedGen:C3661900|MedGen:CN169374",
+      "clinical_sources": "ClinGen:CA502426",
+      "clinical_hgvs": "NC_000001.11:g.930200G>A"
+    }
+  ]
+}

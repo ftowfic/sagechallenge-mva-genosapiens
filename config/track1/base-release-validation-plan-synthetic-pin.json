@@ -1,0 +1,12 @@
+{
+  "canonical_artifact_bundle_path": "tests/fixtures/track1/base-release-validation-artifacts.synthetic.json",
+  "canonical_artifact_bundle_schema_path": "schemas/track1/base-release-validation-artifact-bundle.schema.json",
+  "canonical_artifact_bundle_schema_sha256": "9779067edc5f2912999aa1011ff4c36e513d1f048d84ae01d119861f173701f4",
+  "canonical_artifact_bundle_sha256": "14ee23fa18059e58c7692c304282049aef17ed5a4d7a981083321f158b972c01",
+  "canonical_plan_path": "tests/fixtures/track1/base-release-validation-plan.synthetic.json",
+  "canonical_plan_sha256": "fe38a3b905f3d295da2c0a492bfe0da82a3b8a1181568aa5c9eef06cbc54a893",
+  "canonical_schema_path": "schemas/track1/base-release-validation-plan.schema.json",
+  "canonical_schema_sha256": "060d61cdf7bd5c232309e9d31712d52e59dfa287a9c2a062cd95cfd986bac2a4",
+  "plan_id": "track1-submission-acceptance-population-models-20260917",
+  "schema": "genosapiens.track1-base-release-validation-plan-pin"
+}

@@ -1,0 +1,2297 @@
+{
+  "schema": "genosapiens.portable-installation/v1",
+  "host": {
+    "os": "Linux",
+    "architecture": "AMD64",
+    "python": "3.12",
+    "shell": "Bash",
+    "docker_cgroups": "v2"
+  },
+  "resources": [
+    {
+      "id": "grch38",
+      "version": "GRCh38 masked-v2 plus hs38d1",
+      "consumers": [
+        "track1 run",
+        "track2 setup",
+        "track2 run"
+      ],
+      "role": "required",
+      "contracts": [
+        {
+          "path": "config/reference-identities/challenge-grch38-masked-v2-hs38d1.json",
+          "sha256": "a92c50f61c1b149e635656a54086e671f3f27f09b97002309ff68a9ded1d3b62"
+        }
+      ],
+      "integrity": {
+        "contract_bindings": [
+          {
+            "path": "config/reference-identities/challenge-grch38-masked-v2-hs38d1.json",
+            "sha256": "a92c50f61c1b149e635656a54086e671f3f27f09b97002309ff68a9ded1d3b62"
+          }
+        ],
+        "rule": "Retain every declared source and manifest digest. A new timestamp does not reproduce a frozen manifest.",
+        "consumer_pin_source": {
+          "path": "src/genosapiens/track1_public_validation.py",
+          "sha256": "e7770b7c6f46b08e3a02988f86b0c4d80731b4b9b7736e6d207845c85747808b"
+        }
+      },
+      "acquisition": null,
+      "producer": {
+        "command": [
+          "python",
+          "-m",
+          "genosapiens",
+          "reference",
+          "bootstrap-grch38",
+          "config/reference-builder.example.json",
+          "--image-digest",
+          "IMAGE_DIGEST"
+        ],
+        "inputs": [
+          "pinned assembly FASTA sources"
+        ],
+        "image": "reference-builder",
+        "completion": "The owner validates input bindings before publishing complete outputs. Interrupted outputs cannot supply completion.",
+        "limit": "Historical producer only. It does not reproduce the exact frozen manifest without matching original evidence.",
+        "execution_context": "Run inside the declared image with the checkout and selected public reference root mounted."
+      },
+      "destinations": [
+        "releases/grch38",
+        "manifests/grch38"
+      ],
+      "notices": [
+        "Retain upstream source terms and ATTRIBUTION.md."
+      ],
+      "availability": {
+        "status": "unverified_frozen_artifact",
+        "limit": "Exact frozen manifests require an authenticated archive. The historical producer can create different manifest bytes."
+      },
+      "required_records": [
+        {
+          "path": "manifests/grch38/challenge-grch38-masked-v2-plus-hs38d1.a92c50f61c1b.json",
+          "sha256": "27eaf00fde35e5fa83f945c63e5dee871960374d90488cc0797b5ebea2fb1c25"
+        }
+      ],
+      "inspection": [
+        "python3",
+        "scripts/prepare_public_resources.py",
+        "grch38",
+        "--reference-root",
+        "REFERENCE_ROOT",
+        "--describe"
+      ]
+    },
+    {
+      "id": "vep",
+      "version": "116_GRCh38",
+      "consumers": [
+        "track1 run",
+        "track2 setup",
+        "track2 run"
+      ],
+      "role": "required",
+      "contracts": [
+        {
+          "path": "config/public-resources/ensembl-vep-116-grch38.json",
+          "sha256": "f1c47e44cd07d8d3298f4c2b1c4b35392f57d1a5abebb03a4646276869254e1e"
+        }
+      ],
+      "integrity": {
+        "contract_bindings": [
+          {
+            "path": "config/public-resources/ensembl-vep-116-grch38.json",
+            "sha256": "f1c47e44cd07d8d3298f4c2b1c4b35392f57d1a5abebb03a4646276869254e1e"
+          }
+        ],
+        "rule": "Retain every declared source and manifest digest. A new timestamp does not reproduce a frozen manifest.",
+        "consumer_pin_source": {
+          "path": "src/genosapiens/track1_public_validation.py",
+          "sha256": "e7770b7c6f46b08e3a02988f86b0c4d80731b4b9b7736e6d207845c85747808b"
+        }
+      },
+      "acquisition": null,
+      "producer": {
+        "command": [
+          "python",
+          "-m",
+          "genosapiens",
+          "reference",
+          "bootstrap-vep",
+          "config/reference-builder.example.json",
+          "--image-digest",
+          "IMAGE_DIGEST"
+        ],
+        "inputs": [
+          "grch38",
+          "pinned Ensembl cache"
+        ],
+        "image": "reference-builder",
+        "completion": "The owner validates input bindings before publishing complete outputs. Interrupted outputs cannot supply completion.",
+        "limit": "Historical producer only. It does not reproduce the exact frozen manifest without matching original evidence.",
+        "execution_context": "Run inside the declared image with the checkout and selected public reference root mounted."
+      },
+      "destinations": [
+        "releases/ensembl/vep/116_GRCh38",
+        "manifests/ensembl/vep"
+      ],
+      "notices": [
+        "ENSEMBL-DATA-USE",
+        "https://www.ensembl.org/info/about/legal/disclaimer.html"
+      ],
+      "availability": {
+        "status": "unverified_frozen_artifact",
+        "limit": "Exact frozen manifests require an authenticated archive. The historical producer can create different manifest bytes."
+      },
+      "required_records": [
+        {
+          "owner": "src/genosapiens/track1_public_validation.py",
+          "symbol": "VEP_BUNDLE_SHA256",
+          "sha256": "3071600d1ab2db89a9d0988465d137c0221378ebfdedb021b5392d4a8deb075a"
+        }
+      ],
+      "inspection": [
+        "python3",
+        "scripts/prepare_public_resources.py",
+        "vep",
+        "--reference-root",
+        "REFERENCE_ROOT",
+        "--describe"
+      ]
+    },
+    {
+      "id": "gnomad-joint",
+      "version": "4.1",
+      "consumers": [
+        "track1 run"
+      ],
+      "role": "required",
+      "contracts": [
+        {
+          "path": "config/public-resources/gnomad-joint-projection.json",
+          "sha256": "481c435ad16c04f2c6f4c79319613dcfafba471ac024b88e010279d30d57c793"
+        },
+        {
+          "path": "config/public-resources/gnomad-joint-publication.json",
+          "sha256": "0deedac3f92b45fd62fc625a8ce34a0ec550341605e183117169b004f23daa44"
+        }
+      ],
+      "integrity": {
+        "contract_bindings": [
+          {
+            "path": "config/public-resources/gnomad-joint-projection.json",
+            "sha256": "481c435ad16c04f2c6f4c79319613dcfafba471ac024b88e010279d30d57c793"
+          },
+          {
+            "path": "config/public-resources/gnomad-joint-publication.json",
+            "sha256": "0deedac3f92b45fd62fc625a8ce34a0ec550341605e183117169b004f23daa44"
+          }
+        ],
+        "rule": "Retain every declared source and manifest digest. A new timestamp does not reproduce a frozen manifest.",
+        "consumer_pin_source": {
+          "path": "src/genosapiens/track1_public_validation.py",
+          "sha256": "e7770b7c6f46b08e3a02988f86b0c4d80731b4b9b7736e6d207845c85747808b"
+        }
+      },
+      "acquisition": null,
+      "producer": {
+        "command": [
+          "python",
+          "-m",
+          "genosapiens",
+          "reference",
+          "publish-gnomad-joint",
+          "config/reference-builder.example.json",
+          "--image-digest",
+          "IMAGE_DIGEST"
+        ],
+        "inputs": [
+          "grch38",
+          "pinned Hail table",
+          "accepted producer validation"
+        ],
+        "image": "reference-builder",
+        "completion": "The owner validates input bindings before publishing complete outputs. Interrupted outputs cannot supply completion.",
+        "limit": "Historical producer only. It does not reproduce the exact frozen manifest without matching original evidence.",
+        "execution_context": "Run inside the declared image with the checkout and selected public reference root mounted."
+      },
+      "destinations": [
+        "releases/gnomad/4.1",
+        "manifests/gnomad/4.1"
+      ],
+      "notices": [
+        "ODC-ODbL-1.0",
+        "https://opendatacommons.org/licenses/odbl/1-0/"
+      ],
+      "availability": {
+        "status": "unverified_frozen_artifact",
+        "limit": "Exact frozen manifests require an authenticated archive. The historical producer can create different manifest bytes."
+      },
+      "required_records": [
+        {
+          "owner": "src/genosapiens/track1_public_validation.py",
+          "symbol": "GNOMAD_JOINT_MANIFEST_SHA256",
+          "sha256": "a453a49f573e4a5999b38bcd02744ab389f0ef1a4e878a9adf7fa656e59985af"
+        }
+      ],
+      "inspection": [
+        "python3",
+        "scripts/prepare_public_resources.py",
+        "gnomad-joint",
+        "--reference-root",
+        "REFERENCE_ROOT",
+        "--describe"
+      ]
+    },
+    {
+      "id": "gnomad-all-sites",
+      "version": "4.1",
+      "consumers": [
+        "track1 run"
+      ],
+      "role": "required",
+      "contracts": [
+        {
+          "path": "config/public-resources/gnomad-all-sites-v4.1.json",
+          "sha256": "12e75423e4f309959633bb5828e7a4777fe1d75474c4460bf5d04eaa3111ffec"
+        }
+      ],
+      "integrity": {
+        "contract_bindings": [
+          {
+            "path": "config/public-resources/gnomad-all-sites-v4.1.json",
+            "sha256": "12e75423e4f309959633bb5828e7a4777fe1d75474c4460bf5d04eaa3111ffec"
+          }
+        ],
+        "rule": "Retain every declared source and manifest digest. A new timestamp does not reproduce a frozen manifest.",
+        "consumer_pin_source": {
+          "path": "src/genosapiens/track1_public_validation.py",
+          "sha256": "e7770b7c6f46b08e3a02988f86b0c4d80731b4b9b7736e6d207845c85747808b"
+        }
+      },
+      "acquisition": null,
+      "producer": {
+        "command": [
+          "python",
+          "-m",
+          "genosapiens",
+          "reference",
+          "bootstrap-gnomad-all-sites",
+          "config/reference-builder.example.json",
+          "--image-digest",
+          "IMAGE_DIGEST"
+        ],
+        "inputs": [
+          "pinned all-sites AN sources"
+        ],
+        "image": "reference-builder",
+        "completion": "The owner validates input bindings before publishing complete outputs. Interrupted outputs cannot supply completion.",
+        "limit": "Historical producer only. It does not reproduce the exact frozen manifest without matching original evidence.",
+        "execution_context": "Run inside the declared image with the checkout and selected public reference root mounted."
+      },
+      "destinations": [
+        "releases/gnomad/4.1",
+        "manifests/gnomad/4.1"
+      ],
+      "notices": [
+        "ODC-ODbL-1.0",
+        "https://opendatacommons.org/licenses/odbl/1-0/"
+      ],
+      "availability": {
+        "status": "unverified_frozen_artifact",
+        "limit": "Exact frozen manifests require an authenticated archive. The historical producer can create different manifest bytes."
+      },
+      "required_records": [
+        {
+          "owner": "src/genosapiens/track1_public_validation.py",
+          "symbol": "GNOMAD_ALL_SITES_MANIFEST_SHA256",
+          "sha256": "8f1df94310ec81af4118ab6760694997a932ceaeb10469b7b91e4c73d6400305"
+        }
+      ],
+      "inspection": [
+        "python3",
+        "scripts/prepare_public_resources.py",
+        "gnomad-all-sites",
+        "--reference-root",
+        "REFERENCE_ROOT",
+        "--describe"
+      ]
+    },
+    {
+      "id": "gnomad-precision",
+      "version": "faf95 float32 v1",
+      "consumers": [
+        "track1 run"
+      ],
+      "role": "required",
+      "contracts": [
+        {
+          "path": "config/public-resources/gnomad-joint-faf95-precision-v1.json",
+          "sha256": "6ee26fb9addce0464c6d88f498e359c60f0a4f6b23b694b2911ca36d1f25e3a8"
+        }
+      ],
+      "integrity": {
+        "contract_bindings": [
+          {
+            "path": "config/public-resources/gnomad-joint-faf95-precision-v1.json",
+            "sha256": "6ee26fb9addce0464c6d88f498e359c60f0a4f6b23b694b2911ca36d1f25e3a8"
+          }
+        ],
+        "rule": "Retain every declared source and manifest digest. A new timestamp does not reproduce a frozen manifest.",
+        "consumer_pin_source": {
+          "path": "src/genosapiens/track1_public_validation.py",
+          "sha256": "e7770b7c6f46b08e3a02988f86b0c4d80731b4b9b7736e6d207845c85747808b"
+        }
+      },
+      "acquisition": null,
+      "producer": {
+        "command": null,
+        "inputs": [
+          "gnomad-joint"
+        ],
+        "image": "reference-builder",
+        "completion": "The owner validates input bindings before publishing complete outputs. Interrupted outputs cannot supply completion.",
+        "limit": "Historical producer only. It does not reproduce the exact frozen manifest without matching original evidence.",
+        "execution_context": "Run inside the declared image with the checkout and selected public reference root mounted."
+      },
+      "destinations": [
+        "manifests/gnomad/4.1/faf95-precision"
+      ],
+      "notices": [
+        "Retain upstream source terms and ATTRIBUTION.md."
+      ],
+      "availability": {
+        "status": "unverified_frozen_artifact",
+        "limit": "The frozen precision report requires its authenticated artifact. No standalone acquisition command is declared."
+      },
+      "required_records": [
+        {
+          "path": "manifests/gnomad/4.1/faf95-precision/4fb171a7fb5a23ed8ed24dc81b35880f84fa79948b25393048cbcdc991410303.json",
+          "sha256": "4fb171a7fb5a23ed8ed24dc81b35880f84fa79948b25393048cbcdc991410303"
+        }
+      ],
+      "inspection": [
+        "python3",
+        "scripts/prepare_public_resources.py",
+        "gnomad-precision",
+        "--reference-root",
+        "REFERENCE_ROOT",
+        "--describe"
+      ]
+    },
+    {
+      "id": "clinvar",
+      "version": "2026-08-22",
+      "consumers": [
+        "track1 run",
+        "track2 setup",
+        "track2 run"
+      ],
+      "role": "required",
+      "contracts": [
+        {
+          "path": "config/public-resources/clinvar-grch38-2026-08-22.json",
+          "sha256": "92ad95e2a2332436f180b2eabf32b3f25d72b92f372f309abd9e183cec90013f"
+        }
+      ],
+      "integrity": {
+        "contract_bindings": [
+          {
+            "path": "config/public-resources/clinvar-grch38-2026-08-22.json",
+            "sha256": "92ad95e2a2332436f180b2eabf32b3f25d72b92f372f309abd9e183cec90013f"
+          }
+        ],
+        "rule": "Retain every declared source and manifest digest. A new timestamp does not reproduce a frozen manifest.",
+        "consumer_pin_source": {
+          "path": "src/genosapiens/track1_public_validation.py",
+          "sha256": "e7770b7c6f46b08e3a02988f86b0c4d80731b4b9b7736e6d207845c85747808b"
+        }
+      },
+      "acquisition": null,
+      "producer": {
+        "command": [
+          "python",
+          "-m",
+          "genosapiens",
+          "reference",
+          "bootstrap-clinvar",
+          "config/reference-builder.example.json",
+          "--image-digest",
+          "IMAGE_DIGEST"
+        ],
+        "inputs": [
+          "grch38",
+          "dated ClinVar VCF"
+        ],
+        "image": "reference-builder",
+        "completion": "The owner validates input bindings before publishing complete outputs. Interrupted outputs cannot supply completion.",
+        "limit": "Historical producer only. It does not reproduce the exact frozen manifest without matching original evidence.",
+        "execution_context": "Run inside the declared image with the checkout and selected public reference root mounted."
+      },
+      "destinations": [
+        "releases/clinvar",
+        "manifests/clinvar"
+      ],
+      "notices": [
+        "NCBI-DATA-USE",
+        "https://www.ncbi.nlm.nih.gov/clinvar/docs/maintenance_use/"
+      ],
+      "availability": {
+        "status": "unverified_frozen_artifact",
+        "limit": "Exact frozen manifests require an authenticated archive. The historical producer can create different manifest bytes."
+      },
+      "required_records": [
+        {
+          "path": "manifests/clinvar/clinvar-grch38-2026-08-22.19fc8e9cd788.json",
+          "sha256": "78527bd4e5b7dfb3debb88e66c08ce1e3b66ab23692a258544416dffdea4e9e5"
+        }
+      ],
+      "inspection": [
+        "python3",
+        "scripts/prepare_public_resources.py",
+        "clinvar",
+        "--reference-root",
+        "REFERENCE_ROOT",
+        "--describe"
+      ]
+    },
+    {
+      "id": "open-targets",
+      "version": "26.06",
+      "consumers": [
+        "track1 run",
+        "track2 setup",
+        "track2 run"
+      ],
+      "role": "required",
+      "contracts": [
+        {
+          "path": "config/public-resources/open-targets-platform-26.06.json",
+          "sha256": "0cae4540cfea019b5c6f8b9740e582217c195bd6afb05e6d79fad2eb56a28498"
+        }
+      ],
+      "integrity": {
+        "contract_bindings": [
+          {
+            "path": "config/public-resources/open-targets-platform-26.06.json",
+            "sha256": "0cae4540cfea019b5c6f8b9740e582217c195bd6afb05e6d79fad2eb56a28498"
+          }
+        ],
+        "rule": "Retain every declared source and manifest digest. A new timestamp does not reproduce a frozen manifest.",
+        "consumer_pin_source": {
+          "path": "src/genosapiens/track1_public_validation.py",
+          "sha256": "e7770b7c6f46b08e3a02988f86b0c4d80731b4b9b7736e6d207845c85747808b"
+        }
+      },
+      "acquisition": null,
+      "producer": {
+        "command": [
+          "python",
+          "-m",
+          "genosapiens",
+          "reference",
+          "bootstrap-open-targets",
+          "config/reference-builder.example.json",
+          "--image-digest",
+          "IMAGE_DIGEST"
+        ],
+        "inputs": [
+          "pinned target and association partitions"
+        ],
+        "image": "reference-builder",
+        "completion": "The owner validates input bindings before publishing complete outputs. Interrupted outputs cannot supply completion.",
+        "limit": "Historical producer only. It does not reproduce the exact frozen manifest without matching original evidence.",
+        "execution_context": "Run inside the declared image with the checkout and selected public reference root mounted."
+      },
+      "destinations": [
+        "releases/open-targets/26.06",
+        "manifests/open-targets"
+      ],
+      "notices": [
+        "CC-BY-4.0"
+      ],
+      "availability": {
+        "status": "unverified_frozen_artifact",
+        "limit": "Exact frozen manifests require an authenticated archive. The historical producer can create different manifest bytes."
+      },
+      "required_records": [
+        {
+          "path": "manifests/open-targets/open-targets-platform-26.06.0cae4540cfea.json",
+          "sha256": "c6edfc9b8726fd05f5f5cadc19d09ae49d6866d4742c8e9b52b038796637e55e"
+        }
+      ],
+      "inspection": [
+        "python3",
+        "scripts/prepare_public_resources.py",
+        "open-targets",
+        "--reference-root",
+        "REFERENCE_ROOT",
+        "--describe"
+      ]
+    },
+    {
+      "id": "rare-disease",
+      "version": "2026-08-30",
+      "consumers": [
+        "track1 run",
+        "track2 setup",
+        "track2 run"
+      ],
+      "role": "required",
+      "contracts": [
+        {
+          "path": "config/public-resources/rare-disease-evidence-2026-08-30.json",
+          "sha256": "cded6e513755278d628a9e262336c66a3578708162b24f9356973fb8c65afa5f"
+        }
+      ],
+      "integrity": {
+        "contract_bindings": [
+          {
+            "path": "config/public-resources/rare-disease-evidence-2026-08-30.json",
+            "sha256": "cded6e513755278d628a9e262336c66a3578708162b24f9356973fb8c65afa5f"
+          }
+        ],
+        "rule": "Retain every declared source and manifest digest. A new timestamp does not reproduce a frozen manifest.",
+        "consumer_pin_source": {
+          "path": "src/genosapiens/track1_public_validation.py",
+          "sha256": "e7770b7c6f46b08e3a02988f86b0c4d80731b4b9b7736e6d207845c85747808b"
+        }
+      },
+      "acquisition": null,
+      "producer": {
+        "command": [
+          "python",
+          "-m",
+          "genosapiens",
+          "reference",
+          "bootstrap-rare-disease-evidence",
+          "config/reference-builder.example.json",
+          "--image-digest",
+          "IMAGE_DIGEST"
+        ],
+        "inputs": [
+          "open-targets",
+          "dated Orphadata and GenCC sources"
+        ],
+        "image": "reference-builder",
+        "completion": "The owner validates input bindings before publishing complete outputs. Interrupted outputs cannot supply completion.",
+        "limit": "Historical producer only. It does not reproduce the exact frozen manifest without matching original evidence.",
+        "execution_context": "Run inside the declared image with the checkout and selected public reference root mounted."
+      },
+      "destinations": [
+        "releases/rare-disease",
+        "derived/rare-disease",
+        "manifests/rare-disease"
+      ],
+      "notices": [
+        "CC-BY-4.0",
+        "https://creativecommons.org/licenses/by/4.0/",
+        "CC0-1.0",
+        "https://creativecommons.org/publicdomain/zero/1.0/"
+      ],
+      "availability": {
+        "status": "unverified_frozen_artifact",
+        "limit": "Exact frozen manifests require an authenticated archive. The historical producer can create different manifest bytes."
+      },
+      "required_records": [
+        {
+          "owner": "src/genosapiens/track1_public_validation.py",
+          "symbol": "RARE_DISEASE_BUNDLE_SHA256",
+          "sha256": "12c2bf613424137e3c8e7aec7f69ace0cf83a84a5a3bd0bcca81fc63970823d0"
+        }
+      ],
+      "inspection": [
+        "python3",
+        "scripts/prepare_public_resources.py",
+        "rare-disease",
+        "--reference-root",
+        "REFERENCE_ROOT",
+        "--describe"
+      ]
+    },
+    {
+      "id": "ontologies",
+      "version": "core-ontology-references-v1",
+      "consumers": [
+        "track1 run",
+        "track2 setup",
+        "track2 run"
+      ],
+      "role": "required",
+      "contracts": [
+        {
+          "path": "config/public-resources/core-ontologies.json",
+          "sha256": "515cd59b6909e05b9248acc14f01ecd9150c994c5426fbe48ea5fa170e182ee1"
+        }
+      ],
+      "integrity": {
+        "contract_bindings": [
+          {
+            "path": "config/public-resources/core-ontologies.json",
+            "sha256": "515cd59b6909e05b9248acc14f01ecd9150c994c5426fbe48ea5fa170e182ee1"
+          }
+        ],
+        "rule": "Retain every declared source and manifest digest. A new timestamp does not reproduce a frozen manifest.",
+        "consumer_pin_source": {
+          "path": "src/genosapiens/track1_public_validation.py",
+          "sha256": "e7770b7c6f46b08e3a02988f86b0c4d80731b4b9b7736e6d207845c85747808b"
+        }
+      },
+      "acquisition": null,
+      "producer": {
+        "command": [
+          "python",
+          "-m",
+          "genosapiens",
+          "reference",
+          "bootstrap-ontologies",
+          "config/reference-builder.example.json",
+          "--image-digest",
+          "IMAGE_DIGEST"
+        ],
+        "inputs": [
+          "pinned HPO, MONDO mappings, and Sequence Ontology"
+        ],
+        "image": "reference-builder",
+        "completion": "The owner validates input bindings before publishing complete outputs. Interrupted outputs cannot supply completion.",
+        "limit": "Historical producer only. It does not reproduce the exact frozen manifest without matching original evidence.",
+        "execution_context": "Run inside the declared image with the checkout and selected public reference root mounted."
+      },
+      "destinations": [
+        "releases/ontologies/core-ontology-references-v1",
+        "manifests/ontologies"
+      ],
+      "notices": [
+        "LicenseRef-HPO-Terms",
+        "https://web.archive.org/web/20240418143652/https://hpo.jax.org/app/license",
+        "CC0-1.0",
+        "https://creativecommons.org/publicdomain/zero/1.0/",
+        "CC-BY-4.0",
+        "https://creativecommons.org/licenses/by/4.0/"
+      ],
+      "availability": {
+        "status": "unverified_frozen_artifact",
+        "limit": "Exact frozen manifests require an authenticated archive. The historical producer can create different manifest bytes."
+      },
+      "required_records": [
+        {
+          "owner": "src/genosapiens/track1_public_validation.py",
+          "symbol": "HPO_MANIFEST_SHA256",
+          "sha256": "81bb8fe18512f05ba06a9286e6a4c0514a49cf4883d066ef31779e2cf4954232"
+        }
+      ],
+      "inspection": [
+        "python3",
+        "scripts/prepare_public_resources.py",
+        "ontologies",
+        "--reference-root",
+        "REFERENCE_ROOT",
+        "--describe"
+      ]
+    },
+    {
+      "id": "hpo-ic",
+      "version": "HPO 2026-06-23 disease-count IC",
+      "consumers": [
+        "track1 run"
+      ],
+      "role": "required",
+      "contracts": [
+        {
+          "path": "config/public-resources/core-ontologies.json",
+          "sha256": "515cd59b6909e05b9248acc14f01ecd9150c994c5426fbe48ea5fa170e182ee1"
+        }
+      ],
+      "integrity": {
+        "contract_bindings": [
+          {
+            "path": "config/public-resources/core-ontologies.json",
+            "sha256": "515cd59b6909e05b9248acc14f01ecd9150c994c5426fbe48ea5fa170e182ee1"
+          }
+        ],
+        "rule": "Retain every declared source and manifest digest. A new timestamp does not reproduce a frozen manifest.",
+        "consumer_pin_source": {
+          "path": "src/genosapiens/track1_public_validation.py",
+          "sha256": "e7770b7c6f46b08e3a02988f86b0c4d80731b4b9b7736e6d207845c85747808b"
+        }
+      },
+      "acquisition": null,
+      "producer": {
+        "command": [
+          "python",
+          "-m",
+          "genosapiens",
+          "reference",
+          "build-hpo-ic",
+          "config/reference-builder.example.json",
+          "--image-digest",
+          "IMAGE_DIGEST"
+        ],
+        "inputs": [
+          "ontologies"
+        ],
+        "image": "reference-builder",
+        "completion": "The owner validates input bindings before publishing complete outputs. Interrupted outputs cannot supply completion.",
+        "limit": "Historical producer only. It does not reproduce the exact frozen manifest without matching original evidence.",
+        "execution_context": "Run inside the declared image with the checkout and selected public reference root mounted."
+      },
+      "destinations": [
+        "derived/phenotype",
+        "manifests/phenotype"
+      ],
+      "notices": [
+        "LicenseRef-HPO-Terms",
+        "https://web.archive.org/web/20240418143652/https://hpo.jax.org/app/license",
+        "CC0-1.0",
+        "https://creativecommons.org/publicdomain/zero/1.0/",
+        "CC-BY-4.0",
+        "https://creativecommons.org/licenses/by/4.0/"
+      ],
+      "availability": {
+        "status": "unverified_frozen_artifact",
+        "limit": "Exact frozen manifests require an authenticated archive. The historical producer can create different manifest bytes."
+      },
+      "required_records": [
+        {
+          "owner": "src/genosapiens/track1_public_validation.py",
+          "symbol": "HPO_STORE_SHA256",
+          "sha256": "f376198b4faa577910e18f1f75bdf482cd7f9810b232e29c6c44f0d1edd54efd"
+        }
+      ],
+      "inspection": [
+        "python3",
+        "scripts/prepare_public_resources.py",
+        "hpo-ic",
+        "--reference-root",
+        "REFERENCE_ROOT",
+        "--describe"
+      ]
+    },
+    {
+      "id": "variant-class",
+      "version": "frozen variant-class contract",
+      "consumers": [
+        "track1 run"
+      ],
+      "role": "required",
+      "contracts": [
+        {
+          "path": "config/public-resources/variant-class-resources.json",
+          "sha256": "cdea1165c93c81f7e1a1cecbe28defcc7eda2de61732f12e11c957838e3abccc"
+        }
+      ],
+      "integrity": {
+        "contract_bindings": [
+          {
+            "path": "config/public-resources/variant-class-resources.json",
+            "sha256": "cdea1165c93c81f7e1a1cecbe28defcc7eda2de61732f12e11c957838e3abccc"
+          }
+        ],
+        "rule": "Retain every declared source and manifest digest. A new timestamp does not reproduce a frozen manifest.",
+        "consumer_pin_source": {
+          "path": "src/genosapiens/track1_public_validation.py",
+          "sha256": "e7770b7c6f46b08e3a02988f86b0c4d80731b4b9b7736e6d207845c85747808b"
+        }
+      },
+      "acquisition": null,
+      "producer": {
+        "command": [
+          "python",
+          "-m",
+          "genosapiens",
+          "reference",
+          "bootstrap-variant-class-resources",
+          "config/reference-builder.example.json",
+          "--image-digest",
+          "IMAGE_DIGEST"
+        ],
+        "inputs": [
+          "pinned repeat, mitochondrial, and structural sources"
+        ],
+        "image": "reference-builder",
+        "completion": "The owner validates input bindings before publishing complete outputs. Interrupted outputs cannot supply completion.",
+        "limit": "Historical producer only. It does not reproduce the exact frozen manifest without matching original evidence.",
+        "execution_context": "Run inside the declared image with the checkout and selected public reference root mounted."
+      },
+      "destinations": [
+        "releases/variant-class",
+        "manifests/variant-class"
+      ],
+      "notices": [
+        "ODC-ODbL-1.0",
+        "https://opendatacommons.org/licenses/odbl/1-0/",
+        "ENCODE-DATA-USE",
+        "https://www.encodeproject.org/help/citing-encode/",
+        "MIT",
+        "https://raw.githubusercontent.com/broadinstitute/str-analysis/d41c85c97da3cd8c8ac9d7d47883570c95069874/LICENSE"
+      ],
+      "availability": {
+        "status": "unverified_frozen_artifact",
+        "limit": "Exact frozen manifests require an authenticated archive. The historical producer can create different manifest bytes."
+      },
+      "required_records": [
+        {
+          "owner": "src/genosapiens/track1_public_validation.py",
+          "symbol": "REPEAT_MANIFEST_SHA256",
+          "sha256": "7058790cfa8b76bcdc6684f18cfd3152b70a51026412641955262c35e83a95c6"
+        }
+      ],
+      "inspection": [
+        "python3",
+        "scripts/prepare_public_resources.py",
+        "variant-class",
+        "--reference-root",
+        "REFERENCE_ROOT",
+        "--describe"
+      ]
+    },
+    {
+      "id": "model-loci",
+      "version": "GRCh38 Ensembl 116, retrieved 2026-09-16",
+      "consumers": [
+        "track1 run",
+        "track2 setup",
+        "track2 run"
+      ],
+      "role": "required",
+      "contracts": [
+        {
+          "path": "config/public-resources/grch38-model-loci.json",
+          "sha256": "5b9c9760bdb5fa901e0690cf8e6ec5e5a4f6c9fa7382086652b52ca29b02d61e"
+        }
+      ],
+      "integrity": {
+        "contract_bindings": [
+          {
+            "path": "config/public-resources/grch38-model-loci.json",
+            "sha256": "5b9c9760bdb5fa901e0690cf8e6ec5e5a4f6c9fa7382086652b52ca29b02d61e"
+          }
+        ],
+        "rule": "Retain every declared source and manifest digest. A new timestamp does not reproduce a frozen manifest.",
+        "consumer_pin_source": {
+          "path": "src/genosapiens/track1_public_validation.py",
+          "sha256": "e7770b7c6f46b08e3a02988f86b0c4d80731b4b9b7736e6d207845c85747808b"
+        }
+      },
+      "acquisition": null,
+      "producer": {
+        "command": null,
+        "inputs": [
+          "grch38",
+          "pinned Ensembl, GRC, and NHGRI records"
+        ],
+        "image": "reference-builder",
+        "completion": "The owner validates input bindings before publishing complete outputs. Interrupted outputs cannot supply completion.",
+        "limit": "Historical producer only. It does not reproduce the exact frozen manifest without matching original evidence.",
+        "execution_context": "Run inside the declared image with the checkout and selected public reference root mounted."
+      },
+      "destinations": [
+        "derived/model-loci",
+        "manifests/model-loci"
+      ],
+      "notices": [
+        "Retain upstream source terms and ATTRIBUTION.md."
+      ],
+      "availability": {
+        "status": "unverified_frozen_artifact",
+        "limit": "Acquire the exact bound model-locus manifest and outputs. No standalone producer command exists in this distribution."
+      },
+      "required_records": [
+        {
+          "path": "manifests/model-loci/grch38-authoritative-model-loci.22b69fc15bbb.json",
+          "sha256": "b8442cac9dcf9068ef263deab3f453a5fb8425eb8b9fd758236efd5ab5ab1eb5"
+        }
+      ],
+      "inspection": [
+        "python3",
+        "scripts/prepare_public_resources.py",
+        "model-loci",
+        "--reference-root",
+        "REFERENCE_ROOT",
+        "--describe"
+      ]
+    },
+    {
+      "id": "common-allele-exceptions",
+      "version": "2026-09-19",
+      "consumers": [
+        "track1 run",
+        "track2 setup",
+        "track2 run"
+      ],
+      "role": "required",
+      "contracts": [
+        {
+          "path": "config/public-resources/track1-common-allele-exceptions-v1.json",
+          "sha256": "b7f604394948cb22e98fbc14e90643c578a845809d2e3659cfd19729a975084f"
+        },
+        {
+          "path": "config/public-resources/track1-common-allele-exception-curation-v1.json",
+          "sha256": "8f143e9c0932e7df5b4ddb2af9d151b4c434ca4116d828695ca0d8aa950f5483"
+        }
+      ],
+      "integrity": {
+        "contract_bindings": [
+          {
+            "path": "config/public-resources/track1-common-allele-exceptions-v1.json",
+            "sha256": "b7f604394948cb22e98fbc14e90643c578a845809d2e3659cfd19729a975084f"
+          },
+          {
+            "path": "config/public-resources/track1-common-allele-exception-curation-v1.json",
+            "sha256": "8f143e9c0932e7df5b4ddb2af9d151b4c434ca4116d828695ca0d8aa950f5483"
+          }
+        ],
+        "rule": "Retain every declared source and manifest digest. A new timestamp does not reproduce a frozen manifest.",
+        "consumer_pin_source": {
+          "path": "src/genosapiens/track1_public_validation.py",
+          "sha256": "e7770b7c6f46b08e3a02988f86b0c4d80731b4b9b7736e6d207845c85747808b"
+        }
+      },
+      "acquisition": null,
+      "producer": {
+        "command": [
+          "python",
+          "scripts/build_track1_common_allele_exception_bundle.py",
+          "--repository-root",
+          "CHECKOUT",
+          "--reference-root",
+          "REFERENCE_ROOT"
+        ],
+        "inputs": [
+          "clinvar",
+          "open-targets",
+          "grch38",
+          "frozen ClinGen source snapshot"
+        ],
+        "image": "track1-pipeline",
+        "completion": "The owner validates input bindings before publishing complete outputs. Interrupted outputs cannot supply completion.",
+        "limit": "Historical producer only. It does not reproduce the exact frozen manifest without matching original evidence.",
+        "execution_context": "Run inside the declared image with the checkout and selected public reference root mounted."
+      },
+      "destinations": [
+        "derived/track1-common-allele-exceptions",
+        "manifests/track1-common-allele-exceptions"
+      ],
+      "notices": [
+        "CC0-1.0",
+        "https://creativecommons.org/publicdomain/zero/1.0/"
+      ],
+      "availability": {
+        "status": "unverified_frozen_artifact",
+        "limit": "Exact frozen manifests require an authenticated archive. The historical producer can create different manifest bytes."
+      },
+      "required_records": [
+        {
+          "path": "manifests/track1-common-allele-exceptions/79596dff01ac7291604c7715fdd3fa6d7ea89257ee8172e7c2b926402184586e.json",
+          "sha256": "99a3da5f52cae81e097634147c79d2154d20c10646277482cbe3e6c271bcce82"
+        }
+      ],
+      "inspection": [
+        "python3",
+        "scripts/prepare_public_resources.py",
+        "common-allele-exceptions",
+        "--reference-root",
+        "REFERENCE_ROOT",
+        "--describe"
+      ]
+    },
+    {
+      "id": "public-index",
+      "version": "track1-retention-index current",
+      "consumers": [
+        "track1 run",
+        "track2 setup",
+        "track2 run"
+      ],
+      "role": "required",
+      "contracts": [
+        {
+          "path": "config/public-resources/track1-retention-index.json",
+          "sha256": "d63a9c809861e7f2ecc25bd5505945d684622a58a225bb40120d5abf98c51c8b"
+        }
+      ],
+      "integrity": {
+        "contract_bindings": [
+          {
+            "path": "config/public-resources/track1-retention-index.json",
+            "sha256": "d63a9c809861e7f2ecc25bd5505945d684622a58a225bb40120d5abf98c51c8b"
+          }
+        ],
+        "rule": "Retain every declared source and manifest digest. A new timestamp does not reproduce a frozen manifest.",
+        "consumer_pin_source": {
+          "path": "src/genosapiens/track1_public_validation.py",
+          "sha256": "e7770b7c6f46b08e3a02988f86b0c4d80731b4b9b7736e6d207845c85747808b"
+        }
+      },
+      "acquisition": [
+        "python3",
+        "scripts/prepare_public_resources.py",
+        "public-index",
+        "--reference-root",
+        "REFERENCE_ROOT"
+      ],
+      "producer": {
+        "command": [
+          "python",
+          "scripts/build_track1_installation.py",
+          "--repository-root",
+          "CHECKOUT",
+          "--reference-root",
+          "REFERENCE_ROOT",
+          "--package-store",
+          "PACKAGE_STORE"
+        ],
+        "inputs": [
+          "grch38",
+          "clinvar",
+          "open-targets",
+          "rare-disease",
+          "common-allele-exceptions",
+          "model-loci"
+        ],
+        "image": "track1-pipeline",
+        "completion": "The owner validates input bindings before publishing complete outputs. Interrupted outputs cannot supply completion.",
+        "execution_context": "Run inside the declared image with the checkout and selected public reference root mounted."
+      },
+      "destinations": [
+        "derived/common-allele-public-indexes",
+        "manifests/common-allele-public-indexes"
+      ],
+      "notices": [
+        "Retain upstream source terms and ATTRIBUTION.md."
+      ],
+      "availability": {
+        "status": "producer_declared",
+        "limit": "Producer behavior requires the declared inputs. Remote source availability is separate from fixture evidence."
+      },
+      "required_records": [
+        {
+          "path": "manifests/common-allele-public-indexes/<dependency-digest>.json",
+          "contract": "genosapiens.track1_setup.prepare_public_index"
+        }
+      ]
+    },
+    {
+      "id": "disease-lookup",
+      "version": "current public lookup",
+      "consumers": [
+        "track2 setup",
+        "track2 run"
+      ],
+      "role": "required",
+      "contracts": [
+        {
+          "path": "config/public-resources/track1-retention-index.json",
+          "sha256": "d63a9c809861e7f2ecc25bd5505945d684622a58a225bb40120d5abf98c51c8b"
+        }
+      ],
+      "integrity": {
+        "contract_bindings": [
+          {
+            "path": "config/public-resources/track1-retention-index.json",
+            "sha256": "d63a9c809861e7f2ecc25bd5505945d684622a58a225bb40120d5abf98c51c8b"
+          }
+        ],
+        "rule": "Retain every declared source and manifest digest. A new timestamp does not reproduce a frozen manifest.",
+        "consumer_pin_source": null
+      },
+      "acquisition": [
+        "./track2",
+        "setup",
+        "--rules",
+        "OFFICIAL_RULES",
+        "--reference-root",
+        "REFERENCE_ROOT"
+      ],
+      "producer": {
+        "command": [
+          "python",
+          "-m",
+          "genosapiens.track2_setup",
+          "--repository",
+          "CHECKOUT",
+          "--reference",
+          "REFERENCE_ROOT",
+          "--store",
+          "PACKAGE_STORE",
+          "--index-store",
+          "INDEX_STORE",
+          "--discovery-resources",
+          "DISCOVERY_DESCRIPTOR"
+        ],
+        "inputs": [
+          "public-index"
+        ],
+        "image": "track1-pipeline",
+        "completion": "The owner validates input bindings before publishing complete outputs. Interrupted outputs cannot supply completion.",
+        "execution_context": "Run inside the declared image with the checkout and selected public reference root mounted."
+      },
+      "destinations": [
+        "derived/common-allele-public-indexes",
+        "manifests/common-allele-public-indexes"
+      ],
+      "notices": [
+        "Retain upstream source terms and ATTRIBUTION.md."
+      ],
+      "availability": {
+        "status": "producer_declared",
+        "limit": "Producer behavior requires the declared inputs. Remote source availability is separate from fixture evidence."
+      },
+      "required_records": [
+        {
+          "path": "manifests/common-allele-public-indexes/disease-lookup-<dependency-digest>.json",
+          "contract": "genosapiens.public_disease_lookup.prepare_disease_lookup"
+        }
+      ]
+    },
+    {
+      "id": "regulatory-index",
+      "version": "ENCODE registry v4 GRCh38",
+      "consumers": [
+        "track1 run",
+        "track2 setup",
+        "track2 run"
+      ],
+      "role": "required",
+      "contracts": [
+        {
+          "path": "config/track1/regulatory-index-pin.json",
+          "sha256": "a7cbdb6f6e0ccf5c08b42bc559b7984a1e68ee99446893b466482f7c0bffd08d"
+        }
+      ],
+      "integrity": {
+        "contract_bindings": [
+          {
+            "path": "config/track1/regulatory-index-pin.json",
+            "sha256": "a7cbdb6f6e0ccf5c08b42bc559b7984a1e68ee99446893b466482f7c0bffd08d"
+          }
+        ],
+        "rule": "Retain every declared source and manifest digest. A new timestamp does not reproduce a frozen manifest.",
+        "consumer_pin_source": null
+      },
+      "acquisition": null,
+      "producer": {
+        "command": null,
+        "inputs": [
+          "grch38",
+          "pinned ENCODE cCRE and rE2G sources"
+        ],
+        "image": "reference-builder",
+        "completion": "The owner validates input bindings before publishing complete outputs. Interrupted outputs cannot supply completion.",
+        "limit": "Historical producer only. It does not reproduce the exact frozen manifest without matching original evidence.",
+        "execution_context": "Run inside the declared image with the checkout and selected public reference root mounted."
+      },
+      "destinations": [
+        "derived/track1-regulatory-index"
+      ],
+      "notices": [
+        "Retain upstream source terms and ATTRIBUTION.md."
+      ],
+      "availability": {
+        "status": "unverified_frozen_artifact",
+        "limit": "The bound regulatory index needs its exact source manifests and semantic acceptance record. A frozen acquisition location is unresolved."
+      },
+      "required_records": [
+        {
+          "contract": "config/track1/regulatory-index-pin.json",
+          "fields": [
+            "manifest_path",
+            "manifest_sha256"
+          ]
+        }
+      ],
+      "inspection": [
+        "python3",
+        "scripts/prepare_public_resources.py",
+        "regulatory-index",
+        "--reference-root",
+        "REFERENCE_ROOT",
+        "--describe"
+      ]
+    },
+    {
+      "id": "functional-catalog",
+      "version": "UniProt reviewed human isoforms 2026-10-18",
+      "consumers": [
+        "track2 setup",
+        "track2 run"
+      ],
+      "role": "required",
+      "contracts": [
+        {
+          "path": "config/track2/functional-sources.json",
+          "sha256": "23d42b19ec122d317c7df255260224af0132ccdc96288c8e92ef84bdddaf1aab"
+        }
+      ],
+      "integrity": {
+        "contract_bindings": [
+          {
+            "path": "config/track2/functional-sources.json",
+            "sha256": "23d42b19ec122d317c7df255260224af0132ccdc96288c8e92ef84bdddaf1aab"
+          }
+        ],
+        "rule": "Retain every declared source and manifest digest. A new timestamp does not reproduce a frozen manifest.",
+        "consumer_pin_source": null
+      },
+      "acquisition": null,
+      "producer": {
+        "command": [
+          "python3",
+          "scripts/acquire_track2_functional_sources.py",
+          "--output",
+          "NEW_PUBLIC_DIRECTORY"
+        ],
+        "inputs": [
+          "UniProt reviewed human variant records"
+        ],
+        "image": "host-python-3.12",
+        "completion": "The owner validates input bindings before publishing complete outputs. Interrupted outputs cannot supply completion.",
+        "limit": "Historical producer only. It does not reproduce the exact frozen manifest without matching original evidence.",
+        "execution_context": "Run inside the declared image with the checkout and selected public reference root mounted."
+      },
+      "destinations": [
+        "derived/track2-functional/uniprot-reviewed-human-isoforms-20261018"
+      ],
+      "notices": [
+        "Retain upstream source terms and ATTRIBUTION.md."
+      ],
+      "availability": {
+        "status": "unverified_frozen_artifact",
+        "limit": "The live UniProt producer cannot recreate the exact frozen manifest reliably. Acquire the bound frozen catalog or declare a separate version."
+      },
+      "required_records": [
+        {
+          "contract": "config/track2/functional-sources.json",
+          "fields": [
+            "manifest_path",
+            "manifest_sha256"
+          ]
+        }
+      ],
+      "inspection": [
+        "python3",
+        "scripts/prepare_public_resources.py",
+        "functional-catalog",
+        "--reference-root",
+        "REFERENCE_ROOT",
+        "--describe"
+      ]
+    },
+    {
+      "id": "open-targets-drugs",
+      "version": "26.06",
+      "consumers": [
+        "track2 setup",
+        "track2 run",
+        "run_track2_public.py"
+      ],
+      "role": "required",
+      "contracts": [
+        {
+          "path": "config/public-resources/track2-open-targets-drugs-26.06.json",
+          "sha256": "1071d525fedda45e0b6125514903c3f04f76af0517884b892049acccc032b5e7"
+        }
+      ],
+      "integrity": {
+        "contract_bindings": [
+          {
+            "path": "config/public-resources/track2-open-targets-drugs-26.06.json",
+            "sha256": "1071d525fedda45e0b6125514903c3f04f76af0517884b892049acccc032b5e7"
+          }
+        ],
+        "rule": "Retain every declared source and manifest digest. A new timestamp does not reproduce a frozen manifest.",
+        "consumer_pin_source": null
+      },
+      "acquisition": [
+        "python3",
+        "scripts/prepare_public_resources.py",
+        "open-targets-drugs",
+        "--reference-root",
+        "REFERENCE_ROOT"
+      ],
+      "producer": {
+        "command": [
+          "./track2",
+          "prepare-discovery-resources",
+          "--reference-root",
+          "REFERENCE_ROOT"
+        ],
+        "inputs": [
+          "publisher SHA-1 partition checksums"
+        ],
+        "image": null,
+        "completion": "The owner validates input bindings before publishing complete outputs. Interrupted outputs cannot supply completion."
+      },
+      "destinations": [
+        "releases/open-targets/26.06",
+        "manifests/track2/discovery"
+      ],
+      "notices": [
+        "Retain upstream source terms and ATTRIBUTION.md."
+      ],
+      "availability": {
+        "status": "producer_declared",
+        "limit": "Producer behavior requires the declared inputs. Remote source availability is separate from fixture evidence."
+      },
+      "required_records": [
+        {
+          "path": "manifests/track2/discovery/acquisition-<contract-digest>.json",
+          "contract": "genosapiens.track2_discovery_resources.acquire_sources"
+        }
+      ]
+    },
+    {
+      "id": "lincs-metadata",
+      "version": "GSE92742",
+      "consumers": [
+        "track2 setup",
+        "track2 run",
+        "run_track2_public.py"
+      ],
+      "role": "required",
+      "contracts": [
+        {
+          "path": "config/track2/discovery-sources.json",
+          "sha256": "e55d9d35b2a130b19acc76f3d1ff064ab3a50050c18a29d6c9be6ebcb3d83d46"
+        }
+      ],
+      "integrity": {
+        "contract_bindings": [
+          {
+            "path": "config/track2/discovery-sources.json",
+            "sha256": "e55d9d35b2a130b19acc76f3d1ff064ab3a50050c18a29d6c9be6ebcb3d83d46"
+          }
+        ],
+        "rule": "Retain every declared source and manifest digest. A new timestamp does not reproduce a frozen manifest.",
+        "consumer_pin_source": null
+      },
+      "acquisition": [
+        "python3",
+        "scripts/prepare_public_resources.py",
+        "lincs-metadata",
+        "--reference-root",
+        "REFERENCE_ROOT"
+      ],
+      "producer": {
+        "command": [
+          "python3",
+          "scripts/prepare_public_resources.py",
+          "lincs-metadata",
+          "--reference-root",
+          "REFERENCE_ROOT"
+        ],
+        "inputs": [
+          "pinned GEO metadata archives"
+        ],
+        "image": null,
+        "completion": "The owner validates input bindings before publishing complete outputs. Interrupted outputs cannot supply completion."
+      },
+      "destinations": [
+        "lincs/GSE92742/metadata-downloads.json"
+      ],
+      "notices": [
+        "Retain upstream source terms and ATTRIBUTION.md."
+      ],
+      "availability": {
+        "status": "producer_declared",
+        "limit": "Producer behavior requires the declared inputs. Remote source availability is separate from fixture evidence."
+      },
+      "required_records": [
+        {
+          "path": "lincs/GSE92742/metadata-downloads.json",
+          "contract": "source-pins.json:lincs_metadata"
+        }
+      ]
+    },
+    {
+      "id": "lincs-matrix",
+      "version": "GSE92742 Level5 n473647 x12328",
+      "consumers": [
+        "track2 setup",
+        "track2 run",
+        "run_track2_public.py"
+      ],
+      "role": "required",
+      "contracts": [
+        {
+          "path": "config/track2/discovery-sources.json",
+          "sha256": "e55d9d35b2a130b19acc76f3d1ff064ab3a50050c18a29d6c9be6ebcb3d83d46"
+        }
+      ],
+      "integrity": {
+        "contract_bindings": [
+          {
+            "path": "config/track2/discovery-sources.json",
+            "sha256": "e55d9d35b2a130b19acc76f3d1ff064ab3a50050c18a29d6c9be6ebcb3d83d46"
+          }
+        ],
+        "rule": "Retain every declared source and manifest digest. A new timestamp does not reproduce a frozen manifest.",
+        "consumer_pin_source": null
+      },
+      "acquisition": [
+        "python3",
+        "scripts/prepare_public_resources.py",
+        "lincs-matrix",
+        "--reference-root",
+        "REFERENCE_ROOT",
+        "--source",
+        "ARCHIVE"
+      ],
+      "producer": {
+        "command": [
+          "python3",
+          "scripts/prepare_public_resources.py",
+          "lincs-matrix",
+          "--reference-root",
+          "REFERENCE_ROOT",
+          "--source",
+          "ARCHIVE"
+        ],
+        "inputs": [
+          "publisher-bound gzip archive",
+          "lincs-metadata"
+        ],
+        "image": null,
+        "completion": "The owner validates input bindings before publishing complete outputs. Interrupted outputs cannot supply completion."
+      },
+      "destinations": [
+        "lincs/GSE92742/matrix-integrity.json",
+        "lincs/GSE92742/matrix-transfer-state.json",
+        "lincs/GSE92742/GSE92742_Broad_LINCS_Level5_COMPZ.MODZ_n473647x12328.gctx"
+      ],
+      "notices": [
+        "Retain upstream source terms and ATTRIBUTION.md."
+      ],
+      "availability": {
+        "status": "producer_declared",
+        "limit": "Producer behavior requires the declared inputs. Remote source availability is separate from fixture evidence."
+      },
+      "required_records": [
+        {
+          "path": "lincs/GSE92742/matrix-integrity.json",
+          "contract": "source-pins.json:lincs_archive"
+        },
+        {
+          "path": "lincs/GSE92742/matrix-transfer-state.json",
+          "contract": "source-pins.json:lincs_archive"
+        }
+      ]
+    },
+    {
+      "id": "fda",
+      "version": "Drugs@FDA 2026-10-14 and UNII 2026-08-04",
+      "consumers": [
+        "track2 setup",
+        "track2 run",
+        "run_track2_public.py"
+      ],
+      "role": "required",
+      "contracts": [
+        {
+          "path": "config/track2/discovery-sources.json",
+          "sha256": "e55d9d35b2a130b19acc76f3d1ff064ab3a50050c18a29d6c9be6ebcb3d83d46"
+        }
+      ],
+      "integrity": {
+        "contract_bindings": [
+          {
+            "path": "config/track2/discovery-sources.json",
+            "sha256": "e55d9d35b2a130b19acc76f3d1ff064ab3a50050c18a29d6c9be6ebcb3d83d46"
+          }
+        ],
+        "rule": "Retain every declared source and manifest digest. A new timestamp does not reproduce a frozen manifest.",
+        "consumer_pin_source": null
+      },
+      "acquisition": [
+        "python3",
+        "scripts/prepare_public_resources.py",
+        "fda",
+        "--reference-root",
+        "REFERENCE_ROOT"
+      ],
+      "producer": {
+        "command": [
+          "python3",
+          "scripts/prepare_public_resources.py",
+          "fda",
+          "--reference-root",
+          "REFERENCE_ROOT"
+        ],
+        "inputs": [
+          "frozen Drugs@FDA and UNII ZIP files"
+        ],
+        "image": null,
+        "completion": "The owner validates input bindings before publishing complete outputs. Interrupted outputs cannot supply completion."
+      },
+      "destinations": [
+        "fda/2026-10-16/download-manifest.json"
+      ],
+      "notices": [
+        "Retain upstream source terms and ATTRIBUTION.md."
+      ],
+      "availability": {
+        "status": "frozen_url_unverified",
+        "limit": "The FDA URL can supply a newer snapshot. Exact frozen bytes remain required. Remote acquisition was not tested."
+      },
+      "required_records": [
+        {
+          "path": "fda/2026-10-16/download-manifest.json",
+          "contract": "source-pins.json:fda"
+        }
+      ]
+    },
+    {
+      "id": "public-study",
+      "version": "installed-public-evidence current",
+      "consumers": [
+        "track2 install-public-evidence"
+      ],
+      "role": "optional",
+      "contracts": [
+        {
+          "path": "config/track2/installed-public-evidence.json",
+          "sha256": "11ee2985fe1eaa9b9c14288ef296b7099f52c00a98c731315eb354f41dfec322"
+        }
+      ],
+      "integrity": {
+        "contract_bindings": [
+          {
+            "path": "config/track2/installed-public-evidence.json",
+            "sha256": "11ee2985fe1eaa9b9c14288ef296b7099f52c00a98c731315eb354f41dfec322"
+          }
+        ],
+        "rule": "Retain every declared source and manifest digest. A new timestamp does not reproduce a frozen manifest.",
+        "consumer_pin_source": null
+      },
+      "acquisition": [
+        "./track2",
+        "install-public-evidence",
+        "--source",
+        "FROZEN_EXPORT",
+        "--reference-root",
+        "REFERENCE_ROOT"
+      ],
+      "producer": {
+        "command": [
+          "./track2",
+          "install-public-evidence",
+          "--source",
+          "FROZEN_EXPORT"
+        ],
+        "inputs": [
+          "reviewed public input and study export"
+        ],
+        "image": "host-python-3.12",
+        "completion": "The owner validates input bindings before publishing complete outputs. Interrupted outputs cannot supply completion.",
+        "execution_context": "Run inside the declared image with the checkout and selected public reference root mounted."
+      },
+      "destinations": [
+        "path declared by config/track2/installed-public-evidence.json"
+      ],
+      "notices": [
+        "Retain upstream source terms and ATTRIBUTION.md."
+      ],
+      "availability": {
+        "status": "unverified_frozen_artifact",
+        "limit": "Native discovery does not require this frozen study export. Its archive location is unresolved."
+      },
+      "required_records": [
+        {
+          "path": "releases/track2/public-evidence/72dbcf4726644d820b7f1e14c1bee2e9f53cc514e5f151d94bf55d10cf7568dc/evidence.json",
+          "sha256": "72dbcf4726644d820b7f1e14c1bee2e9f53cc514e5f151d94bf55d10cf7568dc"
+        }
+      ]
+    },
+    {
+      "id": "policies",
+      "version": "current checkout",
+      "consumers": [
+        "track1 run",
+        "track2 setup",
+        "track2 run"
+      ],
+      "role": "required",
+      "contracts": [
+        {
+          "path": "config/track1/analysis-eligibility-v1.json",
+          "sha256": "668e113262a6859b3cfffb1721772fb4a49c9e756fae7cafd0573064bb22d7c9"
+        },
+        {
+          "path": "config/track1/analysis-profiles.json",
+          "sha256": "ea12ce48321da6add3bc3d929447415be0701c892b035b25d34f44a225b4b291"
+        },
+        {
+          "path": "config/track1/base-release-validation-plan-synthetic-pin.json",
+          "sha256": "f8790c77c026bc5ea7e5eccdb48c293f0d7edd81d77ded5bbbbd1f31760a9204"
+        },
+        {
+          "path": "config/track1/bounded-wgs-execution-v4.json",
+          "sha256": "698a29619f66d4db61ef12f4e9ff7e7740865a84dc613a0caba313ec412bb727"
+        },
+        {
+          "path": "config/track1/bounded-wgs-execution-v5.json",
+          "sha256": "be049f9700c4dcf479f5471ef304212a406e021b0875b419bce4bb00f26ad6d2"
+        },
+        {
+          "path": "config/track1/challenge-evaluator.json",
+          "sha256": "ea83b88d1c9c31626a6cb301633687407a1edddfb8bf98fde8d586551bf61ccd"
+        },
+        {
+          "path": "config/track1/common-allele-prefilter-v1.json",
+          "sha256": "aa2c583c7524cfc2d3be5e42adbfeb7b7ecadb367a50e4f588749402c9d1d948"
+        },
+        {
+          "path": "config/track1/context-writer-runtime-v1.json",
+          "sha256": "60793cc23454adfd523ddf81618a3312c242ef4b849b3c1bcf4bed3457e28c45"
+        },
+        {
+          "path": "config/track1/epcr-numerical-suitability.json",
+          "sha256": "f3a8a6548ba91c5906c518d8a59ac4bea2a7c5748ff1f382fd9798c14e1035e8"
+        },
+        {
+          "path": "config/track1/epcr-policy.json",
+          "sha256": "6f8f6056507e7ecf651adfc863ec0a000e19b0c46424f9ef145dcb02ed1e3d44"
+        },
+        {
+          "path": "config/track1/focused-work-contract-v1.json",
+          "sha256": "ba9a3e4b581a29d81d6c55dcccca24bdec5958009d4aab3c7a49530099c4ddaf"
+        },
+        {
+          "path": "config/track1/handoff-contract.json",
+          "sha256": "4d1d4c62497936e4266bfaf29420111526e0ebd43ea2678d9d4e13fac682bf4d"
+        },
+        {
+          "path": "config/track1/handoff-pin.json",
+          "sha256": "8840c971e90251a43481e4f5ab4f1c44abdfb97607519803cd6fb0845f09d457"
+        },
+        {
+          "path": "config/track1/official-contract-review.json",
+          "sha256": "1dcae58fef36ddd2cae820d5fdd572dce8dd905da2eb728c58228ad46f65ae28"
+        },
+        {
+          "path": "config/track1/protected-population-work-filter-v1.json",
+          "sha256": "3c0d96e7621507498eeda8fc9ddd964fa2626b7f27a8b1e7eef4434d6c5d719e"
+        },
+        {
+          "path": "config/track1/public-population-development-derivation.json",
+          "sha256": "9070da8186a46ccfebec33cb16607f9b8e869fa064016bf649e0674462cf0afd"
+        },
+        {
+          "path": "config/track1/public-ranking-development-policy-family.json",
+          "sha256": "3b1ee132e60aa244041e2747b9afb92a50ea346e7a946b8a242a39394c422a42"
+        },
+        {
+          "path": "config/track1/regulatory-index-pin.json",
+          "sha256": "a7cbdb6f6e0ccf5c08b42bc559b7984a1e68ee99446893b466482f7c0bffd08d"
+        },
+        {
+          "path": "config/track1/runtime-image.json",
+          "sha256": "b3528764e14a444456bbaf0b6a80aac8137315dcb06748c4cbc153f26f963ab1"
+        },
+        {
+          "path": "config/track1/submission-acceptance-profile.json",
+          "sha256": "5200cd15d33b813f9b21ed42acfc8bbb0df59c684ec2daf07062e49b4b86f7e4"
+        },
+        {
+          "path": "config/track1/vcf-evidence-policy-v1.json",
+          "sha256": "9fc5f5571129085542f219c5f6543344388f75bd5ee3899ed315b550ec2c70ce"
+        },
+        {
+          "path": "config/track2/decision-policy-g0-g7-v1.json",
+          "sha256": "5b5a53483f4f1f588e09c91a92d30e4bf4ef2d9af6efeb59618992e0196eeeea"
+        },
+        {
+          "path": "config/track2/diagnosis-runtime.json",
+          "sha256": "9a12cbb1e81d1d809957b4bf816a4e1fa8537f077fe029fbdc754b7982664e34"
+        },
+        {
+          "path": "config/track2/discovery-builder-runtime.json",
+          "sha256": "f3a1a1fb7200163be3de89b098ef02ebd9b6d77b7e8456bc3e60e9b99138a5f6"
+        },
+        {
+          "path": "config/track2/discovery-runtime.json",
+          "sha256": "2ba070fb60f978e87d845f7a4d62007b58cd7dbbeca42bc04d89b656b91e34a7"
+        },
+        {
+          "path": "config/track2/discovery-sources.json",
+          "sha256": "e55d9d35b2a130b19acc76f3d1ff064ab3a50050c18a29d6c9be6ebcb3d83d46"
+        },
+        {
+          "path": "config/track2/exploratory-policy-v1.json",
+          "sha256": "426dd87377b645d7aeeddffb2777a8a4fbdd24654fc24a566a28c559ce55f363"
+        },
+        {
+          "path": "config/track2/functional-sources.json",
+          "sha256": "23d42b19ec122d317c7df255260224af0132ccdc96288c8e92ef84bdddaf1aab"
+        },
+        {
+          "path": "config/track2/installed-public-evidence.json",
+          "sha256": "11ee2985fe1eaa9b9c14288ef296b7099f52c00a98c731315eb354f41dfec322"
+        },
+        {
+          "path": "config/track2/public-expansion-policy-v1.json",
+          "sha256": "bae1ae607ed614d15f3052f0b74664bdc5945bd6a1edbb73e8b31d41680b7093"
+        },
+        {
+          "path": "config/track2/record-registry-v1.json",
+          "sha256": "0596560b88828a31444a10ab6a2180b67090e6c493e70dbda7ae98491787e7cc"
+        },
+        {
+          "path": "config/track2/report-presentation-v1.json",
+          "sha256": "494e14eb1587e763f67a2d16ce27d8bc9ef2a526ad7ffe682063fa06598be1cc"
+        },
+        {
+          "path": "config/track2/source-domain-matrix-v1.json",
+          "sha256": "e3e234a70754bfc9ed53f1f8c16bcaa6f05532358458303387b5df4a3c4d0453"
+        }
+      ],
+      "integrity": {
+        "contract_bindings": [
+          {
+            "path": "config/track1/analysis-eligibility-v1.json",
+            "sha256": "668e113262a6859b3cfffb1721772fb4a49c9e756fae7cafd0573064bb22d7c9"
+          },
+          {
+            "path": "config/track1/analysis-profiles.json",
+            "sha256": "ea12ce48321da6add3bc3d929447415be0701c892b035b25d34f44a225b4b291"
+          },
+          {
+            "path": "config/track1/base-release-validation-plan-synthetic-pin.json",
+            "sha256": "f8790c77c026bc5ea7e5eccdb48c293f0d7edd81d77ded5bbbbd1f31760a9204"
+          },
+          {
+            "path": "config/track1/bounded-wgs-execution-v4.json",
+            "sha256": "698a29619f66d4db61ef12f4e9ff7e7740865a84dc613a0caba313ec412bb727"
+          },
+          {
+            "path": "config/track1/bounded-wgs-execution-v5.json",
+            "sha256": "be049f9700c4dcf479f5471ef304212a406e021b0875b419bce4bb00f26ad6d2"
+          },
+          {
+            "path": "config/track1/challenge-evaluator.json",
+            "sha256": "ea83b88d1c9c31626a6cb301633687407a1edddfb8bf98fde8d586551bf61ccd"
+          },
+          {
+            "path": "config/track1/common-allele-prefilter-v1.json",
+            "sha256": "aa2c583c7524cfc2d3be5e42adbfeb7b7ecadb367a50e4f588749402c9d1d948"
+          },
+          {
+            "path": "config/track1/context-writer-runtime-v1.json",
+            "sha256": "60793cc23454adfd523ddf81618a3312c242ef4b849b3c1bcf4bed3457e28c45"
+          },
+          {
+            "path": "config/track1/epcr-numerical-suitability.json",
+            "sha256": "f3a8a6548ba91c5906c518d8a59ac4bea2a7c5748ff1f382fd9798c14e1035e8"
+          },
+          {
+            "path": "config/track1/epcr-policy.json",
+            "sha256": "6f8f6056507e7ecf651adfc863ec0a000e19b0c46424f9ef145dcb02ed1e3d44"
+          },
+          {
+            "path": "config/track1/focused-work-contract-v1.json",
+            "sha256": "ba9a3e4b581a29d81d6c55dcccca24bdec5958009d4aab3c7a49530099c4ddaf"
+          },
+          {
+            "path": "config/track1/handoff-contract.json",
+            "sha256": "4d1d4c62497936e4266bfaf29420111526e0ebd43ea2678d9d4e13fac682bf4d"
+          },
+          {
+            "path": "config/track1/handoff-pin.json",
+            "sha256": "8840c971e90251a43481e4f5ab4f1c44abdfb97607519803cd6fb0845f09d457"
+          },
+          {
+            "path": "config/track1/official-contract-review.json",
+            "sha256": "1dcae58fef36ddd2cae820d5fdd572dce8dd905da2eb728c58228ad46f65ae28"
+          },
+          {
+            "path": "config/track1/protected-population-work-filter-v1.json",
+            "sha256": "3c0d96e7621507498eeda8fc9ddd964fa2626b7f27a8b1e7eef4434d6c5d719e"
+          },
+          {
+            "path": "config/track1/public-population-development-derivation.json",
+            "sha256": "9070da8186a46ccfebec33cb16607f9b8e869fa064016bf649e0674462cf0afd"
+          },
+          {
+            "path": "config/track1/public-ranking-development-policy-family.json",
+            "sha256": "3b1ee132e60aa244041e2747b9afb92a50ea346e7a946b8a242a39394c422a42"
+          },
+          {
+            "path": "config/track1/regulatory-index-pin.json",
+            "sha256": "a7cbdb6f6e0ccf5c08b42bc559b7984a1e68ee99446893b466482f7c0bffd08d"
+          },
+          {
+            "path": "config/track1/runtime-image.json",
+            "sha256": "b3528764e14a444456bbaf0b6a80aac8137315dcb06748c4cbc153f26f963ab1"
+          },
+          {
+            "path": "config/track1/submission-acceptance-profile.json",
+            "sha256": "5200cd15d33b813f9b21ed42acfc8bbb0df59c684ec2daf07062e49b4b86f7e4"
+          },
+          {
+            "path": "config/track1/vcf-evidence-policy-v1.json",
+            "sha256": "9fc5f5571129085542f219c5f6543344388f75bd5ee3899ed315b550ec2c70ce"
+          },
+          {
+            "path": "config/track2/decision-policy-g0-g7-v1.json",
+            "sha256": "5b5a53483f4f1f588e09c91a92d30e4bf4ef2d9af6efeb59618992e0196eeeea"
+          },
+          {
+            "path": "config/track2/diagnosis-runtime.json",
+            "sha256": "9a12cbb1e81d1d809957b4bf816a4e1fa8537f077fe029fbdc754b7982664e34"
+          },
+          {
+            "path": "config/track2/discovery-builder-runtime.json",
+            "sha256": "f3a1a1fb7200163be3de89b098ef02ebd9b6d77b7e8456bc3e60e9b99138a5f6"
+          },
+          {
+            "path": "config/track2/discovery-runtime.json",
+            "sha256": "2ba070fb60f978e87d845f7a4d62007b58cd7dbbeca42bc04d89b656b91e34a7"
+          },
+          {
+            "path": "config/track2/discovery-sources.json",
+            "sha256": "e55d9d35b2a130b19acc76f3d1ff064ab3a50050c18a29d6c9be6ebcb3d83d46"
+          },
+          {
+            "path": "config/track2/exploratory-policy-v1.json",
+            "sha256": "426dd87377b645d7aeeddffb2777a8a4fbdd24654fc24a566a28c559ce55f363"
+          },
+          {
+            "path": "config/track2/functional-sources.json",
+            "sha256": "23d42b19ec122d317c7df255260224af0132ccdc96288c8e92ef84bdddaf1aab"
+          },
+          {
+            "path": "config/track2/installed-public-evidence.json",
+            "sha256": "11ee2985fe1eaa9b9c14288ef296b7099f52c00a98c731315eb354f41dfec322"
+          },
+          {
+            "path": "config/track2/public-expansion-policy-v1.json",
+            "sha256": "bae1ae607ed614d15f3052f0b74664bdc5945bd6a1edbb73e8b31d41680b7093"
+          },
+          {
+            "path": "config/track2/record-registry-v1.json",
+            "sha256": "0596560b88828a31444a10ab6a2180b67090e6c493e70dbda7ae98491787e7cc"
+          },
+          {
+            "path": "config/track2/report-presentation-v1.json",
+            "sha256": "494e14eb1587e763f67a2d16ce27d8bc9ef2a526ad7ffe682063fa06598be1cc"
+          },
+          {
+            "path": "config/track2/source-domain-matrix-v1.json",
+            "sha256": "e3e234a70754bfc9ed53f1f8c16bcaa6f05532358458303387b5df4a3c4d0453"
+          }
+        ],
+        "rule": "Retain every declared source and manifest digest. A new timestamp does not reproduce a frozen manifest.",
+        "consumer_pin_source": null
+      },
+      "acquisition": null,
+      "producer": {
+        "command": null,
+        "inputs": [
+          "installed checkout"
+        ],
+        "image": null,
+        "completion": "The owner validates input bindings before publishing complete outputs. Interrupted outputs cannot supply completion."
+      },
+      "destinations": [
+        "config/track1",
+        "config/track2",
+        "schemas/track1",
+        "schemas/track2"
+      ],
+      "notices": [
+        "https://creativecommons.org/licenses/by/4.0/",
+        "SageBio public challenge evaluator; upstream credits Stenton et al. (2024), CAGI6 RGP assessment methodology"
+      ],
+      "availability": {
+        "status": "included",
+        "limit": "Retain the declared checkout files."
+      },
+      "required_records": [
+        {
+          "path": "package manifest",
+          "contract": "Installed code, policy and schema hashes in each immutable package."
+        }
+      ]
+    },
+    {
+      "id": "discovery-catalog",
+      "version": "v1",
+      "consumers": [
+        "track2 setup",
+        "track2 run",
+        "public Track 2 reconstruction"
+      ],
+      "role": "required",
+      "contracts": [
+        {
+          "path": "config/track2/discovery-sources.json",
+          "sha256": "e55d9d35b2a130b19acc76f3d1ff064ab3a50050c18a29d6c9be6ebcb3d83d46"
+        }
+      ],
+      "integrity": {
+        "rule": "Bind source manifests, producer code and runtime dependencies."
+      },
+      "acquisition": [
+        "./track2",
+        "prepare-discovery-resources",
+        "--reference-root",
+        "REFERENCE_ROOT"
+      ],
+      "producer": {
+        "command": "genosapiens.track2_discovery_resources.build_catalog",
+        "inputs": [
+          "open-targets",
+          "open-targets-drugs",
+          "lincs-metadata",
+          "lincs-matrix",
+          "fda"
+        ],
+        "image": "track2-discovery-resources",
+        "completion": "Publish only after source authentication and complete output validation.",
+        "execution_context": "Run inside the declared image with the checkout and selected public reference root mounted."
+      },
+      "destinations": [
+        "derived/track2/discovery"
+      ],
+      "required_records": [
+        {
+          "path": "derived/track2/discovery/manifest.json",
+          "contract": "genosapiens.track2_discovery_resources.build_catalog"
+        }
+      ],
+      "notices": [
+        "ATTRIBUTION.md",
+        "Retain Open Targets and other source notices."
+      ],
+      "availability": {
+        "status": "producer_declared",
+        "limit": "Requires the declared sources and runtime images."
+      }
+    },
+    {
+      "id": "gene-metadata",
+      "version": "v1",
+      "consumers": [
+        "track2 setup",
+        "track2 run"
+      ],
+      "role": "required",
+      "contracts": [
+        {
+          "path": "config/track2/discovery-sources.json",
+          "sha256": "e55d9d35b2a130b19acc76f3d1ff064ab3a50050c18a29d6c9be6ebcb3d83d46"
+        }
+      ],
+      "integrity": {
+        "rule": "Bind source manifests, producer code and runtime dependencies."
+      },
+      "acquisition": [
+        "./track2",
+        "setup",
+        "--rules",
+        "OFFICIAL_RULES",
+        "--reference-root",
+        "REFERENCE_ROOT"
+      ],
+      "producer": {
+        "command": "genosapiens.track2_report_gene_metadata.prepare_gene_metadata",
+        "inputs": [
+          "open-targets"
+        ],
+        "image": "track1-pipeline",
+        "completion": "Publish only after source authentication and complete output validation.",
+        "execution_context": "Run inside the declared image with the checkout and selected public reference root mounted."
+      },
+      "destinations": [
+        ".track2-packages"
+      ],
+      "required_records": [
+        {
+          "path": ".track2-packages/manifest.json",
+          "contract": "genosapiens.track2_report_gene_metadata.prepare_gene_metadata"
+        }
+      ],
+      "notices": [
+        "ATTRIBUTION.md",
+        "Retain Open Targets and other source notices."
+      ],
+      "availability": {
+        "status": "producer_declared",
+        "limit": "Requires the declared sources and runtime images."
+      }
+    }
+  ],
+  "source_pins": {
+    "path": "config/installation/source-pins.json",
+    "sha256": "62a5da085f8e4bd8c0fbdb9fb6a6db91ed273a348231e060d2f244cf86c0ac19"
+  },
+  "images": [
+    {
+      "image": "genosapiens/track1-pipeline:0.1.0@sha256:640ba2fa699cc8ed677ed19f57aa39d256f05ff8377cf745f8f12131b95b0b92",
+      "error": null,
+      "acquisition": [
+        "docker",
+        "pull",
+        "genosapiens/track1-pipeline:0.1.0@sha256:640ba2fa699cc8ed677ed19f57aa39d256f05ff8377cf745f8f12131b95b0b92"
+      ],
+      "availability_status": "registry_manifest_found",
+      "checked_utc_date": "2026-10-19",
+      "layers_downloaded": false,
+      "id": "track1-pipeline",
+      "recipe": {
+        "path": "docker/track1-pipeline.Dockerfile",
+        "sha256": "8a7aea58773ab55582ba93bcc3ac2300a874c85971e39116df0409a9f13a3051"
+      },
+      "construction_limit": "The build requires all pinned inputs. A new digest needs explicit validation and binding.",
+      "dependency_locks": [
+        {
+          "path": "requirements/track1-pipeline.lock",
+          "sha256": "72ebfb25031ff260a9acfea3e098b5fb58d800e725120db91428775926266f1a"
+        }
+      ],
+      "resulting_image_policy": "A different digest requires explicit validation and binding under requirements/supply-chain-policy.json.",
+      "construction_command": [
+        "docker",
+        "build",
+        "--file",
+        "docker/track1-pipeline.Dockerfile",
+        "--tag",
+        "genosapiens/track1-pipeline:local",
+        "."
+      ],
+      "consumers": [
+        "track1 run",
+        "track2 setup",
+        "track2 run",
+        "public Track 2 reconstruction"
+      ],
+      "role": "required",
+      "version": "sha256:640ba2fa699cc8ed677ed19f57aa39d256f05ff8377cf745f8f12131b95b0b92",
+      "destination": "Local Docker image store",
+      "notices": [
+        "ATTRIBUTION.md",
+        "Base images and bundled dependencies retain their own licenses.",
+        "requirements/supply-chain-policy.json"
+      ],
+      "base_images": [
+        "ensemblorg/ensembl-vep@sha256:f22d1f89b28c6c4caf043ddb2269fdfff8940364da589cadbbabc6212a436949",
+        "python:3.12.11-slim-bookworm@sha256:519591d6871b7bc437060736b9f7456b8731f1499a57e22e6c285135ae657bf7"
+      ],
+      "build_inputs": "All COPY and checksum-bound ADD inputs in the bound recipe, plus its declared language dependency files."
+    },
+    {
+      "image": "genosapiens/track2-lincs@sha256:5f23dd9312c0521569a5ed2d4d5ee71e9173726daf7d581f91a33f13f7283ded",
+      "error": "no such manifest: docker.io/genosapiens/track2-lincs@sha256:5f23dd9312c0521569a5ed2d4d5ee71e9173726daf7d581f91a33f13f7283ded\n",
+      "acquisition": [
+        "docker",
+        "pull",
+        "genosapiens/track2-lincs@sha256:5f23dd9312c0521569a5ed2d4d5ee71e9173726daf7d581f91a33f13f7283ded"
+      ],
+      "availability_status": "registry_manifest_unavailable",
+      "checked_utc_date": "2026-10-19",
+      "layers_downloaded": false,
+      "id": "track2-lincs",
+      "recipe": {
+        "path": "docker/track2-lincs.Dockerfile",
+        "sha256": "ea850542a8b1a4c1b92602093f9d431735518b189da085b840b698912a5d23d3"
+      },
+      "construction_limit": "The signaturesearch base has no committed complete construction recipe.",
+      "dependency_locks": [
+        {
+          "path": "requirements/track2-signaturesearch.provenance.json",
+          "sha256": "f39af01b3eaa67312ccdc6a4dcc24f9032ef0e00324ae7c7dda22211ffb39df7"
+        },
+        {
+          "path": "requirements/track2-signaturesearch-r.csv",
+          "sha256": "22e19d59d35b673757ec60782256500104ac0a9d321f934fc282eb0fc3f1382b"
+        }
+      ],
+      "resulting_image_policy": "A different digest requires explicit validation and binding under requirements/supply-chain-policy.json.",
+      "dependency_inventory_is_build_lock": false,
+      "base_image": "genosapiens/track2-signaturesearch@sha256:98ae55f3af076e7d392beb763cf6dabee06680d11dfd8fa82549cf1bd0fe2a40",
+      "construction_command": [
+        "docker",
+        "build",
+        "--file",
+        "docker/track2-lincs.Dockerfile",
+        "--tag",
+        "genosapiens/track2-lincs:local",
+        "."
+      ],
+      "consumers": [
+        "track2 run",
+        "public Track 2 reconstruction"
+      ],
+      "role": "required",
+      "version": "sha256:5f23dd9312c0521569a5ed2d4d5ee71e9173726daf7d581f91a33f13f7283ded",
+      "destination": "Local Docker image store",
+      "notices": [
+        "ATTRIBUTION.md",
+        "Base images and bundled dependencies retain their own licenses.",
+        "requirements/supply-chain-policy.json"
+      ],
+      "base_images": [
+        "genosapiens/track2-signaturesearch@sha256:98ae55f3af076e7d392beb763cf6dabee06680d11dfd8fa82549cf1bd0fe2a40"
+      ],
+      "build_inputs": "All COPY and checksum-bound ADD inputs in the bound recipe, plus its declared language dependency files."
+    },
+    {
+      "image": "genosapiens/track2-discovery-resources@sha256:65dce595299c57a0096b41aae81cab298110e3087597549f2f75f8bd7741f2b9",
+      "error": "no such manifest: docker.io/genosapiens/track2-discovery-resources@sha256:65dce595299c57a0096b41aae81cab298110e3087597549f2f75f8bd7741f2b9\n",
+      "acquisition": [
+        "docker",
+        "pull",
+        "genosapiens/track2-discovery-resources@sha256:65dce595299c57a0096b41aae81cab298110e3087597549f2f75f8bd7741f2b9"
+      ],
+      "availability_status": "registry_manifest_unavailable",
+      "checked_utc_date": "2026-10-19",
+      "layers_downloaded": false,
+      "id": "track2-discovery-resources",
+      "recipe": {
+        "path": "docker/track2-discovery-resources.Dockerfile",
+        "sha256": "ffb9f9075d778cbd664307408ca98f1c9876ce7df9b6175044ca199f007759fb"
+      },
+      "construction_limit": "The build requires all pinned inputs. A new digest needs explicit validation and binding.",
+      "dependency_locks": [
+        {
+          "path": "requirements/track2-discovery-resources.lock",
+          "sha256": "6c2cc29174bede03f7c1514c6205f177df6bc0fa14d28fe54d41eb7072cad3f8"
+        },
+        {
+          "path": "requirements/track2-discovery-resources.provenance.json",
+          "sha256": "26a40b8c8b5dc2d3b557ce1390a955a966e7f78e0aa726fa8775e4d07361bbef"
+        },
+        {
+          "path": "requirements/track2-discovery-resources.txt",
+          "sha256": "15d148957f1c8c61df172a590ee3cc580f4113242a5b669305d5022fc9646e1f"
+        }
+      ],
+      "resulting_image_policy": "A different digest requires explicit validation and binding under requirements/supply-chain-policy.json.",
+      "construction_command": [
+        "docker",
+        "build",
+        "--file",
+        "docker/track2-discovery-resources.Dockerfile",
+        "--tag",
+        "genosapiens/track2-discovery-resources:local",
+        "."
+      ],
+      "consumers": [
+        "track2 prepare-discovery-resources",
+        "track2 setup",
+        "track2 run",
+        "public Track 2 reconstruction"
+      ],
+      "role": "required",
+      "version": "sha256:65dce595299c57a0096b41aae81cab298110e3087597549f2f75f8bd7741f2b9",
+      "destination": "Local Docker image store",
+      "notices": [
+        "ATTRIBUTION.md",
+        "Base images and bundled dependencies retain their own licenses.",
+        "requirements/supply-chain-policy.json"
+      ],
+      "base_images": [
+        "genosapiens/track1-pipeline@sha256:640ba2fa699cc8ed677ed19f57aa39d256f05ff8377cf745f8f12131b95b0b92"
+      ],
+      "build_inputs": "All COPY and checksum-bound ADD inputs in the bound recipe, plus its declared language dependency files."
+    },
+    {
+      "image": "genosapiens/track2-signaturesearch@sha256:98ae55f3af076e7d392beb763cf6dabee06680d11dfd8fa82549cf1bd0fe2a40",
+      "error": "no such manifest: docker.io/genosapiens/track2-signaturesearch@sha256:98ae55f3af076e7d392beb763cf6dabee06680d11dfd8fa82549cf1bd0fe2a40\n",
+      "acquisition": [
+        "docker",
+        "pull",
+        "genosapiens/track2-signaturesearch@sha256:98ae55f3af076e7d392beb763cf6dabee06680d11dfd8fa82549cf1bd0fe2a40"
+      ],
+      "availability_status": "registry_manifest_unavailable",
+      "checked_utc_date": "2026-10-19",
+      "layers_downloaded": false,
+      "id": "track2-signaturesearch",
+      "recipe": null,
+      "construction_limit": "The signaturesearch base has no committed complete construction recipe.",
+      "dependency_locks": [
+        {
+          "path": "requirements/track2-signaturesearch.provenance.json",
+          "sha256": "f39af01b3eaa67312ccdc6a4dcc24f9032ef0e00324ae7c7dda22211ffb39df7"
+        },
+        {
+          "path": "requirements/track2-signaturesearch-r.csv",
+          "sha256": "22e19d59d35b673757ec60782256500104ac0a9d321f934fc282eb0fc3f1382b"
+        }
+      ],
+      "resulting_image_policy": "A different digest requires explicit validation and binding under requirements/supply-chain-policy.json.",
+      "dependency_inventory_is_build_lock": false,
+      "base_image": "bioconductor/bioconductor_docker@sha256:e34177896c1579f66d48b756e4229b58237499183a089da084af72d7aba1d40a",
+      "consumers": [
+        "track2-lincs construction"
+      ],
+      "role": "required",
+      "version": "sha256:98ae55f3af076e7d392beb763cf6dabee06680d11dfd8fa82549cf1bd0fe2a40",
+      "destination": "Local Docker image store",
+      "notices": [
+        "ATTRIBUTION.md",
+        "Base images and bundled dependencies retain their own licenses.",
+        "requirements/supply-chain-policy.json"
+      ],
+      "base_images": [
+        "bioconductor/bioconductor_docker@sha256:e34177896c1579f66d48b756e4229b58237499183a089da084af72d7aba1d40a"
+      ],
+      "build_inputs": "Incomplete historical construction. See the retained dependency inventory and explicit installation limit."
+    },
+    {
+      "id": "reference-builder",
+      "image": null,
+      "acquisition": null,
+      "recipe": {
+        "path": "docker/reference-builder.Dockerfile",
+        "sha256": "55c20e3286a7a4fedf2ae9e16b153ce5eb7bd0b04100dc163b67fde2beffd9a7"
+      },
+      "dependency_locks": [
+        {
+          "path": "requirements/reference-builder.lock",
+          "sha256": "189f521c3484cd4f50a123afa1f153858d17b57ccbcf1e5e351bb9f2846b84b7"
+        },
+        {
+          "path": "requirements/reference-builder.txt",
+          "sha256": "a93279d9605155da84e56799f7bb7686c9d356d2270fc1b345d8133e9a4786ea"
+        }
+      ],
+      "availability_status": "construction_path_only",
+      "construction_limit": "Build inputs require acquisition. A resulting digest needs validation and explicit binding.",
+      "construction_command": [
+        "docker",
+        "build",
+        "--file",
+        "docker/reference-builder.Dockerfile",
+        "--tag",
+        "genosapiens/reference-builder:local",
+        "."
+      ],
+      "resulting_image_policy": "Validate under requirements/supply-chain-policy.json before explicit binding.",
+      "consumers": [
+        "historical frozen reference builders"
+      ],
+      "role": "construction_only",
+      "version": "unbound_local_build",
+      "destination": "Local Docker image store",
+      "notices": [
+        "ATTRIBUTION.md",
+        "Base images and bundled dependencies retain their own licenses.",
+        "requirements/supply-chain-policy.json"
+      ],
+      "base_images": [
+        "eclipse-temurin@sha256:fc451894669bc656f81082ced9daddfd8df0d8e8fea659dc26a232f0e0124837",
+        "ensemblorg/ensembl-vep@sha256:f22d1f89b28c6c4caf043ddb2269fdfff8940364da589cadbbabc6212a436949",
+        "python:3.12.11-slim-bookworm@sha256:519591d6871b7bc437060736b9f7456b8731f1499a57e22e6c285135ae657bf7"
+      ],
+      "build_inputs": "All COPY and checksum-bound ADD inputs in the bound recipe, plus its declared language dependency files."
+    }
+  ],
+  "dataset": {
+    "access_url": "https://huggingface.co/datasets/SageBio/mva-hackathon-2026-data",
+    "official_synapse_citation": null,
+    "citation_status": "unresolved"
+  },
+  "production_installation_verified": false,
+  "declaration_scope": "Source metadata and registry manifests only. No production source payload was downloaded or scanned."
+}

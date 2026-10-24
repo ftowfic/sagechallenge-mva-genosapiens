@@ -1,0 +1,6 @@
+{
+  "image": "genosapiens/track1-pipeline@sha256:640ba2fa699cc8ed677ed19f57aa39d256f05ff8377cf745f8f12131b95b0b92",
+  "code_binding": "frozen_current_source_overlay",
+  "network": "none",
+  "raw_input_stage": "construct"
+}

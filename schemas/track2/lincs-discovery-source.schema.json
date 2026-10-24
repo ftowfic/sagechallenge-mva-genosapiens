@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "schema",
+    "matrix",
+    "row_ids",
+    "signature_ids",
+    "expected_dimensions",
+    "block_size",
+    "output"
+  ],
+  "properties": {
+    "schema": {
+      "const": "genosapiens.track2-lincs-discovery-source/v1"
+    },
+    "matrix": {
+      "type": "string"
+    },
+    "row_ids": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string"
+      }
+    },
+    "signature_ids": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string"
+      }
+    },
+    "expected_dimensions": {
+      "type": "object",
+      "required": [
+        "rows",
+        "columns"
+      ],
+      "properties": {
+        "rows": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "columns": {
+          "type": "integer",
+          "minimum": 1
+        }
+      },
+      "additionalProperties": false
+    },
+    "block_size": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 256
+    },
+    "output": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,109 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/ftowfic/sagechallenge-raredisease-genosapiens/schemas/track1/base-release-validation-plan.schema.json",
+  "title": "Genosapiens Track 1 base release validation plan",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "classification", "validation_only", "controlled_use_authorized", "plan_id", "submission_acceptance_profile_sha256", "analysis_profile", "analysis_profile_policy_sha256", "profile_acceptance_sha256", "lifecycle", "evaluator_resource_id", "required_scopes", "required_analysis_modes", "generators", "inputs", "resources", "backgrounds", "oracles", "cases", "metrics", "assessed_subset_accounting", "limitations"],
+  "properties": {
+    "schema": {"const": "genosapiens.track1-base-release-validation-plan"},
+    "classification": {"const": "public"},
+    "validation_only": {"const": true},
+    "controlled_use_authorized": {"const": false},
+    "plan_id": {"$ref": "#/$defs/id"},
+    "submission_acceptance_profile_sha256": {"$ref": "#/$defs/sha256"},
+    "analysis_profile": {"enum": ["focused", "exhaustive"]},
+    "analysis_profile_policy_sha256": {"$ref": "#/$defs/sha256"},
+    "profile_acceptance_sha256": {"$ref": "#/$defs/sha256"},
+    "lifecycle": {"$ref": "#/$defs/lifecycle"},
+    "evaluator_resource_id": {"$ref": "#/$defs/id"},
+    "required_scopes": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"$ref": "#/$defs/id"}},
+    "required_analysis_modes": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"$ref": "#/$defs/id"}},
+    "generators": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/generator"}},
+    "inputs": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/input"}},
+    "resources": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/resource"}},
+    "backgrounds": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/background"}},
+    "oracles": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/oracle"}},
+    "cases": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/case"}},
+    "metrics": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/metric"}},
+    "assessed_subset_accounting": {"const": "publish-denominator-and-exclusions-separately"},
+    "limitations": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}}
+  },
+  "$defs": {
+    "id": {"type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$"},
+    "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "nullableSha256": {"type": ["string", "null"], "pattern": "^[0-9a-f]{64}$"},
+    "criterion": {
+      "type": "object", "additionalProperties": false,
+      "required": ["metric_id", "comparator", "threshold", "derivation_sha256"],
+      "properties": {
+        "metric_id": {"$ref": "#/$defs/id"}, "comparator": {"enum": [">=", "<="]},
+        "threshold": {"type": "string", "pattern": "^(0|[1-9][0-9]*)(\\.[0-9]+)?$"},
+        "derivation_sha256": {"$ref": "#/$defs/sha256"}
+      }
+    },
+    "lifecycle": {
+      "type": "object", "additionalProperties": false,
+      "required": ["state", "held_out_execution", "independence_status", "development_derivation_sha256", "candidate_stack_sha256", "post_held_out_policy_change_sha256", "acceptance_criteria"],
+      "properties": {
+        "state": {"enum": ["development_plan", "held_out_ready", "adaptive_revision"]},
+        "held_out_execution": {"enum": ["blocked", "ready", "adaptive_only"]},
+        "independence_status": {"enum": ["not_evaluated", "prespecified", "invalidated"]},
+        "development_derivation_sha256": {"$ref": "#/$defs/nullableSha256"},
+        "candidate_stack_sha256": {"$ref": "#/$defs/nullableSha256"},
+        "post_held_out_policy_change_sha256": {"$ref": "#/$defs/nullableSha256"},
+        "acceptance_criteria": {"type": "array", "items": {"$ref": "#/$defs/criterion"}}
+      }
+    },
+    "generator": {
+      "type": "object", "additionalProperties": false,
+      "required": ["generator_id", "version", "manifest_sha256"],
+      "properties": {"generator_id": {"$ref": "#/$defs/id"}, "version": {"$ref": "#/$defs/id"}, "manifest_sha256": {"$ref": "#/$defs/sha256"}}
+    },
+    "input": {
+      "type": "object", "additionalProperties": false,
+      "required": ["input_id", "kind", "sha256", "generator_id", "seed"],
+      "properties": {"input_id": {"$ref": "#/$defs/id"}, "kind": {"enum": ["hpo_text", "vcf", "native"]}, "sha256": {"$ref": "#/$defs/sha256"}, "generator_id": {"$ref": "#/$defs/id"}, "seed": {"type": "integer", "minimum": 0}}
+    },
+    "resource": {
+      "type": "object", "additionalProperties": false,
+      "required": ["resource_id", "kind", "descriptor_sha256"],
+      "properties": {"resource_id": {"$ref": "#/$defs/id"}, "kind": {"enum": ["annotation_expectations", "causal_truth", "challenge_evaluator", "comparison_baseline", "genomic_truth", "runner_annotation_resources", "runner_reference", "submission_acceptance_profile"]}, "descriptor_sha256": {"$ref": "#/$defs/sha256"}}
+    },
+    "background": {
+      "type": "object", "additionalProperties": false,
+      "required": ["background_id", "subject_id", "kind", "shared_across_cases", "disclosure"],
+      "properties": {"background_id": {"$ref": "#/$defs/id"}, "subject_id": {"$ref": "#/$defs/id"}, "kind": {"enum": ["HG002", "independent_synthetic"]}, "shared_across_cases": {"type": "boolean"}, "disclosure": {"type": "string", "minLength": 1}}
+    },
+    "oracle": {
+      "type": "object", "additionalProperties": false,
+      "required": ["oracle_id", "role", "source_kind", "resource_id"],
+      "properties": {"oracle_id": {"$ref": "#/$defs/id"}, "role": {"enum": ["genomic_truth", "annotation_expectation", "causal_truth", "comparison_baseline"]}, "source_kind": {"enum": ["giab_hg002", "release_annotation_expectation", "synthetic_causal_truth", "exomiser_comparison"]}, "resource_id": {"$ref": "#/$defs/id"}}
+    },
+    "case": {
+      "type": "object", "additionalProperties": false,
+      "required": ["case_id", "split", "recipe_group_id", "recipe_manifest_sha256", "perturbation_group_id", "perturbation_manifest_sha256", "generator_id", "seed", "background_id", "runner_input_ids", "runner_resource_ids", "causal_truth_oracle_id", "assessed_scopes"],
+      "properties": {
+        "case_id": {"$ref": "#/$defs/id"}, "split": {"enum": ["development", "held_out"]},
+        "recipe_group_id": {"$ref": "#/$defs/id"}, "recipe_manifest_sha256": {"$ref": "#/$defs/sha256"},
+        "perturbation_group_id": {"$ref": "#/$defs/id"}, "perturbation_manifest_sha256": {"$ref": "#/$defs/sha256"},
+        "generator_id": {"$ref": "#/$defs/id"}, "seed": {"type": "integer", "minimum": 0}, "background_id": {"$ref": "#/$defs/id"},
+        "runner_input_ids": {"type": "array", "minItems": 2, "uniqueItems": true, "items": {"$ref": "#/$defs/id"}},
+        "runner_resource_ids": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"$ref": "#/$defs/id"}},
+        "causal_truth_oracle_id": {"$ref": "#/$defs/id"},
+        "assessed_scopes": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"$ref": "#/$defs/id"}}
+      }
+    },
+    "metric": {
+      "type": "object", "additionalProperties": false,
+      "required": ["metric_id", "unit", "numerator", "denominator", "reporting_dimensions", "non_success_statuses", "non_success_accounting"],
+      "properties": {
+        "metric_id": {"$ref": "#/$defs/id"}, "unit": {"$ref": "#/$defs/id"},
+        "numerator": {"$ref": "#/$defs/id"}, "denominator": {"$ref": "#/$defs/id"},
+        "reporting_dimensions": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"$ref": "#/$defs/id"}},
+        "non_success_statuses": {"type": "array", "minItems": 4, "uniqueItems": true, "items": {"enum": ["failed", "timed_out", "truncated", "unsupported"]}},
+        "non_success_accounting": {"enum": ["retained-in-full-roster-denominator", "reported-by-status-including-non-success", "status-retained-measurement-null-assessed-subset-separate"]}
+      }
+    }
+  }
+}

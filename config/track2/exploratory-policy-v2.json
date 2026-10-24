@@ -1,0 +1,162 @@
+{
+  "schema": "genosapiens.track2-exploratory-policy/v2",
+  "version": "2.0.0",
+  "eligibility": {
+    "mechanism": "loss_of_function",
+    "decision": "accepted",
+    "desired_modulation": "increase",
+    "study_required": false,
+    "kind": "restoration_or_compensation_hypothesis"
+  },
+  "actions": {
+    "reported_positive": [
+      "ACTIVATOR",
+      "AGONIST",
+      "PARTIAL AGONIST",
+      "POSITIVE ALLOSTERIC MODULATOR",
+      "POSITIVE MODULATOR",
+      "OPENER",
+      "EXOGENOUS GENE",
+      "EXOGENOUS PROTEIN"
+    ],
+    "assumed_positive": [
+      "MODULATOR",
+      "BINDING AGENT",
+      "STABILISER"
+    ],
+    "reported_negative": [
+      "INHIBITOR",
+      "ANTAGONIST",
+      "ALLOSTERIC ANTAGONIST",
+      "INVERSE AGONIST",
+      "NEGATIVE ALLOSTERIC MODULATOR",
+      "NEGATIVE MODULATOR",
+      "BLOCKER",
+      "DEGRADER",
+      "ANTISENSE INHIBITOR",
+      "RNAI INHIBITOR",
+      "RELEASING AGENT",
+      "GENE EDITING NEGATIVE MODULATOR"
+    ]
+  },
+  "unknown_action": "unclassified",
+  "group_targets": "explicit_mapped_members_with_warning",
+  "automatic_regulator_search": false,
+  "lincs": {
+    "schema": "genosapiens.track2-lincs-policy/v3",
+    "genetic_types": {
+      "oe": "trt_oe",
+      "kd": "trt_sh.cgs"
+    },
+    "method_selection": {
+      "oe+kd": "paired_oe_kd",
+      "kd": "kd_only_reversal",
+      "oe": "oe_only_matching"
+    },
+    "genetic_qc": {
+      "distil_nsample": 2,
+      "distil_cc_q75": 0.2,
+      "tas": 0.2
+    },
+    "drug_qc": {
+      "distil_nsample": 2,
+      "distil_cc_q75": 0.2,
+      "tas": 0.2
+    },
+    "genetic_order": [
+      "-tas",
+      "-distil_cc_q75",
+      "-distil_nsample",
+      "sig_id"
+    ],
+    "drug_times_hours": [
+      6,
+      24
+    ],
+    "features": "measured_landmarks",
+    "minimum_absolute_modz": 1,
+    "minimum_features": 3,
+    "correlation": "spearman_average_tied_ranks",
+    "aggregation": "independent_tissue_directional_flags",
+    "undefined_condition": "retain_exclude_from_flags",
+    "fallback_after_paired_failure": false,
+    "rank_ties": "competition_rank_stable_ingredient_display",
+    "significance": "not_assessed",
+    "column_block_size": 256,
+    "paired_research_minimum_cells": 2,
+    "tissue_membership": "lincs-primary-site/case-whitespace-v1",
+    "genetic_pooling": "per_feature_median_equal_selected_cell_weight",
+    "missing_feature": "exclude_if_any_selected_contributor_missing",
+    "query_scope": "gene_and_primary_site",
+    "drug_scope": "all_admitted_conditions_in_tissue",
+    "score": "support_minus_conflict_over_evaluable_tissues",
+    "paired_research_eligibility": "not_applicable"
+  },
+  "completion": {
+    "every_objective_requires_completed_search": true,
+    "every_executable_search_requires_completion": true,
+    "coverage_gaps_allowed": true,
+    "empty_result_is_complete": true,
+    "operational_failure": "incomplete"
+  },
+  "identity": {
+    "version": "fda-active-single-ingredient/1.0.0",
+    "snapshot": "2026-10-16",
+    "application_types": [
+      "NDA",
+      "ANDA",
+      "BLA"
+    ],
+    "submission_type": "ORIG",
+    "submission_status": "AP",
+    "marketing_status_ids": [
+      "1",
+      "2"
+    ],
+    "mixture_separator": ";",
+    "name_resolution": [
+      "unique_preferred_unii",
+      "unique_exact_nonbrand_alias"
+    ],
+    "structural_resolution": [
+      "exact_full_inchikey",
+      "stereo_preserved_parent"
+    ],
+    "spectator_smiles": [
+      "O",
+      "Cl",
+      "Br",
+      "I",
+      "[Na+]",
+      "[K+]",
+      "[Li+]",
+      "[Ca+2]",
+      "[Mg+2]",
+      "CC(=O)O",
+      "O=S(=O)(O)O",
+      "OP(=O)(O)O",
+      "O=[N+]([O-])O",
+      "CS(=O)(=O)O",
+      "Cc1ccc(S(=O)(=O)O)cc1",
+      "O=S(=O)(O)c1ccccc1",
+      "O=C(O)CC(O)(CC(=O)O)C(=O)O",
+      "O=C(O)/C=C/C(=O)O",
+      "O=C(O)/C=C\\C(=O)O",
+      "O=C(O)CCC(=O)O",
+      "O=C(O)C(=O)O",
+      "CC(O)C(=O)O",
+      "C[C@H](O)C(=O)O",
+      "C[C@@H](O)C(=O)O",
+      "O=C(O)C(O)C(O)C(=O)O",
+      "O=C(O)[C@H](O)[C@H](O)C(=O)O",
+      "O=C(O)[C@@H](O)[C@@H](O)C(=O)O",
+      "O=C(O)[C@H](O)[C@@H](O)C(=O)O",
+      "O=C(O)[C@@H](O)[C@H](O)C(=O)O",
+      "O=C(O)CC(O)C(=O)O",
+      "O=C(O)[C@@H](O)[C@H](O)[C@@H](O)[C@H](O)CO"
+    ],
+    "neutralization": "rdkit.Uncharger",
+    "ambiguous_identity": "unresolved",
+    "name_only_compound_matching": false
+  }
+}

@@ -1,0 +1,123 @@
+{
+  "schema": "genosapiens.gnomad-joint-projection",
+  "projection_id": "gnomad-joint-v4.1-frequency-projection-v1",
+  "source": {
+    "resource_id": "gnomad-joint-v4.1-sites",
+    "release": "v4.1",
+    "assembly": "GRCh38",
+    "hail_path": "gs://gcp-public-data--gnomad/release/4.1/ht/joint/gnomad.joint.v4.1.sites.ht",
+    "root_metadata_url": "https://storage.googleapis.com/download/storage/v1/b/gcp-public-data--gnomad/o/release%2F4.1%2Fht%2Fjoint%2Fgnomad.joint.v4.1.sites.ht%2Fmetadata.json.gz?generation=1713312330645979&alt=media",
+    "root_metadata_object_generation": "1713312330645979",
+    "root_metadata_md5_base64": "5qUvnORpLok8DJOxc6jo/w==",
+    "written_hail_version": "0.2.129-41126be2df04",
+    "expected_rows": 909216068,
+    "expected_partitions": 9796,
+    "license": "ODC-ODbL-1.0",
+    "license_url": "https://opendatacommons.org/licenses/odbl/1-0/"
+  },
+  "major_genetic_ancestries": [
+    "afr",
+    "amr",
+    "eas",
+    "mid",
+    "nfe",
+    "sas"
+  ],
+  "region_flags": [
+    "fail_interval_qc",
+    "outside_broad_capture_region",
+    "outside_ukb_capture_region",
+    "outside_broad_calling_region",
+    "outside_ukb_calling_region",
+    "not_called_in_exomes",
+    "not_called_in_genomes"
+  ],
+  "datasets": [
+    {
+      "name": "exomes",
+      "row_field": "exomes",
+      "globals_field": "exomes_globals",
+      "expected_frequency_entries": 31,
+      "expected_faf_entries": 21,
+      "frequency_ancestries": [
+        "afr",
+        "amr",
+        "asj",
+        "eas",
+        "fin",
+        "mid",
+        "nfe",
+        "remaining",
+        "sas"
+      ],
+      "faf_ancestries": [
+        "afr",
+        "amr",
+        "eas",
+        "mid",
+        "nfe",
+        "sas"
+      ],
+      "has_filters": true
+    },
+    {
+      "name": "genomes",
+      "row_field": "genomes",
+      "globals_field": "genomes_globals",
+      "expected_frequency_entries": 34,
+      "expected_faf_entries": 18,
+      "frequency_ancestries": [
+        "afr",
+        "ami",
+        "amr",
+        "asj",
+        "eas",
+        "fin",
+        "mid",
+        "nfe",
+        "remaining",
+        "sas"
+      ],
+      "faf_ancestries": [
+        "afr",
+        "amr",
+        "eas",
+        "nfe",
+        "sas"
+      ],
+      "has_filters": true
+    },
+    {
+      "name": "joint",
+      "row_field": "joint",
+      "globals_field": "joint_globals",
+      "expected_frequency_entries": 34,
+      "expected_faf_entries": 21,
+      "frequency_ancestries": [
+        "afr",
+        "ami",
+        "amr",
+        "asj",
+        "eas",
+        "fin",
+        "mid",
+        "nfe",
+        "remaining",
+        "sas"
+      ],
+      "faf_ancestries": [
+        "afr",
+        "amr",
+        "eas",
+        "mid",
+        "nfe",
+        "sas"
+      ],
+      "has_filters": false
+    }
+  ],
+  "discordance": {
+    "contingency_index_dataset": "joint",
+    "discrepant_p_value_threshold": 0.0001
+  }
+}

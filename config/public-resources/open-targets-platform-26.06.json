@@ -1,0 +1,154 @@
+{
+  "schema": "genosapiens.open-targets-contract",
+  "resource": "open-targets-platform",
+  "release": "26.06",
+  "published_date": "2026-06-24",
+  "croissant_date_published": "2026-06-23",
+  "base_url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06",
+  "output_prefix": "releases/open-targets/26.06",
+  "assembly": "GRCh38",
+  "license": "CC-BY-4.0",
+  "croissant_license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "metadata": [
+    {
+      "name": "croissant.json",
+      "size_bytes": 640827,
+      "sha1": "5e87aa7e5a2c8c4dd23e505db14d84b657a3ec1f",
+      "sha256": "a05ab463995995e9f272560d4e27243784ece396d0b143838f15bc3cfdc268ae"
+    },
+    {
+      "name": "release_data_integrity",
+      "size_bytes": 4937279,
+      "sha1": "e49fc309e6039938e86ad763634abd85e470314e",
+      "sha256": "86aafe43072415c6e9f6aa2364b1893959b8aff492a0ced10c035631335a4d8a"
+    },
+    {
+      "name": "release_data_integrity.sha1",
+      "size_bytes": 65,
+      "sha1": "4948f3d7d6c1211942b10a8232ff330ff449bb56",
+      "sha256": "7adceb51e3ea9038a7b978caab5fb4fa57a4acc1368e39f097e6f8e5e52fd2ef"
+    }
+  ],
+  "datasets": [
+    {
+      "name": "association_by_datasource_direct",
+      "partition_count": 14,
+      "size_bytes": 1194730300,
+      "row_count": 7842921,
+      "partition_size_bytes": [84290551, 83153049, 83155797, 83839028, 84583641, 83508113, 95378040, 83253680, 83347427, 83369153, 83189845, 84341444, 84075969, 95244563]
+    },
+    {
+      "name": "disease",
+      "partition_count": 1,
+      "size_bytes": 7150787,
+      "row_count": 47080,
+      "partition_size_bytes": [7150787]
+    },
+    {
+      "name": "disease_hpo",
+      "partition_count": 1,
+      "size_bytes": 1804225,
+      "row_count": 31529,
+      "partition_size_bytes": [1804225]
+    },
+    {
+      "name": "disease_phenotype",
+      "partition_count": 1,
+      "size_bytes": 7999495,
+      "row_count": 181939,
+      "partition_size_bytes": [7999495]
+    },
+    {
+      "name": "evidence_clingen",
+      "partition_count": 1,
+      "size_bytes": 558900,
+      "row_count": 4537,
+      "partition_size_bytes": [558900]
+    },
+    {
+      "name": "evidence_eva",
+      "partition_count": 8,
+      "size_bytes": 445387990,
+      "row_count": 3998459,
+      "partition_size_bytes": [61053193, 50855436, 60888738, 50377457, 61024832, 60558790, 50298078, 50331466]
+    },
+    {
+      "name": "evidence_gene2phenotype",
+      "partition_count": 1,
+      "size_bytes": 570426,
+      "row_count": 5050,
+      "partition_size_bytes": [570426]
+    },
+    {
+      "name": "evidence_genomics_england",
+      "partition_count": 1,
+      "size_bytes": 4355571,
+      "row_count": 47102,
+      "partition_size_bytes": [4355571]
+    },
+    {
+      "name": "evidence_impc",
+      "partition_count": 25,
+      "size_bytes": 1240347338,
+      "row_count": 7758975,
+      "partition_size_bytes": [31359564, 74851206, 30139508, 66465269, 141200235, 153061383, 32543759, 45972248, 74973030, 44788553, 31351608, 31570692, 31417045, 30245912, 31415311, 66612314, 31353269, 30200552, 28897170, 29063032, 44626567, 31401711, 31341998, 28949814, 66545588]
+    },
+    {
+      "name": "evidence_orphanet",
+      "partition_count": 1,
+      "size_bytes": 759911,
+      "row_count": 7461,
+      "partition_size_bytes": [759911]
+    },
+    {
+      "name": "evidence_uniprot_variants",
+      "partition_count": 1,
+      "size_bytes": 3020107,
+      "row_count": 36722,
+      "partition_size_bytes": [3020107]
+    },
+    {
+      "name": "go",
+      "partition_count": 1,
+      "size_bytes": 2872291,
+      "row_count": 48321,
+      "partition_size_bytes": [2872291]
+    },
+    {
+      "name": "mouse_phenotype",
+      "partition_count": 1,
+      "size_bytes": 9294368,
+      "row_count": 203591,
+      "partition_size_bytes": [9294368]
+    },
+    {
+      "name": "so",
+      "partition_count": 1,
+      "size_bytes": 26378,
+      "row_count": 2615,
+      "partition_size_bytes": [26378]
+    },
+    {
+      "name": "target",
+      "partition_count": 3,
+      "size_bytes": 89931558,
+      "row_count": 78691,
+      "partition_size_bytes": [30365704, 29725904, 29839950]
+    },
+    {
+      "name": "variant",
+      "partition_count": 25,
+      "size_bytes": 3461449327,
+      "row_count": 7538243,
+      "partition_size_bytes": [141394041, 153569471, 126755518, 163539512, 128722808, 145401516, 140062184, 166518978, 178093242, 178740083, 155759539, 191966238, 119904689, 124956124, 165912146, 119194577, 119629805, 109474722, 99547815, 127464828, 104664847, 129142485, 126694594, 115687610, 128651955]
+    }
+  ],
+  "semantic_joins": [
+    {
+      "source": "disease_phenotype/phenotype",
+      "target": "disease_hpo/id",
+      "source_prefix": "HP_",
+      "reason": "Croissant omits this reference for HPO-valued phenotype rows; MONDO/EFO phenotype identifiers are intentionally excluded."
+    }
+  ]
+}

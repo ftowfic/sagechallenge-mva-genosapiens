@@ -1,0 +1,26 @@
+{
+  "schema": "genosapiens.track2-derived-scoring-policy/v1",
+  "policy_id": "increase-function-strength/v1",
+  "supported_direction": "increase",
+  "methods": {
+    "paired_oe_kd": "(r_oe-r_kd)/2",
+    "oe_only_matching": "r_oe",
+    "kd_only_reversal": "-r_kd"
+  },
+  "aggregation": "median_doses_then_equal_time_cell_tissue_means/v1",
+  "source_decisions": "preserve",
+  "calibration": {
+    "schema": "genosapiens.track2-frozen-background/v1",
+    "draws": 10000,
+    "seed": 0,
+    "generator": "sha256-counter-fisher-yates-rejection/v1",
+    "numerical_contract": "python-binary64-spearman-retained-ranks/v1",
+    "randomization": "selected_gene_labels_shared_by_query_paired_values_together",
+    "percentile": "100*(2*L+E)/(2*B)",
+    "scope": "all_evaluable_frozen_fda_eligible_ingredients",
+    "runtime_preparation": false
+  },
+  "ranking": ["descending_exact_percentile_fraction", "descending_unrounded_strength"],
+  "ties": "competition_rank_stable_identity_display",
+  "source_objective": "retain_source_selected_representative"
+}

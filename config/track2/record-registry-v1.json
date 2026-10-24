@@ -1,0 +1,624 @@
+{
+  "schema": "genosapiens.track2-record-registry/v1",
+  "record_schema": "genosapiens.track2-record/v1",
+  "missing_states": [
+    "present",
+    "unknown",
+    "not_applicable",
+    "not_assessed",
+    "unavailable",
+    "absent_from_source",
+    "conflicting",
+    "contradicted"
+  ],
+  "artifact_roots": {
+    "public": [
+      "derived/track2/",
+      "manifests/track2/"
+    ],
+    "controlled": [
+      "controlled-work/track2/"
+    ]
+  },
+  "public_manifest_forbidden_fields": [
+    "case_id",
+    "case_identifier",
+    "controlled_path",
+    "family_id",
+    "family_identifier",
+    "handoff_id",
+    "handoff_path",
+    "handoff_sha256",
+    "known_linked_later_disclosure_sha256",
+    "selection_acknowledgement",
+    "selection_acknowledgement_sha256",
+    "manual_review_log",
+    "participant_id",
+    "participant_identifier",
+    "patient_id",
+    "patient_identifier",
+    "reviewer_email",
+    "reviewer_id",
+    "reviewer_identity",
+    "reviewer_log",
+    "reviewer_name",
+    "sample_id",
+    "subject_id",
+    "track1_run_id",
+    "track2_run_id",
+    "source_selection_sha256",
+    "diagnosis_package_sha256",
+    "source_vcf_sha256",
+    "selected_sample",
+    "scope_sha256"
+  ],
+  "record_types": {
+    "research_submission_decision": {
+      "id_prefix": "research-submission-decision",
+      "classification": [
+        "public",
+        "controlled"
+      ],
+      "required_payload_fields": [
+        "candidate_id",
+        "eligible",
+        "scientific_tier",
+        "reason_codes",
+        "gaps",
+        "evidence_ids",
+        "review_id",
+        "review_state",
+        "policy_version",
+        "input_sha256"
+      ],
+      "nullable_payload_fields": [
+        "review_id"
+      ],
+      "reference_roles": {
+        "candidate": {
+          "targets": [
+            "drug_candidate"
+          ],
+          "minimum": 1,
+          "maximum": 1
+        },
+        "evidence": {
+          "targets": [
+            "evidence_record"
+          ],
+          "minimum": 0,
+          "maximum": null
+        }
+      }
+    },
+    "public_query": {
+      "id_prefix": "public-query",
+      "classification": [
+        "public"
+      ],
+      "required_payload_fields": [
+        "adapter",
+        "entity_type",
+        "parameters",
+        "provenance",
+        "seed_id",
+        "status"
+      ],
+      "nullable_payload_fields": [],
+      "reference_roles": {}
+    },
+    "source_snapshot": {
+      "id_prefix": "source-snapshot",
+      "classification": [
+        "public"
+      ],
+      "required_payload_fields": [
+        "accessed_on",
+        "license",
+        "publisher",
+        "query_id",
+        "redistribution",
+        "response_sha256",
+        "status",
+        "transformation"
+      ],
+      "nullable_payload_fields": [
+        "response_sha256"
+      ],
+      "reference_roles": {
+        "query": {
+          "targets": [
+            "public_query"
+          ],
+          "minimum": 1,
+          "maximum": 1
+        }
+      }
+    },
+    "biomedical_entity": {
+      "id_prefix": "biomedical-entity",
+      "classification": [
+        "public"
+      ],
+      "required_payload_fields": [
+        "aliases",
+        "entity_type",
+        "preferred_name",
+        "stable_identifiers"
+      ],
+      "nullable_payload_fields": [
+        "preferred_name"
+      ],
+      "reference_roles": {
+        "source": {
+          "targets": [
+            "source_snapshot"
+          ],
+          "minimum": 1,
+          "maximum": null
+        }
+      }
+    },
+    "evidence_record": {
+      "id_prefix": "evidence-record",
+      "classification": [
+        "public"
+      ],
+      "required_payload_fields": [
+        "applicability",
+        "assertion_type",
+        "context",
+        "directness",
+        "independence",
+        "lineage_key",
+        "object",
+        "predicate",
+        "result_direction",
+        "risk_of_bias",
+        "study_quality",
+        "subject",
+        "translational_maturity"
+      ],
+      "nullable_payload_fields": [
+        "object",
+        "result_direction"
+      ],
+      "reference_roles": {
+        "source": {
+          "targets": [
+            "source_snapshot"
+          ],
+          "minimum": 1,
+          "maximum": null
+        }
+      }
+    },
+    "causal_edge": {
+      "id_prefix": "causal-edge",
+      "classification": [
+        "public"
+      ],
+      "required_payload_fields": [
+        "context",
+        "directness",
+        "from_id",
+        "sign",
+        "to_id"
+      ],
+      "nullable_payload_fields": [],
+      "reference_roles": {
+        "evidence": {
+          "targets": [
+            "evidence_record"
+          ],
+          "minimum": 1,
+          "maximum": null
+        }
+      }
+    },
+    "mechanism_readiness": {
+      "id_prefix": "mechanism-readiness",
+      "classification": [
+        "public",
+        "controlled"
+      ],
+      "required_payload_fields": [
+        "conflicts",
+        "genotype_completeness",
+        "missing_direction",
+        "phase",
+        "readiness_state",
+        "subtype_applicability",
+        "technical_support",
+        "transcript_relevance"
+      ],
+      "nullable_payload_fields": [],
+      "reference_roles": {
+        "analysis_input": {
+          "targets": [
+            "analysis_input"
+          ],
+          "minimum": 1,
+          "maximum": 1
+        }
+      }
+    },
+    "mechanism_model": {
+      "id_prefix": "mechanism-model",
+      "classification": [
+        "public",
+        "controlled"
+      ],
+      "required_payload_fields": [
+        "allele_models",
+        "explicit_unknowns",
+        "joint_model",
+        "lesion",
+        "natural_history",
+        "stage",
+        "tissue"
+      ],
+      "nullable_payload_fields": [
+        "joint_model",
+        "lesion",
+        "natural_history",
+        "stage",
+        "tissue"
+      ],
+      "reference_roles": {
+        "readiness": {
+          "targets": [
+            "mechanism_readiness"
+          ],
+          "minimum": 1,
+          "maximum": 1
+        },
+        "edge": {
+          "targets": [
+            "causal_edge"
+          ],
+          "minimum": 1,
+          "maximum": null
+        }
+      }
+    },
+    "endpoint_selection": {
+      "id_prefix": "endpoint-selection",
+      "classification": [
+        "public",
+        "controlled"
+      ],
+      "required_payload_fields": [
+        "causal_proximity",
+        "endpoint_class",
+        "expected_direction",
+        "meaningful_interpretation",
+        "measurement",
+        "modifiability",
+        "stage",
+        "tissue"
+      ],
+      "nullable_payload_fields": [
+        "meaningful_interpretation",
+        "stage",
+        "tissue"
+      ],
+      "reference_roles": {
+        "mechanism": {
+          "targets": [
+            "mechanism_model"
+          ],
+          "minimum": 1,
+          "maximum": 1
+        },
+        "evidence": {
+          "targets": [
+            "evidence_record"
+          ],
+          "minimum": 0,
+          "maximum": null
+        }
+      }
+    },
+    "intervention_objective": {
+      "id_prefix": "intervention-objective",
+      "classification": [
+        "public",
+        "controlled"
+      ],
+      "required_payload_fields": [
+        "assumptions",
+        "compartment",
+        "desired_change",
+        "direction",
+        "harm_conditions",
+        "stage",
+        "tissue"
+      ],
+      "nullable_payload_fields": [
+        "stage",
+        "tissue"
+      ],
+      "reference_roles": {
+        "endpoint": {
+          "targets": [
+            "endpoint_selection"
+          ],
+          "minimum": 1,
+          "maximum": 1
+        },
+        "mechanism": {
+          "targets": [
+            "mechanism_model"
+          ],
+          "minimum": 1,
+          "maximum": 1
+        }
+      }
+    },
+    "target_hypothesis": {
+      "id_prefix": "target-hypothesis",
+      "classification": [
+        "public",
+        "controlled"
+      ],
+      "required_payload_fields": [
+        "alternatives",
+        "causal_role",
+        "conflicts",
+        "harm_conditions",
+        "required_modulation",
+        "signed_rescue_path",
+        "stage",
+        "target_id",
+        "tissue"
+      ],
+      "nullable_payload_fields": [
+        "stage",
+        "tissue"
+      ],
+      "reference_roles": {
+        "objective": {
+          "targets": [
+            "intervention_objective"
+          ],
+          "minimum": 1,
+          "maximum": 1
+        },
+        "evidence": {
+          "targets": [
+            "evidence_record"
+          ],
+          "minimum": 1,
+          "maximum": null
+        }
+      }
+    },
+    "drug_candidate": {
+      "id_prefix": "drug-candidate",
+      "classification": [
+        "public",
+        "controlled"
+      ],
+      "required_payload_fields": [
+        "active_ingredient_id",
+        "approval_records",
+        "generation_routes",
+        "proposed_paths",
+        "resolution_state"
+      ],
+      "nullable_payload_fields": [],
+      "reference_roles": {
+        "target": {
+          "targets": [
+            "target_hypothesis"
+          ],
+          "minimum": 0,
+          "maximum": null
+        },
+        "evidence": {
+          "targets": [
+            "evidence_record"
+          ],
+          "minimum": 0,
+          "maximum": null
+        }
+      }
+    },
+    "decision_ledger": {
+      "id_prefix": "decision-ledger",
+      "classification": [
+        "public",
+        "controlled"
+      ],
+      "required_payload_fields": [
+        "child_applicability",
+        "dimensions",
+        "gates",
+        "general_mva_applicability",
+        "policy_version",
+        "reason_codes",
+        "review_state",
+        "tier"
+      ],
+      "nullable_payload_fields": [],
+      "reference_roles": {
+        "candidate": {
+          "targets": [
+            "drug_candidate"
+          ],
+          "minimum": 1,
+          "maximum": 1
+        },
+        "evidence": {
+          "targets": [
+            "evidence_record"
+          ],
+          "minimum": 0,
+          "maximum": null
+        }
+      }
+    },
+    "validation_plan": {
+      "id_prefix": "validation-plan",
+      "classification": [
+        "public",
+        "controlled"
+      ],
+      "required_payload_fields": [
+        "controls",
+        "dose_response",
+        "model_qualification",
+        "primary_endpoint",
+        "replicates",
+        "statistical_analysis",
+        "stopping_criteria",
+        "testable_prediction",
+        "toxicity_readouts"
+      ],
+      "nullable_payload_fields": [],
+      "reference_roles": {
+        "candidate": {
+          "targets": [
+            "drug_candidate"
+          ],
+          "minimum": 1,
+          "maximum": 1
+        },
+        "endpoint": {
+          "targets": [
+            "endpoint_selection"
+          ],
+          "minimum": 1,
+          "maximum": 1
+        }
+      }
+    },
+    "report_claim": {
+      "id_prefix": "report-claim",
+      "classification": [
+        "public",
+        "controlled"
+      ],
+      "required_payload_fields": [
+        "claim_kind",
+        "publication_classification",
+        "text",
+        "value"
+      ],
+      "nullable_payload_fields": [
+        "text",
+        "value"
+      ],
+      "reference_roles": {
+        "evidence": {
+          "targets": [
+            "evidence_record",
+            "decision_ledger",
+            "validation_plan"
+          ],
+          "minimum": 0,
+          "maximum": null
+        }
+      }
+    },
+    "coverage_record": {
+      "id_prefix": "coverage-record",
+      "classification": [
+        "public"
+      ],
+      "required_payload_fields": [
+        "bound",
+        "domain",
+        "route",
+        "seed_id",
+        "source",
+        "state",
+        "subtype_id"
+      ],
+      "nullable_payload_fields": [
+        "bound",
+        "subtype_id"
+      ],
+      "reference_roles": {}
+    },
+    "manual_import": {
+      "id_prefix": "manual-import",
+      "classification": [
+        "public"
+      ],
+      "required_payload_fields": [
+        "document_checksum",
+        "document_identity",
+        "document_version",
+        "extracted_fields",
+        "locator",
+        "review_time",
+        "reviewer_role",
+        "uncertainty"
+      ],
+      "nullable_payload_fields": [],
+      "reference_roles": {}
+    },
+    "adjudication": {
+      "id_prefix": "adjudication",
+      "classification": [
+        "public",
+        "controlled"
+      ],
+      "required_payload_fields": [
+        "decision",
+        "independence",
+        "prior_state",
+        "reason",
+        "reviewed_content_sha256",
+        "reviewer_role",
+        "timestamp"
+      ],
+      "nullable_payload_fields": [
+        "reviewed_content_sha256"
+      ],
+      "reference_roles": {
+        "evidence": {
+          "targets": [
+            "evidence_record"
+          ],
+          "minimum": 1,
+          "maximum": null
+        }
+      }
+    },
+    "analysis_input": {
+      "id_prefix": "analysis-input",
+      "classification": [
+        "public",
+        "controlled"
+      ],
+      "required_payload_fields": [
+        "input_origin",
+        "scenario_id",
+        "source_sha256",
+        "review_sha256"
+      ],
+      "nullable_payload_fields": [],
+      "reference_roles": {}
+    },
+    "research_run_manifest": {
+      "id_prefix": "research-run-manifest",
+      "classification": [
+        "public",
+        "controlled"
+      ],
+      "required_payload_fields": [
+        "analysis_origin",
+        "runtime",
+        "bindings",
+        "frozen_envelope_sha256",
+        "outputs",
+        "readiness"
+      ],
+      "nullable_payload_fields": [],
+      "reference_roles": {}
+    }
+  }
+}

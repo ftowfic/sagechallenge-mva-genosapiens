@@ -1,0 +1,77 @@
+{
+  "schema": "genosapiens.portable-source-pins/v1",
+  "fda": [
+    {
+      "file": "drugsfda.zip",
+      "url": "https://www.fda.gov/media/89850/download?attachment",
+      "bytes": 6097688,
+      "sha256": "2b6947d18fb5ef9a94b39043675df90565c7ff1efbb9041e7a1f5a532004c3ff"
+    },
+    {
+      "file": "UNII_Data_20260804.zip",
+      "url": "https://precision.fda.gov/uniisearch/archive/2026-08-04/UNII_Data_20260804.zip",
+      "bytes": 14477857,
+      "sha256": "e768525350d17e0eedfa179e62563226e9da0a3d5bda006d27b7b94600a76ee9"
+    },
+    {
+      "file": "UNIIs_20260804.zip",
+      "url": "https://precision.fda.gov/uniisearch/archive/2026-08-04/UNIIs_20260804.zip",
+      "bytes": 20344194,
+      "sha256": "c63082f452eed6a172bc90a9a09ef54e298373edfca790c82237997b5edf874e"
+    }
+  ],
+  "lincs_metadata": [
+    {
+      "name": "GSE92742_Broad_LINCS_sig_info.txt.gz",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE92nnn/GSE92742/suppl/GSE92742_Broad_LINCS_sig_info.txt.gz",
+      "size": 11124404,
+      "sha256": "19da29c0ee12ddf27f9698cd0da40beaff58657dcde9d382aae068737e831299",
+      "sha512": "3e334edd319b4abc6f879bec125ad78f869f73f0a222279269b54aac04f81877ed6d2cdcd034adf5efdf378329349242bdcd636113ab78617473dbfae43261c6"
+    },
+    {
+      "name": "GSE92742_Broad_LINCS_sig_metrics.txt.gz",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE92nnn/GSE92742/suppl/GSE92742_Broad_LINCS_sig_metrics.txt.gz",
+      "size": 12520228,
+      "sha256": "54f19003e5e3445bc293347cca004eeb066e22e97f5eec50f1605b393e90f466",
+      "sha512": "81b729319fde1144e133ee63a930ead94a79cec12ed311f2e6e0716cce94c68528fd7459c0f3188d1e5aabe389970889e4d6d95fdcd397ea6cfd951d88ea5286"
+    },
+    {
+      "name": "GSE92742_Broad_LINCS_pert_info.txt.gz",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE92nnn/GSE92742/suppl/GSE92742_Broad_LINCS_pert_info.txt.gz",
+      "size": 1138509,
+      "sha256": "b1945b3fde51021865b12269929cc78ccf2665be27f53a4da9336e4ddcf4b42f",
+      "sha512": "cdba99a4a6204ecdd26adb2338a418e60ac3da9e18d6d75214dea87c3cf06e951f9356e876f581dd7d6081014a428a11b6ad93b68486954cddbae5e29177530b"
+    },
+    {
+      "name": "GSE92742_Broad_LINCS_gene_info.txt.gz",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE92nnn/GSE92742/suppl/GSE92742_Broad_LINCS_gene_info.txt.gz",
+      "size": 216692,
+      "sha256": "741216ccc53320119b47ab006de3bcad48963c57087c9e07f50f0d6cd088711a",
+      "sha512": "b2df105ebf7a69799b23130d03b7da769bfd6ab83fd69cbb419c91c78ae069ae3e5d474e09d36e3ac4271f3b7fc56b24caaf1ac5ece9554ea7738b15535dfefd"
+    },
+    {
+      "name": "GSE92742_Broad_LINCS_cell_info.txt.gz",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE92nnn/GSE92742/suppl/GSE92742_Broad_LINCS_cell_info.txt.gz",
+      "size": 2528,
+      "sha256": "88c6ca5ff8bb3cf3af22c2eb8cbe769f9ae8e305a760959b18711877d730d61c",
+      "sha512": "75b5d4cf9b6f3955bfe888ce22ae85134dd9fd053111c0f0d7b02298640269454267b0bdfcb2dc9ab562e0281b332703eb1d94337e57355945ccc3505b609b4a"
+    },
+    {
+      "name": "GSE92742_SHA512SUMS.txt.gz",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE92nnn/GSE92742/suppl/GSE92742_SHA512SUMS.txt.gz",
+      "size": 1429,
+      "sha256": "43bbea5abfe40e7755c88ae8a2e680544bd8cb1a190538d3ad786036e6009edf",
+      "sha512": "658982ac91c22d4e03f3c3838c4d72b80c82b3eb4d72203a1c202887c33aa70b18d1dc00a30a52c6afbe662e2bc3e8e53f07a8b2863299949bb55ebc82bed962"
+    }
+  ],
+  "lincs_archive": {
+    "compressed_file": "GSE92742_Broad_LINCS_Level5_COMPZ.MODZ_n473647x12328.gctx.gz",
+    "compressed_bytes": 21328033748,
+    "sha512": "6a3115cf3aaa402bb1bc098678b52b9c03632fc21087050e3e1a56c24a60196c4809bbac3797978dab63a47d955ff7a2c6110025a6e6d3cef4c5f6e010208a2a",
+    "decompressed_file": "GSE92742_Broad_LINCS_Level5_COMPZ.MODZ_n473647x12328.gctx",
+    "decompressed_bytes": 23380287022,
+    "decompressed_sha256": "b293f3fb7c2298a60526de727e5400d8400af4b77a23c4ed2116f86199fb45e8"
+  },
+  "evidence_origin": "Retained public acquisition metadata. Historical timestamps and completion status are not reproduced.",
+  "lincs_archive_url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE92nnn/GSE92742/suppl/GSE92742_Broad_LINCS_Level5_COMPZ.MODZ_n473647x12328.gctx.gz"
+}

@@ -1,0 +1,14 @@
+{
+  "schema": "genosapiens.track2-report-presentation-policy/v1",
+  "policy_id": "short-runtime-paper-v1",
+  "main_table_limit": 5,
+  "main_figure_limit": 3,
+  "score_unit": "half_point",
+  "mechanism_support": "reported_action_matches_objective_direction",
+  "weights": {"I_L": 2, "B": 4, "U": 1, "C": -1, "I_M": 2, "M": 4},
+  "metrics": {"combined": "S", "lincs": "S_L", "mechanism": "S_M"},
+  "tie_order": ["casefold_name", "canonical_active_ingredient_id", "objective_id"],
+  "rank": "competition",
+  "scope": "report_wide_distinct_ingredients",
+  "sections": ["Gene and variant context", "Abstract", "Biological rationale", "Combined medications", "LINCS medications", "Mechanism medications", "Discussion", "Methods", "References", "Glossary", "Acknowledgement", "Supplementary index"]
+}

@@ -1,0 +1,144 @@
+{
+  "schema": "genosapiens.challenge-rules/v1",
+  "challenge": "SageBio Rare Disease Real Kid MVA Hackathon 2026",
+  "space_repository": "SageBio/rare-disease-real-kid-mva-hackathon-2026",
+  "space_revision": "1c761cc23d90aebe6a011fd5b0b99517df42408c",
+  "verified_on": "2026-09-03",
+  "sources": [
+    {
+      "role": "official_rules",
+      "path": "tabs/rules.py",
+      "url": "https://huggingface.co/spaces/SageBio/rare-disease-real-kid-mva-hackathon-2026/raw/1c761cc23d90aebe6a011fd5b0b99517df42408c/tabs/rules.py",
+      "retrieval_url": "https://huggingface.co/spaces/SageBio/rare-disease-real-kid-mva-hackathon-2026/raw/1c761cc23d90aebe6a011fd5b0b99517df42408c/tabs/rules.py",
+      "extraction": "response_bytes",
+      "source_id": "484f0cd8b66204fd8c090277c46af08963d2919d",
+      "sha256": "dccb3740f6301b8629c704c375739e23391d19dee62513587ee461d6c8637f8f",
+      "size_bytes": 8151
+    },
+    {
+      "role": "methods_template",
+      "path": "static/templates/methods_description_form.xlsx",
+      "url": "https://huggingface.co/spaces/SageBio/rare-disease-real-kid-mva-hackathon-2026/resolve/1c761cc23d90aebe6a011fd5b0b99517df42408c/static/templates/methods_description_form.xlsx",
+      "retrieval_url": "https://huggingface.co/spaces/SageBio/rare-disease-real-kid-mva-hackathon-2026/resolve/1c761cc23d90aebe6a011fd5b0b99517df42408c/static/templates/methods_description_form.xlsx",
+      "extraction": "response_bytes",
+      "source_id": "c7b0d295dee93a4f324c51549e464d3b9487e8e2",
+      "sha256": "61aab080a2868a3b724e76692b83c24812112e305cd3a8b03f8f91a6b2414441",
+      "size_bytes": 14784
+    },
+    {
+      "role": "announcement_10",
+      "path": "discussions/10",
+      "url": "https://huggingface.co/spaces/SageBio/rare-disease-real-kid-mva-hackathon-2026/discussions/10",
+      "retrieval_url": "https://huggingface.co/api/spaces/SageBio/rare-disease-real-kid-mva-hackathon-2026/discussions/10",
+      "extraction": "hf_discussion_first_comment_raw",
+      "source_id": "6a92329044bdec8ae2cddfd8",
+      "sha256": "832d75291fdd9a31d61e974afb4f4ba55947b7e42050e8ca167be6f51a36ecfd",
+      "size_bytes": 1360
+    },
+    {
+      "role": "space_config",
+      "path": "config.py",
+      "url": "https://huggingface.co/spaces/SageBio/rare-disease-real-kid-mva-hackathon-2026/raw/1c761cc23d90aebe6a011fd5b0b99517df42408c/config.py",
+      "retrieval_url": "https://huggingface.co/spaces/SageBio/rare-disease-real-kid-mva-hackathon-2026/raw/1c761cc23d90aebe6a011fd5b0b99517df42408c/config.py",
+      "extraction": "response_bytes",
+      "source_id": "b1a0d52bbe8eabc5f090d6c99a2cb50ef8d44670",
+      "sha256": "a65e67fca2fb698ac3f3fe6610e585f549cf29f175d636ce77543d7db6dc8bdc",
+      "size_bytes": 1918
+    },
+    {
+      "role": "track2_submission_ui",
+      "path": "tabs/submit_track2.py",
+      "url": "https://huggingface.co/spaces/SageBio/rare-disease-real-kid-mva-hackathon-2026/raw/1c761cc23d90aebe6a011fd5b0b99517df42408c/tabs/submit_track2.py",
+      "retrieval_url": "https://huggingface.co/spaces/SageBio/rare-disease-real-kid-mva-hackathon-2026/raw/1c761cc23d90aebe6a011fd5b0b99517df42408c/tabs/submit_track2.py",
+      "extraction": "response_bytes",
+      "source_id": "92fd894843b1bcf3c6aab81b5eb948cb23e8905a",
+      "sha256": "f48d576ab052df34527222b7693f956e15e5376ef68eddedcf0c4f04736bf65c",
+      "size_bytes": 8372
+    },
+    {
+      "role": "track2_overview",
+      "path": "tabs/about.py",
+      "url": "https://huggingface.co/spaces/SageBio/rare-disease-real-kid-mva-hackathon-2026/raw/1c761cc23d90aebe6a011fd5b0b99517df42408c/tabs/about.py",
+      "retrieval_url": "https://huggingface.co/spaces/SageBio/rare-disease-real-kid-mva-hackathon-2026/raw/1c761cc23d90aebe6a011fd5b0b99517df42408c/tabs/about.py",
+      "extraction": "response_bytes",
+      "source_id": "adfe644fb2ebf2d99f0b6e005d04b295134df305",
+      "sha256": "1867b07f24d987fbb728c756c2d2bc4ab5f302d7c7804f53fe7b6a8b4c83ae43",
+      "size_bytes": 16076
+    }
+  ],
+  "track2": {
+    "maximum_submission_attempts": 3,
+    "judge_active_submission": "latest_submitted",
+    "designated_team_submitter": true,
+    "report_formats": ["markdown", "pdf"],
+    "repository_url_prefix": "https://github.com/",
+    "repository_public_by": "final_evaluation_begins",
+    "pitch_maximum_seconds": 180,
+    "pitch_providers": ["youtube", "vimeo"],
+    "methods_template_source": "methods_template",
+    "judging_criteria_source": "track2_overview",
+    "judging_criteria": [
+      {
+        "key": "scientific_rigor",
+        "label": "Scientific Rigor",
+        "weight_percent": 35,
+        "organizer_question": "Is the variant mechanism characterization sound, and is the proposed drug repurposing candidate well-supported by that mechanism?"
+      },
+      {
+        "key": "potential_impact",
+        "label": "Potential Impact",
+        "weight_percent": 25,
+        "organizer_question": "If independently validated, how much could this contribute to understanding or diagnosing MVA, for this child or for others living with it?"
+      },
+      {
+        "key": "innovation",
+        "label": "Innovation",
+        "weight_percent": 25,
+        "organizer_question": "Did you bring a genuinely creative angle, method, or tool to the problem?"
+      },
+      {
+        "key": "scalability",
+        "label": "Scalability",
+        "weight_percent": 15,
+        "organizer_question": "Could your approach realistically be applied to other individuals, other diseases, or larger datasets - not just this one case?"
+      }
+    ],
+    "commercial_llm_disclosure_required_when_used": true,
+    "commercial_llm_disclosure_fields": [
+      "provider",
+      "plan_or_tier",
+      "relevant_data_handling_setting"
+    ],
+    "deadline_display": "October 24, 2026 at 23:59 UTC",
+    "submission_closes_at_utc_exclusive": "2026-10-25T00:00:00Z",
+    "required_submission_fields": ["team_or_submitter_identity", "github_repository_url", "pitch_video_url", "report"],
+    "submission_material_license": "CC-BY-4.0",
+    "submission_material_license_source": "track2_overview",
+    "organizer_rerun_allowed": true,
+    "public_name_attribution_required": true,
+    "embargo_begins": "hackathon_close",
+    "embargo_ends": "organizer_summary_report_or_preprint_publication",
+    "peer_review_submission_during_embargo": "prohibited",
+    "conference_preliminary_findings": "prior_written_approval_required",
+    "required_acknowledgement": "This work was made possible through the Hackathon, organized by Sage Bionetworks in partnership with the MVA Society, Hugging Face, and BEACON (The Benchmarking, Evaluation, and Assessment Consortium for Science), with prize sponsorship from AWS and Anthropic. We are deeply grateful to the child and their family who generously contributed their data and their story to advance research into this rare disease. We acknowledge their trust in making this Hackathon possible.",
+    "dataset_citation": "hackathon_synapse_page_reference_at_time_of_publication",
+    "controlled_retention_days_after_close": 30,
+    "deletion_confirmation_email": "RarediseaserealkidMVAhackathon2026@synapse.org",
+    "requirements_snapshot_freshness_hours": 24,
+    "requirements_attestation_public_key_sha256": "4b19b2ca762415ca406929efde69ed762b95c3ac138069af84c799d1e1f14f81"
+  },
+  "precedence": [
+    {
+      "authority": "announcement_10",
+      "supersedes": "methods_template",
+      "subject": "track2.maximum_submission_attempts",
+      "effective_value": 3
+    },
+    {
+      "authority": "announcement_10",
+      "supersedes": "track2_submission_ui",
+      "subject": "track2.repository_public_by",
+      "effective_value": "final_evaluation_begins"
+    }
+  ]
+}

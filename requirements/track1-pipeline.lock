@@ -1,0 +1,73 @@
+{
+  "schema": "genosapiens.dependency-lock",
+  "image_role": "track1-pipeline",
+  "python": "3.12.11",
+  "dependencies": [
+    {
+      "name": "duckdb",
+      "version": "1.4.2",
+      "sha256": [
+        "c6a21732dd52a76f1e61484c06d65800b18f57fe29e8102a7466c201a2221604"
+      ],
+      "license": "MIT"
+    }
+  ],
+  "tools": [
+    {
+      "name": "bcftools",
+      "version": "1.13",
+      "sha256": [
+        "5ab4909fc958af5a4871b309ac3affd4bd82e7d47a048bc575e93f991c148004"
+      ],
+      "license": "MIT"
+    },
+    {
+      "name": "htslib-runtime",
+      "version": "1.13+ds",
+      "sha256": [
+        "8e9d1437f218af8c80f851e63de1e19bfbd96741fd78ab442418cf4b0b997420"
+      ],
+      "license": "MIT"
+    },
+    {
+      "name": "ensembl-vep",
+      "version": "116.2",
+      "sha256": [
+        "f22d1f89b28c6c4caf043ddb2269fdfff8940364da589cadbbabc6212a436949"
+      ],
+      "license": "Apache-2.0"
+    }
+  ],
+  "annotation_resources": [
+    {
+      "name": "gnomad",
+      "version": "4.1",
+      "distribution": "runtime-mount-only"
+    },
+    {
+      "name": "ensembl-vep-cache",
+      "version": "116.0",
+      "distribution": "runtime-mount-only"
+    },
+    {
+      "name": "clinvar",
+      "version": "2026.08.22",
+      "distribution": "runtime-mount-only"
+    },
+    {
+      "name": "open-targets",
+      "version": "26.06",
+      "distribution": "runtime-mount-only"
+    },
+    {
+      "name": "orphadata",
+      "version": "2026.06.23",
+      "distribution": "runtime-mount-only"
+    },
+    {
+      "name": "gencc",
+      "version": "2026.08.30",
+      "distribution": "runtime-mount-only"
+    }
+  ]
+}

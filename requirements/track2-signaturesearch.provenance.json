@@ -1,0 +1,101 @@
+{
+  "schema": "genosapiens.signaturesearch-construction-evidence/v1",
+  "base_image": "bioconductor/bioconductor_docker@sha256:e34177896c1579f66d48b756e4229b58237499183a089da084af72d7aba1d40a",
+  "signatureSearch_version": "1.24.0",
+  "historical_setup_command": "BiocManager::install(\"signatureSearch\", ask=FALSE, update=FALSE, Ncpus=4)",
+  "construction_complete": false,
+  "limit": "The retained package inventory supplies versions, not immutable source archives or a complete construction recipe.",
+  "python": {
+    "packages": [
+      [
+        "Mako",
+        "1.3.2.dev0"
+      ],
+      [
+        "Markdown",
+        "3.5.2"
+      ],
+      [
+        "MarkupSafe",
+        "2.1.5"
+      ],
+      [
+        "PyYAML",
+        "6.0.1"
+      ],
+      [
+        "SciPy",
+        "1.11.4"
+      ],
+      [
+        "chardet",
+        "5.2.0"
+      ],
+      [
+        "decorator",
+        "5.1.1"
+      ],
+      [
+        "joblib",
+        "1.3.2"
+      ],
+      [
+        "numpy",
+        "1.26.4"
+      ],
+      [
+        "packaging",
+        "24.0"
+      ],
+      [
+        "pandas",
+        "2.1.4+dfsg"
+      ],
+      [
+        "pip",
+        "24.0"
+      ],
+      [
+        "python-apt",
+        "2.7.7+ubuntu5"
+      ],
+      [
+        "python-dateutil",
+        "2.8.2"
+      ],
+      [
+        "python-debian",
+        "0.1.49+ubuntu2"
+      ],
+      [
+        "pytz",
+        "2024.1"
+      ],
+      [
+        "scikit-learn",
+        "1.4.1.post1"
+      ],
+      [
+        "setuptools",
+        "68.1.2"
+      ],
+      [
+        "six",
+        "1.16.0"
+      ],
+      [
+        "threadpoolctl",
+        "3.1.0"
+      ],
+      [
+        "wheel",
+        "0.42.0"
+      ]
+    ],
+    "python": "3.12.3 (main, Nov  6 2025, 13:44:16) [GCC 13.3.0]"
+  },
+  "r_inventory": {
+    "path": "requirements/track2-signaturesearch-r.csv",
+    "sha256": "22e19d59d35b673757ec60782256500104ac0a9d321f934fc282eb0fc3f1382b"
+  }
+}

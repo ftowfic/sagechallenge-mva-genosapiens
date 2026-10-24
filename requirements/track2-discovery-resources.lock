@@ -1,0 +1,57 @@
+{
+  "schema": "genosapiens.dependency-lock",
+  "image_role": "track2-discovery-resources",
+  "python": "3.12.11",
+  "dependencies": [
+    {
+      "name": "duckdb",
+      "version": "1.4.2",
+      "sha256": [
+        "c6a21732dd52a76f1e61484c06d65800b18f57fe29e8102a7466c201a2221604"
+      ],
+      "license": "MIT"
+    },
+    {
+      "name": "rdkit",
+      "version": "2025.9.6",
+      "sha256": [
+        "6be95b735c428ba27badf39e92078133d3a505f872d0a31467ba577d73c57676"
+      ],
+      "license": "BSD-3-Clause"
+    },
+    {
+      "name": "numpy",
+      "version": "2.2.6",
+      "sha256": [
+        "fd83c01228a688733f1ded5201c678f0c53ecc1006ffbc404db9f7a899ac6249"
+      ],
+      "license": "BSD-3-Clause"
+    },
+    {
+      "name": "pillow",
+      "version": "11.3.0",
+      "sha256": [
+        "67172f2944ebba3d4a7b54f2e95c786a3a50c21b88456329314caaa28cda70f6"
+      ],
+      "license": "MIT-CMU"
+    }
+  ],
+  "tools": [],
+  "annotation_resources": [
+    {
+      "name": "open-targets",
+      "version": "26.06",
+      "distribution": "runtime-mount-only"
+    },
+    {
+      "name": "orphadata",
+      "version": "2026.06.23",
+      "distribution": "runtime-mount-only"
+    },
+    {
+      "name": "gencc",
+      "version": "2026.08.30",
+      "distribution": "runtime-mount-only"
+    }
+  ]
+}

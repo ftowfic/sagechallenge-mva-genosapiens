@@ -1,0 +1,43 @@
+{
+  "schema": "genosapiens.track2-speedup-compatibility/v1",
+  "status": "validated",
+  "producer": {
+    "package": "package-7dc1c1c4bed6c95732a70b5c39acfbf3ae24c54876cad824b80075aa9a2fadec",
+    "manifest_sha256": "76c97bf6fc8471c246e451204e77be169c3202068f91aeb83b5b9eabb4f7f74f",
+    "scientific_code_sha256": "7a7e094894c8cf208c6731d90cfe10783811e321d06b226db6c83c9ddd5d7a8d"
+  },
+  "consumer": {
+    "scientific_code_sha256": "bf8df3426d1c94eceffae6c26a686411ba1515948c22c619044a5508ad6380ba",
+    "runtime_files_sha256": [
+      "0650d538249e5d412a6a8d964f9a686875afe70222659bfba892b37a7223f102",
+      "3e0764425fda454bf85cf7ef5d686fa3421f65ea22cd48d5488a5dd451727669"
+    ]
+  },
+  "evidence": [
+    {
+      "path": "tests/fixtures/track2-speedup/acceptance/producer-package.json",
+      "status": "passed",
+      "sha256": "949bcee4bf6d241efcfce1a17908d5fe0ae61f049a3fb4983ce73f48b16052ce"
+    },
+    {
+      "path": "tests/fixtures/track2-speedup/acceptance/equivalence.json",
+      "status": "passed",
+      "sha256": "c057c28c611fa4fe2aa2149c831f8fdd4bd3fb2254f065be4dfcb40a0712b1e9"
+    },
+    {
+      "path": "tests/fixtures/track2-speedup/acceptance/targeted-tests.json",
+      "status": "passed",
+      "sha256": "3afe13e14f49161596ca32e137a3b2ab3ebce29b6d8f34cfac6fefbffa6dd8a2"
+    },
+    {
+      "path": "tests/fixtures/track2-speedup/acceptance/origins-evidence.json",
+      "status": "passed",
+      "sha256": "027824001df84515a49384f08e8ce1aa445f0aa2dee77043d8eb4828dfa05d96"
+    },
+    {
+      "path": "tests/fixtures/track2-speedup/acceptance/reader-tests.json",
+      "status": "passed",
+      "sha256": "6072628253d464b2db08c689ef415f5069c1786e4e9c68c69befbf1ba17fa88e"
+    }
+  ]
+}

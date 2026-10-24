@@ -1,0 +1,32 @@
+{
+  "schema": "genosapiens.gnomad-all-sites",
+  "resource_id": "gnomad-v4.1-all-sites-an",
+  "release": "v4.1",
+  "assembly": "GRCh38",
+  "license": "ODC-ODbL-1.0",
+  "license_url": "https://opendatacommons.org/licenses/odbl/1-0/",
+  "derived_header": "#contig\tposition\tAN\toutside_broad_capture_region\toutside_ukb_capture_region\toutside_broad_calling_region\toutside_ukb_calling_region",
+  "output_directory": "derived/gnomad/4.1/all-sites/gnomad-v4.1-all-sites-an-v1",
+  "bundle_manifest_path": "manifests/gnomad/4.1/all-sites-an.85aee86f3391.json",
+  "maximum_derived_bytes": 16000000000,
+  "sources": [
+    {
+      "name": "exomes",
+      "source_path": "release/4.1/tsv/exomes/gnomad.exomes.v4.1.allele_number_all_sites.tsv.bgz",
+      "url": "https://storage.googleapis.com/download/storage/v1/b/gcp-public-data--gnomad/o/release%2F4.1%2Ftsv%2Fexomes%2Fgnomad.exomes.v4.1.allele_number_all_sites.tsv.bgz?generation=1713312294386520&alt=media",
+      "object_generation": "1713312294386520",
+      "size_bytes": 1149738480,
+      "md5": "ee71ce1ccfa5c1d9dd86e1ee1b1d11e2",
+      "source_header": "locus\tAN\toutside_broad_capture_region\toutside_ukb_capture_region\toutside_broad_calling_region\toutside_ukb_calling_region"
+    },
+    {
+      "name": "genomes",
+      "source_path": "release/4.1/tsv/genomes/gnomad.genomes.v4.1.allele_number_all_sites.tsv.bgz",
+      "url": "https://storage.googleapis.com/download/storage/v1/b/gcp-public-data--gnomad/o/release%2F4.1%2Ftsv%2Fgenomes%2Fgnomad.genomes.v4.1.allele_number_all_sites.tsv.bgz?generation=1713312294896637&alt=media",
+      "object_generation": "1713312294896637",
+      "size_bytes": 12012641029,
+      "md5": "7101516dd79d48d10c28fa548b22884a",
+      "source_header": "locus\tAN"
+    }
+  ]
+}

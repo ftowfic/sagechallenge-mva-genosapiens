@@ -1,0 +1,288 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "schema",
+    "classification",
+    "source_kind",
+    "input_origin",
+    "source_bindings",
+    "input_snapshot_sha256",
+    "readiness",
+    "evidence",
+    "scientific_policy",
+    "presentation",
+    "figures",
+    "calibration",
+    "calibration_applicability",
+    "derived_rankings",
+    "producer_admission",
+    "report_review",
+    "outputs"
+  ],
+  "properties": {
+    "schema": {
+      "const": "genosapiens.track2-challenge-package/v2"
+    },
+    "classification": {
+      "enum": [
+        "public",
+        "controlled"
+      ]
+    },
+    "source_kind": {
+      "enum": [
+        "native",
+        "study"
+      ]
+    },
+    "input_origin": {
+      "enum": [
+        "published_patient_genotype",
+        "diagnosis_guided_vcf"
+      ]
+    },
+    "source_bindings": {
+      "type": "object"
+    },
+    "input_snapshot_sha256": {
+      "anyOf": [
+        {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "readiness": {
+      "type": "object",
+      "required": [
+        "assessment_status",
+        "input_report_ready",
+        "research_report_ready",
+        "submission_ready"
+      ],
+      "properties": {
+        "assessment_status": {
+          "enum": [
+            "complete",
+            "incomplete",
+            "not_performed"
+          ]
+        },
+        "input_report_ready": {
+          "type": "boolean"
+        },
+        "research_report_ready": {
+          "type": "boolean"
+        },
+        "submission_ready": {
+          "type": "boolean",
+          "const": false
+        },
+        "classification": {
+          "enum": [
+            "public",
+            "controlled"
+          ]
+        },
+        "candidate_objective_met": {
+          "type": "boolean"
+        },
+        "case_matching": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "evidence": {
+      "type": "object",
+      "required": [
+        "path",
+        "sha256"
+      ],
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      },
+      "additionalProperties": false
+    },
+    "scientific_policy": {
+      "type": "object",
+      "required": [
+        "path",
+        "sha256"
+      ],
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      },
+      "additionalProperties": false
+    },
+    "presentation": {
+      "type": "object",
+      "required": [
+        "path",
+        "sha256"
+      ],
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      },
+      "additionalProperties": false
+    },
+    "figures": {
+      "type": "object",
+      "required": [
+        "path",
+        "sha256"
+      ],
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      },
+      "additionalProperties": false
+    },
+    "calibration": {
+      "anyOf": [
+        {
+          "type": "object",
+          "required": [
+            "path",
+            "sha256"
+          ],
+          "properties": {
+            "path": {
+              "type": "string",
+              "minLength": 1
+            },
+            "sha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            }
+          },
+          "additionalProperties": false
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "calibration_applicability": {
+      "type": "object",
+      "required": [
+        "path",
+        "sha256"
+      ],
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      },
+      "additionalProperties": false
+    },
+    "derived_rankings": {
+      "anyOf": [
+        {
+          "type": "object",
+          "required": [
+            "path",
+            "sha256"
+          ],
+          "properties": {
+            "path": {
+              "type": "string",
+              "minLength": 1
+            },
+            "sha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            }
+          },
+          "additionalProperties": false
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "producer_admission": {
+      "anyOf": [
+        {
+          "type": "object",
+          "required": [
+            "path",
+            "sha256"
+          ],
+          "properties": {
+            "path": {
+              "type": "string",
+              "minLength": 1
+            },
+            "sha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            }
+          },
+          "additionalProperties": false
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "report_review": {
+      "type": "object",
+      "required": [
+        "path",
+        "sha256"
+      ],
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      },
+      "additionalProperties": false
+    },
+    "outputs": {
+      "type": "object"
+    }
+  },
+  "additionalProperties": false
+}

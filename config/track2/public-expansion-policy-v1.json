@@ -1,0 +1,266 @@
+{
+  "schema": "genosapiens.track2-public-expansion-policy/v1",
+  "policy_version": "1.0.0",
+  "default_submission_routes": [
+    "qualified_target_drug_linkage",
+    "intervention_literature"
+  ],
+  "date_range": {
+    "start": "2006-09-03",
+    "end": "2026-10-16",
+    "undated_record_handling": "retain_and_flag"
+  },
+  "global_bounds": {
+    "maximum_graph_depth": 3,
+    "maximum_results_per_seed_source_relation": 200,
+    "stopping": "configured_bound_or_source_exhausted"
+  },
+  "mechanism_branches": [
+    "centrosome_integrity",
+    "chromosome_segregation",
+    "kinetochore_attachment",
+    "spindle_assembly_checkpoint"
+  ],
+  "entity_types": [
+    "active_ingredient",
+    "assay",
+    "clinical_trial",
+    "disease",
+    "disease_subtype",
+    "evidence_document",
+    "gene",
+    "guideline",
+    "label",
+    "pathway",
+    "phenotype",
+    "protein",
+    "regulatory_status",
+    "safety_liability",
+    "variant"
+  ],
+  "screening_profiles": [
+    "all_source_records",
+    "dual_rescue_harm_review",
+    "official_current_status",
+    "qualified_targets_only",
+    "signed_only",
+    "unsigned_context_only"
+  ],
+  "relations": {
+    "associated_with": {
+      "from": [
+        "disease",
+        "disease_subtype"
+      ],
+      "to": [
+        "gene"
+      ],
+      "sources": [
+        "published-genotype",
+        "open-targets",
+        "primary-literature"
+      ],
+      "maximum_depth": 1,
+      "screening": [
+        "all_source_records"
+      ]
+    },
+    "has_phenotype": {
+      "from": [
+        "disease",
+        "disease_subtype"
+      ],
+      "to": [
+        "phenotype"
+      ],
+      "sources": [
+        "published-genotype",
+        "open-targets",
+        "primary-literature"
+      ],
+      "maximum_depth": 1,
+      "screening": [
+        "all_source_records"
+      ]
+    },
+    "has_target_context": {
+      "from": [
+        "gene"
+      ],
+      "to": [
+        "protein",
+        "safety_liability"
+      ],
+      "sources": [
+        "published-genotype",
+        "open-targets",
+        "gtex"
+      ],
+      "maximum_depth": 1,
+      "screening": [
+        "all_source_records"
+      ]
+    },
+    "ingredient_of": {
+      "from": [
+        "active_ingredient"
+      ],
+      "to": [
+        "label",
+        "regulatory_status"
+      ],
+      "sources": [
+        "rxnorm",
+        "pubchem",
+        "drugs-at-fda",
+        "purple-book",
+        "fda-product-status",
+        "fda-label",
+        "dailymed",
+        "named-non-us-regulator"
+      ],
+      "maximum_depth": 1,
+      "screening": [
+        "official_current_status"
+      ]
+    },
+    "intervention_evidence": {
+      "from": [
+        "active_ingredient"
+      ],
+      "to": [
+        "assay",
+        "clinical_trial",
+        "evidence_document",
+        "guideline",
+        "safety_liability"
+      ],
+      "sources": [
+        "chembl",
+        "gtopdb",
+        "primary-literature",
+        "clinicaltrials-gov",
+        "current-guideline",
+        "fda-label",
+        "cpic"
+      ],
+      "maximum_depth": 1,
+      "screening": [
+        "all_source_records",
+        "dual_rescue_harm_review"
+      ]
+    },
+    "participates_in": {
+      "from": [
+        "gene",
+        "protein"
+      ],
+      "to": [
+        "pathway"
+      ],
+      "sources": [
+        "published-genotype",
+        "open-targets",
+        "reactome"
+      ],
+      "maximum_depth": 2,
+      "screening": [
+        "all_source_records"
+      ]
+    },
+    "regulates": {
+      "from": [
+        "gene",
+        "protein",
+        "pathway"
+      ],
+      "to": [
+        "gene",
+        "protein",
+        "pathway"
+      ],
+      "sources": [
+        "reactome",
+        "primary-literature"
+      ],
+      "maximum_depth": 2,
+      "screening": [
+        "signed_only"
+      ]
+    },
+    "subtype_of": {
+      "from": [
+        "disease_subtype"
+      ],
+      "to": [
+        "disease"
+      ],
+      "sources": [
+        "published-genotype",
+        "primary-literature"
+      ],
+      "maximum_depth": 2,
+      "screening": [
+        "all_source_records"
+      ]
+    },
+    "targeted_by": {
+      "from": [
+        "gene",
+        "protein"
+      ],
+      "to": [
+        "active_ingredient"
+      ],
+      "sources": [
+        "chembl",
+        "gtopdb",
+        "open-targets",
+        "dgidb",
+        "pharos"
+      ],
+      "maximum_depth": 1,
+      "screening": [
+        "all_source_records",
+        "qualified_targets_only"
+      ]
+    },
+    "unsigned_proximity": {
+      "from": [
+        "gene",
+        "protein",
+        "pathway"
+      ],
+      "to": [
+        "gene",
+        "protein",
+        "pathway"
+      ],
+      "sources": [
+        "published-genotype",
+        "open-targets",
+        "reactome"
+      ],
+      "maximum_depth": 2,
+      "screening": [
+        "unsigned_context_only"
+      ]
+    },
+    "literature_for": {
+      "from": [
+        "gene",
+        "variant"
+      ],
+      "to": [
+        "evidence_document"
+      ],
+      "sources": [
+        "primary-literature"
+      ],
+      "maximum_depth": 1,
+      "screening": [
+        "dual_rescue_harm_review"
+      ]
+    }
+  }
+}

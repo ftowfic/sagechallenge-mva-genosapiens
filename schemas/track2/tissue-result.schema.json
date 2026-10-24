@@ -1,0 +1,140 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Track 2 tissue result",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "gene_id",
+    "objective_id",
+    "scenario_id",
+    "medication_entity_key",
+    "tissue_id",
+    "query_sha256",
+    "method",
+    "evaluable",
+    "support",
+    "conflict",
+    "contribution",
+    "state",
+    "witnesses",
+    "condition_ids",
+    "n_conditions",
+    "n_valid",
+    "n_undefined",
+    "coverage_reasons",
+    "incomplete_jobs",
+    "weaker_nomination",
+    "legacy_research_eligibility"
+  ],
+  "properties": {
+    "schema": {
+      "const": "genosapiens.track2-tissue-result/v1"
+    },
+    "gene_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "objective_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "scenario_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "medication_entity_key": {
+      "type": "string",
+      "minLength": 1
+    },
+    "tissue_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "query_sha256": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "method": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "evaluable": {
+      "type": "boolean"
+    },
+    "support": {
+      "type": "boolean"
+    },
+    "conflict": {
+      "type": "boolean"
+    },
+    "contribution": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": -1,
+      "maximum": 1
+    },
+    "state": {
+      "enum": [
+        "support",
+        "conflict",
+        "mixed",
+        "no_two_direction_evidence",
+        "unavailable",
+        "pending"
+      ]
+    },
+    "witnesses": {
+      "type": "object"
+    },
+    "condition_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+    "n_conditions": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "n_valid": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "n_undefined": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "coverage_reasons": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+    "incomplete_jobs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+    "weaker_nomination": {
+      "type": "boolean"
+    },
+    "legacy_research_eligibility": {
+      "const": "not_applicable"
+    }
+  }
+}

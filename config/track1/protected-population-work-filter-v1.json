@@ -1,0 +1,129 @@
+{
+  "additional_pruning": {
+    "adaptive_budget": false,
+    "member_quota": false,
+    "phenotype_cutoff": false,
+    "prediction_only_pair_loss": false
+  },
+  "case_tunable": false,
+  "frequency": {
+    "ancestries": [
+      "afr",
+      "amr",
+      "eas",
+      "nfe",
+      "sas"
+    ],
+    "comparison": "strictly_greater",
+    "corroboration": "both_usable_datasets_above_threshold_without_equal_frequency_requirement",
+    "datasets": [
+      "genomes",
+      "exomes"
+    ],
+    "genome_only": {
+      "exome_flags_equal_one": [
+        "REGION_NOT_CALLED_IN_EXOMES",
+        "REGION_OUTSIDE_BROAD_CALLING_REGION",
+        "REGION_OUTSIDE_UKB_CALLING_REGION",
+        "REGION_OUTSIDE_BROAD_CAPTURE_REGION",
+        "REGION_OUTSIDE_UKB_CAPTURE_REGION"
+      ],
+      "exome_null_fields": [
+        "allele_count",
+        "allele_number",
+        "filters",
+        "callable"
+      ],
+      "genome_discordant_true": "retain"
+    },
+    "metric": "FAF99",
+    "minimum_an": 2000,
+    "one_sided_unresolved_or_contradictory_ancestry": "retain",
+    "pooling": false,
+    "quality": {
+      "callable": true,
+      "exome_interval_qc": "0",
+      "filters": "empty_or_PASS_only",
+      "not_called": "0"
+    },
+    "storage_interval": "float32_interval.lower_bound_strictly_greater",
+    "stratum": "ancestry",
+    "threshold": {
+      "denominator": 20,
+      "numerator": 1
+    },
+    "valid_ac_an_and_copy_counts": true
+  },
+  "policy_id": "track1-protected-population-work-filter-v1",
+  "prohibited_inputs": [
+    "diagnosis",
+    "validation_truth",
+    "rank",
+    "selected_rows"
+  ],
+  "protection": {
+    "bare_no_match_is_clearance": false,
+    "completed_clearance_exception": {
+      "categories": [
+        "founder",
+        "reduced_penetrance"
+      ],
+      "other_unknowns": "retain",
+      "positive_rescues": "retain",
+      "preserve_scientific_rescue_record": true,
+      "reason": "no_exact_public_curated_entry;not_negative_evidence",
+      "requires": "fully_bound_completed_negative_protection_lookup_for_every_occurrence_and_model",
+      "status": "unknown"
+    },
+    "completed_clinical_clearance_exception": {
+      "category": "curated_pathogenic",
+      "inputs": "exact_typed_complete_index_coverage;absent_or_aggregate_without_assertion_id_or_explicit_condition_link",
+      "missing_significance_or_review": "retain",
+      "other_unknowns": "retain",
+      "partial_individual_assertions": "retain",
+      "positive_rescues": "retain",
+      "preserve_scientific_rescue_record": true,
+      "reason": "assertions_are_boolean_rescue_only;no_clinical_or_conflict_score",
+      "requires": "fully_bound_completed_negative_protection_lookup_for_every_occurrence_and_model",
+      "status": "unknown",
+      "unknown_clinical_reason": "individual_native_condition_and_gene_target_required"
+    },
+    "context_rescue_policy_family": {
+      "path": "config/track1/public-ranking-development-policy-family.json",
+      "sha256": "3b1ee132e60aa244041e2747b9afb92a50ea346e7a946b8a242a39394c422a42",
+      "size_bytes": 5324
+    },
+    "context_rescues": "existing_evaluate_population_member_inputs",
+    "corrupt_or_foreign_evidence": "fail",
+    "globally_missing_required_resource": "fail",
+    "policy": {
+      "path": "config/track1/common-allele-prefilter-v1.json",
+      "sha256": "aa2c583c7524cfc2d3be5e42adbfeb7b7ecadb367a50e4f588749402c9d1d948",
+      "size_bytes": 2661
+    },
+    "required_bindings": [
+      "reference",
+      "normalized_or_native_identity",
+      "source_occurrence",
+      "source_manifest",
+      "protection_resources",
+      "context_model"
+    ],
+    "saved_clearance": "no_protection_found_in_pinned_sources",
+    "uncertain_rescue": "retain_except_explicit_completed_clearance_cases"
+  },
+  "qualification_authority": "matching_accepted_release_or_bound_public_candidate",
+  "schema": "genosapiens.protected-population-work-filter-policy",
+  "scope": {
+    "all_consuming_model_alternatives_required": true,
+    "all_contributing_occurrences_required": true,
+    "excluded_partner_semantics": "retain_tentative_exclusions_in_mixed_pair_contexts",
+    "missing_occurrence_or_model": "retain",
+    "original_domain_preserved": true,
+    "other_contexts_independent": true,
+    "skipped_score": "not_evaluated",
+    "unit": "context_member"
+  },
+  "uncertainty_action": "retain",
+  "version": 1
+}

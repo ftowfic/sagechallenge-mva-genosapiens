@@ -1,0 +1,20 @@
+{
+  "accession_report_path": "releases/model-loci/grc-ensembl-nhgri/grch38-ensembl-116-nhgri-retrieved-2026-09-16/ncbi-assembly-report.txt",
+  "accession_report_sha256": "aa733ce92719f6339b3a4540137d4322894434363314c4b7704ba6691e9eab66",
+  "clinvar_contract_path": "config/public-resources/clinvar-grch38-2026-08-22.json",
+  "clinvar_contract_sha256": "92ad95e2a2332436f180b2eabf32b3f25d72b92f372f309abd9e183cec90013f",
+  "clinvar_manifest_path": "manifests/clinvar/clinvar-grch38-2026-08-22.19fc8e9cd788.json",
+  "clinvar_manifest_sha256": "78527bd4e5b7dfb3debb88e66c08ce1e3b66ab23692a258544416dffdea4e9e5",
+  "curated_bundle_sha256": "12c2bf613424137e3c8e7aec7f69ace0cf83a84a5a3bd0bcca81fc63970823d0",
+  "curated_contract_path": "config/public-resources/rare-disease-evidence-2026-08-30.json",
+  "exception_manifest_path": "manifests/track1-common-allele-exceptions/79596dff01ac7291604c7715fdd3fa6d7ea89257ee8172e7c2b926402184586e.json",
+  "exception_manifest_sha256": "99a3da5f52cae81e097634147c79d2154d20c10646277482cbe3e6c271bcce82",
+  "open_targets_contract_path": "config/public-resources/open-targets-platform-26.06.json",
+  "open_targets_contract_sha256": "0cae4540cfea019b5c6f8b9740e582217c195bd6afb05e6d79fad2eb56a28498",
+  "open_targets_manifest_path": "manifests/open-targets/open-targets-platform-26.06.0cae4540cfea.json",
+  "open_targets_manifest_sha256": "c6edfc9b8726fd05f5f5cadc19d09ae49d6866d4742c8e9b52b038796637e55e",
+  "reference_contract_path": "config/reference-identities/challenge-grch38-masked-v2-hs38d1.json",
+  "reference_contract_sha256": "a92c50f61c1b149e635656a54086e671f3f27f09b97002309ff68a9ded1d3b62",
+  "reference_manifest_path": "manifests/grch38/challenge-grch38-masked-v2-plus-hs38d1.a92c50f61c1b.json",
+  "reference_manifest_sha256": "27eaf00fde35e5fa83f945c63e5dee871960374d90488cc0797b5ebea2fb1c25"
+}

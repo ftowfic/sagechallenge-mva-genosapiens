@@ -1,0 +1,19 @@
+{
+  "image": "genosapiens/track2-discovery-resources@sha256:65dce595299c57a0096b41aae81cab298110e3087597549f2f75f8bd7741f2b9",
+  "network": "none",
+  "code_binding": "frozen_current_source_overlay",
+  "probe": {
+    "python": "3.12.11",
+    "duckdb": "1.4.2",
+    "rdkit": "2025.09.6",
+    "numpy": "2.2.6",
+    "pillow": "11.3.0",
+    "chemical_probe": "LFQSCWFLJHTTHZ-UHFFFAOYSA-N"
+  },
+  "build_inputs": {
+    "docker/track2-discovery-resources.Dockerfile": "ffb9f9075d778cbd664307408ca98f1c9876ce7df9b6175044ca199f007759fb",
+    "requirements/track2-discovery-resources.txt": "15d148957f1c8c61df172a590ee3cc580f4113242a5b669305d5022fc9646e1f",
+    "requirements/track2-discovery-resources.lock": "6c2cc29174bede03f7c1514c6205f177df6bc0fa14d28fe54d41eb7072cad3f8",
+    "requirements/track2-discovery-resources.provenance.json": "26a40b8c8b5dc2d3b557ce1390a955a966e7f78e0aa726fa8775e4d07361bbef"
+  }
+}

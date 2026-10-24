@@ -1,0 +1,1791 @@
+{
+  "analysis_profile_acceptance": {
+    "acceptance_id": "track1-focused-default-analysis-20261008",
+    "access_history": [
+      {
+        "case_id": "development-population-model-state-01",
+        "current_use": "development_regression",
+        "generator": {
+          "id": "track1-model-roster-generator",
+          "seed": 101,
+          "version": "4"
+        },
+        "group_id": "public-population-gene-group-35c5771c0738fb35",
+        "observation_status": "previously_inspected_public_fixture",
+        "original_split": "development",
+        "runner_inputs": [
+          {
+            "path": "tests/fixtures/track1/roster/development-population-model-state-01.hpo.txt",
+            "role": "hpo_text",
+            "sha256": "6ec48d4b0e65dc66a944027b5437f9b1ca9ab5ab777a0df62e86a260886ccf75",
+            "size_bytes": 539
+          },
+          {
+            "path": "tests/fixtures/track1/roster/development-population-model-state-01.vcf",
+            "role": "small_variant_vcf",
+            "sha256": "8488a6acc242efdb41a53c55dcefc77e32198531796700d014b113ae6644e724",
+            "size_bytes": 1947
+          }
+        ],
+        "untouched_holdout_claimed": false
+      },
+      {
+        "case_id": "development-population-model-state-02",
+        "current_use": "development_regression",
+        "generator": {
+          "id": "track1-model-roster-generator",
+          "seed": 101,
+          "version": "4"
+        },
+        "group_id": "public-population-gene-group-35c5771c0738fb35",
+        "observation_status": "previously_inspected_public_fixture",
+        "original_split": "development",
+        "runner_inputs": [
+          {
+            "path": "tests/fixtures/track1/roster/development-population-model-state-02.hpo.txt",
+            "role": "hpo_text",
+            "sha256": "6ec48d4b0e65dc66a944027b5437f9b1ca9ab5ab777a0df62e86a260886ccf75",
+            "size_bytes": 539
+          },
+          {
+            "path": "tests/fixtures/track1/roster/development-population-model-state-02.vcf",
+            "role": "small_variant_vcf",
+            "sha256": "5438c07a17e2a08dcfb20c8ec2c7086bed1e0e681febac4a1f18962c2f04bd1c",
+            "size_bytes": 1947
+          }
+        ],
+        "untouched_holdout_claimed": false
+      },
+      {
+        "case_id": "development-population-model-state-03",
+        "current_use": "development_regression",
+        "generator": {
+          "id": "track1-model-roster-generator",
+          "seed": 101,
+          "version": "4"
+        },
+        "group_id": "public-population-gene-group-35c5771c0738fb35",
+        "observation_status": "previously_inspected_public_fixture",
+        "original_split": "development",
+        "runner_inputs": [
+          {
+            "path": "tests/fixtures/track1/roster/development-population-model-state-03.hpo.txt",
+            "role": "hpo_text",
+            "sha256": "6ec48d4b0e65dc66a944027b5437f9b1ca9ab5ab777a0df62e86a260886ccf75",
+            "size_bytes": 539
+          },
+          {
+            "path": "tests/fixtures/track1/roster/development-population-model-state-03.vcf",
+            "role": "small_variant_vcf",
+            "sha256": "572f001e3d161e727f62284239097256108698a4d4ccee9fbe4438653f4dd06c",
+            "size_bytes": 1957
+          }
+        ],
+        "untouched_holdout_claimed": false
+      },
+      {
+        "case_id": "development-source-backed-singleton",
+        "current_use": "development_regression",
+        "generator": {
+          "id": "track1-model-roster-generator",
+          "seed": 101,
+          "version": "3"
+        },
+        "group_id": "public-singleton-gene-group-4f8a65b9961e49d5",
+        "observation_status": "previously_inspected_public_fixture",
+        "original_split": "development",
+        "runner_inputs": [
+          {
+            "path": "tests/fixtures/track1/roster/development-source-backed-singleton.hpo.txt",
+            "role": "hpo_text",
+            "sha256": "c8e70793f986bb460927ef0180b24b4aae41e14e3a839a50392b378c10489e94",
+            "size_bytes": 33
+          },
+          {
+            "path": "tests/fixtures/track1/roster/development-source-backed-singleton.vcf",
+            "role": "small_variant_vcf",
+            "sha256": "69ac99b5d46903ebf3d629457c46634f6158344efaa91b6b3e40db5a36ef8a25",
+            "size_bytes": 1913
+          }
+        ],
+        "untouched_holdout_claimed": false
+      },
+      {
+        "case_id": "development-mixed-class",
+        "current_use": "development_regression",
+        "generator": {
+          "id": "track1-model-roster-generator",
+          "seed": 101,
+          "version": "1"
+        },
+        "group_id": "development-mixed_class",
+        "observation_status": "previously_inspected_public_fixture",
+        "original_split": "development",
+        "runner_inputs": [
+          {
+            "path": "tests/fixtures/track1/roster/development-mixed-class.hpo.txt",
+            "role": "hpo_text",
+            "sha256": "28dd1a8cf0b00da6bde5ce2143b2dad4b21c6ba1302fa97c89769dcaf1d33d28",
+            "size_bytes": 33
+          },
+          {
+            "path": "tests/fixtures/track1/roster/development-mixed-class.vcf",
+            "role": "small_variant_vcf",
+            "sha256": "0aef5748ef158e995a6772d7d8b9934dc4513a45f65e75f4d0249bba93871868",
+            "size_bytes": 2378
+          }
+        ],
+        "untouched_holdout_claimed": false
+      },
+      {
+        "case_id": "development-repeat",
+        "current_use": "development_regression",
+        "generator": {
+          "id": "track1-model-roster-generator",
+          "seed": 101,
+          "version": "1"
+        },
+        "group_id": "development-repeat",
+        "observation_status": "previously_inspected_public_fixture",
+        "original_split": "development",
+        "runner_inputs": [
+          {
+            "path": "tests/fixtures/track1/roster/development-repeat.hpo.txt",
+            "role": "hpo_text",
+            "sha256": "28dd1a8cf0b00da6bde5ce2143b2dad4b21c6ba1302fa97c89769dcaf1d33d28",
+            "size_bytes": 33
+          },
+          {
+            "path": "tests/fixtures/track1/roster/development-repeat.vcf",
+            "role": "small_variant_vcf",
+            "sha256": "af16f7f284049d6bd3c95bfdcc55bfd920dea2f04a2b6f0b9029388a65026518",
+            "size_bytes": 2341
+          }
+        ],
+        "untouched_holdout_claimed": false
+      },
+      {
+        "case_id": "held-out-population-model-state-01",
+        "current_use": "development_regression",
+        "generator": {
+          "id": "track1-model-roster-generator",
+          "seed": 303,
+          "version": "4"
+        },
+        "group_id": "public-population-gene-group-cfa949bf74dffe3c",
+        "observation_status": "previously_inspected_public_fixture",
+        "original_split": "held_out",
+        "runner_inputs": [
+          {
+            "path": "tests/fixtures/track1/roster/held-out-population-model-state-01.hpo.txt",
+            "role": "hpo_text",
+            "sha256": "c246549f54758f4439f2913c125c850f97642773260ccc8adae25f9b882aa468",
+            "size_bytes": 748
+          },
+          {
+            "path": "tests/fixtures/track1/roster/held-out-population-model-state-01.vcf",
+            "role": "small_variant_vcf",
+            "sha256": "0499a1d26c020eeaaf15190870b326587e27fc8c2b7f53397778fe56ab2b586e",
+            "size_bytes": 1909
+          }
+        ],
+        "untouched_holdout_claimed": false
+      },
+      {
+        "case_id": "held-out-source-backed-singleton",
+        "current_use": "development_regression",
+        "generator": {
+          "id": "track1-model-roster-generator",
+          "seed": 303,
+          "version": "3"
+        },
+        "group_id": "public-singleton-gene-group-e06666bcf9bcdf0e",
+        "observation_status": "previously_inspected_public_fixture",
+        "original_split": "held_out",
+        "runner_inputs": [
+          {
+            "path": "tests/fixtures/track1/roster/held-out-source-backed-singleton.hpo.txt",
+            "role": "hpo_text",
+            "sha256": "7d983e1fc169f5468f857392fb972d5adf177a4e99a237b888869cc75fe18c5c",
+            "size_bytes": 33
+          },
+          {
+            "path": "tests/fixtures/track1/roster/held-out-source-backed-singleton.vcf",
+            "role": "small_variant_vcf",
+            "sha256": "13bc8655bbdeb0e92e87c0c3b1bb4d5d83bb5c5937676daa6d566a8b6a46f05c",
+            "size_bytes": 1876
+          }
+        ],
+        "untouched_holdout_claimed": false
+      }
+    ],
+    "d41_acceptance": {
+      "amendment_id": "d41-policy-acceptance-03",
+      "controlled_use_authorized": false,
+      "execution_contract": {
+        "path": "config/track1/focused-work-contract-v1.json",
+        "sha256": "ba9a3e4b581a29d81d6c55dcccca24bdec5958009d4aab3c7a49530099c4ddaf",
+        "size_bytes": 633
+      },
+      "exhaustive_full_public_required": true,
+      "finite_acceptance": {
+        "path": "artifacts/validation/track1-focused-default-analysis-20261008/d41-policy-acceptance-03/finite-acceptance.json",
+        "sha256": "5ea31d90296a6180b2099d03a0cbf84966a487da5903910f394f3751fecb432d",
+        "size_bytes": 16788
+      },
+      "focused_qualification": {
+        "automatic_retries": 0,
+        "budget_scope": "per_three_case_trial",
+        "execution_cap_seconds": 18000,
+        "full_public_focused_required": false,
+        "full_wgs_runtime_validated": false,
+        "maximum_background_source_records": 512,
+        "positive_edge_roster": "separately_frozen",
+        "scope": "bounded_fresh_input_end_to_end",
+        "termination_grace": "separately_declared_no_scientific_work"
+      },
+      "fresh_invocation_id": "focused-fresh-subsample",
+      "planning_runtime_dependency": false,
+      "planning_snapshots": [
+        {
+          "path": "artifacts/validation/track1-focused-default-analysis-20261008/d41-policy-acceptance-03/planning/openspec/changes/add-track1-focused-default-analysis/design.md",
+          "sha256": "abb3345b02a431dd5d342be902f32072b6a5bc1f81898d4203ec87c6bb274a0c",
+          "size_bytes": 460827
+        },
+        {
+          "path": "artifacts/validation/track1-focused-default-analysis-20261008/d41-policy-acceptance-03/planning/openspec/changes/add-track1-focused-default-analysis/proposal.md",
+          "sha256": "2a3a1bd8c7b9d92718f65033c04ddb468afcc6dfe47d87f2edeb09707d0c4a8e",
+          "size_bytes": 8170
+        },
+        {
+          "path": "artifacts/validation/track1-focused-default-analysis-20261008/d41-policy-acceptance-03/planning/openspec/changes/add-track1-focused-default-analysis/specs/bounded-wgs-execution/spec.md",
+          "sha256": "0c3c3221b19b0476313846318468dc9090d1f37d6849ca6b870d66acd79b4697",
+          "size_bytes": 72556
+        },
+        {
+          "path": "artifacts/validation/track1-focused-default-analysis-20261008/d41-policy-acceptance-03/planning/openspec/changes/add-track1-focused-default-analysis/specs/case-input-preparation/spec.md",
+          "sha256": "2d730418ecaae3dae08a009a6d8dfc7ad7631d440e68ab151dde412661333132",
+          "size_bytes": 14147
+        },
+        {
+          "path": "artifacts/validation/track1-focused-default-analysis-20261008/d41-policy-acceptance-03/planning/openspec/changes/add-track1-focused-default-analysis/specs/phenotype-guided-wgs-prioritization/spec.md",
+          "sha256": "b445061bec995fcf9d62c21a14a04d6ab9326247460114d21551f6c735444194",
+          "size_bytes": 23599
+        },
+        {
+          "path": "artifacts/validation/track1-focused-default-analysis-20261008/d41-policy-acceptance-03/planning/openspec/changes/add-track1-focused-default-analysis/specs/reference-data-bundle/spec.md",
+          "sha256": "a2988a64b759bcb03a7eccc094e79e18725f762ef0c1e50df4b449b8fa73c293",
+          "size_bytes": 33065
+        },
+        {
+          "path": "artifacts/validation/track1-focused-default-analysis-20261008/d41-policy-acceptance-03/planning/openspec/changes/add-track1-focused-default-analysis/specs/track1-analysis-profiles/spec.md",
+          "sha256": "b0c1445f733eb070edba80b6ed8805efa9b69acb5aeb9451b15bf83d8446c124",
+          "size_bytes": 18211
+        },
+        {
+          "path": "artifacts/validation/track1-focused-default-analysis-20261008/d41-policy-acceptance-03/planning/openspec/changes/add-track1-focused-default-analysis/specs/track1-submission/spec.md",
+          "sha256": "90b5dad1b10b46875cbf3a5743514a6355cf8e933f335007037dad8d902918af",
+          "size_bytes": 25348
+        },
+        {
+          "path": "artifacts/validation/track1-focused-default-analysis-20261008/d41-policy-acceptance-03/planning/openspec/changes/add-track1-focused-default-analysis/supersession.md",
+          "sha256": "6a92dc05be182c3adae8ba2e14b30b731e260ae76f1af670f4b56d6f5ebc9078",
+          "size_bytes": 23309
+        },
+        {
+          "path": "artifacts/validation/track1-focused-default-analysis-20261008/d41-policy-acceptance-03/planning/openspec/changes/add-track1-focused-default-analysis/tasks.md",
+          "sha256": "1bbdf82d0460ec6da03e0cf16a14d3e1e61dfa6ac357404fc9a3e1bc09fee5d4",
+          "size_bytes": 126907
+        }
+      ],
+      "policy": {
+        "path": "config/track1/protected-population-work-filter-v1.json",
+        "sha256": "3c0d96e7621507498eeda8fc9ddd964fa2626b7f27a8b1e7eef4434d6c5d719e",
+        "size_bytes": 4370
+      },
+      "previous_profile": {
+        "path": "artifacts/validation/track1-focused-default-analysis-20261008/d41-policy-acceptance-03/previous/config/track1/submission-acceptance-profile.json",
+        "sha256": "ce88e9ebfff7e19722e59078f97586a1f2379ec051e69992766090591137eb0b",
+        "size_bytes": 79806
+      },
+      "qualified_profiles": [],
+      "required_tasks": [
+        "7.2.56",
+        "7.2.57",
+        "7.2.58",
+        "7.2.59",
+        "7.2.60",
+        "7.2.61",
+        "7.2.62",
+        "7.2.63",
+        "7.2.64",
+        "7.2.65",
+        "7.3",
+        "7.4",
+        "7.5"
+      ],
+      "schema": "genosapiens.track1-d41-acceptance-amendment",
+      "version": 1
+    },
+    "default_profile": "focused",
+    "denominator_contract": {
+      "outcomes": [
+        "failed",
+        "recovered",
+        "scoped_out",
+        "unsupported",
+        "unresolved",
+        "evaluated_no_recovery"
+      ],
+      "retain_all_declared_cases": true,
+      "retain_original_failures_and_unsupported": true,
+      "scope_exclusion_is_recovery": false
+    },
+    "failure_controls": [
+      "missing-required-resource",
+      "wrong-EH38E",
+      "changed-policy",
+      "foreign-source",
+      "missing-tail-row",
+      "interrupted-writer",
+      "publication-readback",
+      "worker-cancellation",
+      "writer-crash-before-after-commit",
+      "row-context-limit",
+      "discovery-manifest-16-MiB-boundary",
+      "mode-plan-mismatch"
+    ],
+    "full_workloads": [
+      {
+        "attempt_budget": 1,
+        "automatic_retries": 0,
+        "classification": "public",
+        "completed_admission": {
+          "path": "/mnt/reference/scratch/public-build/track1-wgs-discovery-repair-20261005-admission-input/completed-admission-input.json",
+          "sha256": "44795c012cadec827f590a0ac04df22b9caa7dc3354c085da2e4820dd554b98e"
+        },
+        "external_deep_readback": false,
+        "final_check": "bounded_inventory_receipt_role_metadata_CSV_and_retained_path_sizes",
+        "milestone": "M1",
+        "output_namespace": "track1-profile-focused-20261008/full-01",
+        "prerequisites": [
+          "7.1",
+          "7.2"
+        ],
+        "profile": "focused",
+        "purpose": "HG002-engineering-traversal-not-clinical-recovery",
+        "required_terminal": "scientific_validated_publication_and_lightweight_final_check"
+      },
+      {
+        "attempt_budget": 1,
+        "automatic_retries": 0,
+        "classification": "public",
+        "completed_admission": {
+          "path": "/mnt/reference/scratch/public-build/track1-wgs-discovery-repair-20261005-admission-input/completed-admission-input.json",
+          "sha256": "44795c012cadec827f590a0ac04df22b9caa7dc3354c085da2e4820dd554b98e"
+        },
+        "external_deep_readback": false,
+        "final_check": "bounded_inventory_receipt_role_metadata_CSV_and_retained_path_sizes",
+        "milestone": "M2",
+        "output_namespace": "track1-profile-exhaustive-20261008/full-01",
+        "prerequisites": [
+          "7.5",
+          "10.1",
+          "10.2"
+        ],
+        "profile": "exhaustive",
+        "purpose": "HG002-engineering-traversal-not-clinical-recovery",
+        "required_terminal": "scientific_validated_publication_and_lightweight_final_check"
+      }
+    ],
+    "gate_contract": {
+      "all_relevant_transcripts": true,
+      "design": {
+        "path": "artifacts/validation/track1-focused-default-analysis-20261008/focused-acceptance-amendment-05/planning/openspec/changes/add-track1-focused-default-analysis/design.md",
+        "sha256": "82e233b3e5dec93c075a55adc0725c215ba2f078df8a0a737c326ff507045715",
+        "size_bytes": 171563
+      },
+      "diagnosis_independent": true,
+      "hpo_cutoff": null,
+      "new_af_cutoff": null,
+      "regulatory_score_cutoff": null,
+      "required_resource_failure_blocks": true,
+      "routes": [
+        "molecular",
+        "clinical",
+        "native",
+        "regulatory"
+      ],
+      "scenarios": {
+        "path": "artifacts/validation/track1-focused-default-analysis-20261008/focused-acceptance-amendment-05/planning/openspec/changes/add-track1-focused-default-analysis/specs/track1-analysis-profiles/spec.md",
+        "sha256": "084a133126d5e5adc8cfad05d35af1efefcd9f1c1c5f668d86355a1de04f74e4",
+        "size_bytes": 12803
+      },
+      "target_scoped": true,
+      "union_required": true,
+      "unknown_advances": true
+    },
+    "independent_clinical_validation_claimed": false,
+    "measured_stage_fields": [
+      "startup",
+      "cold_authentication",
+      "annotation_reuse_or_fresh",
+      "catalog_setup",
+      "regulatory_index_setup",
+      "selection",
+      "discovery",
+      "contexts",
+      "science",
+      "publication",
+      "seal_tail",
+      "final_inventory_check"
+    ],
+    "measured_work_fields": [
+      "elapsed_seconds",
+      "rss_peak_bytes",
+      "scratch_peak_bytes",
+      "cold_or_warm",
+      "source_inputs",
+      "selected_inputs",
+      "targets",
+      "contexts",
+      "logical_pairs",
+      "materialized_pairs",
+      "bytes_read",
+      "bytes_written"
+    ],
+    "mechanism_controls": [
+      {
+        "control_id": "molecular-splice-pair",
+        "expected_contract": "full_pair",
+        "gate_expectation": "selected",
+        "owner_task": "5.3",
+        "route": "molecular",
+        "source_control_status": "existing_public_or_synthetic_fixture_boundary"
+      },
+      {
+        "control_id": "homozygous-coding",
+        "expected_contract": "singleton",
+        "gate_expectation": "selected",
+        "owner_task": "5.3",
+        "route": "molecular",
+        "source_control_status": "existing_public_or_synthetic_fixture_boundary"
+      },
+      {
+        "control_id": "exact-clinical-intronic",
+        "expected_contract": "singleton",
+        "gate_expectation": "selected",
+        "owner_task": "5.3",
+        "route": "clinical",
+        "source_control_status": "existing_public_or_synthetic_fixture_boundary"
+      },
+      {
+        "control_id": "noncanonical-splice",
+        "expected_contract": "full_pair",
+        "gate_expectation": "selected",
+        "owner_task": "2.1",
+        "route": "molecular",
+        "source_control_status": "existing_public_or_synthetic_fixture_boundary"
+      },
+      {
+        "control_id": "installed-regulatory-homozygote",
+        "expected_contract": "singleton",
+        "gate_expectation": "selected",
+        "owner_task": "3.5",
+        "route": "regulatory",
+        "source_control_status": "source_binding_to_freeze_before_ranking"
+      },
+      {
+        "control_id": "cross-partition-coding-regulatory",
+        "expected_contract": "full_pair",
+        "gate_expectation": "selected",
+        "owner_task": "3.5",
+        "route": "regulatory",
+        "source_control_status": "source_binding_to_freeze_before_ranking"
+      },
+      {
+        "control_id": "low-quality-obligation",
+        "expected_contract": "technical_block",
+        "gate_expectation": "selected",
+        "owner_task": "5.3",
+        "route": "molecular",
+        "source_control_status": "existing_public_or_synthetic_fixture_boundary"
+      },
+      {
+        "control_id": "native-structural-repeat-mosaic",
+        "expected_contract": "source_uncertainty",
+        "gate_expectation": "unresolved",
+        "owner_task": "5.3",
+        "route": "native",
+        "source_control_status": "existing_public_or_synthetic_fixture_boundary"
+      },
+      {
+        "control_id": "generic-overlap-decoy",
+        "expected_contract": "scope_only",
+        "gate_expectation": "outside_profile",
+        "owner_task": "2.1",
+        "route": "all",
+        "source_control_status": "existing_public_or_synthetic_fixture_boundary"
+      },
+      {
+        "control_id": "same-domain-output-parity",
+        "expected_contract": "same_csv_and_science",
+        "gate_expectation": "selected",
+        "owner_task": "8.4",
+        "route": "all",
+        "source_control_status": "existing_public_or_synthetic_fixture_boundary"
+      },
+      {
+        "control_id": "late-duplicate-multiallelic-phase-model",
+        "expected_contract": "complete_pair_domain",
+        "gate_expectation": "selected",
+        "owner_task": "5.2",
+        "route": "all",
+        "source_control_status": "existing_public_or_synthetic_fixture_boundary"
+      }
+    ],
+    "minimum_speedup": null,
+    "operator_owned": [
+      "O1",
+      "O2",
+      "O3",
+      "O4",
+      "O5"
+    ],
+    "optional_products_required": false,
+    "original_profile_sha256": "307b19e8dd11ea57f8a9996bb578ba2c94f176412be409f1dc7b1f2c99b8e64c",
+    "phase_order": [
+      "M1",
+      "M2"
+    ],
+    "pilot": {
+      "deep_saved_product_readback": false,
+      "dense_selection": {
+        "path": "artifacts/validation/track1-wgs-discovery-repair-20261005/sample-inventory.json",
+        "sha256": "473ecc495778984a96f7b45bc082d77de03d009b8a247ecc6e89ccc9221216d2",
+        "size_bytes": 5273095
+      },
+      "determinism_scope": "representative_small_fixtures",
+      "finite_host_timeout_seconds": 93720,
+      "finite_process_timeout_seconds": 93600,
+      "retention_arithmetic_is_end_to_end": false,
+      "scientific_output_invocations": 1,
+      "seed": "track1-focused-20261008-v1",
+      "selection": {
+        "path": "artifacts/validation/track1-focused-exploration-20261008/selection-v2.json",
+        "sha256": "9459887f421d90fe6f3c3c9de968e3cf30a3d6d6a9c5f3375cc9d5d2ff864762",
+        "size_bytes": 257441
+      },
+      "source_audit": "compact_authenticated_accounting_and_addressable_original_ledger",
+      "stages": [
+        "selection",
+        "discovery",
+        "contexts",
+        "science",
+        "publication",
+        "final_inventory_check"
+      ],
+      "strata": [
+        {
+          "id": "random",
+          "interpretation": "uniform-original-inputs-assessed-subset",
+          "sample_size": 20000,
+          "selector": "random_ordinals"
+        },
+        {
+          "id": "dense_late",
+          "interpretation": "all-frozen-D41-ordinals-biased-no-global-estimate",
+          "sample_size": 16336,
+          "selector": "samples[*].ordinal"
+        }
+      ]
+    },
+    "positive_output_checks": {
+      "empty_public_workload_can_replace_positive_controls": false,
+      "exact_faithful_csv": true,
+      "full_pair": true,
+      "maximum_rank": 10,
+      "representative_small_fixture_determinism": true,
+      "selected_technical_obligations": true,
+      "singleton": true
+    },
+    "prospective_amendment": {
+      "amendment_id": "focused-D15-20261011-05",
+      "controlled_use_authorized": false,
+      "current_planning_snapshots": [
+        {
+          "path": "artifacts/validation/track1-focused-default-analysis-20261008/focused-acceptance-amendment-05/planning/openspec/changes/add-track1-focused-default-analysis/design.md",
+          "sha256": "82e233b3e5dec93c075a55adc0725c215ba2f078df8a0a737c326ff507045715",
+          "size_bytes": 171563
+        },
+        {
+          "path": "artifacts/validation/track1-focused-default-analysis-20261008/focused-acceptance-amendment-05/planning/openspec/changes/add-track1-focused-default-analysis/proposal.md",
+          "sha256": "566e104139de7eba085caed556f7dd23f333b581dd8eeb053e6ea8af3572baab",
+          "size_bytes": 7940
+        },
+        {
+          "path": "artifacts/validation/track1-focused-default-analysis-20261008/focused-acceptance-amendment-05/planning/openspec/changes/add-track1-focused-default-analysis/specs/bounded-wgs-execution/spec.md",
+          "sha256": "15ff5438439291182622781d24eb8ba28046514ef20ff1a61a094ae7e48af118",
+          "size_bytes": 24957
+        },
+        {
+          "path": "artifacts/validation/track1-focused-default-analysis-20261008/focused-acceptance-amendment-05/planning/openspec/changes/add-track1-focused-default-analysis/specs/case-input-preparation/spec.md",
+          "sha256": "475c63251958f0261652a20de60d5f8c8b5a2c99cb491b58fa68879014fb843b",
+          "size_bytes": 11899
+        },
+        {
+          "path": "artifacts/validation/track1-focused-default-analysis-20261008/focused-acceptance-amendment-05/planning/openspec/changes/add-track1-focused-default-analysis/specs/phenotype-guided-wgs-prioritization/spec.md",
+          "sha256": "0bffd5bfdf140af190aa90c5754f303e23aac4cdd312d55423a6d5cfc23592e2",
+          "size_bytes": 11791
+        },
+        {
+          "path": "artifacts/validation/track1-focused-default-analysis-20261008/focused-acceptance-amendment-05/planning/openspec/changes/add-track1-focused-default-analysis/specs/reference-data-bundle/spec.md",
+          "sha256": "b78636b304557b16667814ae92b5fc8fbdf73aab4cc6eff60eec07a867ed2269",
+          "size_bytes": 23559
+        },
+        {
+          "path": "artifacts/validation/track1-focused-default-analysis-20261008/focused-acceptance-amendment-05/planning/openspec/changes/add-track1-focused-default-analysis/specs/track1-analysis-profiles/spec.md",
+          "sha256": "084a133126d5e5adc8cfad05d35af1efefcd9f1c1c5f668d86355a1de04f74e4",
+          "size_bytes": 12803
+        },
+        {
+          "path": "artifacts/validation/track1-focused-default-analysis-20261008/focused-acceptance-amendment-05/planning/openspec/changes/add-track1-focused-default-analysis/specs/track1-submission/spec.md",
+          "sha256": "1c98c6e3092263f89bb1423d92efe477a5d4533e39689ad0eefe3354272683f8",
+          "size_bytes": 17216
+        },
+        {
+          "path": "artifacts/validation/track1-focused-default-analysis-20261008/focused-acceptance-amendment-05/planning/openspec/changes/add-track1-focused-default-analysis/supersession.md",
+          "sha256": "6a92dc05be182c3adae8ba2e14b30b731e260ae76f1af670f4b56d6f5ebc9078",
+          "size_bytes": 23309
+        },
+        {
+          "path": "artifacts/validation/track1-focused-default-analysis-20261008/focused-acceptance-amendment-05/planning/openspec/changes/add-track1-focused-default-analysis/tasks.md",
+          "sha256": "8f2e397f04ea623db00db62eb799a8641759c3ccb43fcda33fcd9ec610de548e",
+          "size_bytes": 56145
+        }
+      ],
+      "current_policy": {
+        "path": "config/track1/analysis-profiles.json",
+        "sha256": "1db257b65928273b37a7ad8f2c696e9cb499c8a0d6ee51919874e88f02a941c3",
+        "size_bytes": 2104
+      },
+      "execution_identity_owner": "existing public candidate authority; exact candidate/source/image and reuse manifest freeze before launch",
+      "finite_budget": {
+        "allowance_seconds": {
+          "completed_metadata": 120,
+          "contexts": 3600,
+          "discovery": 3600,
+          "final_inventory_check": 120,
+          "profile_seal_or_reuse": 1800,
+          "publication": 1800,
+          "reused_selection_ledger": 1800,
+          "science": 7200
+        },
+        "assumptions": [
+          "Reuse existing producer completion with bounded metadata, then one scientific/publication traversal.",
+          "All original random/dense inputs and routes remain fixed.",
+          "Complete compatible 3.4 facts are reused; no repeat installed regulatory queries solely for gate selection.",
+          "Small representative fixtures cover deterministic/oracle/corruption checks.",
+          "Normal publication checks payloads while copying; one bounded final inventory check follows.",
+          "Compact source accounting replaces per-record JSON/Markdown narrative regeneration.",
+          "Operational allowances and the retained watchdog are not measured durations or an ETA."
+        ],
+        "base_seconds": 20040,
+        "cleanup_seconds": 120,
+        "host_seconds": 93720,
+        "measured_selection_anchor_seconds": 16003.445873227989,
+        "measured_selection_scope": "historical selection queries, now reused; not a new selection-stage allowance",
+        "operational_reserve_seconds": 61740,
+        "prior_admission_authentication_seconds": 6086.57,
+        "process_seconds": 93600,
+        "rounded_allowance_seconds": 1800,
+        "total_wgs_runtime_gate": false,
+        "uncertainty_factor": "1.5",
+        "uncertainty_seconds": 10020
+      },
+      "historical_gate_bindings": {
+        "design": {
+          "path": "artifacts/validation/track1-focused-default-analysis-20261008/focused-acceptance-amendment-04/planning-final/openspec/changes/add-track1-focused-default-analysis/design.md",
+          "sha256": "1474982cbbf66c4c0024e66b0d594ba4da76cc3beecac505d63e9ffbf48b105f",
+          "size_bytes": 163951
+        },
+        "scenarios": {
+          "path": "artifacts/validation/track1-focused-default-analysis-20261008/focused-acceptance-amendment-04/planning-final/openspec/changes/add-track1-focused-default-analysis/specs/track1-analysis-profiles/spec.md",
+          "sha256": "084a133126d5e5adc8cfad05d35af1efefcd9f1c1c5f668d86355a1de04f74e4",
+          "size_bytes": 12803
+        }
+      },
+      "historical_planning_snapshots": [
+        {
+          "availability": "preserved_at_declared_snapshot_path",
+          "path": "artifacts/validation/track1-focused-default-analysis-20261008/focused-acceptance-amendment-04/planning-final/openspec/changes/add-track1-focused-default-analysis/design.md",
+          "reconstructed": false,
+          "sha256": "1474982cbbf66c4c0024e66b0d594ba4da76cc3beecac505d63e9ffbf48b105f",
+          "size_bytes": 163951
+        },
+        {
+          "availability": "preserved_at_declared_snapshot_path",
+          "path": "artifacts/validation/track1-focused-default-analysis-20261008/focused-acceptance-amendment-04/planning-final/openspec/changes/add-track1-focused-default-analysis/specs/track1-analysis-profiles/spec.md",
+          "reconstructed": false,
+          "sha256": "084a133126d5e5adc8cfad05d35af1efefcd9f1c1c5f668d86355a1de04f74e4",
+          "size_bytes": 12803
+        }
+      ],
+      "installed_index_pin": {
+        "path": "config/track1/regulatory-index-pin.json",
+        "sha256": "040f4a7d55d4e59ed64c62250bb46ff1070b8fa7d98dc9f25aa23b7f74b4ae1f",
+        "size_bytes": 868
+      },
+      "no_automatic_retries": true,
+      "original_cohorts_unchanged": true,
+      "original_outcomes_unchanged": true,
+      "planning_runtime_dependency": false,
+      "previous_profile": {
+        "path": "artifacts/validation/track1-focused-default-analysis-20261008/focused-acceptance-amendment-05/previous/config/track1/submission-acceptance-profile.json",
+        "sha256": "2c8535fcf1700ecf2c8ea955d6d22d10592ae299b7d22b72e0fa9d09363f733d",
+        "size_bytes": 63845
+      },
+      "previous_profile_acceptance_sha256": "e9d4d24cbc9e852a7a8287639fbc200ce55c0153cfb554433461fc07dbf14d09",
+      "prior_amendment": {
+        "amendment_id": "focused-D14-20261011-04",
+        "controlled_use_authorized": false,
+        "current_planning_snapshots": [
+          {
+            "path": "artifacts/validation/track1-focused-default-analysis-20261008/focused-acceptance-amendment-04/planning-final/openspec/changes/add-track1-focused-default-analysis/design.md",
+            "sha256": "1474982cbbf66c4c0024e66b0d594ba4da76cc3beecac505d63e9ffbf48b105f",
+            "size_bytes": 163951
+          },
+          {
+            "path": "artifacts/validation/track1-focused-default-analysis-20261008/focused-acceptance-amendment-04/planning-final/openspec/changes/add-track1-focused-default-analysis/proposal.md",
+            "sha256": "3948fbf7f31e5c5f28039da5602fd6f217a4b9de06c1c1242871395506958d66",
+            "size_bytes": 6909
+          },
+          {
+            "path": "artifacts/validation/track1-focused-default-analysis-20261008/focused-acceptance-amendment-04/planning-final/openspec/changes/add-track1-focused-default-analysis/specs/bounded-wgs-execution/spec.md",
+            "sha256": "d2eb3c183c16d315b882a2d20c8916db97cc2f47af64bcf4e9fb4703578174b6",
+            "size_bytes": 21293
+          },
+          {
+            "path": "artifacts/validation/track1-focused-default-analysis-20261008/focused-acceptance-amendment-04/planning-final/openspec/changes/add-track1-focused-default-analysis/specs/case-input-preparation/spec.md",
+            "sha256": "6af45eb92678fb2766c11705927ec37edb0309f5994e913f8bc2a287ff20f7c6",
+            "size_bytes": 10909
+          },
+          {
+            "path": "artifacts/validation/track1-focused-default-analysis-20261008/focused-acceptance-amendment-04/planning-final/openspec/changes/add-track1-focused-default-analysis/specs/phenotype-guided-wgs-prioritization/spec.md",
+            "sha256": "0bffd5bfdf140af190aa90c5754f303e23aac4cdd312d55423a6d5cfc23592e2",
+            "size_bytes": 11791
+          },
+          {
+            "path": "artifacts/validation/track1-focused-default-analysis-20261008/focused-acceptance-amendment-04/planning-final/openspec/changes/add-track1-focused-default-analysis/specs/reference-data-bundle/spec.md",
+            "sha256": "791c1cb36bfc69a282d81190cac3f79e3da5624e964ef21a863426aed6c48ade",
+            "size_bytes": 22764
+          },
+          {
+            "path": "artifacts/validation/track1-focused-default-analysis-20261008/focused-acceptance-amendment-04/planning-final/openspec/changes/add-track1-focused-default-analysis/specs/track1-analysis-profiles/spec.md",
+            "sha256": "084a133126d5e5adc8cfad05d35af1efefcd9f1c1c5f668d86355a1de04f74e4",
+            "size_bytes": 12803
+          },
+          {
+            "path": "artifacts/validation/track1-focused-default-analysis-20261008/focused-acceptance-amendment-04/planning-final/openspec/changes/add-track1-focused-default-analysis/specs/track1-submission/spec.md",
+            "sha256": "1c98c6e3092263f89bb1423d92efe477a5d4533e39689ad0eefe3354272683f8",
+            "size_bytes": 17216
+          },
+          {
+            "path": "artifacts/validation/track1-focused-default-analysis-20261008/focused-acceptance-amendment-04/planning-final/openspec/changes/add-track1-focused-default-analysis/supersession.md",
+            "sha256": "6a92dc05be182c3adae8ba2e14b30b731e260ae76f1af670f4b56d6f5ebc9078",
+            "size_bytes": 23309
+          },
+          {
+            "path": "artifacts/validation/track1-focused-default-analysis-20261008/focused-acceptance-amendment-04/planning-final/openspec/changes/add-track1-focused-default-analysis/tasks.md",
+            "sha256": "d3a9c18c6225a771091ccb3bffa7424da9bc720d9b7f0d2bc72f6586ba85e6a4",
+            "size_bytes": 51060
+          }
+        ],
+        "current_policy": {
+          "path": "config/track1/analysis-profiles.json",
+          "sha256": "1db257b65928273b37a7ad8f2c696e9cb499c8a0d6ee51919874e88f02a941c3",
+          "size_bytes": 2104
+        },
+        "execution_identity_owner": "existing public candidate authority; exact candidate/source/image and reuse manifest freeze before launch",
+        "finite_budget": {
+          "allowance_seconds": {
+            "admission_authentication": 7200,
+            "contexts": 3600,
+            "discovery": 3600,
+            "final_inventory_check": 120,
+            "profile_seal_or_reuse": 1800,
+            "publication": 1800,
+            "reused_selection_ledger": 1800,
+            "science": 7200
+          },
+          "assumptions": [
+            "One complete immutable admission authentication and one scientific/publication traversal.",
+            "All original random/dense inputs and routes remain fixed.",
+            "Complete compatible 3.4 facts are reused; no repeat installed regulatory queries solely for gate selection.",
+            "Small representative fixtures cover deterministic/oracle/corruption checks.",
+            "Normal publication checks payloads while copying; one bounded final inventory check follows.",
+            "Compact source accounting replaces per-record JSON/Markdown narrative regeneration.",
+            "Operational allowances and the retained watchdog are not measured durations or an ETA."
+          ],
+          "base_seconds": 27120,
+          "cleanup_seconds": 120,
+          "host_seconds": 93720,
+          "measured_selection_anchor_seconds": 16003.445873227989,
+          "measured_selection_scope": "historical selection queries, now reused; not a new selection-stage allowance",
+          "operational_reserve_seconds": 51120,
+          "prior_admission_authentication_seconds": 6086.57,
+          "process_seconds": 93600,
+          "rounded_allowance_seconds": 1800,
+          "total_wgs_runtime_gate": false,
+          "uncertainty_factor": "1.5",
+          "uncertainty_seconds": 13560
+        },
+        "historical_gate_bindings": {
+          "design": {
+            "path": "artifacts/validation/track1-focused-default-analysis-20261008/focused-acceptance-amendment-03/planning/openspec/changes/add-track1-focused-default-analysis/design.md",
+            "sha256": "3fe371d06ccb52b999fd48b2101b3170180643fbdf68b8779b96bdd0e48009f0",
+            "size_bytes": 159793
+          },
+          "scenarios": {
+            "path": "artifacts/validation/track1-focused-default-analysis-20261008/focused-acceptance-amendment-03/planning/openspec/changes/add-track1-focused-default-analysis/specs/track1-analysis-profiles/spec.md",
+            "sha256": "157da0455cec3ff5094814432061d71750a9b55f2e8a93f2416f68db095c399d",
+            "size_bytes": 12434
+          }
+        },
+        "historical_planning_snapshots": [
+          {
+            "availability": "not_found_in_preserved_contract_or_known_candidate_snapshots",
+            "path": "artifacts/validation/track1-focused-default-analysis-20261008/focused-acceptance-amendment-03/planning/openspec/changes/add-track1-focused-default-analysis/design.md",
+            "reconstructed": false,
+            "sha256": "3fe371d06ccb52b999fd48b2101b3170180643fbdf68b8779b96bdd0e48009f0",
+            "size_bytes": 159793
+          },
+          {
+            "availability": "not_found_in_preserved_contract_or_known_candidate_snapshots",
+            "path": "artifacts/validation/track1-focused-default-analysis-20261008/focused-acceptance-amendment-03/planning/openspec/changes/add-track1-focused-default-analysis/specs/track1-analysis-profiles/spec.md",
+            "reconstructed": false,
+            "sha256": "157da0455cec3ff5094814432061d71750a9b55f2e8a93f2416f68db095c399d",
+            "size_bytes": 12434
+          }
+        ],
+        "installed_index_pin": {
+          "path": "config/track1/regulatory-index-pin.json",
+          "sha256": "040f4a7d55d4e59ed64c62250bb46ff1070b8fa7d98dc9f25aa23b7f74b4ae1f",
+          "size_bytes": 868
+        },
+        "no_automatic_retries": true,
+        "original_cohorts_unchanged": true,
+        "original_outcomes_unchanged": true,
+        "planning_runtime_dependency": false,
+        "previous_profile": {
+          "path": "artifacts/validation/track1-focused-default-analysis-20261008/focused-acceptance-amendment-04/previous/config/track1/submission-acceptance-profile.json",
+          "sha256": "c24e3126d6b3d2cb9de31f456be5fd077ba2cd62c107c76a85274da3079acd9c",
+          "size_bytes": 52849
+        },
+        "previous_profile_acceptance_sha256": "feae4ef9f66cdcc2c145d4024acdf7ae260c341a1ce869b56e22eea56d6e668b",
+        "prior_amendment": {
+          "amendment_id": "focused-D13-20261011-03",
+          "controlled_use_authorized": false,
+          "current_planning_snapshots": [
+            {
+              "path": "artifacts/validation/track1-focused-default-analysis-20261008/focused-acceptance-amendment-03/planning/openspec/changes/add-track1-focused-default-analysis/design.md",
+              "sha256": "3fe371d06ccb52b999fd48b2101b3170180643fbdf68b8779b96bdd0e48009f0",
+              "size_bytes": 159793
+            },
+            {
+              "path": "artifacts/validation/track1-focused-default-analysis-20261008/focused-acceptance-amendment-03/planning/openspec/changes/add-track1-focused-default-analysis/proposal.md",
+              "sha256": "77eb0b381fa3a944d26b19edaf50ee22da712711cee5fba1b49e4d437e161b56",
+              "size_bytes": 6258
+            },
+            {
+              "path": "artifacts/validation/track1-focused-default-analysis-20261008/focused-acceptance-amendment-03/planning/openspec/changes/add-track1-focused-default-analysis/specs/bounded-wgs-execution/spec.md",
+              "sha256": "db717d644ebbf9c7901bdf81506975eab1a00090259e2d4312c0e3187e971fc9",
+              "size_bytes": 19944
+            },
+            {
+              "path": "artifacts/validation/track1-focused-default-analysis-20261008/focused-acceptance-amendment-03/planning/openspec/changes/add-track1-focused-default-analysis/specs/case-input-preparation/spec.md",
+              "sha256": "4f7695ec79da60e384d4cf9b621b50888d44a9e426f9727705db5aa6aad86625",
+              "size_bytes": 9991
+            },
+            {
+              "path": "artifacts/validation/track1-focused-default-analysis-20261008/focused-acceptance-amendment-03/planning/openspec/changes/add-track1-focused-default-analysis/specs/phenotype-guided-wgs-prioritization/spec.md",
+              "sha256": "d6dfa4cbe08c5665f5ed59fbe32628dd8e13d38c82db732a80be4a7becfa6b78",
+              "size_bytes": 11614
+            },
+            {
+              "path": "artifacts/validation/track1-focused-default-analysis-20261008/focused-acceptance-amendment-03/planning/openspec/changes/add-track1-focused-default-analysis/specs/reference-data-bundle/spec.md",
+              "sha256": "2765d8ba1c8799fcd93f00441ff96ce0e74a59f3501858753847db409e8cce07",
+              "size_bytes": 22411
+            },
+            {
+              "path": "artifacts/validation/track1-focused-default-analysis-20261008/focused-acceptance-amendment-03/planning/openspec/changes/add-track1-focused-default-analysis/specs/track1-analysis-profiles/spec.md",
+              "sha256": "157da0455cec3ff5094814432061d71750a9b55f2e8a93f2416f68db095c399d",
+              "size_bytes": 12434
+            },
+            {
+              "path": "artifacts/validation/track1-focused-default-analysis-20261008/focused-acceptance-amendment-03/planning/openspec/changes/add-track1-focused-default-analysis/specs/track1-submission/spec.md",
+              "sha256": "452b88d0e370320b277f2a358625eaef01925552933c09a273ae33691bb7f22c",
+              "size_bytes": 16744
+            },
+            {
+              "path": "artifacts/validation/track1-focused-default-analysis-20261008/focused-acceptance-amendment-03/planning/openspec/changes/add-track1-focused-default-analysis/supersession.md",
+              "sha256": "eb8e3ea39538ec8f658d6a11998d33006adc47df69146400c2fd1cc0a388fb25",
+              "size_bytes": 22178
+            },
+            {
+              "path": "artifacts/validation/track1-focused-default-analysis-20261008/focused-acceptance-amendment-03/planning/openspec/changes/add-track1-focused-default-analysis/tasks.md",
+              "sha256": "210ba313c67b43cf7a2d23754a1f18ea0ae2dd599f71e60a41a2ffbd7ef20e8f",
+              "size_bytes": 50138
+            }
+          ],
+          "current_policy": {
+            "path": "config/track1/analysis-profiles.json",
+            "sha256": "1db257b65928273b37a7ad8f2c696e9cb499c8a0d6ee51919874e88f02a941c3",
+            "size_bytes": 2104
+          },
+          "execution_identity_owner": "existing public candidate authority; exact candidate/source/image and reuse manifest freeze before launch",
+          "finite_budget": {
+            "allowance_seconds": {
+              "admission_authentication": 7200,
+              "context_first_and_replay": 7200,
+              "discovery_first_and_replay": 7200,
+              "independent_product_readback": 1800,
+              "profile_seal_or_reuse": 1800,
+              "publication_first_and_replay": 3600,
+              "science_first_and_replay": 14400,
+              "selection": 18000
+            },
+            "assumptions": [
+              "One complete immutable admission authentication; no repeated upstream VEP.",
+              "Original random/dense union and all four routes remain fixed.",
+              "Compatible gate facts may be reused only under complete supported bindings.",
+              "Scientific/output decisions execute twice; product readback does not execute science.",
+              "Downstream allowances are operational planning assumptions, not measured durations or an ETA.",
+              "Unknown prefix query/decode costs and ambient cache state remain explicit."
+            ],
+            "base_seconds": 61200,
+            "cleanup_seconds": 120,
+            "host_seconds": 93720,
+            "measured_selection_anchor_seconds": 16003.445873227989,
+            "measured_selection_scope": "old incomplete prefix wall plus completed new continuation; conservative overlapping setup included",
+            "prior_admission_authentication_seconds": 6086.57,
+            "process_seconds": 93600,
+            "rounded_allowance_seconds": 1800,
+            "total_wgs_runtime_gate": false,
+            "uncertainty_factor": "1.5",
+            "uncertainty_seconds": 30600
+          },
+          "historical_gate_bindings": {
+            "design": {
+              "path": "openspec/changes/add-track1-focused-default-analysis/design.md",
+              "sha256": "8ef31acda485a9b32b55bd17d3fef5f3b3e8b146cedd75f51117527fbb72f766",
+              "size_bytes": 62150
+            },
+            "scenarios": {
+              "path": "openspec/changes/add-track1-focused-default-analysis/specs/track1-analysis-profiles/spec.md",
+              "sha256": "aab3237026439213caf0da4889bb82d5f33392b23980d32894b435854fd7a9a2",
+              "size_bytes": 10757
+            }
+          },
+          "historical_planning_snapshots": [
+            {
+              "availability": "not_found_in_preserved_contract_or_known_candidate_snapshots",
+              "path": "openspec/changes/add-track1-focused-default-analysis/design.md",
+              "reconstructed": false,
+              "sha256": "8ef31acda485a9b32b55bd17d3fef5f3b3e8b146cedd75f51117527fbb72f766",
+              "size_bytes": 62150
+            },
+            {
+              "availability": "not_found_in_preserved_contract_or_known_candidate_snapshots",
+              "path": "openspec/changes/add-track1-focused-default-analysis/specs/track1-analysis-profiles/spec.md",
+              "reconstructed": false,
+              "sha256": "aab3237026439213caf0da4889bb82d5f33392b23980d32894b435854fd7a9a2",
+              "size_bytes": 10757
+            }
+          ],
+          "installed_index_pin": {
+            "path": "config/track1/regulatory-index-pin.json",
+            "sha256": "040f4a7d55d4e59ed64c62250bb46ff1070b8fa7d98dc9f25aa23b7f74b4ae1f",
+            "size_bytes": 868
+          },
+          "no_automatic_retries": true,
+          "original_cohorts_unchanged": true,
+          "original_outcomes_unchanged": true,
+          "planning_runtime_dependency": false,
+          "previous_profile": {
+            "path": "artifacts/validation/track1-focused-default-analysis-20261008/focused-acceptance-amendment-03/previous/config/track1/submission-acceptance-profile.json",
+            "sha256": "d9677265ca015dc25c697ae7b8af7273f3927c719be49a91c01c9c3569f2dfc5",
+            "size_bytes": 43605
+          },
+          "previous_profile_acceptance_sha256": "477ff4bad25e11a35a86cf77b2bb135dc8d7c21023fd9f0bce8c5c61e05d7891",
+          "qualified_profiles": [],
+          "schema": "genosapiens.track1-analysis-profile-acceptance-amendment",
+          "selection_receipts": [
+            {
+              "path": "artifacts/validation/track1-focused-exploration-20261008/regulatory-indexed-10/plan.json",
+              "sha256": "939e56c0225b32de02382e766d6afdd5fb8b46a96f75a9191911af6bc2f2ba45",
+              "size_bytes": 62142
+            },
+            {
+              "path": "artifacts/validation/track1-focused-exploration-20261008/regulatory-indexed-10/result.json",
+              "sha256": "89c875fc0997747355d311d6b28f93a07f66942a9959152ce41d5d51d8baddbf",
+              "size_bytes": 4952
+            },
+            {
+              "path": "artifacts/validation/track1-focused-exploration-20261008/regulatory-indexed-10/exit.json",
+              "sha256": "5d98e3a24b6683ec2188dc454359e1fc3e1c12056ab78a0ab6a32453532b4c9b",
+              "size_bytes": 536
+            },
+            {
+              "path": "artifacts/validation/track1-focused-exploration-20261008/regulatory-indexed-10/reconciliation.json",
+              "sha256": "13ef41ac3135e9bec3068ee318b3be205f3e74bd4c3dd70d3e1352cbca76e24a",
+              "size_bytes": 3490
+            }
+          ],
+          "supported_reuse_required": [
+            "cohort",
+            "ordered_original_domain",
+            "source",
+            "policy",
+            "original_producer",
+            "current_consumer"
+          ],
+          "version": 1
+        },
+        "qualified_profiles": [],
+        "schema": "genosapiens.track1-analysis-profile-acceptance-amendment",
+        "selection_receipts": [
+          {
+            "path": "artifacts/validation/track1-focused-exploration-20261008/regulatory-indexed-10/plan.json",
+            "sha256": "939e56c0225b32de02382e766d6afdd5fb8b46a96f75a9191911af6bc2f2ba45",
+            "size_bytes": 62142
+          },
+          {
+            "path": "artifacts/validation/track1-focused-exploration-20261008/regulatory-indexed-10/result.json",
+            "sha256": "89c875fc0997747355d311d6b28f93a07f66942a9959152ce41d5d51d8baddbf",
+            "size_bytes": 4952
+          },
+          {
+            "path": "artifacts/validation/track1-focused-exploration-20261008/regulatory-indexed-10/exit.json",
+            "sha256": "5d98e3a24b6683ec2188dc454359e1fc3e1c12056ab78a0ab6a32453532b4c9b",
+            "size_bytes": 536
+          },
+          {
+            "path": "artifacts/validation/track1-focused-exploration-20261008/regulatory-indexed-10/reconciliation.json",
+            "sha256": "13ef41ac3135e9bec3068ee318b3be205f3e74bd4c3dd70d3e1352cbca76e24a",
+            "size_bytes": 3490
+          }
+        ],
+        "supported_reuse_required": [
+          "cohort",
+          "ordered_original_domain",
+          "source",
+          "policy",
+          "original_producer",
+          "current_consumer"
+        ],
+        "version": 1
+      },
+      "qualified_profiles": [],
+      "schema": "genosapiens.track1-analysis-profile-acceptance-amendment",
+      "selection_receipts": [
+        {
+          "path": "artifacts/validation/track1-focused-exploration-20261008/regulatory-indexed-10/plan.json",
+          "sha256": "939e56c0225b32de02382e766d6afdd5fb8b46a96f75a9191911af6bc2f2ba45",
+          "size_bytes": 62142
+        },
+        {
+          "path": "artifacts/validation/track1-focused-exploration-20261008/regulatory-indexed-10/result.json",
+          "sha256": "89c875fc0997747355d311d6b28f93a07f66942a9959152ce41d5d51d8baddbf",
+          "size_bytes": 4952
+        },
+        {
+          "path": "artifacts/validation/track1-focused-exploration-20261008/regulatory-indexed-10/exit.json",
+          "sha256": "5d98e3a24b6683ec2188dc454359e1fc3e1c12056ab78a0ab6a32453532b4c9b",
+          "size_bytes": 536
+        },
+        {
+          "path": "artifacts/validation/track1-focused-exploration-20261008/regulatory-indexed-10/reconciliation.json",
+          "sha256": "13ef41ac3135e9bec3068ee318b3be205f3e74bd4c3dd70d3e1352cbca76e24a",
+          "size_bytes": 3490
+        }
+      ],
+      "supported_reuse_required": [
+        "cohort",
+        "ordered_original_domain",
+        "source",
+        "policy",
+        "original_producer",
+        "current_consumer"
+      ],
+      "version": 1
+    },
+    "qualification_bindings": [
+      "profile",
+      "profile_policy_sha256",
+      "catalog_sha256",
+      "regulatory_index_sha256",
+      "source_sha256",
+      "executable_stack_sha256",
+      "runtime_image_digest",
+      "acceptance_plan_sha256",
+      "attempt_id"
+    ],
+    "regulatory_source_contract_amendment": {
+      "actual_bounded_adapter_integration_required": true,
+      "anchor_column": 3,
+      "anchor_determines_class": false,
+      "anchor_pattern": "EH38[DF][0-9]+",
+      "automatic_retries": 0,
+      "biotype_column": 3,
+      "ccre_accession_column": 4,
+      "complete_index_does_not_imply_resolved_targets": true,
+      "corrected_installed_attempt": "04",
+      "display_symbol_column": 2,
+      "failed_attempt_remains_failed": true,
+      "failed_installed_attempt": "installed-regulatory-exit-attempt-01.json",
+      "failed_installed_attempts": [
+        "installed-regulatory-exit-attempt-01.json",
+        "installed-regulatory-exit-attempt-02.json",
+        "installed-regulatory-exit-attempt-03.json"
+      ],
+      "finite_controls": [
+        "mixed-anchor-parse-build-readback",
+        "non-TF-EH38F-class",
+        "unsupported-anchor-outside-overlap",
+        "missing-and-wrong-ccre-join",
+        "unchanged-source-geometry-context-conflicts",
+        "late-sentinel-in-both-sources",
+        "missing-sentinel-atomic-failure",
+        "malformed-later-row-after-sentinel-fails",
+        "actual-row-609-raw-target-and-context-preserved",
+        "supported-versioned-Ensembl-and-missing-target",
+        "no-display-symbol-or-alias-mapping",
+        "mixed-stable-unmapped-missing-targets-with-tissue-deduplication",
+        "same-raw-target-on-distinct-elements-and-orphan-source-rows",
+        "unmapped-target-only-indexed-bounded-chunk-reads",
+        "linked-unknown-distinct-from-genuine-missing-link",
+        "independently-selected-row-retains-regulatory-uncertainty",
+        "structural-error-after-sentinel-on-unmapped-row-fails",
+        "balanced-class-swap-rejected",
+        "missing-or-mislocated-provenance-rejected",
+        "one-source-validation-ingest-pass",
+        "transaction-close-and-finalization-cleanup-failure"
+      ],
+      "genuine_absent_link_is_distinct": true,
+      "header_dictionary_agreement_scope_only": true,
+      "independent_index_readback_required": true,
+      "independent_readback_reopens_original_streams": false,
+      "installed_bed_counts": {
+        "EH38D": 2262106,
+        "EH38F": 86748,
+        "total": 2348854
+      },
+      "installed_bed_sha256": "a292aea64edea7efbef275140b78116efdef1bea5b729dc9e5513421dc868dda",
+      "installed_re2g_sha256": "074820992b59f46273e650aabe6d8c96156e43b12ee5213f56a56f5815298d12",
+      "inventory_collection": "same-validation-ingest-pass-as-index-build",
+      "linked_unknown_target_remains_unresolved": true,
+      "missing_join_is_unlinked": true,
+      "observed_inventory_counts_are_results": true,
+      "original_source_validation_passes": 1,
+      "orphan_source_rows_preserved": true,
+      "raw_target_labels_preserved": true,
+      "re2g_join_column": 0,
+      "reconciliation": [
+        "physical-row-and-target-class-partitions",
+        "distinct-raw-target-reclassification",
+        "raw-stable-unresolved-relations-and-orphan-joins",
+        "observed-vocabularies-with-source-locators",
+        "complete-provenance-ordinal-content-and-relation-closure",
+        "known-pinned-BED-family-counts"
+      ],
+      "row609": {
+        "biotype": "NA",
+        "ccre": "EH38E2777880",
+        "display_symbol": "SLC35E2",
+        "ordinal": 609,
+        "raw_target": "SLC35E2",
+        "sha256": "d2e24c8c09526973c978599828b91607496a4c3614c509e573d4a8899e196c36",
+        "target_kind": "unmapped"
+      },
+      "sentinel_position_is_fixed": false,
+      "sentinel_presence_required_in_complete_pass": true,
+      "separate_inventory_prerequisite": false,
+      "source_missing_target_marker": ".",
+      "source_target_column": 1,
+      "source_target_kinds": [
+        "ensembl",
+        "missing",
+        "unmapped"
+      ],
+      "supported_target_pattern": "ENSG[0-9]{11}(?:\\.[1-9][0-9]*)?",
+      "symbol_or_alias_mapping_permitted": false,
+      "unresolved_evidence_survives_independent_selection": true,
+      "unsupported_anchor_outside_overlap_fails": true
+    },
+    "resource_limits": {
+      "additional_swap_bytes": 0,
+      "cpus": 12,
+      "disk_reserve_bytes": 100000000000,
+      "memory_bytes": 25769803776
+    },
+    "schema": "genosapiens.track1-analysis-profile-acceptance",
+    "source_fixture_experiment_id": "track1-submission-acceptance-population-models-20260917",
+    "total_runtime_gate_seconds": null,
+    "verification_policy": {
+      "completed_input_reuse": {
+        "authority": "existing_bound_producer_completion",
+        "completed_journal_replay": false,
+        "domain_closure": "during_required_consumption",
+        "full_parent_replay": false,
+        "new_verification_checkpoint": false,
+        "requested_records": "strict_type_identity_hash_and_proof_validation",
+        "skip_verification_cli": false,
+        "startup": "bounded_metadata_bindings_and_file_stability",
+        "unread_payloads": "producer_validation_and_retained_storage",
+        "whole_resource_rehash": false
+      },
+      "determinism_scope": "representative_small_fixtures",
+      "external_deep_readback": false,
+      "final_check": "bounded_inventory_receipt_role_metadata_CSV_and_retained_path_sizes",
+      "original_source_narratives": "compact_accounting",
+      "payload_integrity_owner": "normal_publication_streaming_copy",
+      "phase_2_parity_receipt_shared": true,
+      "rerun_scope": "missing_or_affected_checks_only",
+      "scientific_invocations_per_declared_workload": 1
+    },
+    "version": 1
+  },
+  "assessed_scopes": [
+    "compound_heterozygous",
+    "dominant",
+    "mixed_class",
+    "repeat"
+  ],
+  "attempt_budget_per_case": 1,
+  "candidate_budget": 1,
+  "case_budget": 8,
+  "cases": [
+    {
+      "case_id": "development-population-model-state-01",
+      "expected_genotype_sha256": "6e4e0cf3b8a6a685351eeda2ddf7580f203241df9233caf71b69a1bd0ce6fb88",
+      "generator": {
+        "id": "track1-model-roster-generator",
+        "seed": 101,
+        "version": "4"
+      },
+      "group_id": "public-population-gene-group-35c5771c0738fb35",
+      "positive_exact_export": true,
+      "required_model_coverage": [
+        "clinical-unasserted-exploratory-pair",
+        "completed-population-lookup-unknown-rescue",
+        "unknown-count-hypothesis"
+      ],
+      "runner_inputs": [
+        {
+          "path": "tests/fixtures/track1/roster/development-population-model-state-01.hpo.txt",
+          "role": "hpo_text",
+          "sha256": "6ec48d4b0e65dc66a944027b5437f9b1ca9ab5ab777a0df62e86a260886ccf75",
+          "size_bytes": 539
+        },
+        {
+          "path": "tests/fixtures/track1/roster/development-population-model-state-01.vcf",
+          "role": "small_variant_vcf",
+          "sha256": "8488a6acc242efdb41a53c55dcefc77e32198531796700d014b113ae6644e724",
+          "size_bytes": 1947
+        }
+      ],
+      "scope": "compound_heterozygous",
+      "source_case_sha256": "4ff24b102f39b6f005f557c156683fbd851779ec0ea75fcabb5e1476e9130f8d",
+      "split": "development",
+      "target_kind": "full_pair"
+    },
+    {
+      "case_id": "development-population-model-state-02",
+      "expected_genotype_sha256": "a23a0b9a7fb27386079386e7e165587ce4b654df939f1e045416980423e0f933",
+      "generator": {
+        "id": "track1-model-roster-generator",
+        "seed": 101,
+        "version": "4"
+      },
+      "group_id": "public-population-gene-group-35c5771c0738fb35",
+      "positive_exact_export": false,
+      "required_model_coverage": [
+        "completed-population-lookup-unknown-rescue",
+        "population-excluded-unresolved-partner"
+      ],
+      "runner_inputs": [
+        {
+          "path": "tests/fixtures/track1/roster/development-population-model-state-02.hpo.txt",
+          "role": "hpo_text",
+          "sha256": "6ec48d4b0e65dc66a944027b5437f9b1ca9ab5ab777a0df62e86a260886ccf75",
+          "size_bytes": 539
+        },
+        {
+          "path": "tests/fixtures/track1/roster/development-population-model-state-02.vcf",
+          "role": "small_variant_vcf",
+          "sha256": "5438c07a17e2a08dcfb20c8ec2c7086bed1e0e681febac4a1f18962c2f04bd1c",
+          "size_bytes": 1947
+        }
+      ],
+      "scope": "compound_heterozygous",
+      "source_case_sha256": "64f860d1ddab4c35073c70d1cfee1e07f71e68cb81a7db990e60f8922d1e20d6",
+      "split": "development",
+      "target_kind": "full_pair"
+    },
+    {
+      "case_id": "development-population-model-state-03",
+      "expected_genotype_sha256": "a23a0b9a7fb27386079386e7e165587ce4b654df939f1e045416980423e0f933",
+      "generator": {
+        "id": "track1-model-roster-generator",
+        "seed": 101,
+        "version": "4"
+      },
+      "group_id": "public-population-gene-group-35c5771c0738fb35",
+      "positive_exact_export": false,
+      "required_model_coverage": [
+        "independent-non-population-contradiction"
+      ],
+      "runner_inputs": [
+        {
+          "path": "tests/fixtures/track1/roster/development-population-model-state-03.hpo.txt",
+          "role": "hpo_text",
+          "sha256": "6ec48d4b0e65dc66a944027b5437f9b1ca9ab5ab777a0df62e86a260886ccf75",
+          "size_bytes": 539
+        },
+        {
+          "path": "tests/fixtures/track1/roster/development-population-model-state-03.vcf",
+          "role": "small_variant_vcf",
+          "sha256": "572f001e3d161e727f62284239097256108698a4d4ccee9fbe4438653f4dd06c",
+          "size_bytes": 1957
+        }
+      ],
+      "scope": "compound_heterozygous",
+      "source_case_sha256": "5d005d00b64fe07751be93f3f04603e496743847a3abd6eb6193953404f504bf",
+      "split": "development",
+      "target_kind": "full_pair"
+    },
+    {
+      "case_id": "development-source-backed-singleton",
+      "expected_genotype_sha256": "ab3ad223397ce46dbef5f6f83e093aa57e02a9047528e8aa53b1768be1f77e83",
+      "generator": {
+        "id": "track1-model-roster-generator",
+        "seed": 101,
+        "version": "3"
+      },
+      "group_id": "public-singleton-gene-group-4f8a65b9961e49d5",
+      "positive_exact_export": true,
+      "required_model_coverage": [],
+      "runner_inputs": [
+        {
+          "path": "tests/fixtures/track1/roster/development-source-backed-singleton.hpo.txt",
+          "role": "hpo_text",
+          "sha256": "c8e70793f986bb460927ef0180b24b4aae41e14e3a839a50392b378c10489e94",
+          "size_bytes": 33
+        },
+        {
+          "path": "tests/fixtures/track1/roster/development-source-backed-singleton.vcf",
+          "role": "small_variant_vcf",
+          "sha256": "69ac99b5d46903ebf3d629457c46634f6158344efaa91b6b3e40db5a36ef8a25",
+          "size_bytes": 1913
+        }
+      ],
+      "scope": "dominant",
+      "source_case_sha256": "ec56ffcffb802127bdacb2e1d48b1f4f8dc51f36ac8d4bc59d2143fc3cf2d2dc",
+      "split": "development",
+      "target_kind": "singleton"
+    },
+    {
+      "case_id": "development-mixed-class",
+      "expected_genotype_sha256": "6285d2865df1414b234f0ffc80a2c5a440b6f54b81c1dc92682459dff7bcd7f2",
+      "generator": {
+        "id": "track1-model-roster-generator",
+        "seed": 101,
+        "version": "1"
+      },
+      "group_id": "development-mixed_class",
+      "positive_exact_export": false,
+      "required_model_coverage": [],
+      "runner_inputs": [
+        {
+          "path": "tests/fixtures/track1/roster/development-mixed-class.hpo.txt",
+          "role": "hpo_text",
+          "sha256": "28dd1a8cf0b00da6bde5ce2143b2dad4b21c6ba1302fa97c89769dcaf1d33d28",
+          "size_bytes": 33
+        },
+        {
+          "path": "tests/fixtures/track1/roster/development-mixed-class.vcf",
+          "role": "small_variant_vcf",
+          "sha256": "0aef5748ef158e995a6772d7d8b9934dc4513a45f65e75f4d0249bba93871868",
+          "size_bytes": 2378
+        }
+      ],
+      "scope": "mixed_class",
+      "source_case_sha256": "864ef61cdf465bb427f1d97b62d754591017a512316c685e70c1b6336b9dd281",
+      "split": "development",
+      "target_kind": "full_pair"
+    },
+    {
+      "case_id": "development-repeat",
+      "expected_genotype_sha256": "b8e0be776a003d0047f1b284fed050ce4341556d4945f82c06245d34ffc0c154",
+      "generator": {
+        "id": "track1-model-roster-generator",
+        "seed": 101,
+        "version": "1"
+      },
+      "group_id": "development-repeat",
+      "positive_exact_export": false,
+      "required_model_coverage": [],
+      "runner_inputs": [
+        {
+          "path": "tests/fixtures/track1/roster/development-repeat.hpo.txt",
+          "role": "hpo_text",
+          "sha256": "28dd1a8cf0b00da6bde5ce2143b2dad4b21c6ba1302fa97c89769dcaf1d33d28",
+          "size_bytes": 33
+        },
+        {
+          "path": "tests/fixtures/track1/roster/development-repeat.vcf",
+          "role": "small_variant_vcf",
+          "sha256": "af16f7f284049d6bd3c95bfdcc55bfd920dea2f04a2b6f0b9029388a65026518",
+          "size_bytes": 2341
+        }
+      ],
+      "scope": "repeat",
+      "source_case_sha256": "7a75eedac13aea307357cb63f82c173cbcea988d92eac0e0d0cb84061e279c8c",
+      "split": "development",
+      "target_kind": "locus"
+    },
+    {
+      "case_id": "held-out-population-model-state-01",
+      "expected_genotype_sha256": "118ec2f6e349025b964800a986f5b546f0f1f8c826a73181ef67bc87fcf6fd65",
+      "generator": {
+        "id": "track1-model-roster-generator",
+        "seed": 303,
+        "version": "4"
+      },
+      "group_id": "public-population-gene-group-cfa949bf74dffe3c",
+      "positive_exact_export": true,
+      "required_model_coverage": [
+        "clinical-unasserted-exploratory-pair",
+        "completed-population-lookup-unknown-rescue",
+        "unknown-count-hypothesis"
+      ],
+      "runner_inputs": [
+        {
+          "path": "tests/fixtures/track1/roster/held-out-population-model-state-01.hpo.txt",
+          "role": "hpo_text",
+          "sha256": "c246549f54758f4439f2913c125c850f97642773260ccc8adae25f9b882aa468",
+          "size_bytes": 748
+        },
+        {
+          "path": "tests/fixtures/track1/roster/held-out-population-model-state-01.vcf",
+          "role": "small_variant_vcf",
+          "sha256": "0499a1d26c020eeaaf15190870b326587e27fc8c2b7f53397778fe56ab2b586e",
+          "size_bytes": 1909
+        }
+      ],
+      "scope": "compound_heterozygous",
+      "source_case_sha256": "5a876f1d5a363e3e5a4f3f5d2225cf705d5d610433922ed9d353ee7fe5e2a2f9",
+      "split": "held_out",
+      "target_kind": "full_pair"
+    },
+    {
+      "case_id": "held-out-source-backed-singleton",
+      "expected_genotype_sha256": "2739d4fe897f2e30160335d04f543663a4db1e3aa5203b349b98ef8d49461358",
+      "generator": {
+        "id": "track1-model-roster-generator",
+        "seed": 303,
+        "version": "3"
+      },
+      "group_id": "public-singleton-gene-group-e06666bcf9bcdf0e",
+      "positive_exact_export": true,
+      "required_model_coverage": [],
+      "runner_inputs": [
+        {
+          "path": "tests/fixtures/track1/roster/held-out-source-backed-singleton.hpo.txt",
+          "role": "hpo_text",
+          "sha256": "7d983e1fc169f5468f857392fb972d5adf177a4e99a237b888869cc75fe18c5c",
+          "size_bytes": 33
+        },
+        {
+          "path": "tests/fixtures/track1/roster/held-out-source-backed-singleton.vcf",
+          "role": "small_variant_vcf",
+          "sha256": "13bc8655bbdeb0e92e87c0c3b1bb4d5d83bb5c5937676daa6d566a8b6a46f05c",
+          "size_bytes": 1876
+        }
+      ],
+      "scope": "dominant",
+      "source_case_sha256": "037201482d280983cf0df286051b44ea962e88821d35fa460b76f9e438df11c9",
+      "split": "held_out",
+      "target_kind": "singleton"
+    }
+  ],
+  "classification": "public",
+  "complete_enumeration_transition": {
+    "changed_field": "fixed_settings.maximum_pairs_per_context",
+    "current_value": null,
+    "decision": "repair-track1-bounded-wgs-execution:D28",
+    "historical_policy": {
+      "path": "config/track1/historical/public-ranking-development-policy-family-4979c7b73f56.json",
+      "sha256": "4979c7b73f56184d829e0198f0e1cd12499f90f060e085dbbae2bbb111333244",
+      "size_bytes": 5325
+    },
+    "previous_value": 10000,
+    "schema": "genosapiens.track1-complete-enumeration-policy-transition",
+    "version": 1
+  },
+  "configuration_bindings": [
+    {
+      "path": "artifacts/validation/track1-population-development-numerical-freeze-2026-09-17.json",
+      "sha256": "ef3b74fe9dd1d4dc54cae63fbbed6c847155c02b0feddb62ac66f18d4eeb333c"
+    },
+    {
+      "path": "artifacts/validation/track1-population-development-qualification-2026-09-17.json",
+      "sha256": "1c9ab17609b748df5fd240e5a15fcad82f1ae373e0325d5bc8a01210d41960f1"
+    },
+    {
+      "path": "artifacts/validation/track1-population-development-selection-2026-09-17.json",
+      "sha256": "20ff8257b18e7f3ef5f197d6789de3ecb7c3b1cbebeca2d74ada3744c0cd7c53"
+    },
+    {
+      "path": "artifacts/validation/track1-population-fixture-qualification-2026-09-17.json",
+      "sha256": "726b9bee577a90d063a98b4d9d4f007ab426f8276e4e4577094af0e19b396480"
+    },
+    {
+      "path": "artifacts/validation/track1-population-held-out-selection-2026-09-17.json",
+      "sha256": "801d6450a415419970d00a163e27a8bd737ba08311e1b05f1c7b36b7566ed52b"
+    },
+    {
+      "path": "artifacts/validation/track1-population-source-search-2026-09-17.json",
+      "sha256": "285d74ac00dd1fef97beba7bd5ecf99b8fd8fbf01ade99f5588dc3f625be345e"
+    },
+    {
+      "path": "artifacts/validation/track1-retained-fixture-qualification-2026-09-17-population-models.json",
+      "sha256": "4533f938762af856b0e433697bb8394fcded76ef274f95d9697267741ca8feca"
+    },
+    {
+      "path": "artifacts/validation/track1-singleton-fixture-qualification-2026-09-17.json",
+      "sha256": "b3d4ff94372e29f45b69137473efe97deb956205fb11c868f713f5920584a0a4"
+    },
+    {
+      "path": "config/public-resources/clinvar-grch38-2026-08-22.json",
+      "sha256": "92ad95e2a2332436f180b2eabf32b3f25d72b92f372f309abd9e183cec90013f"
+    },
+    {
+      "path": "config/public-resources/deepvariant-hg002-novaseq-35x-v1.0.0.json",
+      "sha256": "772e20778810d2efec0648bc0e8ad4653a52b4c972e43021ba09528dbf09b6e1"
+    },
+    {
+      "path": "config/public-resources/gnomad-all-sites-v4.1.json",
+      "sha256": "12e75423e4f309959633bb5828e7a4777fe1d75474c4460bf5d04eaa3111ffec"
+    },
+    {
+      "path": "config/public-resources/gnomad-chr21-chr22-validation.json",
+      "sha256": "676b3e47382ee1a132b3de82a7f2c6212fbfcd22b45a98567723eec613e0c4e3"
+    },
+    {
+      "path": "config/public-resources/gnomad-joint-projection.json",
+      "sha256": "481c435ad16c04f2c6f4c79319613dcfafba471ac024b88e010279d30d57c793"
+    },
+    {
+      "path": "config/public-resources/gnomad-joint-publication.json",
+      "sha256": "0deedac3f92b45fd62fc625a8ce34a0ec550341605e183117169b004f23daa44"
+    },
+    {
+      "path": "config/public-resources/grch38-model-loci.json",
+      "sha256": "5b9c9760bdb5fa901e0690cf8e6ec5e5a4f6c9fa7382086652b52ca29b02d61e"
+    },
+    {
+      "path": "config/reference-identities/challenge-grch38-masked-v2-hs38d1.json",
+      "sha256": "a92c50f61c1b149e635656a54086e671f3f27f09b97002309ff68a9ded1d3b62"
+    },
+    {
+      "path": "config/track1/epcr-numerical-suitability.json",
+      "sha256": "f3a8a6548ba91c5906c518d8a59ac4bea2a7c5748ff1f382fd9798c14e1035e8"
+    },
+    {
+      "path": "config/track1/epcr-policy.json",
+      "sha256": "6f8f6056507e7ecf651adfc863ec0a000e19b0c46424f9ef145dcb02ed1e3d44"
+    },
+    {
+      "path": "config/track1/experiments/population-models-20260917-generating-source/manifest.json",
+      "sha256": "7d2a00c628ff279b239869d7231d69ab9020d9504010f73ecb7e6f51944073a9"
+    },
+    {
+      "path": "config/track1/public-population-development-derivation.json",
+      "sha256": "9070da8186a46ccfebec33cb16607f9b8e869fa064016bf649e0674462cf0afd"
+    },
+    {
+      "path": "scripts/build_track1_population_controls.py",
+      "sha256": "5a94b795b1dc30076435303e9abf3edc92189be0aa5af1bbcee2907a25d852cd"
+    },
+    {
+      "path": "scripts/build_track1_singleton_controls.py",
+      "sha256": "fea1060fc6f78191bbf40787da00fec21cffe128da56cf2c8e7097ba1dc9428e"
+    },
+    {
+      "path": "scripts/promote_track1_population_controls.py",
+      "sha256": "dca1830bb88e3496ccc96bf8b385be01aa4b533d4c6c0e9741857c8222151c09"
+    },
+    {
+      "path": "scripts/qualify_track1_population_policy.py",
+      "sha256": "0625e3c2bac431805a19505af75bcbb1c1223b00815aea33bb9b495e7f7f0d95"
+    },
+    {
+      "path": "scripts/select_track1_population_development.py",
+      "sha256": "4a5d7880fe9f9c0767e3cf698114b91e1718e2ec18c4ba4da9c3298daecb36d7"
+    }
+  ],
+  "consumer_manifest_sha256s": [
+    "78527bd4e5b7dfb3debb88e66c08ce1e3b66ab23692a258544416dffdea4e9e5",
+    "8f1df94310ec81af4118ab6760694997a932ceaeb10469b7b91e4c73d6400305",
+    "a453a49f573e4a5999b38bcd02744ab389f0ef1a4e878a9adf7fa656e59985af"
+  ],
+  "controlled_use_authorized": false,
+  "declared_case_ids": [
+    "development-mixed-class",
+    "development-population-model-state-01",
+    "development-population-model-state-02",
+    "development-population-model-state-03",
+    "development-repeat",
+    "development-source-backed-singleton",
+    "held-out-population-model-state-01",
+    "held-out-source-backed-singleton"
+  ],
+  "experiment_id": "track1-submission-acceptance-population-models-20260917",
+  "fixed_metric_criteria": [
+    [
+      "successful_case_fraction",
+      ">=",
+      "1"
+    ],
+    [
+      "unresolved_partner_singleton_violation_count",
+      "<=",
+      "0"
+    ]
+  ],
+  "generating_source_manifest": {
+    "path": "config/track1/experiments/population-models-20260917-generating-source/manifest.json",
+    "sha256": "7d2a00c628ff279b239869d7231d69ab9020d9504010f73ecb7e6f51944073a9",
+    "size_bytes": 27500
+  },
+  "historical_failure_contract": {
+    "earlier_failed_attempt_denominator": 28,
+    "original_source_roster_case_denominator": 28,
+    "reinterpret_as_accepted": false
+  },
+  "independence": {
+    "claim": "recipe-group holdout conditional on previously inspected public fixtures; no untouched clinical or patient holdout",
+    "independent_patients": false,
+    "public_inputs_previously_observed": true,
+    "recipe_groups_separated": true,
+    "shared_HG002_background": true
+  },
+  "limitations": [
+    "Fixed coefficients are transparent engineering choices, not fitted probabilities.",
+    "Population threshold is a public synthetic stress separator, not clinical maximum-credible-frequency calibration.",
+    "Materialization qualification spans the existing supported vocabulary; empirical recovery claims are limited to the selected acceptance profile.",
+    "No controlled-case use is authorized by this declaration.",
+    "All reused roster cases are development regression evidence for the new profile gates.",
+    "No focused or exhaustive qualification is established by this pre-result declaration.",
+    "Installed regulatory positive source/allele controls must be frozen in task 3.5 before ranking."
+  ],
+  "materialization_qualification_scopes": [
+    "compound_heterozygous",
+    "dominant",
+    "homozygous_recessive",
+    "incomplete_recessive",
+    "mitochondrial",
+    "mixed_class",
+    "mosaic",
+    "regulatory",
+    "repeat",
+    "sv_cnv",
+    "x_linked"
+  ],
+  "model_loci_descriptor_sha256": "5b9c9760bdb5fa901e0690cf8e6ec5e5a4f6c9fa7382086652b52ca29b02d61e",
+  "policy_path": "config/track1/public-ranking-development-policy-family.json",
+  "policy_sha256": "3b1ee132e60aa244041e2747b9afb92a50ea346e7a946b8a242a39394c422a42",
+  "positive_export_contract": {
+    "eligible_csv_contains_exact_genotype": true,
+    "eligible_rank_at_most": 10,
+    "exact_expected_genotype": true,
+    "mandatory_byte_identical_replay": true,
+    "optional_products_required": false,
+    "required_for_each_positive_case": true
+  },
+  "realistic_workload": {
+    "maximum_records": 512,
+    "purpose": "bounded-real-caller-burden/source-accounting; no-full-WGS-feasibility-or-calibration-claim",
+    "selection": "first-512-records-in-publisher-VCF-order",
+    "source_contract": {
+      "path": "config/public-resources/deepvariant-hg002-novaseq-35x-v1.0.0.json",
+      "sha256": "772e20778810d2efec0648bc0e8ad4653a52b4c972e43021ba09528dbf09b6e1",
+      "size_bytes": 2502
+    },
+    "source_path": "releases/deepvariant/HG002/1.0.0/GRCh38/HG002.novaseq.pcr-free.35x.deepvariant-1.0.0.vcf.gz",
+    "worker_timeout_seconds": 6480
+  },
+  "representative_contracts": {
+    "development-mixed-class": "source-native-mixed-partner/technical-obligations/unknown-preservation",
+    "development-model-state-01": "source-unasserted-AR-pair/unknown-count/scoped-positive-pair",
+    "development-model-state-02": "population-excluded-unresolved-partner/unknown-rescue",
+    "development-model-state-03": "independent-phase-contradiction/incomplete-singleton-rejection",
+    "development-repeat": "source-native-repeat/catalogue-lineage/unknown-preservation"
+  },
+  "retained_source_roster": {
+    "path": "tests/fixtures/track1/roster/submission-source-roster.json",
+    "sha256": "1fb8e482658b1135931be20a9e6c9ba9727d55ab2ad478fdf370583ebdbf6466",
+    "size_bytes": 71995
+  },
+  "schema": "genosapiens.track1-submission-acceptance-profile",
+  "source_annotation_sha256": "f8fd5b7713edc6dc0b0f5cd81d56c07b1d58b740aba6c4a86cb700140318a1ef",
+  "source_causal_truth_sha256": "cc084551e8983a308d953dcfedfad78dd418d408ab7d8128b6a76698a471d5c3",
+  "source_roster": {
+    "path": "tests/fixtures/track1/roster/submission-population-source-roster.json",
+    "sha256": "69ebac040288fbfdc19b426db59b94968098a7aed6650e104e7493a77fc15151",
+    "size_bytes": 84888
+  },
+  "stage_schedule": [
+    {
+      "case_ids": [
+        "development-population-model-state-01",
+        "development-population-model-state-02",
+        "development-population-model-state-03",
+        "development-source-backed-singleton"
+      ],
+      "split": "development",
+      "stage": "A"
+    },
+    {
+      "case_ids": [
+        "development-mixed-class",
+        "development-repeat"
+      ],
+      "split": "development",
+      "stage": "B"
+    },
+    {
+      "case_ids": [
+        "held-out-population-model-state-01",
+        "held-out-source-backed-singleton"
+      ],
+      "split": "held_out",
+      "stage": "C"
+    }
+  ],
+  "stopping_condition": "all-declared-attempts-terminal-or-budget-exhausted; preserve-every-failure",
+  "superseded_experiment": {
+    "completed_development_case_count": 6,
+    "declared_acceptance_case_denominator": 8,
+    "experiment_id": "track1-submission-acceptance-source-singletons-20260917",
+    "held_out_started_case_count": 0,
+    "original_source_case_denominator": 30,
+    "profile_sha256": "f82a648df971a0ef91c6d9eb0ad09b75bac403872db6e26931272de68b26b84d",
+    "remedy": "operator-authorized four-model-state replacement; one genomes-only eight-case campaign",
+    "status": "required-model-coverage-failed; original outcomes and denominator retained",
+    "verified_matching_replay_count": 6
+  },
+  "worker_timeout_seconds": 6480
+}

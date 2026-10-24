@@ -1,0 +1,63 @@
+{
+  "schema": "genosapiens.gnomad-pilot-validation-contract",
+  "validation_id": "gnomad-joint-v4.1-chr21-chr22-validation-v1",
+  "pilot_run_id": "chromosome-21-22-pilot",
+  "projection_id": "gnomad-joint-v4.1-frequency-projection-v1",
+  "projection_contract_sha256": "481c435ad16c04f2c6f4c79319613dcfafba471ac024b88e010279d30d57c793",
+  "pilot_report_sha256": "0f3085c6cc8335dba27a687efb7e49ccc8bb99de6de754cd5f34170cd088355a",
+  "source_object_inventory_sha256": "f8a9c33b6b311762a19800305ec7a6762fd6c292c1b6b8e37c8a9f843c825537",
+  "ancestry_order": [
+    "afr",
+    "amr",
+    "eas",
+    "mid",
+    "nfe",
+    "sas"
+  ],
+  "sentinels": [
+    {
+      "id": "chr21-common-ancestry-unfiltered",
+      "chromosome": "chr21",
+      "position": 5031991,
+      "reference": "G",
+      "alternate": "GA",
+      "expectations": [
+        "ac-an-derived-frequency",
+        "ancestry-values",
+        "genome-mid-faf-missing",
+        "exome-filters-empty",
+        "genome-filters-empty",
+        "discordance-false"
+      ]
+    },
+    {
+      "id": "chr21-missing-exome-filtered-genome",
+      "chromosome": "chr21",
+      "position": 5029882,
+      "reference": "CAA",
+      "alternate": "C",
+      "expectations": [
+        "genome-mid-faf-missing",
+        "exome-data-missing",
+        "exome-filters-missing",
+        "genome-filters-nonempty",
+        "discordance-missing"
+      ]
+    },
+    {
+      "id": "chr22-discordant-filtered-exome",
+      "chromosome": "chr22",
+      "position": 10736352,
+      "reference": "A",
+      "alternate": "T",
+      "expectations": [
+        "ac-an-derived-frequency",
+        "ancestry-values",
+        "genome-mid-faf-missing",
+        "exome-filters-nonempty",
+        "genome-filters-empty",
+        "discordance-true"
+      ]
+    }
+  ]
+}

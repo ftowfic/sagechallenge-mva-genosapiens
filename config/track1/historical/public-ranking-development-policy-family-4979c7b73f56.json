@@ -1,0 +1,132 @@
+{
+  "attempt_budget_per_case": 1,
+  "candidate_budget": 1,
+  "candidates": [
+    {
+      "phenotype_weight": "1",
+      "policy_id": "track1-public-balanced-v1"
+    }
+  ],
+  "classification": "public",
+  "controlled_use_authorized": false,
+  "deterministic_selection_ties": [
+    "lower_candidate_burden",
+    "lexical_policy_id"
+  ],
+  "experiment_id": "track1-submission-acceptance-population-models-20260917",
+  "fixed_settings": {
+    "candidate_admission": "Decision-6a-permissive-source-union",
+    "clinical_confidences": [
+      "criteria provided, multiple submitters, no conflicts",
+      "practice guideline",
+      "reviewed by expert panel"
+    ],
+    "clinical_negative_significances": [
+      "benign",
+      "likely benign"
+    ],
+    "clinical_positive_significances": [
+      "likely pathogenic",
+      "pathogenic"
+    ],
+    "clinical_review_statuses": [
+      "criteria provided, multiple submitters, no conflicts",
+      "practice guideline",
+      "reviewed by expert panel"
+    ],
+    "component_source_facts": "closed-existing-source-adapter-vocabulary",
+    "component_transforms": "unit-affine-clamp; population-minus10-to10; other-components-zero-to10",
+    "diagnosis_prior_strength": "1",
+    "diagnosis_sensitivity_control": "ORPHA:999999",
+    "diagnostic_thresholds": "none-development-observation-only",
+    "dominant_term_tie": "positive-post-cap-sum-desc-canonical-hpo-id-asc",
+    "epcr_policy_path": "config/track1/epcr-policy.json",
+    "epcr_suitability_path": "config/track1/epcr-numerical-suitability.json",
+    "incompleteness_penalty": "3",
+    "maximum_pairs_per_context": 10000,
+    "model_loci_descriptor_sha256": "5b9c9760bdb5fa901e0690cf8e6ec5e5a4f6c9fa7382086652b52ca29b02d61e",
+    "phenotype_transform": {
+      "intercept": "0",
+      "lower": "0",
+      "neutral": "0",
+      "slope": "1",
+      "upper": "10"
+    },
+    "population": {
+      "derivation_sha256": "9070da8186a46ccfebec33cb16607f9b8e869fa064016bf649e0674462cf0afd",
+      "frequency_rule": {
+        "allowed_filters": [
+          "PASS"
+        ],
+        "ancestry": null,
+        "metric": "AF",
+        "minimum_an": 152346,
+        "region_flags": [],
+        "rule_id": "development-selected-genomes-adjusted-AF",
+        "stratum": "adjusted",
+        "subset": "genomes",
+        "threshold": "32017197/12500000000",
+        "unreliable_signals": [
+          "counts_missing",
+          "filters_unknown",
+          "inconsistent_ac_an",
+          "inconsistent_genotype_counts",
+          "low_an",
+          "source_filtered",
+          "zero_an"
+        ]
+      },
+      "rescues": {
+        "combination": "any_applies",
+        "founder": "exact_public_curated_exception",
+        "pathogenic_conflicts": "block_assertion_rescue",
+        "pathogenic_match": "exact_native_condition_and_gene_target",
+        "pathogenic_review_statuses": [
+          "criteria provided, multiple submitters, no conflicts",
+          "practice guideline",
+          "reviewed by expert panel"
+        ],
+        "pathogenic_significances": [
+          "likely pathogenic",
+          "pathogenic"
+        ],
+        "reduced_penetrance": "exact_public_curated_exception",
+        "technical_scope": "every_reliable_excess_record_or_every_unreliable_excess_record",
+        "technical_signals": [
+          "not_callable"
+        ]
+      },
+      "transform": {
+        "cap": "1",
+        "kind": "capped_linear_excess",
+        "scale": "1"
+      }
+    },
+    "weak_partner_floor": "5"
+  },
+  "limitations": [
+    "The single balanced policy uses unit phenotype weight declared before submission acceptance outcomes; coefficients are fixed engineering choices, not fitted probabilities.",
+    "The synthetic cases share one public HG002 background and are not independent patients.",
+    "The fixed diagnosis sensitivity control is intentionally unrelated to evaluator truth and is not a clinical diagnosis.",
+    "Performance on this public synthetic roster is not clinical calibration or controlled-use authorization.",
+    "The added population separator is development-source-derived for synthetic stress assessment; it is not clinical maximum credible AF calibration."
+  ],
+  "objective_metrics": [
+    "top_10_full_genotype_recovery",
+    "top_1_full_genotype_recovery",
+    "exact_genotype_recovery",
+    "candidate_burden"
+  ],
+  "policy_family_id": "track1-single-balanced-model-loci-20260916",
+  "resource_query": {
+    "clinical": "actual Open Targets variant/evidence_eva and ClinVar VCF aggregates; only explicit native condition/target links may qualify",
+    "disease_gene": "all source assertions for VEP-returned Ensembl genes plus directly linked source disease records",
+    "disease_profiles": "all source phenotype assertions for the selected native or mapped disease identifiers",
+    "missing_sources": "unknown-not-negative",
+    "population": "actual pinned joint BCF/CSI container; genomes/adjusted/null counts and real genome source FILTER; all-sites callability separately preserved",
+    "selection_authority": "variant-first public-source query only; evaluator truth and case scope are unavailable"
+  },
+  "schema": "genosapiens.track1-public-ranking-development-policy-family",
+  "stopping_condition": "complete-declared-family-or-budget-exhausted",
+  "validation_only": true
+}

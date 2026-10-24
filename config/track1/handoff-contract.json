@@ -1,0 +1,15 @@
+{
+  "schema": "genosapiens.track1-handoff-contract",
+  "contract_owner": "track1",
+  "canonical_schema": "genosapiens.track1-sharded-mechanism-ready-handoff",
+  "canonical_artifact_path": "controlled-work/track1/handoff/mechanism-ready-handoff.json",
+  "allowed_analysis_modes": [
+    "diagnosis_blind_primary"
+  ],
+  "forbidden_substitutes": [
+    "case_vcf",
+    "challenge_csv",
+    "manually_authored_handoff",
+    "track2_owned_schema"
+  ]
+}

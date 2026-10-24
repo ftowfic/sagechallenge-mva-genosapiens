@@ -1,0 +1,2431 @@
+{
+  "schema": "genosapiens.minimal-distribution/v1",
+  "owner_change": "publish-clean-track1-track2-releases",
+  "files": [
+    {
+      "source": "ATTRIBUTION.md",
+      "destination": "ATTRIBUTION.md"
+    },
+    {
+      "source": "LICENSE",
+      "destination": "LICENSE"
+    },
+    {
+      "source": "config/challenge-rules/mva-hackathon-2026-track2-methods-form-v1.json",
+      "destination": "config/challenge-rules/mva-hackathon-2026-track2-methods-form-v1.json"
+    },
+    {
+      "source": "config/challenge-rules/mva-hackathon-2026-track2-v1.json",
+      "destination": "config/challenge-rules/mva-hackathon-2026-track2-v1.json"
+    },
+    {
+      "source": "config/installation/dependencies.json",
+      "destination": "config/installation/dependencies.json"
+    },
+    {
+      "source": "config/installation/required-files.json",
+      "destination": "config/installation/required-files.json"
+    },
+    {
+      "source": "config/installation/source-pins.json",
+      "destination": "config/installation/source-pins.json"
+    },
+    {
+      "source": "config/public-resources/challenge-shaped-fixture.json",
+      "destination": "config/public-resources/challenge-shaped-fixture.json"
+    },
+    {
+      "source": "config/public-resources/clinvar-grch38-2026-08-22.json",
+      "destination": "config/public-resources/clinvar-grch38-2026-08-22.json"
+    },
+    {
+      "source": "config/public-resources/core-ontologies.json",
+      "destination": "config/public-resources/core-ontologies.json"
+    },
+    {
+      "source": "config/public-resources/deepvariant-hg002-novaseq-35x-v1.0.0.json",
+      "destination": "config/public-resources/deepvariant-hg002-novaseq-35x-v1.0.0.json"
+    },
+    {
+      "source": "config/public-resources/ensembl-vep-116-grch38.json",
+      "destination": "config/public-resources/ensembl-vep-116-grch38.json"
+    },
+    {
+      "source": "config/public-resources/exomiser-15.1.0-2512.json",
+      "destination": "config/public-resources/exomiser-15.1.0-2512.json"
+    },
+    {
+      "source": "config/public-resources/giab-hg002-v4.2.1.json",
+      "destination": "config/public-resources/giab-hg002-v4.2.1.json"
+    },
+    {
+      "source": "config/public-resources/gnomad-all-sites-v4.1.json",
+      "destination": "config/public-resources/gnomad-all-sites-v4.1.json"
+    },
+    {
+      "source": "config/public-resources/gnomad-chr21-chr22-validation.json",
+      "destination": "config/public-resources/gnomad-chr21-chr22-validation.json"
+    },
+    {
+      "source": "config/public-resources/gnomad-joint-faf95-precision-v1.json",
+      "destination": "config/public-resources/gnomad-joint-faf95-precision-v1.json"
+    },
+    {
+      "source": "config/public-resources/gnomad-joint-projection.json",
+      "destination": "config/public-resources/gnomad-joint-projection.json"
+    },
+    {
+      "source": "config/public-resources/gnomad-joint-publication.json",
+      "destination": "config/public-resources/gnomad-joint-publication.json"
+    },
+    {
+      "source": "config/public-resources/grch38-model-loci.json",
+      "destination": "config/public-resources/grch38-model-loci.json"
+    },
+    {
+      "source": "config/public-resources/open-targets-platform-26.06.json",
+      "destination": "config/public-resources/open-targets-platform-26.06.json"
+    },
+    {
+      "source": "config/public-resources/rare-disease-evidence-2026-08-30.json",
+      "destination": "config/public-resources/rare-disease-evidence-2026-08-30.json"
+    },
+    {
+      "source": "config/public-resources/track1-common-allele-exception-curation-v1.json",
+      "destination": "config/public-resources/track1-common-allele-exception-curation-v1.json"
+    },
+    {
+      "source": "config/public-resources/track1-common-allele-exceptions-v1.json",
+      "destination": "config/public-resources/track1-common-allele-exceptions-v1.json"
+    },
+    {
+      "source": "config/public-resources/track1-retention-index.json",
+      "destination": "config/public-resources/track1-retention-index.json"
+    },
+    {
+      "source": "config/public-resources/track2-open-targets-drugs-26.06.json",
+      "destination": "config/public-resources/track2-open-targets-drugs-26.06.json"
+    },
+    {
+      "source": "config/public-resources/variant-class-resources.json",
+      "destination": "config/public-resources/variant-class-resources.json"
+    },
+    {
+      "source": "config/reference-builder.example.json",
+      "destination": "config/reference-builder.example.json"
+    },
+    {
+      "source": "config/reference-identities/challenge-grch38-masked-v2-hs38d1.json",
+      "destination": "config/reference-identities/challenge-grch38-masked-v2-hs38d1.json"
+    },
+    {
+      "source": "config/track1-pipeline.example.json",
+      "destination": "config/track1-pipeline.example.json"
+    },
+    {
+      "source": "config/track1/analysis-eligibility-v1.json",
+      "destination": "config/track1/analysis-eligibility-v1.json"
+    },
+    {
+      "source": "config/track1/analysis-profiles.json",
+      "destination": "config/track1/analysis-profiles.json"
+    },
+    {
+      "source": "config/track1/base-release-validation-plan-synthetic-pin.json",
+      "destination": "config/track1/base-release-validation-plan-synthetic-pin.json"
+    },
+    {
+      "source": "config/track1/bounded-wgs-execution-v4.json",
+      "destination": "config/track1/bounded-wgs-execution-v4.json"
+    },
+    {
+      "source": "config/track1/bounded-wgs-execution-v5.json",
+      "destination": "config/track1/bounded-wgs-execution-v5.json"
+    },
+    {
+      "source": "config/track1/challenge-evaluator.json",
+      "destination": "config/track1/challenge-evaluator.json"
+    },
+    {
+      "source": "config/track1/common-allele-prefilter-v1.json",
+      "destination": "config/track1/common-allele-prefilter-v1.json"
+    },
+    {
+      "source": "config/track1/context-writer-runtime-v1.json",
+      "destination": "config/track1/context-writer-runtime-v1.json"
+    },
+    {
+      "source": "config/track1/early-scope-policy.json",
+      "destination": "config/track1/early-scope-policy.json"
+    },
+    {
+      "source": "config/track1/epcr-numerical-suitability.json",
+      "destination": "config/track1/epcr-numerical-suitability.json"
+    },
+    {
+      "source": "config/track1/epcr-policy.json",
+      "destination": "config/track1/epcr-policy.json"
+    },
+    {
+      "source": "config/track1/focused-work-contract-v1.json",
+      "destination": "config/track1/focused-work-contract-v1.json"
+    },
+    {
+      "source": "config/track1/handoff-contract.json",
+      "destination": "config/track1/handoff-contract.json"
+    },
+    {
+      "source": "config/track1/handoff-pin.json",
+      "destination": "config/track1/handoff-pin.json"
+    },
+    {
+      "source": "config/track1/historical/public-ranking-development-policy-family-4979c7b73f56.json",
+      "destination": "config/track1/historical/public-ranking-development-policy-family-4979c7b73f56.json"
+    },
+    {
+      "source": "config/track1/official-contract-review.json",
+      "destination": "config/track1/official-contract-review.json"
+    },
+    {
+      "source": "config/track1/protected-population-work-filter-v1.json",
+      "destination": "config/track1/protected-population-work-filter-v1.json"
+    },
+    {
+      "source": "config/track1/public-population-development-derivation.json",
+      "destination": "config/track1/public-population-development-derivation.json"
+    },
+    {
+      "source": "config/track1/public-ranking-development-policy-family.json",
+      "destination": "config/track1/public-ranking-development-policy-family.json"
+    },
+    {
+      "source": "config/track1/regulatory-index-pin.json",
+      "destination": "config/track1/regulatory-index-pin.json"
+    },
+    {
+      "source": "config/track1/runtime-image.json",
+      "destination": "config/track1/runtime-image.json"
+    },
+    {
+      "source": "config/track1/submission-acceptance-profile.json",
+      "destination": "config/track1/submission-acceptance-profile.json"
+    },
+    {
+      "source": "config/track1/vcf-evidence-policy-v1.json",
+      "destination": "config/track1/vcf-evidence-policy-v1.json"
+    },
+    {
+      "source": "config/track2/concept-supplement.json",
+      "destination": "config/track2/concept-supplement.json"
+    },
+    {
+      "source": "config/track2/decision-policy-g0-g7-v1.json",
+      "destination": "config/track2/decision-policy-g0-g7-v1.json"
+    },
+    {
+      "source": "config/track2/derived-scoring-v1.json",
+      "destination": "config/track2/derived-scoring-v1.json"
+    },
+    {
+      "source": "config/track2/diagnosis-runtime.json",
+      "destination": "config/track2/diagnosis-runtime.json"
+    },
+    {
+      "source": "config/track2/discovery-builder-runtime.json",
+      "destination": "config/track2/discovery-builder-runtime.json"
+    },
+    {
+      "source": "config/track2/discovery-runtime.json",
+      "destination": "config/track2/discovery-runtime.json"
+    },
+    {
+      "source": "config/track2/discovery-sources.json",
+      "destination": "config/track2/discovery-sources.json"
+    },
+    {
+      "source": "config/track2/exploratory-policy-v1.json",
+      "destination": "config/track2/exploratory-policy-v1.json"
+    },
+    {
+      "source": "config/track2/exploratory-policy-v2.json",
+      "destination": "config/track2/exploratory-policy-v2.json"
+    },
+    {
+      "source": "config/track2/functional-sources.json",
+      "destination": "config/track2/functional-sources.json"
+    },
+    {
+      "source": "config/track2/installed-public-evidence.json",
+      "destination": "config/track2/installed-public-evidence.json"
+    },
+    {
+      "source": "config/track2/protein-representation-supplement.json",
+      "destination": "config/track2/protein-representation-supplement.json"
+    },
+    {
+      "source": "config/track2/public-expansion-policy-v1.json",
+      "destination": "config/track2/public-expansion-policy-v1.json"
+    },
+    {
+      "source": "config/track2/record-registry-v1.json",
+      "destination": "config/track2/record-registry-v1.json"
+    },
+    {
+      "source": "config/track2/report-presentation-v1.json",
+      "destination": "config/track2/report-presentation-v1.json"
+    },
+    {
+      "source": "config/track2/report-presentation-v2.json",
+      "destination": "config/track2/report-presentation-v2.json"
+    },
+    {
+      "source": "config/track2/report-presentation-v3.json",
+      "destination": "config/track2/report-presentation-v3.json"
+    },
+    {
+      "source": "config/track2/source-domain-matrix-v1.json",
+      "destination": "config/track2/source-domain-matrix-v1.json"
+    },
+    {
+      "source": "config/track2/speedup-compatibility-v1.json",
+      "destination": "config/track2/speedup-compatibility-v1.json"
+    },
+    {
+      "source": "docker/dev.Dockerfile",
+      "destination": "docker/dev.Dockerfile"
+    },
+    {
+      "source": "docker/reference-builder.Dockerfile",
+      "destination": "docker/reference-builder.Dockerfile"
+    },
+    {
+      "source": "docker/track1-pipeline.Dockerfile",
+      "destination": "docker/track1-pipeline.Dockerfile"
+    },
+    {
+      "source": "docker/track2-discovery-resources.Dockerfile",
+      "destination": "docker/track2-discovery-resources.Dockerfile"
+    },
+    {
+      "source": "docker/track2-lincs.Dockerfile",
+      "destination": "docker/track2-lincs.Dockerfile"
+    },
+    {
+      "source": "docker/track2-pipeline.Dockerfile",
+      "destination": "docker/track2-pipeline.Dockerfile"
+    },
+    {
+      "source": "docs/portable-command-interface.md",
+      "destination": "docs/portable-command-interface.md"
+    },
+    {
+      "source": "docs/portable-host.md",
+      "destination": "docs/portable-host.md"
+    },
+    {
+      "source": "docs/portable-methods.md",
+      "destination": "docs/portable-methods.md"
+    },
+    {
+      "source": "docs/portable-notices.md",
+      "destination": "docs/portable-notices.md"
+    },
+    {
+      "source": "docs/portable-setup.md",
+      "destination": "docs/portable-setup.md"
+    },
+    {
+      "source": "docs/track1-installation.md",
+      "destination": "docs/track1-installation.md"
+    },
+    {
+      "source": "docs/track1-methods.md",
+      "destination": "docs/track1-methods.md"
+    },
+    {
+      "source": "docs/track1-operator-command.md",
+      "destination": "docs/track1-operator-command.md"
+    },
+    {
+      "source": "docs/track1-vcf-evidence.md",
+      "destination": "docs/track1-vcf-evidence.md"
+    },
+    {
+      "source": "docs/track2-methods.md",
+      "destination": "docs/track2-methods.md"
+    },
+    {
+      "source": "pyproject.toml",
+      "destination": "pyproject.toml"
+    },
+    {
+      "source": "release/README.md",
+      "destination": "README.md"
+    },
+    {
+      "source": "release/challenge-sources.json",
+      "destination": "release/challenge-sources.json"
+    },
+    {
+      "source": "requirements/reference-builder-build.txt",
+      "destination": "requirements/reference-builder-build.txt"
+    },
+    {
+      "source": "requirements/reference-builder.lock",
+      "destination": "requirements/reference-builder.lock"
+    },
+    {
+      "source": "requirements/reference-builder.txt",
+      "destination": "requirements/reference-builder.txt"
+    },
+    {
+      "source": "requirements/runtime.txt",
+      "destination": "requirements/runtime.txt"
+    },
+    {
+      "source": "requirements/supply-chain-policy.json",
+      "destination": "requirements/supply-chain-policy.json"
+    },
+    {
+      "source": "requirements/track1-pipeline.lock",
+      "destination": "requirements/track1-pipeline.lock"
+    },
+    {
+      "source": "requirements/track2-discovery-resources.lock",
+      "destination": "requirements/track2-discovery-resources.lock"
+    },
+    {
+      "source": "requirements/track2-discovery-resources.provenance.json",
+      "destination": "requirements/track2-discovery-resources.provenance.json"
+    },
+    {
+      "source": "requirements/track2-discovery-resources.txt",
+      "destination": "requirements/track2-discovery-resources.txt"
+    },
+    {
+      "source": "requirements/track2-pipeline.lock",
+      "destination": "requirements/track2-pipeline.lock"
+    },
+    {
+      "source": "requirements/track2-signaturesearch-r.csv",
+      "destination": "requirements/track2-signaturesearch-r.csv"
+    },
+    {
+      "source": "requirements/track2-signaturesearch.provenance.json",
+      "destination": "requirements/track2-signaturesearch.provenance.json"
+    },
+    {
+      "source": "schemas/track1/base-release-validation-artifact-bundle.schema.json",
+      "destination": "schemas/track1/base-release-validation-artifact-bundle.schema.json"
+    },
+    {
+      "source": "schemas/track1/base-release-validation-plan.schema.json",
+      "destination": "schemas/track1/base-release-validation-plan.schema.json"
+    },
+    {
+      "source": "schemas/track1/mechanism-ready-handoff.schema.json",
+      "destination": "schemas/track1/mechanism-ready-handoff.schema.json"
+    },
+    {
+      "source": "schemas/track2/automatic-decision.schema.json",
+      "destination": "schemas/track2/automatic-decision.schema.json"
+    },
+    {
+      "source": "schemas/track2/challenge-package-v2.schema.json",
+      "destination": "schemas/track2/challenge-package-v2.schema.json"
+    },
+    {
+      "source": "schemas/track2/derived-strength.schema.json",
+      "destination": "schemas/track2/derived-strength.schema.json"
+    },
+    {
+      "source": "schemas/track2/diagnosis-guided-package.schema.json",
+      "destination": "schemas/track2/diagnosis-guided-package.schema.json"
+    },
+    {
+      "source": "schemas/track2/diagnosis-publication-selection.schema.json",
+      "destination": "schemas/track2/diagnosis-publication-selection.schema.json"
+    },
+    {
+      "source": "schemas/track2/discovery-outcome.schema.json",
+      "destination": "schemas/track2/discovery-outcome.schema.json"
+    },
+    {
+      "source": "schemas/track2/discovery-resources.schema.json",
+      "destination": "schemas/track2/discovery-resources.schema.json"
+    },
+    {
+      "source": "schemas/track2/exploratory-plan.schema.json",
+      "destination": "schemas/track2/exploratory-plan.schema.json"
+    },
+    {
+      "source": "schemas/track2/frozen-background.schema.json",
+      "destination": "schemas/track2/frozen-background.schema.json"
+    },
+    {
+      "source": "schemas/track2/lincs-discovery-source.schema.json",
+      "destination": "schemas/track2/lincs-discovery-source.schema.json"
+    },
+    {
+      "source": "schemas/track2/lincs-source.schema.json",
+      "destination": "schemas/track2/lincs-source.schema.json"
+    },
+    {
+      "source": "schemas/track2/native-figure-page.schema.json",
+      "destination": "schemas/track2/native-figure-page.schema.json"
+    },
+    {
+      "source": "schemas/track2/published-patient-genotype.schema.json",
+      "destination": "schemas/track2/published-patient-genotype.schema.json"
+    },
+    {
+      "source": "schemas/track2/record-envelope-v1.schema.json",
+      "destination": "schemas/track2/record-envelope-v1.schema.json"
+    },
+    {
+      "source": "schemas/track2/report-evidence-v1.schema.json",
+      "destination": "schemas/track2/report-evidence-v1.schema.json"
+    },
+    {
+      "source": "schemas/track2/report-presentation-v3.schema.json",
+      "destination": "schemas/track2/report-presentation-v3.schema.json"
+    },
+    {
+      "source": "schemas/track2/report-presentation.schema.json",
+      "destination": "schemas/track2/report-presentation.schema.json"
+    },
+    {
+      "source": "schemas/track2/scientific-artifact-reference.schema.json",
+      "destination": "schemas/track2/scientific-artifact-reference.schema.json"
+    },
+    {
+      "source": "schemas/track2/scientific-completion.schema.json",
+      "destination": "schemas/track2/scientific-completion.schema.json"
+    },
+    {
+      "source": "schemas/track2/tissue-condition.schema.json",
+      "destination": "schemas/track2/tissue-condition.schema.json"
+    },
+    {
+      "source": "schemas/track2/tissue-membership.schema.json",
+      "destination": "schemas/track2/tissue-membership.schema.json"
+    },
+    {
+      "source": "schemas/track2/tissue-plan.schema.json",
+      "destination": "schemas/track2/tissue-plan.schema.json"
+    },
+    {
+      "source": "schemas/track2/tissue-query.schema.json",
+      "destination": "schemas/track2/tissue-query.schema.json"
+    },
+    {
+      "source": "schemas/track2/tissue-result.schema.json",
+      "destination": "schemas/track2/tissue-result.schema.json"
+    },
+    {
+      "source": "schemas/track2/tissue-score.schema.json",
+      "destination": "schemas/track2/tissue-score.schema.json"
+    },
+    {
+      "source": "scripts/acquire_track2_functional_sources.py",
+      "destination": "scripts/acquire_track2_functional_sources.py"
+    },
+    {
+      "source": "scripts/build_common_allele_public_indexes.py",
+      "destination": "scripts/build_common_allele_public_indexes.py"
+    },
+    {
+      "source": "scripts/build_public_wgs_unprefixed_derivative.py",
+      "destination": "scripts/build_public_wgs_unprefixed_derivative.py"
+    },
+    {
+      "source": "scripts/build_track1_common_allele_exception_bundle.py",
+      "destination": "scripts/build_track1_common_allele_exception_bundle.py"
+    },
+    {
+      "source": "scripts/build_track1_common_allele_exception_sources.py",
+      "destination": "scripts/build_track1_common_allele_exception_sources.py"
+    },
+    {
+      "source": "scripts/build_track1_installation.py",
+      "destination": "scripts/build_track1_installation.py"
+    },
+    {
+      "source": "scripts/diagnose_track2_report_transition.py",
+      "destination": "scripts/diagnose_track2_report_transition.py"
+    },
+    {
+      "source": "scripts/ensure_track1_installation.py",
+      "destination": "scripts/ensure_track1_installation.py"
+    },
+    {
+      "source": "scripts/launch-track1-public-validation.sh",
+      "destination": "scripts/launch-track1-public-validation.sh"
+    },
+    {
+      "source": "scripts/operator_compatibility_repair/analyze_bounded_case.py",
+      "destination": "scripts/operator_compatibility_repair/analyze_bounded_case.py"
+    },
+    {
+      "source": "scripts/operator_compatibility_repair/archive_bounded_resume.py",
+      "destination": "scripts/operator_compatibility_repair/archive_bounded_resume.py"
+    },
+    {
+      "source": "scripts/operator_compatibility_repair/archive_failed_preparation.py",
+      "destination": "scripts/operator_compatibility_repair/archive_failed_preparation.py"
+    },
+    {
+      "source": "scripts/operator_compatibility_repair/check_bounded_host_capacity.py",
+      "destination": "scripts/operator_compatibility_repair/check_bounded_host_capacity.py"
+    },
+    {
+      "source": "scripts/operator_compatibility_repair/check_stage_prerequisite.py",
+      "destination": "scripts/operator_compatibility_repair/check_stage_prerequisite.py"
+    },
+    {
+      "source": "scripts/operator_compatibility_repair/finalize_bounded_runtime.py",
+      "destination": "scripts/operator_compatibility_repair/finalize_bounded_runtime.py"
+    },
+    {
+      "source": "scripts/operator_compatibility_repair/prepare_bounded_case.py",
+      "destination": "scripts/operator_compatibility_repair/prepare_bounded_case.py"
+    },
+    {
+      "source": "scripts/operator_compatibility_repair/run_bounded_stage.py",
+      "destination": "scripts/operator_compatibility_repair/run_bounded_stage.py"
+    },
+    {
+      "source": "scripts/operator_compatibility_repair/seal_bounded_stage_evidence.py",
+      "destination": "scripts/operator_compatibility_repair/seal_bounded_stage_evidence.py"
+    },
+    {
+      "source": "scripts/portable_paths.py",
+      "destination": "scripts/portable_paths.py"
+    },
+    {
+      "source": "scripts/prepare_public_resources.py",
+      "destination": "scripts/prepare_public_resources.py"
+    },
+    {
+      "source": "scripts/prepare_track1_operator_bounded_wgs.py",
+      "destination": "scripts/prepare_track1_operator_bounded_wgs.py"
+    },
+    {
+      "source": "scripts/prepare_track2_discovery.py",
+      "destination": "scripts/prepare_track2_discovery.py"
+    },
+    {
+      "source": "scripts/qualify_gnomad_faf95_precision.py",
+      "destination": "scripts/qualify_gnomad_faf95_precision.py"
+    },
+    {
+      "source": "scripts/read_track2_lincs.R",
+      "destination": "scripts/read_track2_lincs.R"
+    },
+    {
+      "source": "scripts/render_track2_challenge_overviews.R",
+      "destination": "scripts/render_track2_challenge_overviews.R"
+    },
+    {
+      "source": "scripts/render_track2_lincs.R",
+      "destination": "scripts/render_track2_lincs.R"
+    },
+    {
+      "source": "scripts/render_track2_overviews.R",
+      "destination": "scripts/render_track2_overviews.R"
+    },
+    {
+      "source": "scripts/report_track2_run.py",
+      "destination": "scripts/report_track2_run.py"
+    },
+    {
+      "source": "scripts/resolve_track1_resume.py",
+      "destination": "scripts/resolve_track1_resume.py"
+    },
+    {
+      "source": "scripts/revise_track2_report.py",
+      "destination": "scripts/revise_track2_report.py"
+    },
+    {
+      "source": "scripts/run_track1_public_validation.py",
+      "destination": "scripts/run_track1_public_validation.py"
+    },
+    {
+      "source": "scripts/run_track2.py",
+      "destination": "scripts/run_track2.py"
+    },
+    {
+      "source": "scripts/run_track2_public.py",
+      "destination": "scripts/run_track2_public.py"
+    },
+    {
+      "source": "src/genosapiens/__init__.py",
+      "destination": "src/genosapiens/__init__.py"
+    },
+    {
+      "source": "src/genosapiens/__main__.py",
+      "destination": "src/genosapiens/__main__.py"
+    },
+    {
+      "source": "src/genosapiens/admission_inventory.py",
+      "destination": "src/genosapiens/admission_inventory.py"
+    },
+    {
+      "source": "src/genosapiens/admission_links.py",
+      "destination": "src/genosapiens/admission_links.py"
+    },
+    {
+      "source": "src/genosapiens/allele_identity.py",
+      "destination": "src/genosapiens/allele_identity.py"
+    },
+    {
+      "source": "src/genosapiens/annotation_admission.py",
+      "destination": "src/genosapiens/annotation_admission.py"
+    },
+    {
+      "source": "src/genosapiens/bounded_io.py",
+      "destination": "src/genosapiens/bounded_io.py"
+    },
+    {
+      "source": "src/genosapiens/bounded_json.py",
+      "destination": "src/genosapiens/bounded_json.py"
+    },
+    {
+      "source": "src/genosapiens/bounded_wgs_config.py",
+      "destination": "src/genosapiens/bounded_wgs_config.py"
+    },
+    {
+      "source": "src/genosapiens/candidate_admission.py",
+      "destination": "src/genosapiens/candidate_admission.py"
+    },
+    {
+      "source": "src/genosapiens/case_manifest.py",
+      "destination": "src/genosapiens/case_manifest.py"
+    },
+    {
+      "source": "src/genosapiens/challenge_evaluator.py",
+      "destination": "src/genosapiens/challenge_evaluator.py"
+    },
+    {
+      "source": "src/genosapiens/challenge_fixture.py",
+      "destination": "src/genosapiens/challenge_fixture.py"
+    },
+    {
+      "source": "src/genosapiens/challenge_rules.py",
+      "destination": "src/genosapiens/challenge_rules.py"
+    },
+    {
+      "source": "src/genosapiens/cli.py",
+      "destination": "src/genosapiens/cli.py"
+    },
+    {
+      "source": "src/genosapiens/clinical_annotation.py",
+      "destination": "src/genosapiens/clinical_annotation.py"
+    },
+    {
+      "source": "src/genosapiens/clinvar.py",
+      "destination": "src/genosapiens/clinvar.py"
+    },
+    {
+      "source": "src/genosapiens/common_allele_exception_bundle.py",
+      "destination": "src/genosapiens/common_allele_exception_bundle.py"
+    },
+    {
+      "source": "src/genosapiens/common_allele_filter.py",
+      "destination": "src/genosapiens/common_allele_filter.py"
+    },
+    {
+      "source": "src/genosapiens/common_allele_public_indexes.py",
+      "destination": "src/genosapiens/common_allele_public_indexes.py"
+    },
+    {
+      "source": "src/genosapiens/common_allele_resources.py",
+      "destination": "src/genosapiens/common_allele_resources.py"
+    },
+    {
+      "source": "src/genosapiens/compatibility_fixture.py",
+      "destination": "src/genosapiens/compatibility_fixture.py"
+    },
+    {
+      "source": "src/genosapiens/config.py",
+      "destination": "src/genosapiens/config.py"
+    },
+    {
+      "source": "src/genosapiens/curated_alleles.py",
+      "destination": "src/genosapiens/curated_alleles.py"
+    },
+    {
+      "source": "src/genosapiens/deepvariant.py",
+      "destination": "src/genosapiens/deepvariant.py"
+    },
+    {
+      "source": "src/genosapiens/disease_gene_evidence.py",
+      "destination": "src/genosapiens/disease_gene_evidence.py"
+    },
+    {
+      "source": "src/genosapiens/disease_profiles.py",
+      "destination": "src/genosapiens/disease_profiles.py"
+    },
+    {
+      "source": "src/genosapiens/download.py",
+      "destination": "src/genosapiens/download.py"
+    },
+    {
+      "source": "src/genosapiens/evidence_fusion.py",
+      "destination": "src/genosapiens/evidence_fusion.py"
+    },
+    {
+      "source": "src/genosapiens/evidence_model.py",
+      "destination": "src/genosapiens/evidence_model.py"
+    },
+    {
+      "source": "src/genosapiens/evidence_serialization.py",
+      "destination": "src/genosapiens/evidence_serialization.py"
+    },
+    {
+      "source": "src/genosapiens/genotype_evaluation.py",
+      "destination": "src/genosapiens/genotype_evaluation.py"
+    },
+    {
+      "source": "src/genosapiens/genotype_hypotheses.py",
+      "destination": "src/genosapiens/genotype_hypotheses.py"
+    },
+    {
+      "source": "src/genosapiens/genotype_model.py",
+      "destination": "src/genosapiens/genotype_model.py"
+    },
+    {
+      "source": "src/genosapiens/genotype_properties.py",
+      "destination": "src/genosapiens/genotype_properties.py"
+    },
+    {
+      "source": "src/genosapiens/giab.py",
+      "destination": "src/genosapiens/giab.py"
+    },
+    {
+      "source": "src/genosapiens/gnomad_all_sites.py",
+      "destination": "src/genosapiens/gnomad_all_sites.py"
+    },
+    {
+      "source": "src/genosapiens/gnomad_faf95_adapter.py",
+      "destination": "src/genosapiens/gnomad_faf95_adapter.py"
+    },
+    {
+      "source": "src/genosapiens/gnomad_hail.py",
+      "destination": "src/genosapiens/gnomad_hail.py"
+    },
+    {
+      "source": "src/genosapiens/gnomad_pilot.py",
+      "destination": "src/genosapiens/gnomad_pilot.py"
+    },
+    {
+      "source": "src/genosapiens/gnomad_projection.py",
+      "destination": "src/genosapiens/gnomad_projection.py"
+    },
+    {
+      "source": "src/genosapiens/gnomad_publication.py",
+      "destination": "src/genosapiens/gnomad_publication.py"
+    },
+    {
+      "source": "src/genosapiens/gnomad_validation.py",
+      "destination": "src/genosapiens/gnomad_validation.py"
+    },
+    {
+      "source": "src/genosapiens/governance.py",
+      "destination": "src/genosapiens/governance.py"
+    },
+    {
+      "source": "src/genosapiens/grch38_reference.py",
+      "destination": "src/genosapiens/grch38_reference.py"
+    },
+    {
+      "source": "src/genosapiens/hpo_ic.py",
+      "destination": "src/genosapiens/hpo_ic.py"
+    },
+    {
+      "source": "src/genosapiens/incident_response.py",
+      "destination": "src/genosapiens/incident_response.py"
+    },
+    {
+      "source": "src/genosapiens/installed_public_index.py",
+      "destination": "src/genosapiens/installed_public_index.py"
+    },
+    {
+      "source": "src/genosapiens/json_schema.py",
+      "destination": "src/genosapiens/json_schema.py"
+    },
+    {
+      "source": "src/genosapiens/llm_guard.py",
+      "destination": "src/genosapiens/llm_guard.py"
+    },
+    {
+      "source": "src/genosapiens/longtr_admission.py",
+      "destination": "src/genosapiens/longtr_admission.py"
+    },
+    {
+      "source": "src/genosapiens/manifest.py",
+      "destination": "src/genosapiens/manifest.py"
+    },
+    {
+      "source": "src/genosapiens/model_locus_resources.py",
+      "destination": "src/genosapiens/model_locus_resources.py"
+    },
+    {
+      "source": "src/genosapiens/model_requirements.py",
+      "destination": "src/genosapiens/model_requirements.py"
+    },
+    {
+      "source": "src/genosapiens/ontology_bundle.py",
+      "destination": "src/genosapiens/ontology_bundle.py"
+    },
+    {
+      "source": "src/genosapiens/open_targets.py",
+      "destination": "src/genosapiens/open_targets.py"
+    },
+    {
+      "source": "src/genosapiens/operator_warnings.py",
+      "destination": "src/genosapiens/operator_warnings.py"
+    },
+    {
+      "source": "src/genosapiens/participant_governance.py",
+      "destination": "src/genosapiens/participant_governance.py"
+    },
+    {
+      "source": "src/genosapiens/partner_qualification.py",
+      "destination": "src/genosapiens/partner_qualification.py"
+    },
+    {
+      "source": "src/genosapiens/partner_relevance.py",
+      "destination": "src/genosapiens/partner_relevance.py"
+    },
+    {
+      "source": "src/genosapiens/phenotype_ingestion.py",
+      "destination": "src/genosapiens/phenotype_ingestion.py"
+    },
+    {
+      "source": "src/genosapiens/phenotype_scoring.py",
+      "destination": "src/genosapiens/phenotype_scoring.py"
+    },
+    {
+      "source": "src/genosapiens/population_annotation.py",
+      "destination": "src/genosapiens/population_annotation.py"
+    },
+    {
+      "source": "src/genosapiens/population_clinical_session.py",
+      "destination": "src/genosapiens/population_clinical_session.py"
+    },
+    {
+      "source": "src/genosapiens/population_filter_candidate.py",
+      "destination": "src/genosapiens/population_filter_candidate.py"
+    },
+    {
+      "source": "src/genosapiens/population_policy.py",
+      "destination": "src/genosapiens/population_policy.py"
+    },
+    {
+      "source": "src/genosapiens/portable_resources.py",
+      "destination": "src/genosapiens/portable_resources.py"
+    },
+    {
+      "source": "src/genosapiens/public_disease_lookup.py",
+      "destination": "src/genosapiens/public_disease_lookup.py"
+    },
+    {
+      "source": "src/genosapiens/rare_disease.py",
+      "destination": "src/genosapiens/rare_disease.py"
+    },
+    {
+      "source": "src/genosapiens/reference_concordance.py",
+      "destination": "src/genosapiens/reference_concordance.py"
+    },
+    {
+      "source": "src/genosapiens/regulatory_index.py",
+      "destination": "src/genosapiens/regulatory_index.py"
+    },
+    {
+      "source": "src/genosapiens/repeat_catalog_admission.py",
+      "destination": "src/genosapiens/repeat_catalog_admission.py"
+    },
+    {
+      "source": "src/genosapiens/retention_sources.py",
+      "destination": "src/genosapiens/retention_sources.py"
+    },
+    {
+      "source": "src/genosapiens/storage.py",
+      "destination": "src/genosapiens/storage.py"
+    },
+    {
+      "source": "src/genosapiens/submission_rendering.py",
+      "destination": "src/genosapiens/submission_rendering.py"
+    },
+    {
+      "source": "src/genosapiens/supplied_structural.py",
+      "destination": "src/genosapiens/supplied_structural.py"
+    },
+    {
+      "source": "src/genosapiens/supply_chain.py",
+      "destination": "src/genosapiens/supply_chain.py"
+    },
+    {
+      "source": "src/genosapiens/tabix.py",
+      "destination": "src/genosapiens/tabix.py"
+    },
+    {
+      "source": "src/genosapiens/track1_analysis_profiles.py",
+      "destination": "src/genosapiens/track1_analysis_profiles.py"
+    },
+    {
+      "source": "src/genosapiens/track1_artifacts.py",
+      "destination": "src/genosapiens/track1_artifacts.py"
+    },
+    {
+      "source": "src/genosapiens/track1_association_scope.py",
+      "destination": "src/genosapiens/track1_association_scope.py"
+    },
+    {
+      "source": "src/genosapiens/track1_authorized_evidence.py",
+      "destination": "src/genosapiens/track1_authorized_evidence.py"
+    },
+    {
+      "source": "src/genosapiens/track1_diagnostics.py",
+      "destination": "src/genosapiens/track1_diagnostics.py"
+    },
+    {
+      "source": "src/genosapiens/track1_early_scope.py",
+      "destination": "src/genosapiens/track1_early_scope.py"
+    },
+    {
+      "source": "src/genosapiens/track1_empirical_validation.py",
+      "destination": "src/genosapiens/track1_empirical_validation.py"
+    },
+    {
+      "source": "src/genosapiens/track1_epcr.py",
+      "destination": "src/genosapiens/track1_epcr.py"
+    },
+    {
+      "source": "src/genosapiens/track1_exomiser.py",
+      "destination": "src/genosapiens/track1_exomiser.py"
+    },
+    {
+      "source": "src/genosapiens/track1_exomiser_roster.py",
+      "destination": "src/genosapiens/track1_exomiser_roster.py"
+    },
+    {
+      "source": "src/genosapiens/track1_handoff.py",
+      "destination": "src/genosapiens/track1_handoff.py"
+    },
+    {
+      "source": "src/genosapiens/track1_handoff_projection.py",
+      "destination": "src/genosapiens/track1_handoff_projection.py"
+    },
+    {
+      "source": "src/genosapiens/track1_installation.py",
+      "destination": "src/genosapiens/track1_installation.py"
+    },
+    {
+      "source": "src/genosapiens/track1_methods.py",
+      "destination": "src/genosapiens/track1_methods.py"
+    },
+    {
+      "source": "src/genosapiens/track1_official_contract.py",
+      "destination": "src/genosapiens/track1_official_contract.py"
+    },
+    {
+      "source": "src/genosapiens/track1_policy_bindings.py",
+      "destination": "src/genosapiens/track1_policy_bindings.py"
+    },
+    {
+      "source": "src/genosapiens/track1_preflight.py",
+      "destination": "src/genosapiens/track1_preflight.py"
+    },
+    {
+      "source": "src/genosapiens/track1_public_roster_builder.py",
+      "destination": "src/genosapiens/track1_public_roster_builder.py"
+    },
+    {
+      "source": "src/genosapiens/track1_public_validation.py",
+      "destination": "src/genosapiens/track1_public_validation.py"
+    },
+    {
+      "source": "src/genosapiens/track1_public_validation_coordinator.py",
+      "destination": "src/genosapiens/track1_public_validation_coordinator.py"
+    },
+    {
+      "source": "src/genosapiens/track1_public_worker.py",
+      "destination": "src/genosapiens/track1_public_worker.py"
+    },
+    {
+      "source": "src/genosapiens/track1_publication.py",
+      "destination": "src/genosapiens/track1_publication.py"
+    },
+    {
+      "source": "src/genosapiens/track1_release.py",
+      "destination": "src/genosapiens/track1_release.py"
+    },
+    {
+      "source": "src/genosapiens/track1_roster.py",
+      "destination": "src/genosapiens/track1_roster.py"
+    },
+    {
+      "source": "src/genosapiens/track1_science_protection.py",
+      "destination": "src/genosapiens/track1_science_protection.py"
+    },
+    {
+      "source": "src/genosapiens/track1_science_roster.py",
+      "destination": "src/genosapiens/track1_science_roster.py"
+    },
+    {
+      "source": "src/genosapiens/track1_science_scope.py",
+      "destination": "src/genosapiens/track1_science_scope.py"
+    },
+    {
+      "source": "src/genosapiens/track1_sensitivity.py",
+      "destination": "src/genosapiens/track1_sensitivity.py"
+    },
+    {
+      "source": "src/genosapiens/track1_setup.py",
+      "destination": "src/genosapiens/track1_setup.py"
+    },
+    {
+      "source": "src/genosapiens/track1_submission.py",
+      "destination": "src/genosapiens/track1_submission.py"
+    },
+    {
+      "source": "src/genosapiens/track1_validation_plan.py",
+      "destination": "src/genosapiens/track1_validation_plan.py"
+    },
+    {
+      "source": "src/genosapiens/track1_validation_runner.py",
+      "destination": "src/genosapiens/track1_validation_runner.py"
+    },
+    {
+      "source": "src/genosapiens/track1_validation_seed.py",
+      "destination": "src/genosapiens/track1_validation_seed.py"
+    },
+    {
+      "source": "src/genosapiens/track2_acquisition.py",
+      "destination": "src/genosapiens/track2_acquisition.py"
+    },
+    {
+      "source": "src/genosapiens/track2_adjudication.py",
+      "destination": "src/genosapiens/track2_adjudication.py"
+    },
+    {
+      "source": "src/genosapiens/track2_allele_facts.py",
+      "destination": "src/genosapiens/track2_allele_facts.py"
+    },
+    {
+      "source": "src/genosapiens/track2_annotation_artifacts.py",
+      "destination": "src/genosapiens/track2_annotation_artifacts.py"
+    },
+    {
+      "source": "src/genosapiens/track2_annotation_checkpoint.py",
+      "destination": "src/genosapiens/track2_annotation_checkpoint.py"
+    },
+    {
+      "source": "src/genosapiens/track2_annotation_recovery.py",
+      "destination": "src/genosapiens/track2_annotation_recovery.py"
+    },
+    {
+      "source": "src/genosapiens/track2_assessment.py",
+      "destination": "src/genosapiens/track2_assessment.py"
+    },
+    {
+      "source": "src/genosapiens/track2_calibration_bank.py",
+      "destination": "src/genosapiens/track2_calibration_bank.py"
+    },
+    {
+      "source": "src/genosapiens/track2_candidate_union.py",
+      "destination": "src/genosapiens/track2_candidate_union.py"
+    },
+    {
+      "source": "src/genosapiens/track2_challenge_model.py",
+      "destination": "src/genosapiens/track2_challenge_model.py"
+    },
+    {
+      "source": "src/genosapiens/track2_challenge_overviews.py",
+      "destination": "src/genosapiens/track2_challenge_overviews.py"
+    },
+    {
+      "source": "src/genosapiens/track2_challenge_paper.py",
+      "destination": "src/genosapiens/track2_challenge_paper.py"
+    },
+    {
+      "source": "src/genosapiens/track2_challenge_revision.py",
+      "destination": "src/genosapiens/track2_challenge_revision.py"
+    },
+    {
+      "source": "src/genosapiens/track2_challenge_selection.py",
+      "destination": "src/genosapiens/track2_challenge_selection.py"
+    },
+    {
+      "source": "src/genosapiens/track2_challenge_summary.py",
+      "destination": "src/genosapiens/track2_challenge_summary.py"
+    },
+    {
+      "source": "src/genosapiens/track2_checked_evidence.py",
+      "destination": "src/genosapiens/track2_checked_evidence.py"
+    },
+    {
+      "source": "src/genosapiens/track2_checked_pages.py",
+      "destination": "src/genosapiens/track2_checked_pages.py"
+    },
+    {
+      "source": "src/genosapiens/track2_cli.py",
+      "destination": "src/genosapiens/track2_cli.py"
+    },
+    {
+      "source": "src/genosapiens/track2_clinical_batches.py",
+      "destination": "src/genosapiens/track2_clinical_batches.py"
+    },
+    {
+      "source": "src/genosapiens/track2_codec.py",
+      "destination": "src/genosapiens/track2_codec.py"
+    },
+    {
+      "source": "src/genosapiens/track2_compact_ranking.py",
+      "destination": "src/genosapiens/track2_compact_ranking.py"
+    },
+    {
+      "source": "src/genosapiens/track2_concept_supplement.py",
+      "destination": "src/genosapiens/track2_concept_supplement.py"
+    },
+    {
+      "source": "src/genosapiens/track2_construction_dependencies.py",
+      "destination": "src/genosapiens/track2_construction_dependencies.py"
+    },
+    {
+      "source": "src/genosapiens/track2_coverage.py",
+      "destination": "src/genosapiens/track2_coverage.py"
+    },
+    {
+      "source": "src/genosapiens/track2_deferred.py",
+      "destination": "src/genosapiens/track2_deferred.py"
+    },
+    {
+      "source": "src/genosapiens/track2_derived_ranking.py",
+      "destination": "src/genosapiens/track2_derived_ranking.py"
+    },
+    {
+      "source": "src/genosapiens/track2_derived_strength.py",
+      "destination": "src/genosapiens/track2_derived_strength.py"
+    },
+    {
+      "source": "src/genosapiens/track2_diagnosis_builder.py",
+      "destination": "src/genosapiens/track2_diagnosis_builder.py"
+    },
+    {
+      "source": "src/genosapiens/track2_diagnosis_package.py",
+      "destination": "src/genosapiens/track2_diagnosis_package.py"
+    },
+    {
+      "source": "src/genosapiens/track2_diagnosis_plan.py",
+      "destination": "src/genosapiens/track2_diagnosis_plan.py"
+    },
+    {
+      "source": "src/genosapiens/track2_diagnosis_scope.py",
+      "destination": "src/genosapiens/track2_diagnosis_scope.py"
+    },
+    {
+      "source": "src/genosapiens/track2_discovery.py",
+      "destination": "src/genosapiens/track2_discovery.py"
+    },
+    {
+      "source": "src/genosapiens/track2_discovery_catalog.py",
+      "destination": "src/genosapiens/track2_discovery_catalog.py"
+    },
+    {
+      "source": "src/genosapiens/track2_discovery_operator.py",
+      "destination": "src/genosapiens/track2_discovery_operator.py"
+    },
+    {
+      "source": "src/genosapiens/track2_discovery_outcome.py",
+      "destination": "src/genosapiens/track2_discovery_outcome.py"
+    },
+    {
+      "source": "src/genosapiens/track2_discovery_recurrence.py",
+      "destination": "src/genosapiens/track2_discovery_recurrence.py"
+    },
+    {
+      "source": "src/genosapiens/track2_discovery_report.py",
+      "destination": "src/genosapiens/track2_discovery_report.py"
+    },
+    {
+      "source": "src/genosapiens/track2_discovery_resources.py",
+      "destination": "src/genosapiens/track2_discovery_resources.py"
+    },
+    {
+      "source": "src/genosapiens/track2_discovery_sources.py",
+      "destination": "src/genosapiens/track2_discovery_sources.py"
+    },
+    {
+      "source": "src/genosapiens/track2_discovery_union.py",
+      "destination": "src/genosapiens/track2_discovery_union.py"
+    },
+    {
+      "source": "src/genosapiens/track2_disk_memo.py",
+      "destination": "src/genosapiens/track2_disk_memo.py"
+    },
+    {
+      "source": "src/genosapiens/track2_drug_identity.py",
+      "destination": "src/genosapiens/track2_drug_identity.py"
+    },
+    {
+      "source": "src/genosapiens/track2_drug_mechanisms.py",
+      "destination": "src/genosapiens/track2_drug_mechanisms.py"
+    },
+    {
+      "source": "src/genosapiens/track2_endpoint.py",
+      "destination": "src/genosapiens/track2_endpoint.py"
+    },
+    {
+      "source": "src/genosapiens/track2_exclusions.py",
+      "destination": "src/genosapiens/track2_exclusions.py"
+    },
+    {
+      "source": "src/genosapiens/track2_exploratory_planning.py",
+      "destination": "src/genosapiens/track2_exploratory_planning.py"
+    },
+    {
+      "source": "src/genosapiens/track2_exposure.py",
+      "destination": "src/genosapiens/track2_exposure.py"
+    },
+    {
+      "source": "src/genosapiens/track2_figure_stream.py",
+      "destination": "src/genosapiens/track2_figure_stream.py"
+    },
+    {
+      "source": "src/genosapiens/track2_figure_workers.py",
+      "destination": "src/genosapiens/track2_figure_workers.py"
+    },
+    {
+      "source": "src/genosapiens/track2_freeze.py",
+      "destination": "src/genosapiens/track2_freeze.py"
+    },
+    {
+      "source": "src/genosapiens/track2_frozen_calibration.py",
+      "destination": "src/genosapiens/track2_frozen_calibration.py"
+    },
+    {
+      "source": "src/genosapiens/track2_functional_observations.py",
+      "destination": "src/genosapiens/track2_functional_observations.py"
+    },
+    {
+      "source": "src/genosapiens/track2_functional_sources.py",
+      "destination": "src/genosapiens/track2_functional_sources.py"
+    },
+    {
+      "source": "src/genosapiens/track2_g5.py",
+      "destination": "src/genosapiens/track2_g5.py"
+    },
+    {
+      "source": "src/genosapiens/track2_g6.py",
+      "destination": "src/genosapiens/track2_g6.py"
+    },
+    {
+      "source": "src/genosapiens/track2_gates.py",
+      "destination": "src/genosapiens/track2_gates.py"
+    },
+    {
+      "source": "src/genosapiens/track2_input.py",
+      "destination": "src/genosapiens/track2_input.py"
+    },
+    {
+      "source": "src/genosapiens/track2_lincs.py",
+      "destination": "src/genosapiens/track2_lincs.py"
+    },
+    {
+      "source": "src/genosapiens/track2_lincs_integration.py",
+      "destination": "src/genosapiens/track2_lincs_integration.py"
+    },
+    {
+      "source": "src/genosapiens/track2_lincs_priority.py",
+      "destination": "src/genosapiens/track2_lincs_priority.py"
+    },
+    {
+      "source": "src/genosapiens/track2_lincs_report.py",
+      "destination": "src/genosapiens/track2_lincs_report.py"
+    },
+    {
+      "source": "src/genosapiens/track2_lincs_scoring.py",
+      "destination": "src/genosapiens/track2_lincs_scoring.py"
+    },
+    {
+      "source": "src/genosapiens/track2_lincs_selection.py",
+      "destination": "src/genosapiens/track2_lincs_selection.py"
+    },
+    {
+      "source": "src/genosapiens/track2_manual_import.py",
+      "destination": "src/genosapiens/track2_manual_import.py"
+    },
+    {
+      "source": "src/genosapiens/track2_mechanism.py",
+      "destination": "src/genosapiens/track2_mechanism.py"
+    },
+    {
+      "source": "src/genosapiens/track2_mechanism_assessment.py",
+      "destination": "src/genosapiens/track2_mechanism_assessment.py"
+    },
+    {
+      "source": "src/genosapiens/track2_mechanism_review.py",
+      "destination": "src/genosapiens/track2_mechanism_review.py"
+    },
+    {
+      "source": "src/genosapiens/track2_medication_catalog.py",
+      "destination": "src/genosapiens/track2_medication_catalog.py"
+    },
+    {
+      "source": "src/genosapiens/track2_milestone.py",
+      "destination": "src/genosapiens/track2_milestone.py"
+    },
+    {
+      "source": "src/genosapiens/track2_no_candidate.py",
+      "destination": "src/genosapiens/track2_no_candidate.py"
+    },
+    {
+      "source": "src/genosapiens/track2_openrouter.py",
+      "destination": "src/genosapiens/track2_openrouter.py"
+    },
+    {
+      "source": "src/genosapiens/track2_operator.py",
+      "destination": "src/genosapiens/track2_operator.py"
+    },
+    {
+      "source": "src/genosapiens/track2_operator_inputs.py",
+      "destination": "src/genosapiens/track2_operator_inputs.py"
+    },
+    {
+      "source": "src/genosapiens/track2_operator_install.py",
+      "destination": "src/genosapiens/track2_operator_install.py"
+    },
+    {
+      "source": "src/genosapiens/track2_operator_resources.py",
+      "destination": "src/genosapiens/track2_operator_resources.py"
+    },
+    {
+      "source": "src/genosapiens/track2_operator_setup.py",
+      "destination": "src/genosapiens/track2_operator_setup.py"
+    },
+    {
+      "source": "src/genosapiens/track2_package_files.py",
+      "destination": "src/genosapiens/track2_package_files.py"
+    },
+    {
+      "source": "src/genosapiens/track2_patient_context.py",
+      "destination": "src/genosapiens/track2_patient_context.py"
+    },
+    {
+      "source": "src/genosapiens/track2_pharmacology.py",
+      "destination": "src/genosapiens/track2_pharmacology.py"
+    },
+    {
+      "source": "src/genosapiens/track2_phenotype.py",
+      "destination": "src/genosapiens/track2_phenotype.py"
+    },
+    {
+      "source": "src/genosapiens/track2_policy.py",
+      "destination": "src/genosapiens/track2_policy.py"
+    },
+    {
+      "source": "src/genosapiens/track2_population_applicability.py",
+      "destination": "src/genosapiens/track2_population_applicability.py"
+    },
+    {
+      "source": "src/genosapiens/track2_protein_loss.py",
+      "destination": "src/genosapiens/track2_protein_loss.py"
+    },
+    {
+      "source": "src/genosapiens/track2_protein_supplement.py",
+      "destination": "src/genosapiens/track2_protein_supplement.py"
+    },
+    {
+      "source": "src/genosapiens/track2_public_discovery.py",
+      "destination": "src/genosapiens/track2_public_discovery.py"
+    },
+    {
+      "source": "src/genosapiens/track2_public_matching.py",
+      "destination": "src/genosapiens/track2_public_matching.py"
+    },
+    {
+      "source": "src/genosapiens/track2_public_query.py",
+      "destination": "src/genosapiens/track2_public_query.py"
+    },
+    {
+      "source": "src/genosapiens/track2_published_genotype.py",
+      "destination": "src/genosapiens/track2_published_genotype.py"
+    },
+    {
+      "source": "src/genosapiens/track2_reader_session.py",
+      "destination": "src/genosapiens/track2_reader_session.py"
+    },
+    {
+      "source": "src/genosapiens/track2_records.py",
+      "destination": "src/genosapiens/track2_records.py"
+    },
+    {
+      "source": "src/genosapiens/track2_reference.py",
+      "destination": "src/genosapiens/track2_reference.py"
+    },
+    {
+      "source": "src/genosapiens/track2_release.py",
+      "destination": "src/genosapiens/track2_release.py"
+    },
+    {
+      "source": "src/genosapiens/track2_report_adapters.py",
+      "destination": "src/genosapiens/track2_report_adapters.py"
+    },
+    {
+      "source": "src/genosapiens/track2_report_assembly.py",
+      "destination": "src/genosapiens/track2_report_assembly.py"
+    },
+    {
+      "source": "src/genosapiens/track2_report_calibration.py",
+      "destination": "src/genosapiens/track2_report_calibration.py"
+    },
+    {
+      "source": "src/genosapiens/track2_report_calibration_inputs.py",
+      "destination": "src/genosapiens/track2_report_calibration_inputs.py"
+    },
+    {
+      "source": "src/genosapiens/track2_report_calibration_stage.py",
+      "destination": "src/genosapiens/track2_report_calibration_stage.py"
+    },
+    {
+      "source": "src/genosapiens/track2_report_captions.py",
+      "destination": "src/genosapiens/track2_report_captions.py"
+    },
+    {
+      "source": "src/genosapiens/track2_report_checks.py",
+      "destination": "src/genosapiens/track2_report_checks.py"
+    },
+    {
+      "source": "src/genosapiens/track2_report_claims.py",
+      "destination": "src/genosapiens/track2_report_claims.py"
+    },
+    {
+      "source": "src/genosapiens/track2_report_command.py",
+      "destination": "src/genosapiens/track2_report_command.py"
+    },
+    {
+      "source": "src/genosapiens/track2_report_context.py",
+      "destination": "src/genosapiens/track2_report_context.py"
+    },
+    {
+      "source": "src/genosapiens/track2_report_contracts.py",
+      "destination": "src/genosapiens/track2_report_contracts.py"
+    },
+    {
+      "source": "src/genosapiens/track2_report_derived.py",
+      "destination": "src/genosapiens/track2_report_derived.py"
+    },
+    {
+      "source": "src/genosapiens/track2_report_discovery_compatibility.py",
+      "destination": "src/genosapiens/track2_report_discovery_compatibility.py"
+    },
+    {
+      "source": "src/genosapiens/track2_report_evidence.py",
+      "destination": "src/genosapiens/track2_report_evidence.py"
+    },
+    {
+      "source": "src/genosapiens/track2_report_finalization.py",
+      "destination": "src/genosapiens/track2_report_finalization.py"
+    },
+    {
+      "source": "src/genosapiens/track2_report_fresh.py",
+      "destination": "src/genosapiens/track2_report_fresh.py"
+    },
+    {
+      "source": "src/genosapiens/track2_report_gene_metadata.py",
+      "destination": "src/genosapiens/track2_report_gene_metadata.py"
+    },
+    {
+      "source": "src/genosapiens/track2_report_language.py",
+      "destination": "src/genosapiens/track2_report_language.py"
+    },
+    {
+      "source": "src/genosapiens/track2_report_links.py",
+      "destination": "src/genosapiens/track2_report_links.py"
+    },
+    {
+      "source": "src/genosapiens/track2_report_local_derivation.py",
+      "destination": "src/genosapiens/track2_report_local_derivation.py"
+    },
+    {
+      "source": "src/genosapiens/track2_report_local_model.py",
+      "destination": "src/genosapiens/track2_report_local_model.py"
+    },
+    {
+      "source": "src/genosapiens/track2_report_metadata.py",
+      "destination": "src/genosapiens/track2_report_metadata.py"
+    },
+    {
+      "source": "src/genosapiens/track2_report_metadata_revision.py",
+      "destination": "src/genosapiens/track2_report_metadata_revision.py"
+    },
+    {
+      "source": "src/genosapiens/track2_report_model.py",
+      "destination": "src/genosapiens/track2_report_model.py"
+    },
+    {
+      "source": "src/genosapiens/track2_report_overviews.py",
+      "destination": "src/genosapiens/track2_report_overviews.py"
+    },
+    {
+      "source": "src/genosapiens/track2_report_package.py",
+      "destination": "src/genosapiens/track2_report_package.py"
+    },
+    {
+      "source": "src/genosapiens/track2_report_paper.py",
+      "destination": "src/genosapiens/track2_report_paper.py"
+    },
+    {
+      "source": "src/genosapiens/track2_report_producer.py",
+      "destination": "src/genosapiens/track2_report_producer.py"
+    },
+    {
+      "source": "src/genosapiens/track2_report_ranking.py",
+      "destination": "src/genosapiens/track2_report_ranking.py"
+    },
+    {
+      "source": "src/genosapiens/track2_report_run_source.py",
+      "destination": "src/genosapiens/track2_report_run_source.py"
+    },
+    {
+      "source": "src/genosapiens/track2_report_science_reuse.py",
+      "destination": "src/genosapiens/track2_report_science_reuse.py"
+    },
+    {
+      "source": "src/genosapiens/track2_report_software.py",
+      "destination": "src/genosapiens/track2_report_software.py"
+    },
+    {
+      "source": "src/genosapiens/track2_report_sources.py",
+      "destination": "src/genosapiens/track2_report_sources.py"
+    },
+    {
+      "source": "src/genosapiens/track2_report_stages.py",
+      "destination": "src/genosapiens/track2_report_stages.py"
+    },
+    {
+      "source": "src/genosapiens/track2_report_summary.py",
+      "destination": "src/genosapiens/track2_report_summary.py"
+    },
+    {
+      "source": "src/genosapiens/track2_report_supplements.py",
+      "destination": "src/genosapiens/track2_report_supplements.py"
+    },
+    {
+      "source": "src/genosapiens/track2_report_tables.py",
+      "destination": "src/genosapiens/track2_report_tables.py"
+    },
+    {
+      "source": "src/genosapiens/track2_report_tissue_checks.py",
+      "destination": "src/genosapiens/track2_report_tissue_checks.py"
+    },
+    {
+      "source": "src/genosapiens/track2_report_worker.py",
+      "destination": "src/genosapiens/track2_report_worker.py"
+    },
+    {
+      "source": "src/genosapiens/track2_report_workflow.py",
+      "destination": "src/genosapiens/track2_report_workflow.py"
+    },
+    {
+      "source": "src/genosapiens/track2_retention.py",
+      "destination": "src/genosapiens/track2_retention.py"
+    },
+    {
+      "source": "src/genosapiens/track2_revision_finalization.py",
+      "destination": "src/genosapiens/track2_revision_finalization.py"
+    },
+    {
+      "source": "src/genosapiens/track2_routes.py",
+      "destination": "src/genosapiens/track2_routes.py"
+    },
+    {
+      "source": "src/genosapiens/track2_run_state.py",
+      "destination": "src/genosapiens/track2_run_state.py"
+    },
+    {
+      "source": "src/genosapiens/track2_runtime.py",
+      "destination": "src/genosapiens/track2_runtime.py"
+    },
+    {
+      "source": "src/genosapiens/track2_scientific_completion.py",
+      "destination": "src/genosapiens/track2_scientific_completion.py"
+    },
+    {
+      "source": "src/genosapiens/track2_scientific_planning.py",
+      "destination": "src/genosapiens/track2_scientific_planning.py"
+    },
+    {
+      "source": "src/genosapiens/track2_scientific_reader.py",
+      "destination": "src/genosapiens/track2_scientific_reader.py"
+    },
+    {
+      "source": "src/genosapiens/track2_scientific_records.py",
+      "destination": "src/genosapiens/track2_scientific_records.py"
+    },
+    {
+      "source": "src/genosapiens/track2_scientific_storage.py",
+      "destination": "src/genosapiens/track2_scientific_storage.py"
+    },
+    {
+      "source": "src/genosapiens/track2_scoped_genotypes.py",
+      "destination": "src/genosapiens/track2_scoped_genotypes.py"
+    },
+    {
+      "source": "src/genosapiens/track2_scoped_interpretation.py",
+      "destination": "src/genosapiens/track2_scoped_interpretation.py"
+    },
+    {
+      "source": "src/genosapiens/track2_scoped_mechanisms.py",
+      "destination": "src/genosapiens/track2_scoped_mechanisms.py"
+    },
+    {
+      "source": "src/genosapiens/track2_scoring_workers.py",
+      "destination": "src/genosapiens/track2_scoring_workers.py"
+    },
+    {
+      "source": "src/genosapiens/track2_selection_report.py",
+      "destination": "src/genosapiens/track2_selection_report.py"
+    },
+    {
+      "source": "src/genosapiens/track2_setup.py",
+      "destination": "src/genosapiens/track2_setup.py"
+    },
+    {
+      "source": "src/genosapiens/track2_shared_blocks.py",
+      "destination": "src/genosapiens/track2_shared_blocks.py"
+    },
+    {
+      "source": "src/genosapiens/track2_speedup_recovery.py",
+      "destination": "src/genosapiens/track2_speedup_recovery.py"
+    },
+    {
+      "source": "src/genosapiens/track2_storage.py",
+      "destination": "src/genosapiens/track2_storage.py"
+    },
+    {
+      "source": "src/genosapiens/track2_structural.py",
+      "destination": "src/genosapiens/track2_structural.py"
+    },
+    {
+      "source": "src/genosapiens/track2_synthesis.py",
+      "destination": "src/genosapiens/track2_synthesis.py"
+    },
+    {
+      "source": "src/genosapiens/track2_target_hypothesis.py",
+      "destination": "src/genosapiens/track2_target_hypothesis.py"
+    },
+    {
+      "source": "src/genosapiens/track2_target_profile.py",
+      "destination": "src/genosapiens/track2_target_profile.py"
+    },
+    {
+      "source": "src/genosapiens/track2_terminal.py",
+      "destination": "src/genosapiens/track2_terminal.py"
+    },
+    {
+      "source": "src/genosapiens/track2_tiers.py",
+      "destination": "src/genosapiens/track2_tiers.py"
+    },
+    {
+      "source": "src/genosapiens/track2_tissue_admission.py",
+      "destination": "src/genosapiens/track2_tissue_admission.py"
+    },
+    {
+      "source": "src/genosapiens/track2_tissue_aggregation.py",
+      "destination": "src/genosapiens/track2_tissue_aggregation.py"
+    },
+    {
+      "source": "src/genosapiens/track2_tissue_discovery.py",
+      "destination": "src/genosapiens/track2_tissue_discovery.py"
+    },
+    {
+      "source": "src/genosapiens/track2_tissue_execution.py",
+      "destination": "src/genosapiens/track2_tissue_execution.py"
+    },
+    {
+      "source": "src/genosapiens/track2_tissue_exports.py",
+      "destination": "src/genosapiens/track2_tissue_exports.py"
+    },
+    {
+      "source": "src/genosapiens/track2_tissue_figures.py",
+      "destination": "src/genosapiens/track2_tissue_figures.py"
+    },
+    {
+      "source": "src/genosapiens/track2_tissue_membership.py",
+      "destination": "src/genosapiens/track2_tissue_membership.py"
+    },
+    {
+      "source": "src/genosapiens/track2_tissue_planning.py",
+      "destination": "src/genosapiens/track2_tissue_planning.py"
+    },
+    {
+      "source": "src/genosapiens/track2_tissue_queries.py",
+      "destination": "src/genosapiens/track2_tissue_queries.py"
+    },
+    {
+      "source": "src/genosapiens/track2_tissue_ranking.py",
+      "destination": "src/genosapiens/track2_tissue_ranking.py"
+    },
+    {
+      "source": "src/genosapiens/track2_tissue_records.py",
+      "destination": "src/genosapiens/track2_tissue_records.py"
+    },
+    {
+      "source": "src/genosapiens/track2_tissue_report_text.py",
+      "destination": "src/genosapiens/track2_tissue_report_text.py"
+    },
+    {
+      "source": "src/genosapiens/track2_tissue_resources.py",
+      "destination": "src/genosapiens/track2_tissue_resources.py"
+    },
+    {
+      "source": "src/genosapiens/track2_tissue_scoring.py",
+      "destination": "src/genosapiens/track2_tissue_scoring.py"
+    },
+    {
+      "source": "src/genosapiens/track2_tissue_union.py",
+      "destination": "src/genosapiens/track2_tissue_union.py"
+    },
+    {
+      "source": "src/genosapiens/track2_validation_plan.py",
+      "destination": "src/genosapiens/track2_validation_plan.py"
+    },
+    {
+      "source": "src/genosapiens/track2_vcf_evidence.py",
+      "destination": "src/genosapiens/track2_vcf_evidence.py"
+    },
+    {
+      "source": "src/genosapiens/track2_vcf_selection.py",
+      "destination": "src/genosapiens/track2_vcf_selection.py"
+    },
+    {
+      "source": "src/genosapiens/variant_class_resources.py",
+      "destination": "src/genosapiens/variant_class_resources.py"
+    },
+    {
+      "source": "src/genosapiens/variant_inventory.py",
+      "destination": "src/genosapiens/variant_inventory.py"
+    },
+    {
+      "source": "src/genosapiens/variant_normalization.py",
+      "destination": "src/genosapiens/variant_normalization.py"
+    },
+    {
+      "source": "src/genosapiens/variant_retention.py",
+      "destination": "src/genosapiens/variant_retention.py"
+    },
+    {
+      "source": "src/genosapiens/vcf_context.py",
+      "destination": "src/genosapiens/vcf_context.py"
+    },
+    {
+      "source": "src/genosapiens/vcf_contracts.py",
+      "destination": "src/genosapiens/vcf_contracts.py"
+    },
+    {
+      "source": "src/genosapiens/vcf_header.py",
+      "destination": "src/genosapiens/vcf_header.py"
+    },
+    {
+      "source": "src/genosapiens/vcf_qc.py",
+      "destination": "src/genosapiens/vcf_qc.py"
+    },
+    {
+      "source": "src/genosapiens/vep_annotation.py",
+      "destination": "src/genosapiens/vep_annotation.py"
+    },
+    {
+      "source": "src/genosapiens/vep_bundle.py",
+      "destination": "src/genosapiens/vep_bundle.py"
+    },
+    {
+      "source": "src/genosapiens/vep_native_annotation.py",
+      "destination": "src/genosapiens/vep_native_annotation.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_admission.py",
+      "destination": "src/genosapiens/wgs_admission.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_admission_diagnostics.py",
+      "destination": "src/genosapiens/wgs_admission_diagnostics.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_admission_graph.py",
+      "destination": "src/genosapiens/wgs_admission_graph.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_admission_inputs.py",
+      "destination": "src/genosapiens/wgs_admission_inputs.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_admission_projection.py",
+      "destination": "src/genosapiens/wgs_admission_projection.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_admission_screening.py",
+      "destination": "src/genosapiens/wgs_admission_screening.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_allele_query_cache.py",
+      "destination": "src/genosapiens/wgs_allele_query_cache.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_analysis.py",
+      "destination": "src/genosapiens/wgs_analysis.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_analysis_eligibility.py",
+      "destination": "src/genosapiens/wgs_analysis_eligibility.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_analysis_inputs.py",
+      "destination": "src/genosapiens/wgs_analysis_inputs.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_analysis_policy.py",
+      "destination": "src/genosapiens/wgs_analysis_policy.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_annotation.py",
+      "destination": "src/genosapiens/wgs_annotation.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_annotation_coverage.py",
+      "destination": "src/genosapiens/wgs_annotation_coverage.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_annotation_prefix.py",
+      "destination": "src/genosapiens/wgs_annotation_prefix.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_assessment_checkpoint.py",
+      "destination": "src/genosapiens/wgs_assessment_checkpoint.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_association_codec.py",
+      "destination": "src/genosapiens/wgs_association_codec.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_association_projection.py",
+      "destination": "src/genosapiens/wgs_association_projection.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_case_context.py",
+      "destination": "src/genosapiens/wgs_case_context.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_case_evidence.py",
+      "destination": "src/genosapiens/wgs_case_evidence.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_case_identities.py",
+      "destination": "src/genosapiens/wgs_case_identities.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_case_order.py",
+      "destination": "src/genosapiens/wgs_case_order.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_case_resources.py",
+      "destination": "src/genosapiens/wgs_case_resources.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_case_science_facts.py",
+      "destination": "src/genosapiens/wgs_case_science_facts.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_clinical_session.py",
+      "destination": "src/genosapiens/wgs_clinical_session.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_clinvar_reference_sites.py",
+      "destination": "src/genosapiens/wgs_clinvar_reference_sites.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_completed_science.py",
+      "destination": "src/genosapiens/wgs_completed_science.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_context_admission.py",
+      "destination": "src/genosapiens/wgs_context_admission.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_context_domain.py",
+      "destination": "src/genosapiens/wgs_context_domain.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_context_evidence.py",
+      "destination": "src/genosapiens/wgs_context_evidence.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_context_order.py",
+      "destination": "src/genosapiens/wgs_context_order.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_context_payloads.py",
+      "destination": "src/genosapiens/wgs_context_payloads.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_context_pipeline.py",
+      "destination": "src/genosapiens/wgs_context_pipeline.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_context_population.py",
+      "destination": "src/genosapiens/wgs_context_population.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_context_runtime.py",
+      "destination": "src/genosapiens/wgs_context_runtime.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_context_scores.py",
+      "destination": "src/genosapiens/wgs_context_scores.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_contexts.py",
+      "destination": "src/genosapiens/wgs_contexts.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_diagnosis_derivative.py",
+      "destination": "src/genosapiens/wgs_diagnosis_derivative.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_eligibility_evidence.py",
+      "destination": "src/genosapiens/wgs_eligibility_evidence.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_engineering_readiness.py",
+      "destination": "src/genosapiens/wgs_engineering_readiness.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_evidence_fragments.py",
+      "destination": "src/genosapiens/wgs_evidence_fragments.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_evidence_replay.py",
+      "destination": "src/genosapiens/wgs_evidence_replay.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_evidence_shared.py",
+      "destination": "src/genosapiens/wgs_evidence_shared.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_evidence_store.py",
+      "destination": "src/genosapiens/wgs_evidence_store.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_failures.py",
+      "destination": "src/genosapiens/wgs_failures.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_filter.py",
+      "destination": "src/genosapiens/wgs_filter.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_gene_evidence.py",
+      "destination": "src/genosapiens/wgs_gene_evidence.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_genotype_evaluation.py",
+      "destination": "src/genosapiens/wgs_genotype_evaluation.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_genotype_facts.py",
+      "destination": "src/genosapiens/wgs_genotype_facts.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_handoff.py",
+      "destination": "src/genosapiens/wgs_handoff.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_hypothesis_evidence.py",
+      "destination": "src/genosapiens/wgs_hypothesis_evidence.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_hypothesis_verification.py",
+      "destination": "src/genosapiens/wgs_hypothesis_verification.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_ic_evidence.py",
+      "destination": "src/genosapiens/wgs_ic_evidence.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_installation.py",
+      "destination": "src/genosapiens/wgs_installation.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_ledger.py",
+      "destination": "src/genosapiens/wgs_ledger.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_locator_tape.py",
+      "destination": "src/genosapiens/wgs_locator_tape.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_logical_evidence.py",
+      "destination": "src/genosapiens/wgs_logical_evidence.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_longtr.py",
+      "destination": "src/genosapiens/wgs_longtr.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_matching_validation.py",
+      "destination": "src/genosapiens/wgs_matching_validation.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_member_json.py",
+      "destination": "src/genosapiens/wgs_member_json.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_migration.py",
+      "destination": "src/genosapiens/wgs_migration.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_native_annotation.py",
+      "destination": "src/genosapiens/wgs_native_annotation.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_operator_invocation.py",
+      "destination": "src/genosapiens/wgs_operator_invocation.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_operator_maintenance.py",
+      "destination": "src/genosapiens/wgs_operator_maintenance.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_operator_package.py",
+      "destination": "src/genosapiens/wgs_operator_package.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_packed_outcomes.py",
+      "destination": "src/genosapiens/wgs_packed_outcomes.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_pair_decisions.py",
+      "destination": "src/genosapiens/wgs_pair_decisions.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_pair_domain.py",
+      "destination": "src/genosapiens/wgs_pair_domain.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_pair_evidence.py",
+      "destination": "src/genosapiens/wgs_pair_evidence.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_pair_outcomes.py",
+      "destination": "src/genosapiens/wgs_pair_outcomes.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_pair_scores.py",
+      "destination": "src/genosapiens/wgs_pair_scores.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_pair_verification.py",
+      "destination": "src/genosapiens/wgs_pair_verification.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_phase_evaluation.py",
+      "destination": "src/genosapiens/wgs_phase_evaluation.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_phase_patterns.py",
+      "destination": "src/genosapiens/wgs_phase_patterns.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_phenotype_evidence.py",
+      "destination": "src/genosapiens/wgs_phenotype_evidence.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_population_evidence.py",
+      "destination": "src/genosapiens/wgs_population_evidence.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_population_input.py",
+      "destination": "src/genosapiens/wgs_population_input.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_population_policy.py",
+      "destination": "src/genosapiens/wgs_population_policy.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_population_work_filter.py",
+      "destination": "src/genosapiens/wgs_population_work_filter.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_preparation.py",
+      "destination": "src/genosapiens/wgs_preparation.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_prepared_case.py",
+      "destination": "src/genosapiens/wgs_prepared_case.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_primary_publication.py",
+      "destination": "src/genosapiens/wgs_primary_publication.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_primary_recovery.py",
+      "destination": "src/genosapiens/wgs_primary_recovery.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_profile_projection.py",
+      "destination": "src/genosapiens/wgs_profile_projection.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_provenance.py",
+      "destination": "src/genosapiens/wgs_provenance.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_public_analysis.py",
+      "destination": "src/genosapiens/wgs_public_analysis.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_public_case.py",
+      "destination": "src/genosapiens/wgs_public_case.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_public_execution.py",
+      "destination": "src/genosapiens/wgs_public_execution.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_public_filter.py",
+      "destination": "src/genosapiens/wgs_public_filter.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_public_qualification.py",
+      "destination": "src/genosapiens/wgs_public_qualification.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_public_replay.py",
+      "destination": "src/genosapiens/wgs_public_replay.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_public_runner.py",
+      "destination": "src/genosapiens/wgs_public_runner.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_public_store.py",
+      "destination": "src/genosapiens/wgs_public_store.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_query_limits.py",
+      "destination": "src/genosapiens/wgs_query_limits.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_read_cache.py",
+      "destination": "src/genosapiens/wgs_read_cache.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_read_rescue.py",
+      "destination": "src/genosapiens/wgs_read_rescue.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_reference_evidence.py",
+      "destination": "src/genosapiens/wgs_reference_evidence.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_reporting.py",
+      "destination": "src/genosapiens/wgs_reporting.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_representation_evidence.py",
+      "destination": "src/genosapiens/wgs_representation_evidence.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_resource_rows.py",
+      "destination": "src/genosapiens/wgs_resource_rows.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_resume.py",
+      "destination": "src/genosapiens/wgs_resume.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_run_manifest.py",
+      "destination": "src/genosapiens/wgs_run_manifest.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_runtime.py",
+      "destination": "src/genosapiens/wgs_runtime.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_science_aggregation.py",
+      "destination": "src/genosapiens/wgs_science_aggregation.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_science_checkpoints.py",
+      "destination": "src/genosapiens/wgs_science_checkpoints.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_science_coordinator.py",
+      "destination": "src/genosapiens/wgs_science_coordinator.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_science_execution.py",
+      "destination": "src/genosapiens/wgs_science_execution.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_science_failures.py",
+      "destination": "src/genosapiens/wgs_science_failures.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_science_graph.py",
+      "destination": "src/genosapiens/wgs_science_graph.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_science_hpo.py",
+      "destination": "src/genosapiens/wgs_science_hpo.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_science_options.py",
+      "destination": "src/genosapiens/wgs_science_options.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_science_parallel.py",
+      "destination": "src/genosapiens/wgs_science_parallel.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_science_publication.py",
+      "destination": "src/genosapiens/wgs_science_publication.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_science_reporting.py",
+      "destination": "src/genosapiens/wgs_science_reporting.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_science_resources.py",
+      "destination": "src/genosapiens/wgs_science_resources.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_science_runtime.py",
+      "destination": "src/genosapiens/wgs_science_runtime.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_science_scope_evidence.py",
+      "destination": "src/genosapiens/wgs_science_scope_evidence.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_science_selection.py",
+      "destination": "src/genosapiens/wgs_science_selection.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_science_sources.py",
+      "destination": "src/genosapiens/wgs_science_sources.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_science_transport.py",
+      "destination": "src/genosapiens/wgs_science_transport.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_science_workers.py",
+      "destination": "src/genosapiens/wgs_science_workers.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_scientific.py",
+      "destination": "src/genosapiens/wgs_scientific.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_scientific_artifact.py",
+      "destination": "src/genosapiens/wgs_scientific_artifact.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_scientific_checkpoint.py",
+      "destination": "src/genosapiens/wgs_scientific_checkpoint.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_scientific_products.py",
+      "destination": "src/genosapiens/wgs_scientific_products.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_scientific_sensitivities.py",
+      "destination": "src/genosapiens/wgs_scientific_sensitivities.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_score_decisions.py",
+      "destination": "src/genosapiens/wgs_score_decisions.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_score_sources.py",
+      "destination": "src/genosapiens/wgs_score_sources.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_score_views.py",
+      "destination": "src/genosapiens/wgs_score_views.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_selection_evidence.py",
+      "destination": "src/genosapiens/wgs_selection_evidence.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_selection_inputs.py",
+      "destination": "src/genosapiens/wgs_selection_inputs.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_sensitivity.py",
+      "destination": "src/genosapiens/wgs_sensitivity.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_sensitivity_evidence.py",
+      "destination": "src/genosapiens/wgs_sensitivity_evidence.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_shards.py",
+      "destination": "src/genosapiens/wgs_shards.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_source_closure.py",
+      "destination": "src/genosapiens/wgs_source_closure.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_source_routing.py",
+      "destination": "src/genosapiens/wgs_source_routing.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_validation_audit.py",
+      "destination": "src/genosapiens/wgs_validation_audit.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_validation_authority.py",
+      "destination": "src/genosapiens/wgs_validation_authority.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_validation_metrics.py",
+      "destination": "src/genosapiens/wgs_validation_metrics.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_validation_projection.py",
+      "destination": "src/genosapiens/wgs_validation_projection.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_validation_recovery.py",
+      "destination": "src/genosapiens/wgs_validation_recovery.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_validation_scope.py",
+      "destination": "src/genosapiens/wgs_validation_scope.py"
+    },
+    {
+      "source": "src/genosapiens/wgs_work_contract.py",
+      "destination": "src/genosapiens/wgs_work_contract.py"
+    },
+    {
+      "source": "track1",
+      "destination": "track1"
+    },
+    {
+      "source": "track2",
+      "destination": "track2"
+    }
+  ],
+  "limits": [
+    "Source export and Git publication belong to the publication change.",
+    "This file specifies required inputs, not an authorized external publication.",
+    "No development artifacts, private data, local packages, or credentials belong in this file set."
+  ]
+}

@@ -1,0 +1,421 @@
+{
+  "assets": [
+    {
+      "git_blob_sha1": "2aed492247fc98be1b775e646f9b75aadec9e999",
+      "path": "evaluation.py",
+      "role": "evaluator",
+      "sha256": "6d18b581e65a45e1ccc120071d588e740c2e42e983ff50704c60a40232b19180",
+      "size_bytes": 7503
+    },
+    {
+      "git_blob_sha1": "fd4c00e63d708a6aed5409096b1030f9ee5793d3",
+      "path": "tabs/submit_track1.py",
+      "role": "submission_instructions",
+      "sha256": "685a3b6d57ef3a1c49a8be47845b10d77cb576ed2d30b5a90879b09707659b86",
+      "size_bytes": 12829
+    },
+    {
+      "git_blob_sha1": "adfe644fb2ebf2d99f0b6e005d04b295134df305",
+      "path": "tabs/about.py",
+      "role": "timeline_and_track_overview",
+      "sha256": "1867b07f24d987fbb728c756c2d2bc4ab5f302d7c7804f53fe7b6a8b4c83ae43",
+      "size_bytes": 16076
+    },
+    {
+      "git_blob_sha1": "c2892f5d9f2e101d2e3b72a9929e77a482931135",
+      "path": "tabs/faq.py",
+      "role": "official_faq",
+      "sha256": "36c3e51e9735a6d2ffacfccea2246a28a13658038988ac88317c5aa05ad71c53",
+      "size_bytes": 5924
+    },
+    {
+      "git_blob_sha1": "484f0cd8b66204fd8c090277c46af08963d2919d",
+      "path": "tabs/rules.py",
+      "role": "official_rules",
+      "sha256": "dccb3740f6301b8629c704c375739e23391d19dee62513587ee461d6c8637f8f",
+      "size_bytes": 8151
+    },
+    {
+      "git_blob_sha1": "fb7e8f55f83978a5ca7bca89d7bbc1c4d7cc0f38",
+      "path": "static/templates/track1_submission_template.csv",
+      "role": "submission_template",
+      "sha256": "7b3ed41c091d34fb6c5622d049c7a3f46124211fc7ec02947e69daef8752755a",
+      "size_bytes": 241
+    },
+    {
+      "git_blob_sha1": "c7b0d295dee93a4f324c51549e464d3b9487e8e2",
+      "path": "static/templates/methods_description_form.xlsx",
+      "role": "methods_template",
+      "sha256": "61aab080a2868a3b724e76692b83c24812112e305cd3a8b03f8f91a6b2414441",
+      "size_bytes": 14784
+    }
+  ],
+  "class_representation": {
+    "audit_only_without_exact_sequence_tuple": [
+      "copy_number",
+      "repeat_locus",
+      "structural"
+    ],
+    "competitive_exact_sequence_classes": [
+      "mitochondrial_sequence",
+      "mosaic_sequence",
+      "regulatory_sequence",
+      "sequence"
+    ],
+    "public_native_ref_check": "required-additional-check-without-input-reference-repair",
+    "unsupported_proxy_policy": "never-render-a-proxy-sequence-allele"
+  },
+  "evaluator_contract": {
+    "alias_semantics": "literal-contig-equality",
+    "f_max_threshold_tie": "highest-threshold-retained",
+    "finding_type_scoring_observation": "upstream-evaluator-includes-primary-and-secondary-rows",
+    "indel_semantics": "literal-tuple-equality-after-parser-only-case-and-whitespace-normalization",
+    "pair_semantics": "unordered-exact-pair-with-partial-member-credit",
+    "selected_submission_policy": "primary-only",
+    "selected_submission_policy_reason": "official-prose-and-evaluator-secondary-behavior-conflict",
+    "source_revision": "1c761cc23d90aebe6a011fd5b0b99517df42408c",
+    "source_sha256": "6d18b581e65a45e1ccc120071d588e740c2e42e983ff50704c60a40232b19180"
+  },
+  "operator_facts": {
+    "current_guidance_review": {
+      "acknowledgment_and_citation": "required-under-official-rules",
+      "ai_disclosure": "actual-provider-product-model-tier-settings-and-data-handling",
+      "assets": [
+        {
+          "git_blob_sha1": "2aed492247fc98be1b775e646f9b75aadec9e999",
+          "path": "evaluation.py",
+          "role": "evaluator",
+          "sha256": "6d18b581e65a45e1ccc120071d588e740c2e42e983ff50704c60a40232b19180",
+          "size_bytes": 7503,
+          "url": "https://huggingface.co/spaces/SageBio/rare-disease-real-kid-mva-hackathon-2026/blob/22726e3eeb1b007c754c01a4d8113d32be913a3c/evaluation.py"
+        },
+        {
+          "git_blob_sha1": "fd4c00e63d708a6aed5409096b1030f9ee5793d3",
+          "path": "tabs/submit_track1.py",
+          "role": "submission_instructions",
+          "sha256": "685a3b6d57ef3a1c49a8be47845b10d77cb576ed2d30b5a90879b09707659b86",
+          "size_bytes": 12829,
+          "url": "https://huggingface.co/spaces/SageBio/rare-disease-real-kid-mva-hackathon-2026/blob/22726e3eeb1b007c754c01a4d8113d32be913a3c/tabs/submit_track1.py"
+        },
+        {
+          "git_blob_sha1": "8098c5cb362d6b75767dde6f6e4add111a4c74db",
+          "path": "tabs/about.py",
+          "role": "timeline_and_track_overview",
+          "sha256": "57d25b20a840d57e09268ca6e8615e85579bf65a99829095690e68c2463d5cf3",
+          "size_bytes": 16161,
+          "url": "https://huggingface.co/spaces/SageBio/rare-disease-real-kid-mva-hackathon-2026/blob/22726e3eeb1b007c754c01a4d8113d32be913a3c/tabs/about.py"
+        },
+        {
+          "git_blob_sha1": "c2892f5d9f2e101d2e3b72a9929e77a482931135",
+          "path": "tabs/faq.py",
+          "role": "official_faq",
+          "sha256": "36c3e51e9735a6d2ffacfccea2246a28a13658038988ac88317c5aa05ad71c53",
+          "size_bytes": 5924,
+          "url": "https://huggingface.co/spaces/SageBio/rare-disease-real-kid-mva-hackathon-2026/blob/22726e3eeb1b007c754c01a4d8113d32be913a3c/tabs/faq.py"
+        },
+        {
+          "git_blob_sha1": "7a5ffb3c71b1d41d0b92fcb6c0c3c922cc5507fc",
+          "path": "tabs/rules.py",
+          "role": "official_rules",
+          "sha256": "16aa61b9580abc21e6ea69e994cdb27341e1b85b1d00a57da889520a94295906",
+          "size_bytes": 8152,
+          "url": "https://huggingface.co/spaces/SageBio/rare-disease-real-kid-mva-hackathon-2026/blob/22726e3eeb1b007c754c01a4d8113d32be913a3c/tabs/rules.py"
+        },
+        {
+          "git_blob_sha1": "fb7e8f55f83978a5ca7bca89d7bbc1c4d7cc0f38",
+          "path": "static/templates/track1_submission_template.csv",
+          "role": "submission_template",
+          "sha256": "7b3ed41c091d34fb6c5622d049c7a3f46124211fc7ec02947e69daef8752755a",
+          "size_bytes": 241,
+          "url": "https://huggingface.co/spaces/SageBio/rare-disease-real-kid-mva-hackathon-2026/blob/22726e3eeb1b007c754c01a4d8113d32be913a3c/static/templates/track1_submission_template.csv"
+        },
+        {
+          "git_blob_sha1": "c7b0d295dee93a4f324c51549e464d3b9487e8e2",
+          "path": "static/templates/methods_description_form.xlsx",
+          "role": "methods_template",
+          "sha256": "61aab080a2868a3b724e76692b83c24812112e305cd3a8b03f8f91a6b2414441",
+          "size_bytes": 14784,
+          "url": "https://huggingface.co/spaces/SageBio/rare-disease-real-kid-mva-hackathon-2026/blob/22726e3eeb1b007c754c01a4d8113d32be913a3c/static/templates/methods_description_form.xlsx"
+        }
+      ],
+      "controlled_input_accessed": false,
+      "deletion_confirmation_contact_source": "https://huggingface.co/spaces/SageBio/rare-disease-real-kid-mva-hackathon-2026/blob/22726e3eeb1b007c754c01a4d8113d32be913a3c/tabs/rules.py",
+      "discussions": [
+        {
+          "number": 2,
+          "organizer_replies": [
+            {
+              "author": "LucaFoschini",
+              "comment_id": "6a8e718f7a73fc5c9fb93884",
+              "content_sha256": "37edccd6b249cf03615e6ae00b8369be94846fef9b2057bf278bbcbc88dec6bc",
+              "created_at": "2026-08-26T04:54:39+00:00",
+              "updated_at": "2026-08-26T04:54:39.524Z"
+            },
+            {
+              "author": "cfsuver",
+              "comment_id": "6a8f68927f3975b1f61cc18a",
+              "content_sha256": "3fe46b49a0ecb494c37c9204444fed3b3962cd19d0d792e6625dafb009ba5ab0",
+              "created_at": "2026-08-26T22:28:34+00:00",
+              "updated_at": "2026-08-26T23:22:56.814Z"
+            },
+            {
+              "author": "LucaFoschini",
+              "comment_id": "6a9555ac587f5f3a13b57e26",
+              "content_sha256": "793e5bcb6120a1e0849ec718835bbcaf423321436ae2fc229edef8c8928f8f7e",
+              "created_at": "2026-08-31T10:21:32+00:00",
+              "updated_at": "2026-08-31T10:21:32.814Z"
+            },
+            {
+              "author": "gandreoletti",
+              "comment_id": "6ab6c2be5d91992e5d5aec9d",
+              "content_sha256": "de0d23125f3759f5651f33285a3e4c8543b6a7fbaee7e094f4ba85511498eb3f",
+              "created_at": "2026-09-25T18:51:42+00:00",
+              "updated_at": "2026-09-25T18:51:42.758Z"
+            },
+            {
+              "author": "gandreoletti",
+              "comment_id": "6abaf38fe117157ed5b22566",
+              "content_sha256": "08b5329c9e450526dcc5642ff299a083020600fd037cfe780ed6661960170c53",
+              "created_at": "2026-09-28T23:09:03+00:00",
+              "updated_at": "2026-09-28T23:09:03.515Z"
+            }
+          ],
+          "snapshot_path": "artifacts/validation/track1-focused-default-analysis-20261008/focused-m1-guidance-review-02/discussion-2.json",
+          "snapshot_sha256": "b396d889dd5188aea1edd807fc08ee87b324690bc813b6d4f48a9c055b7bbf39",
+          "url": "https://huggingface.co/spaces/SageBio/rare-disease-real-kid-mva-hackathon-2026/discussions/2"
+        },
+        {
+          "number": 4,
+          "organizer_replies": [
+            {
+              "author": "vpchung",
+              "comment_id": "6a8f429db543c586439e4430",
+              "content_sha256": "6a140839a003a038f1f387544ccbcae116de86554cbac0760bb271df962d3681",
+              "created_at": "2026-08-26T19:46:37+00:00",
+              "updated_at": "2026-08-26T19:46:37.474Z"
+            }
+          ],
+          "snapshot_path": "artifacts/validation/track1-focused-default-analysis-20261008/focused-m1-guidance-review-02/discussion-4.json",
+          "snapshot_sha256": "43609330f596f46d57844e1af89907d453a5a6a1dcb64b8dde4860d8f47e23cb",
+          "url": "https://huggingface.co/spaces/SageBio/rare-disease-real-kid-mva-hackathon-2026/discussions/4"
+        },
+        {
+          "number": 10,
+          "organizer_replies": [
+            {
+              "author": "vpchung",
+              "comment_id": "6a92329044bdec8ae2cddfd8",
+              "content_sha256": "832d75291fdd9a31d61e974afb4f4ba55947b7e42050e8ca167be6f51a36ecfd",
+              "created_at": "2026-08-29T01:14:56+00:00",
+              "updated_at": "2026-08-29T01:14:56.559Z"
+            },
+            {
+              "author": "vpchung",
+              "comment_id": "6aa07c4eac367069ca21be0d",
+              "content_sha256": "7cc26455d2b2bfb7e59e907e4da779124764853ea1236b830666561460f04722",
+              "created_at": "2026-09-08T21:21:18+00:00",
+              "updated_at": "2026-09-08T21:21:18.861Z"
+            },
+            {
+              "author": "vpchung",
+              "comment_id": "6ab31a2ab4f759a7bdb46cee",
+              "content_sha256": "7b0ff4e0df03f6584e8d39815d2d79513e50d7476a5e4e9cf83d79f2ece7968a",
+              "created_at": "2026-09-23T00:15:38+00:00",
+              "updated_at": "2026-09-23T00:15:38.925Z"
+            }
+          ],
+          "snapshot_path": "artifacts/validation/track1-focused-default-analysis-20261008/focused-m1-guidance-review-02/discussion-10.json",
+          "snapshot_sha256": "5d3d79008f6c34d71d108c865246df85ebb03bad376254a89a1521c3583e92fb",
+          "url": "https://huggingface.co/spaces/SageBio/rare-disease-real-kid-mva-hackathon-2026/discussions/10"
+        },
+        {
+          "number": 17,
+          "organizer_replies": [
+            {
+              "author": "gandreoletti",
+              "comment_id": "6a970140e5193e8369e9a18a",
+              "content_sha256": "6fe3f00dedfb70fabe0db47e4ec13edcc9c20372b5eb5528247cd158e734dc9e",
+              "created_at": "2026-09-01T16:45:52+00:00",
+              "updated_at": "2026-09-01T16:45:52.631Z"
+            }
+          ],
+          "snapshot_path": "artifacts/validation/track1-focused-default-analysis-20261008/focused-m1-guidance-review-02/discussion-17.json",
+          "snapshot_sha256": "3bb31861cc949bb2421884170caec553d8af6f3e9515a2b580155fb6b2394fb8",
+          "url": "https://huggingface.co/spaces/SageBio/rare-disease-real-kid-mva-hackathon-2026/discussions/17"
+        },
+        {
+          "number": 18,
+          "organizer_replies": [
+            {
+              "author": "gandreoletti",
+              "comment_id": "6a971f7cd398c9a2ccd87cea",
+              "content_sha256": "4c6e67e7b60fd4afef267e81e3c6d9d5f8bb7b45b6b14920965ee515dfa903ad",
+              "created_at": "2026-09-01T18:54:52+00:00",
+              "updated_at": "2026-09-01T18:54:52.775Z"
+            }
+          ],
+          "snapshot_path": "artifacts/validation/track1-focused-default-analysis-20261008/focused-m1-guidance-review-02/discussion-18.json",
+          "snapshot_sha256": "96b38a5c5e11767c7b8651cb6a527b66a396204ee87930192196a7b7976223cc",
+          "url": "https://huggingface.co/spaces/SageBio/rare-disease-real-kid-mva-hackathon-2026/discussions/18"
+        },
+        {
+          "number": 20,
+          "organizer_replies": [
+            {
+              "author": "gandreoletti",
+              "comment_id": "6ab6c3a4ae62dfd0883fec90",
+              "content_sha256": "84183173933a65bad16ebca576a34e5695b98e55f751c6c9ab1cc378b7efb45e",
+              "created_at": "2026-09-25T18:55:32+00:00",
+              "updated_at": "2026-09-25T18:55:32.723Z"
+            }
+          ],
+          "snapshot_path": "artifacts/validation/track1-focused-default-analysis-20261008/focused-m1-guidance-review-02/discussion-20.json",
+          "snapshot_sha256": "5ebeb8f6cc6c976a31c0bdbd5f6d03cc037f0bd56828a9209575e8016b378074",
+          "url": "https://huggingface.co/spaces/SageBio/rare-disease-real-kid-mva-hackathon-2026/discussions/20"
+        },
+        {
+          "number": 24,
+          "organizer_replies": [
+            {
+              "author": "gandreoletti",
+              "comment_id": "6ab6c369bc0cf95d6f369951",
+              "content_sha256": "16b1d9f471f152a219a307fedb73fc0bae1636e7687728f006c329c20f6fe61a",
+              "created_at": "2026-09-25T18:54:33+00:00",
+              "updated_at": "2026-09-25T18:54:33.346Z"
+            }
+          ],
+          "snapshot_path": "artifacts/validation/track1-focused-default-analysis-20261008/focused-m1-guidance-review-02/discussion-24.json",
+          "snapshot_sha256": "f6f3bc4edf06531388b04ceab228c01ad8d459084423efcdfa3e4cd0cb1f1142",
+          "url": "https://huggingface.co/spaces/SageBio/rare-disease-real-kid-mva-hackathon-2026/discussions/24"
+        },
+        {
+          "number": 25,
+          "organizer_replies": [
+            {
+              "author": "gandreoletti",
+              "comment_id": "6ab6aff5e2c5a3148de04d3d",
+              "content_sha256": "6afe31faba6135e7a7eac01e36c47e2353412501a08dddf6c3fd1eba8b2c47a6",
+              "created_at": "2026-09-25T17:31:33+00:00",
+              "updated_at": "2026-09-25T17:31:33.264Z"
+            }
+          ],
+          "snapshot_path": "artifacts/validation/track1-focused-default-analysis-20261008/focused-m1-guidance-review-02/discussion-25.json",
+          "snapshot_sha256": "400eb7e5d79e75ec043d126cac6c07a07cbc3af7735fa82a19a4d9caf349dabe",
+          "url": "https://huggingface.co/spaces/SageBio/rare-disease-real-kid-mva-hackathon-2026/discussions/25"
+        },
+        {
+          "number": 26,
+          "organizer_replies": [
+            {
+              "author": "gandreoletti",
+              "comment_id": "6abaa4332df3f89442ecd8be",
+              "content_sha256": "5f465e56b48146591a24c90c7a6ecd284eff6d03be85e1c05a6b389f76cfd20d",
+              "created_at": "2026-09-28T17:30:27+00:00",
+              "updated_at": "2026-09-28T17:30:27.881Z"
+            }
+          ],
+          "snapshot_path": "artifacts/validation/track1-focused-default-analysis-20261008/focused-m1-guidance-review-02/discussion-26.json",
+          "snapshot_sha256": "57588851983804338a463caf70e58fc3740af15165fbdc7b46d30699a68648d2",
+          "url": "https://huggingface.co/spaces/SageBio/rare-disease-real-kid-mva-hackathon-2026/discussions/26"
+        }
+      ],
+      "external_messages_sent": 0,
+      "filename_identity": "consistent-participant-or-team-and-approach",
+      "findings_retention": "reviewed-ranked-findings-HPO-and-reports-without-prohibited-genome-material-may-be-retained",
+      "genome_retention": "delete-genome-files-genotype-scale-derivatives-reconstruction-capable-caches-and-genomic-data-logs",
+      "human_statuses": {
+        "AI_disclosure": "operator-confirmation-required",
+        "deletion": "operator-confirmation-required",
+        "notifications": "operator-confirmation-required",
+        "registration": "operator-confirmation-required",
+        "repository_publication": "operator-confirmation-required",
+        "review": "operator-confirmation-required",
+        "submission_attempt_count": "operator-confirmation-required",
+        "video": "operator-confirmation-required"
+      },
+      "incidental_return_publication": "unresolved-no-independent-family-contact",
+      "judging_through_date": "2026-12-17",
+      "last_modified": "2026-10-13T17:10:51+00:00",
+      "methods_update": "linked-repository-report-update-does-not-require-another-scoring-submission",
+      "pinned_evaluator_bytes_unchanged": true,
+      "pinned_evaluator_revision_preserved": "1c761cc23d90aebe6a011fd5b0b99517df42408c",
+      "previous_review": {
+        "path": "artifacts/validation/track1-focused-default-analysis-20261008/focused-m1-guidance-review-02/previous-official-contract-review.json",
+        "sha256": "6f8cd9dd119491f0bb0e8139586a550fdd4712b6a6c2e6739e52959af8bb347f",
+        "size_bytes": 20031
+      },
+      "project_controlled_policy": "offline-operator-only-no-LLM",
+      "repository": "SageBio/rare-disease-real-kid-mva-hackathon-2026",
+      "repository_publication": "reproducible-code-and-configuration-public-at-close-or-final-evaluation",
+      "retention_calendar_basis": "unresolved-organizer-defined-close-date-with-30-day-window-and-participant-confirmations",
+      "reviewed_at": "2026-10-15T06:11:52.758471+00:00",
+      "revision": "22726e3eeb1b007c754c01a4d8113d32be913a3c",
+      "rules_updated_date": "2026-10-13",
+      "software_readiness_asserted": false,
+      "submission_accounting": "six-per-participant-best-score",
+      "submission_close_utc": "2026-10-24T23:59:00Z",
+      "submission_deadline_extended": false,
+      "submission_license": "CC-BY-with-attribution",
+      "video_applicability": "unresolved-general-rules-versus-track1-instructions",
+      "winners_date": "2026-12-18"
+    },
+    "deletion_confirmation_contact_source": "https://huggingface.co/spaces/SageBio/rare-disease-real-kid-mva-hackathon-2026/blob/22726e3eeb1b007c754c01a4d8113d32be913a3c/tabs/rules.py",
+    "hackathon_close_source_text": "October 24 (23:59 UTC)",
+    "participant_deletion_confirmation": "required-by-email-after-verified-deletion",
+    "retention_due_date": "unresolved-authoritative-calendar-date",
+    "retention_rule": "delete-within-30-days-of-hackathon-close",
+    "video_applicability": "unresolved-general-rules-require-video-track1-tab-does-not-list-video",
+    "video_status": "operator-confirmation-required"
+  },
+  "organizer_clarification": {
+    "contact_attempted": false,
+    "status": "not-requested-no-contact-authorized",
+    "unresolved": [
+      "calendar-date-for-30-day-deletion-deadline",
+      "general-video-requirement-applicability-to-track1",
+      "scope-of-public-updated-report-instructions-for-case-derived-content",
+      "incidental-finding-return-or-public-disclosure"
+    ]
+  },
+  "review_id": "official-contract-review:2026-10-15",
+  "reviewed_at": "2026-10-15T06:11:52.758471+00:00",
+  "schema": "genosapiens.track1-official-contract-review",
+  "space": {
+    "last_modified": "2026-08-29T01:08:57+00:00",
+    "repository": "SageBio/rare-disease-real-kid-mva-hackathon-2026",
+    "revision": "1c761cc23d90aebe6a011fd5b0b99517df42408c"
+  },
+  "submission_contract": {
+    "candidate_row_limit": 10,
+    "chromosome_example": "chr15",
+    "columns": [
+      "proband_id",
+      "chrom_1",
+      "pos_1",
+      "ref_1",
+      "alt_1",
+      "chrom_2",
+      "pos_2",
+      "ref_2",
+      "alt_2",
+      "epcr",
+      "finding_type",
+      "notes"
+    ],
+    "coordinate_assembly": "GRCh38",
+    "epcr_interval": "(0,1]",
+    "finding_types": [
+      "primary",
+      "secondary"
+    ],
+    "github_repository": "required-and-public-after-hackathon",
+    "methods_ai_disclosure": "provider-plan-or-tier-and-relevant-data-handling-setting",
+    "proband_id": "PROBAND01",
+    "report_extensions": [
+      ".md",
+      ".pdf"
+    ],
+    "report_required": true,
+    "submission_quota_per_participant": 6
+  }
+}

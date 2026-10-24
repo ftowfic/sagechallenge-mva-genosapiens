@@ -1,0 +1,502 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "genosapiens.published-patient-genotype/v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "input_origin",
+    "classification",
+    "evidence_origin",
+    "scenario_id",
+    "disease_context",
+    "source_selection",
+    "genotype",
+    "sources",
+    "patients",
+    "models",
+    "evidence",
+    "limitations"
+  ],
+  "properties": {
+    "schema": {
+      "const": "genosapiens.published-patient-genotype/v1"
+    },
+    "input_origin": {
+      "const": "published_patient_genotype"
+    },
+    "classification": {
+      "const": "public"
+    },
+    "evidence_origin": {
+      "enum": [
+        "primary_literature",
+        "independently_synthetic"
+      ]
+    },
+    "scenario_id": {
+      "type": "string",
+      "pattern": "^published-genotype:[0-9a-f]{24}$"
+    },
+    "disease_context": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_selection": {
+      "type": "string",
+      "minLength": 1
+    },
+    "genotype": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "ploidy",
+        "zygosity",
+        "phase",
+        "alleles",
+        "causal_support"
+      ],
+      "properties": {
+        "ploidy": {
+          "const": 2
+        },
+        "zygosity": {
+          "enum": [
+            "homozygous",
+            "compound_heterozygous"
+          ]
+        },
+        "phase": {
+          "enum": [
+            "not_applicable_homozygous",
+            "confirmed_trans"
+          ]
+        },
+        "alleles": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "allele_id",
+              "gene",
+              "reported_coding",
+              "reported_protein",
+              "normalized_coding",
+              "normalized_protein",
+              "copies",
+              "transcript_id",
+              "transcript_version",
+              "reference_mapping",
+              "normalization_rationale",
+              "evidence_ids"
+            ],
+            "properties": {
+              "allele_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "gene": {
+                "type": "string",
+                "minLength": 1
+              },
+              "reported_coding": {
+                "type": "string",
+                "minLength": 1
+              },
+              "reported_protein": {
+                "type": "string",
+                "minLength": 1
+              },
+              "normalized_coding": {
+                "type": "string",
+                "minLength": 1
+              },
+              "normalized_protein": {
+                "type": "string",
+                "minLength": 1
+              },
+              "copies": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 2
+              },
+              "transcript_id": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "transcript_version": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "reference_mapping": {
+                "type": "string",
+                "minLength": 1
+              },
+              "normalization_rationale": {
+                "type": "string",
+                "minLength": 1
+              },
+              "evidence_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "minItems": 1,
+                "uniqueItems": true
+              }
+            }
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "causal_support": {
+          "const": "primary_genetic_and_functional"
+        }
+      }
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "source_id",
+          "citation",
+          "doi",
+          "pmid",
+          "document_version",
+          "path",
+          "sha256",
+          "public_url",
+          "accessed_on",
+          "license_or_terms",
+          "raw_redistribution",
+          "primary"
+        ],
+        "properties": {
+          "source_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "citation": {
+            "type": "string",
+            "minLength": 1
+          },
+          "doi": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "pmid": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "document_version": {
+            "type": "string",
+            "minLength": 1
+          },
+          "path": {
+            "type": "string",
+            "minLength": 1
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "public_url": {
+            "type": "string",
+            "minLength": 1
+          },
+          "accessed_on": {
+            "type": "string",
+            "minLength": 1
+          },
+          "license_or_terms": {
+            "type": "string",
+            "minLength": 1
+          },
+          "raw_redistribution": {
+            "enum": [
+              "not_authorized",
+              "permitted"
+            ]
+          },
+          "primary": {
+            "type": "boolean"
+          }
+        }
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "patients": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "label",
+          "genotype_evidence_ids",
+          "observations",
+          "assay_evidence_ids"
+        ],
+        "properties": {
+          "label": {
+            "type": "string",
+            "minLength": 1
+          },
+          "genotype_evidence_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          },
+          "observations": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "name",
+                "value",
+                "locator"
+              ],
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "value": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "locator": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "source_id",
+                    "page",
+                    "section",
+                    "attribution"
+                  ],
+                  "properties": {
+                    "source_id": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "page": {
+                      "type": "integer",
+                      "minimum": 1
+                    },
+                    "section": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "attribution": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  }
+                }
+              }
+            },
+            "minItems": 0,
+            "uniqueItems": true
+          },
+          "assay_evidence_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 0,
+            "uniqueItems": true
+          }
+        }
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "models": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "model_id",
+          "patient_label",
+          "description",
+          "locator"
+        ],
+        "properties": {
+          "model_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "patient_label": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "description": {
+            "type": "string",
+            "minLength": 1
+          },
+          "locator": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "source_id",
+              "page",
+              "section",
+              "attribution"
+            ],
+            "properties": {
+              "source_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "page": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "section": {
+                "type": "string",
+                "minLength": 1
+              },
+              "attribution": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          }
+        }
+      },
+      "minItems": 0,
+      "uniqueItems": true
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "evidence_id",
+          "kind",
+          "statement",
+          "patient_labels",
+          "model_ids",
+          "locators",
+          "lineage_id",
+          "limitations"
+        ],
+        "properties": {
+          "evidence_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "kind": {
+            "enum": [
+              "genetic",
+              "functional",
+              "mechanism",
+              "limitation"
+            ]
+          },
+          "statement": {
+            "type": "string",
+            "minLength": 1
+          },
+          "patient_labels": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 0,
+            "uniqueItems": true
+          },
+          "model_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 0,
+            "uniqueItems": true
+          },
+          "locators": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "source_id",
+                "page",
+                "section",
+                "attribution"
+              ],
+              "properties": {
+                "source_id": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "page": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "section": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "attribution": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          },
+          "lineage_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "limitations": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 0,
+            "uniqueItems": true
+          }
+        }
+      },
+      "minItems": 2,
+      "uniqueItems": true
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    }
+  }
+}

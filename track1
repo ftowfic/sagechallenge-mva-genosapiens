@@ -1,0 +1,150 @@
+#!/bin/bash
+# Installed Linux/Docker entry. All case processing stays in the offline container.
+set -euo pipefail
+umask 077
+repo=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd -P)
+die() { printf '%s\n' "$1" >&2; exit 2; }
+usage() {
+  cat <<'USAGE'
+Usage: ./track1 run --vcf PATH --hpo PATH --output PATH
+       [--sample NAME] [--concordance PATH] [--max-hours HOURS]
+       [--reference-root PATH]
+       [--allow-low-host-memory]
+       [--science-mode exhaustive|rapid_phenotype|rapid_strict_association]
+       [--science-target-contexts 1500] [--science-hours 5]
+       [--science-report-minutes 30] [--science-pilot] [--science-pilot-minutes 20|40]
+       [--science-workers 1|2|4|8] [--science-publication-readers 1|2|4|8]
+       ./track1 run --output PATH --resume [--max-hours HOURS]
+Prepares the local package automatically and runs Docker offline. No overall time
+limit is set unless --max-hours supplies positive finite hours (e.g. 24 or 0.5).
+Public references default to /mnt/reference. Container paths remain unchanged.
+Use --help to display this command interface.
+USAGE
+}
+[[ ${1:-} == run ]] || { usage; exit 2; }
+shift
+science_options=()
+vcf= hpo= output= concordance= sample= hours= resume=false reference_root=
+sample_set=false hours_set=false
+allow_low_host_memory=false
+while (($#)); do
+  case "$1" in
+    --help|-h) usage; exit 0 ;;
+    --science-pilot) science_options+=("$1"); shift ;;
+    --science-mode|--science-target-contexts|--science-hours|--science-report-minutes|--science-pilot-minutes|--science-workers|--science-publication-readers)
+      [[ $# -ge 2 ]] || die 'Scientific option requires a value.'
+      science_options+=("$1" "$2"); shift 2 ;;
+    --resume) resume=true; shift ;;
+    --allow-low-host-memory) allow_low_host_memory=true; shift ;;
+    --vcf|--hpo|--output|--concordance|--sample|--max-hours|--reference-root)
+      (($# >= 2)) || die 'Option requires a value; see ./track1 run --help.'
+      case "$1" in
+        --vcf) vcf=$2 ;; --hpo) hpo=$2 ;; --output) output=$2 ;;
+        --concordance) concordance=$2 ;; --sample) sample=$2; sample_set=true ;;
+        --max-hours) hours=$2; hours_set=true ;;
+        --reference-root) reference_root=$2 ;;
+      esac
+      shift 2 ;;
+    *) die 'Unknown option; see ./track1 run --help.' ;;
+  esac
+done
+[[ -n $output ]] || die '--output is required.'
+if $resume; then
+  command -v python3 >/dev/null || die 'Python 3 is required to read the current resume inputs.'
+  mapfile -d '' -t saved < <(python3 "$repo/scripts/resolve_track1_resume.py" "$output" "$vcf" "$hpo" "$concordance" "$sample" "$reference_root")
+  [[ ${#saved[@]} == 5 ]] || die 'Resume input binding failed before execution.'
+  vcf=${saved[0]} hpo=${saved[1]} concordance=${saved[2]} sample=${saved[3]}
+  reference_root=${saved[4]}
+  sample_set=true
+else
+  [[ -n $vcf && -n $hpo ]] || die '--vcf and --hpo are required for a fresh run.'
+  reference_root=${reference_root:-/mnt/reference}
+fi
+[[ $(id -u) != 0 && $(id -g) != 0 ]] || die 'Run as the ordinary non-root owner of the input and output files.'
+command -v docker >/dev/null || die 'Docker is missing; install and start Docker before running a case.'
+[[ $(docker info --format '{{.CgroupVersion}}' 2>/dev/null) == 2 ]] || die 'Docker with cgroups v2 is required.'
+[[ -n $reference_root && ! -L $reference_root ]] || die 'Reference root must be a real directory.'
+reference_absolute=$(realpath -ms -- "$reference_root")
+reference_root=$(realpath -e -- "$reference_root")
+[[ $reference_root == "$reference_absolute" ]] || die 'Reference root must not contain symbolic links.'
+for public_directory in releases manifests derived downloads; do
+  [[ -d $reference_root/$public_directory && ! -L $reference_root/$public_directory ]] || die 'Installed public references are missing or have unsafe paths under the selected reference root.'
+done
+resolve_file() {
+  [[ -f $1 && -r $1 ]] || die 'An input is missing or unreadable; check the supplied file paths and ownership.'
+  realpath -e -- "$1"
+}
+vcf=$(resolve_file "$vcf")
+hpo=$(resolve_file "$hpo")
+if [[ -n $concordance ]]; then concordance=$(resolve_file "$concordance"); fi
+[[ ! -L $output ]] || die 'Output must be a real private directory, not a symlink.'
+if [[ -e $output ]]; then
+  [[ -d $output ]] || die 'Output must be a directory.'
+  if ! $resume; then
+    shopt -s nullglob dotglob
+    entries=("$output"/*)
+    ((${#entries[@]} == 0)) || die 'Output already contains files; choose a fresh directory or use explicit --resume.'
+    shopt -u nullglob dotglob
+  fi
+else
+  $resume && die 'Resume requires an existing compatible output directory.'
+fi
+command -v python3 >/dev/null || die 'Python 3 is required by the local Docker launcher.'
+preparation_options=(--repository-root "$repo" --reference-root "$reference_root")
+$hours_set && preparation_options+=(--max-hours "$hours")
+python3 "$repo/scripts/ensure_track1_installation.py" "${preparation_options[@]}"
+if $hours_set; then
+  hours=$(python3 -c 'import sys; remaining=float(sys.argv[1])-int(sys.argv[2])/3600; remaining>0 or sys.exit("Invocation time limit reached during preparation."); print(remaining)' "$hours" "$SECONDS")
+fi
+# The installation is data, never sourced as shell code: image, package, binding.
+installation="$repo/.track1-installation"
+[[ -r $installation ]] || die 'Installation missing; install the delivered .track1-installation and operator package.'
+mapfile -t installed < "$installation"
+[[ ${#installed[@]} == 3 ]] || die 'Installation metadata is invalid.'
+image=${installed[0]} package=${installed[1]} package_sha=${installed[2]}
+[[ $image =~ ^genosapiens/track1-pipeline(:[A-Za-z0-9._-]+)?@sha256:[0-9a-f]{64}$ && $package_sha =~ ^[0-9a-f]{64}$ ]] || die 'Installed image/package pins are invalid.'
+[[ -d $package && -r $package/package-bindings.json ]] || die 'Installed operator package is missing or unreadable.'
+docker image inspect "$image" >/dev/null 2>&1 || die 'Installed image is missing locally; acquire the image named in the handoff before offline execution.'
+package=$(realpath -e -- "$package")
+[[ -e $output ]] || mkdir -m 700 -- "$output"
+output=$(realpath -e -- "$output")
+[[ $(stat -c '%u:%a' -- "$output") == "$(id -u):700" ]] || die 'Output must be owned by you with mode 0700.'
+[[ $output != "$package" && $output != "$package"/* ]] || die 'Output must be outside the installed package.'
+[[ ! -L $output/.scratch ]] || die 'Scratch must be a private directory inside this output root.'
+mkdir -p -m 700 -- "$output/.scratch"
+[[ $(stat -c '%u:%a' -- "$output/.scratch") == "$(id -u):700" ]] || die 'Scratch must be owned by you with mode 0700.'
+# Docker --mount uses CSV. Quote and double embedded quotes instead of treating
+# commas, spaces, dollar signs or shell metacharacters as syntax.
+mount_arg() {
+  local src=${1//\"/\"\"} dst=${2//\"/\"\"}
+  printf 'type=bind,"source=%s","target=%s"%s' "$src" "$dst" "$3"
+}
+args=(run --rm --init --network none --read-only --cpus 12 --memory 24g
+  --memory-swap 24g --pids-limit 512 --user "$(id -u):$(id -g)"
+  --cap-drop ALL --security-opt no-new-privileges
+  --tmpfs /tmp:rw,exec,nosuid,nodev,size=1g,mode=1777
+  --mount "$(mount_arg "$package" /package ,readonly)"
+  --mount "$(mount_arg "$output" /output '')"
+  --mount "$(mount_arg "$output/.scratch" /mnt/reference/scratch/public-build '')"
+  --mount "$(mount_arg "$vcf" /input/case.vcf ,readonly)"
+  --mount "$(mount_arg "$hpo" /input/phenotypes.txt ,readonly)"
+  --env PYTHONPATH=/package/python --env PYTHONDONTWRITEBYTECODE=1
+  --env "GENOSAPIENS_PACKAGE_SHA256=$package_sha" --env "GENOSAPIENS_RUNTIME_IMAGE=$image"
+  --env "GENOSAPIENS_OUTPUT_HOST_PATH=$output"
+  --env "GENOSAPIENS_REFERENCE_HOST_PATH=$reference_root"
+  --env "GENOSAPIENS_INPUT_HOST_PATH=$vcf" --env "GENOSAPIENS_HPO_HOST_PATH=$hpo"
+  --workdir /package --entrypoint python)
+for public_directory in releases manifests derived downloads; do
+  args+=(--mount "$(mount_arg "$reference_root/$public_directory" "/mnt/reference/$public_directory" ,readonly)")
+done
+options=(--vcf /input/case.vcf --hpo /input/phenotypes.txt --output /output "${science_options[@]}")
+if [[ -n $concordance ]]; then
+  args+=(--mount "$(mount_arg "$concordance" /input/concordance.json ,readonly)")
+  options+=(--concordance /input/concordance.json)
+  args+=(--env "GENOSAPIENS_CONCORDANCE_HOST_PATH=$concordance")
+fi
+$sample_set && options+=(--sample "$sample")
+$hours_set && options+=(--max-hours "$hours")
+$resume && options+=(--resume)
+$allow_low_host_memory && options+=(--allow-low-host-memory)
+exec docker "${args[@]}" "$image" -m genosapiens track1 run "${options[@]}"

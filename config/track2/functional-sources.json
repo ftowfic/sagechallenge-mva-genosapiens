@@ -1,0 +1,5 @@
+{
+  "schema": "genosapiens.track2-uniprot-functional-catalog/v1",
+  "manifest_path": "derived/track2-functional/uniprot-reviewed-human-isoforms-20261018/manifest.json",
+  "manifest_sha256": "a07894e37f8d87c9f081329c0d7cdf8c4de187b58d88c6a8b3bad5390199c352"
+}

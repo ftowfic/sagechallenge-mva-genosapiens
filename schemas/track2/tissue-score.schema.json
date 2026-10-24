@@ -1,0 +1,130 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Track 2 tissue score",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "gene_id",
+    "objective_id",
+    "scenario_id",
+    "medication_entity_key",
+    "declared_tissues",
+    "supporting_tissues",
+    "conflicting_tissues",
+    "evaluable_tissues",
+    "P",
+    "C",
+    "N",
+    "numerator",
+    "denominator",
+    "nominated",
+    "provisional",
+    "coverage",
+    "method_labels",
+    "legacy_research_eligibility"
+  ],
+  "properties": {
+    "schema": {
+      "const": "genosapiens.track2-tissue-score/v1"
+    },
+    "gene_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "objective_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "scenario_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "medication_entity_key": {
+      "type": "string",
+      "minLength": 1
+    },
+    "declared_tissues": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+    "supporting_tissues": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+    "conflicting_tissues": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+    "evaluable_tissues": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+    "P": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "C": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "N": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "numerator": {
+      "type": "integer"
+    },
+    "denominator": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "nominated": {
+      "type": "boolean"
+    },
+    "provisional": {
+      "type": "boolean"
+    },
+    "coverage": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "method_labels": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+    "legacy_research_eligibility": {
+      "const": "not_applicable"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "canonical_active_ingredient_id": {
+      "type": "string",
+      "minLength": 1
+    }
+  }
+}

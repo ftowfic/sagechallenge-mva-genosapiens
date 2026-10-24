@@ -1,0 +1,288 @@
+{
+  "schema": "genosapiens.track2-source-domain-matrix/v1",
+  "policy_version": "1.0.0",
+  "primary_jurisdiction": "US",
+  "jurisdiction_exception": {
+    "allowed": true,
+    "requires_named_jurisdiction": true,
+    "requires_official_regulator": true,
+    "requires_current_marketing_status": true,
+    "requires_manual_review": true
+  },
+  "sources": {
+    "rxnorm": {
+      "authority": "NLM",
+      "kind": "public-api"
+    },
+    "pubchem": {
+      "authority": "NCBI",
+      "kind": "public-api"
+    },
+    "chembl": {
+      "authority": "EMBL-EBI",
+      "kind": "public-api"
+    },
+    "gtopdb": {
+      "authority": "IUPHAR-BPS",
+      "kind": "public-api"
+    },
+    "open-targets": {
+      "authority": "Open Targets",
+      "kind": "public-snapshot"
+    },
+    "depmap": {
+      "authority": "Broad Institute",
+      "kind": "public-snapshot"
+    },
+    "dgidb": {
+      "authority": "DGIdb",
+      "kind": "public-api"
+    },
+    "reactome": {
+      "authority": "Reactome",
+      "kind": "public-api"
+    },
+    "primary-literature": {
+      "authority": "publisher",
+      "kind": "reviewed-document"
+    },
+    "drugs-at-fda": {
+      "authority": "FDA",
+      "kind": "official-regulator"
+    },
+    "purple-book": {
+      "authority": "FDA",
+      "kind": "official-regulator"
+    },
+    "fda-product-status": {
+      "authority": "FDA",
+      "kind": "official-regulator"
+    },
+    "ndc-directory": {
+      "authority": "FDA",
+      "kind": "supporting-marketing-only"
+    },
+    "fda-label": {
+      "authority": "FDA",
+      "kind": "official-label"
+    },
+    "dailymed": {
+      "authority": "NLM",
+      "kind": "label-mirror"
+    },
+    "named-non-us-regulator": {
+      "authority": "named-official-regulator",
+      "kind": "official-regulator"
+    },
+    "clinicaltrials-gov": {
+      "authority": "NLM",
+      "kind": "official-registry"
+    },
+    "ctis": {
+      "authority": "European Medicines Agency",
+      "kind": "official-registry"
+    },
+    "isrctn": {
+      "authority": "ISRCTN",
+      "kind": "official-registry"
+    },
+    "current-guideline": {
+      "authority": "named-guideline-body",
+      "kind": "reviewed-document"
+    },
+    "cpic": {
+      "authority": "CPIC",
+      "kind": "reviewed-guideline"
+    },
+    "optional-spontaneous-reports": {
+      "authority": "named-reporting-system",
+      "kind": "optional-signal-context"
+    },
+    "published-genotype": {
+      "authority": "reviewed-primary-publication",
+      "kind": "public-manifest"
+    },
+    "pharos": {
+      "authority": "NIH-IDG-Pharos-TCRD",
+      "kind": "public-api"
+    },
+    "gtex": {
+      "authority": "GTEx",
+      "kind": "public-api"
+    },
+    "lincs-gse92742": {
+      "authority": "Broad Institute / GEO",
+      "kind": "public-snapshot"
+    }
+  },
+  "domains": {
+    "disease_subtype": {
+      "primary": [
+        "published-genotype"
+      ],
+      "alternate": [
+        "primary-literature"
+      ],
+      "freshness_days": null,
+      "manual_import": "reviewed-only",
+      "redistribution": "source-terms",
+      "missing": "not_evaluable"
+    },
+    "target_context": {
+      "primary": [
+        "published-genotype",
+        "reactome"
+      ],
+      "alternate": [
+        "primary-literature"
+      ],
+      "supporting_only": [
+        "depmap",
+        "gtex"
+      ],
+      "freshness_days": 365,
+      "manual_import": "reviewed-only",
+      "redistribution": "source-terms",
+      "missing": "not_evaluable"
+    },
+    "drug_identity": {
+      "primary": [
+        "rxnorm",
+        "pubchem"
+      ],
+      "alternate": [
+        "chembl",
+        "gtopdb"
+      ],
+      "freshness_days": 90,
+      "manual_import": "reviewed-only",
+      "redistribution": "source-terms",
+      "missing": "blocking"
+    },
+    "target_drug_recall": {
+      "primary": [
+        "chembl",
+        "gtopdb"
+      ],
+      "alternate": [
+        "open-targets",
+        "dgidb",
+        "pharos"
+      ],
+      "freshness_days": 180,
+      "manual_import": "reviewed-only",
+      "redistribution": "source-terms",
+      "missing": "incomplete_coverage"
+    },
+    "directional_pharmacology": {
+      "primary": [
+        "chembl",
+        "gtopdb",
+        "primary-literature"
+      ],
+      "alternate": [
+        "fda-label"
+      ],
+      "freshness_days": 365,
+      "manual_import": "reviewed-only",
+      "redistribution": "source-terms",
+      "missing": "not_evaluable"
+    },
+    "approval_marketing": {
+      "primary": [
+        "drugs-at-fda",
+        "purple-book",
+        "fda-product-status"
+      ],
+      "alternate": [
+        "named-non-us-regulator"
+      ],
+      "supporting_only": [
+        "ndc-directory"
+      ],
+      "freshness_days": 30,
+      "manual_import": "reviewed-only",
+      "redistribution": "citation-only-when-required",
+      "missing": "blocking"
+    },
+    "current_label": {
+      "primary": [
+        "fda-label"
+      ],
+      "alternate": [
+        "dailymed",
+        "named-non-us-regulator"
+      ],
+      "freshness_days": 30,
+      "manual_import": "reviewed-only",
+      "redistribution": "citation-only-when-required",
+      "missing": "blocking"
+    },
+    "exposure": {
+      "primary": [
+        "fda-label",
+        "primary-literature"
+      ],
+      "alternate": [
+        "named-non-us-regulator"
+      ],
+      "freshness_days": 365,
+      "manual_import": "reviewed-only",
+      "redistribution": "citation-only-when-required",
+      "missing": "not_evaluable"
+    },
+    "trials_current_care": {
+      "primary": [
+        "clinicaltrials-gov",
+        "current-guideline",
+        "fda-label"
+      ],
+      "alternate": [
+        "primary-literature",
+        "ctis",
+        "isrctn"
+      ],
+      "freshness_days": 30,
+      "manual_import": "reviewed-only",
+      "redistribution": "citation-only-when-required",
+      "missing": "incomplete_coverage"
+    },
+    "safety_pgx": {
+      "primary": [
+        "fda-label",
+        "cpic"
+      ],
+      "alternate": [
+        "primary-literature",
+        "named-non-us-regulator"
+      ],
+      "optional": [
+        "optional-spontaneous-reports"
+      ],
+      "freshness_days": 30,
+      "manual_import": "reviewed-only",
+      "redistribution": "citation-only-when-required",
+      "missing": "not_evaluable"
+    },
+    "input_identity": {
+      "primary": [
+        "published-genotype"
+      ],
+      "alternate": [],
+      "freshness_days": null,
+      "manual_import": "prohibited",
+      "redistribution": "controlled",
+      "missing": "blocking"
+    },
+    "lincs_expression": {
+      "primary": [
+        "lincs-gse92742"
+      ],
+      "alternate": [],
+      "freshness_days": null,
+      "manual_import": true,
+      "missing": "not_assessed",
+      "redistribution": "source_terms_review_required"
+    }
+  }
+}

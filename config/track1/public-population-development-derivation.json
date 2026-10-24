@@ -1,0 +1,40 @@
+{
+  "algorithm": "geometric midpoint of the two selected development low-frequency upper bound and selected high-frequency AF; upward rational rounding at 12 decimal places",
+  "classification": "public",
+  "controlled_use_authorized": false,
+  "development_qualification": {
+    "path": "artifacts/validation/track1-population-development-qualification-2026-09-17.json",
+    "sha256": "1c9ab17609b748df5fd240e5a15fcad82f1ae373e0325d5bc8a01210d41960f1",
+    "size_bytes": 2828
+  },
+  "development_selected_high_frequency": "76154/76173",
+  "development_selected_low_frequency_upper_bound": "1/152386",
+  "development_selection": {
+    "path": "artifacts/validation/track1-population-development-selection-2026-09-17.json",
+    "sha256": "20ff8257b18e7f3ef5f197d6789de3ecb7c3b1cbebeca2d74ada3744c0cd7c53",
+    "size_bytes": 1821
+  },
+  "experiment_id": "track1-submission-acceptance-population-models-20260917",
+  "limitations": [
+    "Source-selected synthetic stress probes are not independent patients or clinical calibration.",
+    "No curated exception or clinical causal assertion is inferred from selection."
+  ],
+  "minimum_observed_development_an": 152346,
+  "schema": "genosapiens.track1-public-population-development-derivation",
+  "selected_ancestry": null,
+  "selected_frequency_threshold": "32017197/12500000000",
+  "selected_high_identity_sha256": "587b929445a50297051aab60490cdbd7ce3bedffdac184c1bac6e4bd7a5d0029",
+  "selected_low_identity_sha256s": [
+    "c42e6accf25c21993ca0c8d88f30d0c4d00ddc04d29662370d5c2177efb3cc8b",
+    "f0f66f1fccd1e3a52114b278e2c861dc3f1722f5b0ec4e3773fee47456bbc450"
+  ],
+  "selected_stratum": "adjusted",
+  "selected_subset": "genomes",
+  "selection_authority": "development-source-only; no held-out frequencies or evaluator outcomes",
+  "source_manifest_sha256s": [
+    "12c2bf613424137e3c8e7aec7f69ace0cf83a84a5a3bd0bcca81fc63970823d0",
+    "a453a49f573e4a5999b38bcd02744ab389f0ef1a4e878a9adf7fa656e59985af",
+    "c6edfc9b8726fd05f5f5cadc19d09ae49d6866d4742c8e9b52b038796637e55e"
+  ],
+  "validation_only": true
+}

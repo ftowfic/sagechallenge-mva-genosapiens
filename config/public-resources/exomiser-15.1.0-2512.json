@@ -1,0 +1,108 @@
+{
+  "schema": "genosapiens.exomiser-baseline",
+  "classification": "public",
+  "validation_only": true,
+  "tool": {
+    "name": "Exomiser",
+    "version": "15.1.0",
+    "release_url": "https://github.com/exomiser/Exomiser/releases/tag/15.1.0",
+    "tag_commit": "98f4e0b6f2f3f5bf790a9f955808c98968559996",
+    "archive": {
+      "url": "https://github.com/exomiser/Exomiser/releases/download/15.1.0/exomiser-cli-15.1.0-distribution.zip",
+      "size_bytes": 170449958,
+      "sha256": "47faa54d4791686c9dc3f896762834630e9eaf607ad3cf3399074353c3dda248"
+    }
+  },
+  "runtime": {
+    "image": "docker.io/exomiser/exomiser-cli:15.1.0",
+    "image_digest": "a368ec91266c2719db03d5d0eb24cfc4504d4f3a60da76cff7bb550d2a2a5d57",
+    "java_version": "25.0.2",
+    "network": "none",
+    "user": "65534:65534"
+  },
+  "data": {
+    "release": "2512",
+    "installed_root": "/mnt/reference/releases/exomiser/15.1.0-2512",
+    "installed_bytes": 58160730503,
+    "installed_file_count": 179,
+    "installed_file_manifest_path": "/mnt/reference/manifests/exomiser/15.1.0-2512.files.sha256",
+    "installed_file_manifest_sha256": "ca718bc1b286fbb0e8ed8c17f72e8b90875ea8c03d3ea762a404d58d0c21cbc7",
+    "archives": [
+      {
+        "role": "cli",
+        "url": "https://github.com/exomiser/Exomiser/releases/download/15.1.0/exomiser-cli-15.1.0-distribution.zip",
+        "size_bytes": 170449958,
+        "sha256": "47faa54d4791686c9dc3f896762834630e9eaf607ad3cf3399074353c3dda248",
+        "publisher_md5": null,
+        "object_generation": null
+      },
+      {
+        "role": "hg38",
+        "url": "https://data.monarchinitiative.org/exomiser/data/2512_hg38.zip",
+        "size_bytes": 23557715707,
+        "sha256": "cc42146926f41f69795ea4e6f227b4583d2ed82085df240ca8d707c27ed39da3",
+        "publisher_md5": "da5ec39e25a73fe6b04b59898fb3d6b0",
+        "object_generation": "1773393329510943"
+      },
+      {
+        "role": "phenotype",
+        "url": "https://data.monarchinitiative.org/exomiser/data/2512_phenotype.zip",
+        "size_bytes": 13132847504,
+        "sha256": "4bb465ad61f13b3074d0d3f741969d6f4f18a1aaef644bdcf7730c816c96097f",
+        "publisher_md5": "c19432cc929d83e86ad2326764eb1bf1",
+        "object_generation": "1773343578157749"
+      }
+    ]
+  },
+  "analysis": {
+    "path": "config/track1/exomiser-analysis.yml",
+    "sha256": "c964f1d6c0e83e90f98b3dcbbe0171d5ccf9b5b10d6d2632f9fb08d657483bd6",
+    "adaptations": [
+      "uses the Exomiser 15.1.0 genome profile structure",
+      "omits ReMM because its separately licensed tabix resource is not part of the official 2512 archives",
+      "retains only predictors embedded in the official Exomiser 2512 genome database"
+    ]
+  },
+  "license_review": {
+    "code_license": "AGPL-3.0-or-later",
+    "code_license_url": "https://github.com/exomiser/Exomiser/blob/15.1.0/LICENCE",
+    "data_use_decision": "local-unmodified-validation-only; no archive redistribution",
+    "restrictions": [
+      "The Monarch archive does not publish one aggregate license covering every embedded upstream annotation source.",
+      "Baseline outputs are comparison evidence only and do not authorize redistribution of the downloaded databases.",
+      "ReMM and CADD are absent; no missing restricted source is silently substituted."
+    ]
+  },
+  "pheval_contract": {
+    "version": "0.7.14",
+    "commit": "51d073bedbde5636c1b11c6d381f2d2fce0c74fc",
+    "license": "Apache-2.0",
+    "source_url": "https://github.com/monarch-initiative/pheval/tree/0.7.14",
+    "sort_order": "descending",
+    "gene_fields": [
+      "gene_symbol",
+      "gene_identifier",
+      "score",
+      "grouping_id"
+    ],
+    "variant_fields": [
+      "chrom",
+      "start",
+      "end",
+      "ref",
+      "alt",
+      "score",
+      "grouping_id"
+    ]
+  },
+  "supported_comparison": {
+    "classes": ["SNV", "indel"],
+    "unsupported_classes": ["mixed-class", "mosaic", "regulatory", "repeat", "SV/CNV"],
+    "metrics": ["best_gene_rank", "exact_variant_rank", "exact_variant_member_count", "exact_full_genotype"],
+    "limitations": [
+      "The public synthetic variants were not selected from Exomiser knowledge and can legitimately yield empty output.",
+      "Shared HG002 backgrounds do not represent independent patients.",
+      "Gene and exact-variant metrics are reported separately; unsupported cases remain in roster accounting."
+    ]
+  }
+}

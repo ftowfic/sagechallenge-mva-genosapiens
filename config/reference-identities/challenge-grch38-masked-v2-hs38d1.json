@@ -1,0 +1,182 @@
+{
+  "schema": "genosapiens.reference-identity",
+  "contract_id": "challenge-grch38-masked-v2-hs38d1-contract-v2",
+  "resource_id": "challenge-grch38-masked-v2-plus-hs38d1",
+  "release": "GIAB-masked-v2+GCA_000001405.15-hs38d1",
+  "assembly": "GRCh38-masked-v2-no-alt-plus-hs38d1",
+  "challenge_reference_basename": "GCA_000001405.15_GRCh38_no_alt_analysis_set_plus_hs38d1_maskedGRC_exclusions_v2_no_chr.fasta",
+  "primary_assembly_accession": "GCA_000001405.15",
+  "decoy_assembly_accession": "GCA_000786075.2",
+  "source_artifacts": [
+    {
+      "role": "masked_component_fasta_gzip",
+      "url": "https://giab.s3.amazonaws.com/release/references/GRCh38/GCA_000001405.15_GRCh38_no_alt_analysis_set_maskedGRC_exclusions_v2.fasta.gz",
+      "path": "releases/grch38/GCA_000001405.15-masked-v2-plus-hs38d1-current/sources/GCA_000001405.15_GRCh38_no_alt_analysis_set_maskedGRC_exclusions_v2.fasta.gz",
+      "purpose": "construction",
+      "size_bytes": 885955190,
+      "md5": "7ceedaf03eaefd7d63a68c452dd8b1a7",
+      "sha256": "74482c74f2a47e8908404028d5305167636c9942fba4129ea0d70c5f04cab5ad",
+      "publisher_md5": null
+    },
+    {
+      "role": "masked_component_fai",
+      "url": "https://giab.s3.amazonaws.com/release/references/GRCh38/GCA_000001405.15_GRCh38_no_alt_analysis_set_maskedGRC_exclusions_v2.fasta.gz.fai",
+      "path": "releases/grch38/GCA_000001405.15-masked-v2-plus-hs38d1-current/sources/GCA_000001405.15_GRCh38_no_alt_analysis_set_maskedGRC_exclusions_v2.fasta.gz.fai",
+      "purpose": "validation",
+      "size_bytes": 7802,
+      "md5": "a44cb7b437c4d34a78047d4d42519f3f",
+      "sha256": "cc003899bcfb8e734f1f53e2f5d14d22f8881ea346e4cc3b6c49db97ea17557d",
+      "publisher_md5": null
+    },
+    {
+      "role": "masked_component_gzi",
+      "url": "https://giab.s3.amazonaws.com/release/references/GRCh38/GCA_000001405.15_GRCh38_no_alt_analysis_set_maskedGRC_exclusions_v2.fasta.gz.gzi",
+      "path": "releases/grch38/GCA_000001405.15-masked-v2-plus-hs38d1-current/sources/GCA_000001405.15_GRCh38_no_alt_analysis_set_maskedGRC_exclusions_v2.fasta.gz.gzi",
+      "purpose": "validation",
+      "size_bytes": 770648,
+      "md5": "51bf863da68a9fd008801217bdb156e4",
+      "sha256": "03c5a066ae7d6c34c00c7e4a492ead62e16563cfeb361d670d14dde1193c089c",
+      "publisher_md5": null
+    },
+    {
+      "role": "unmasked_decoy_source_fasta_gzip",
+      "url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/001/405/GCA_000001405.15_GRCh38/seqs_for_alignment_pipelines.ucsc_ids/GCA_000001405.15_GRCh38_no_alt_plus_hs38d1_analysis_set.fna.gz",
+      "path": "releases/grch38/GCA_000001405.15-masked-v2-plus-hs38d1-current/sources/GCA_000001405.15_GRCh38_no_alt_plus_hs38d1_analysis_set.fna.gz",
+      "purpose": "construction",
+      "size_bytes": 874637925,
+      "md5": "a056c57649f3c9964c68aead3849bbf8",
+      "sha256": "08959902840a28f410ad1220e36b2a3fbe2cb90beecceb6ea5b050a0e68ed96d",
+      "publisher_md5": "a056c57649f3c9964c68aead3849bbf8"
+    },
+    {
+      "role": "unmasked_decoy_source_fai",
+      "url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/001/405/GCA_000001405.15_GRCh38/seqs_for_alignment_pipelines.ucsc_ids/GCA_000001405.15_GRCh38_no_alt_plus_hs38d1_analysis_set.fna.fai",
+      "path": "releases/grch38/GCA_000001405.15-masked-v2-plus-hs38d1-current/sources/GCA_000001405.15_GRCh38_no_alt_plus_hs38d1_analysis_set.fna.fai",
+      "purpose": "validation",
+      "size_bytes": 123147,
+      "md5": "1bcf198e7562ed5f25a6a92014a7715a",
+      "sha256": "e33afb84eb6463b2607798f86c6060e55eb549698c586268d6011f3ce815b122",
+      "publisher_md5": "1bcf198e7562ed5f25a6a92014a7715a"
+    },
+    {
+      "role": "mask_provenance_bed",
+      "url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/001/405/GCA_000001405.15_GRCh38/seqs_for_alignment_pipelines.ucsc_ids/GCA_000001405.15_GRCh38_GRC_exclusions.bed",
+      "path": "releases/grch38/GCA_000001405.15-masked-v2-plus-hs38d1-current/sources/GCA_000001405.15_GRCh38_GRC_exclusions.bed",
+      "purpose": "provenance",
+      "size_bytes": 929,
+      "md5": "bf5c011e0342f355422144eb3547b5d0",
+      "sha256": "7b06fe94703ae437d17793e15ab73a28836bc7c2655f4f3292055b923f1f3417",
+      "publisher_md5": "bf5c011e0342f355422144eb3547b5d0"
+    }
+  ],
+  "reference_roles": [
+    {
+      "role": "challenge_alignment",
+      "identity_id": "challenge-grch38-masked-v2-hs38d1-unprefixed-v2",
+      "naming": "unprefixed",
+      "sequence_relationship": "constructed-masked-v2-plus-hs38d1",
+      "fasta_output_role": "challenge_alignment_fasta",
+      "fai_output_role": "challenge_alignment_fai",
+      "dictionary_output_role": "challenge_alignment_dict",
+      "m5_output_role": "challenge_alignment_m5"
+    },
+    {
+      "role": "challenge_tool_view",
+      "identity_id": "challenge-grch38-masked-v2-hs38d1-prefixed-v2",
+      "naming": "chr-prefixed",
+      "sequence_relationship": "sequence-identical-to-challenge-alignment",
+      "fasta_output_role": "challenge_tool_fasta",
+      "fai_output_role": "challenge_tool_fai",
+      "dictionary_output_role": "challenge_tool_dict",
+      "m5_output_role": "challenge_tool_m5"
+    },
+    {
+      "role": "public_annotation_benchmark",
+      "identity_id": "grch38-no-alt-hs38d1-public-native-v1",
+      "naming": "resource-native",
+      "sequence_relationship": "coordinate-compatible-not-sequence-identical",
+      "fasta_output_role": "public_native_fasta",
+      "fai_output_role": "public_native_fai",
+      "dictionary_output_role": "public_native_dict",
+      "m5_output_role": "public_native_m5"
+    }
+  ],
+  "transformation": {
+    "schema": "genosapiens.masked-v2-plus-hs38d1-construction",
+    "masked_component_records": 195,
+    "masked_component_terminal": "chrEBV",
+    "decoy_suffix_records": 2385,
+    "decoy_name_suffix": "_decoy",
+    "source_prefix": "chr",
+    "scope": "first-fasta-header-token",
+    "preserve_sequence_bytes": true,
+    "preserve_record_order": true,
+    "mask_differences": "unmasked-base-to-N-only",
+    "mask_sentinels": [
+      {
+        "contig": "chr21",
+        "position": 5010001
+      }
+    ]
+  },
+  "acceptance": {
+    "public_construction_validation_required": true,
+    "controlled_complete_concordance_required": true,
+    "operator_override_can_bypass": false
+  },
+  "expected_outputs": [
+    {"role": "public_native_fasta", "path": "releases/grch38/GCA_000001405.15-masked-v2-plus-hs38d1-current/public-native.no-alt-plus-hs38d1.chr.fna"},
+    {"role": "public_native_fai", "path": "releases/grch38/GCA_000001405.15-masked-v2-plus-hs38d1-current/public-native.no-alt-plus-hs38d1.chr.fna.fai"},
+    {"role": "public_native_dict", "path": "releases/grch38/GCA_000001405.15-masked-v2-plus-hs38d1-current/public-native.no-alt-plus-hs38d1.chr.dict"},
+    {"role": "public_native_m5", "path": "releases/grch38/GCA_000001405.15-masked-v2-plus-hs38d1-current/public-native.no-alt-plus-hs38d1.chr.m5.tsv"},
+    {"role": "challenge_tool_fasta", "path": "releases/grch38/GCA_000001405.15-masked-v2-plus-hs38d1-current/challenge.masked-v2-plus-hs38d1.chr.fasta"},
+    {"role": "challenge_tool_fai", "path": "releases/grch38/GCA_000001405.15-masked-v2-plus-hs38d1-current/challenge.masked-v2-plus-hs38d1.chr.fasta.fai"},
+    {"role": "challenge_tool_dict", "path": "releases/grch38/GCA_000001405.15-masked-v2-plus-hs38d1-current/challenge.masked-v2-plus-hs38d1.chr.dict"},
+    {"role": "challenge_tool_m5", "path": "releases/grch38/GCA_000001405.15-masked-v2-plus-hs38d1-current/challenge.masked-v2-plus-hs38d1.chr.m5.tsv"},
+    {"role": "challenge_tool_bwa_0123", "path": "releases/grch38/GCA_000001405.15-masked-v2-plus-hs38d1-current/challenge.masked-v2-plus-hs38d1.chr.fasta.0123"},
+    {"role": "challenge_tool_bwa_amb", "path": "releases/grch38/GCA_000001405.15-masked-v2-plus-hs38d1-current/challenge.masked-v2-plus-hs38d1.chr.fasta.amb"},
+    {"role": "challenge_tool_bwa_ann", "path": "releases/grch38/GCA_000001405.15-masked-v2-plus-hs38d1-current/challenge.masked-v2-plus-hs38d1.chr.fasta.ann"},
+    {"role": "challenge_tool_bwa_bwt", "path": "releases/grch38/GCA_000001405.15-masked-v2-plus-hs38d1-current/challenge.masked-v2-plus-hs38d1.chr.fasta.bwt.2bit.64"},
+    {"role": "challenge_tool_bwa_pac", "path": "releases/grch38/GCA_000001405.15-masked-v2-plus-hs38d1-current/challenge.masked-v2-plus-hs38d1.chr.fasta.pac"},
+    {"role": "challenge_alignment_fasta", "path": "releases/grch38/GCA_000001405.15-masked-v2-plus-hs38d1-current/challenge.masked-v2-plus-hs38d1.unprefixed.fasta"},
+    {"role": "challenge_alignment_fai", "path": "releases/grch38/GCA_000001405.15-masked-v2-plus-hs38d1-current/challenge.masked-v2-plus-hs38d1.unprefixed.fasta.fai"},
+    {"role": "challenge_alignment_dict", "path": "releases/grch38/GCA_000001405.15-masked-v2-plus-hs38d1-current/challenge.masked-v2-plus-hs38d1.unprefixed.dict"},
+    {"role": "challenge_alignment_m5", "path": "releases/grch38/GCA_000001405.15-masked-v2-plus-hs38d1-current/challenge.masked-v2-plus-hs38d1.unprefixed.m5.tsv"},
+    {"role": "challenge_alignment_bwa_0123", "path": "releases/grch38/GCA_000001405.15-masked-v2-plus-hs38d1-current/challenge.masked-v2-plus-hs38d1.unprefixed.fasta.0123"},
+    {"role": "challenge_alignment_bwa_amb", "path": "releases/grch38/GCA_000001405.15-masked-v2-plus-hs38d1-current/challenge.masked-v2-plus-hs38d1.unprefixed.fasta.amb"},
+    {"role": "challenge_alignment_bwa_ann", "path": "releases/grch38/GCA_000001405.15-masked-v2-plus-hs38d1-current/challenge.masked-v2-plus-hs38d1.unprefixed.fasta.ann"},
+    {"role": "challenge_alignment_bwa_bwt", "path": "releases/grch38/GCA_000001405.15-masked-v2-plus-hs38d1-current/challenge.masked-v2-plus-hs38d1.unprefixed.fasta.bwt.2bit.64"},
+    {"role": "challenge_alignment_bwa_pac", "path": "releases/grch38/GCA_000001405.15-masked-v2-plus-hs38d1-current/challenge.masked-v2-plus-hs38d1.unprefixed.fasta.pac"},
+    {"role": "contig_aliases", "path": "releases/grch38/GCA_000001405.15-masked-v2-plus-hs38d1-current/contig-aliases.json"},
+    {"role": "mask_delta", "path": "releases/grch38/GCA_000001405.15-masked-v2-plus-hs38d1-current/masked-v2.delta.bed"},
+    {"role": "construction_report", "path": "releases/grch38/GCA_000001405.15-masked-v2-plus-hs38d1-current/construction-validation.json"}
+  ],
+  "sequence_count": 2580,
+  "canonical_contig_lengths": {
+    "1": 248956422,
+    "2": 242193529,
+    "3": 198295559,
+    "4": 190214555,
+    "5": 181538259,
+    "6": 170805979,
+    "7": 159345973,
+    "8": 145138636,
+    "9": 138394717,
+    "10": 133797422,
+    "11": 135086622,
+    "12": 133275309,
+    "13": 114364328,
+    "14": 107043718,
+    "15": 101991189,
+    "16": 90338345,
+    "17": 83257441,
+    "18": 80373285,
+    "19": 58617616,
+    "20": 64444167,
+    "21": 46709983,
+    "22": 50818468,
+    "X": 156040895,
+    "Y": 57227415,
+    "M": 16569
+  }
+}

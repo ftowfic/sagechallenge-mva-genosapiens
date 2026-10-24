@@ -1,0 +1,80 @@
+{
+  "schema": "genosapiens.giab-hg002",
+  "resource_id": "giab-hg002-nist-v4.2.1-grch38",
+  "release": "NISTv4.2.1",
+  "sample": "HG002",
+  "assembly": "GRCh38",
+  "reference_binding": {
+    "role": "public_annotation_benchmark",
+    "identity_id": "grch38-no-alt-hs38d1-public-native-v1"
+  },
+  "published_checksum_source": "AWS GIAB object metadata x-amz-meta-s3cmd-attrs md5 and GIAB release/references/checksum.md5",
+  "autosomal_contigs": [
+    "chr1",
+    "chr2",
+    "chr3",
+    "chr4",
+    "chr5",
+    "chr6",
+    "chr7",
+    "chr8",
+    "chr9",
+    "chr10",
+    "chr11",
+    "chr12",
+    "chr13",
+    "chr14",
+    "chr15",
+    "chr16",
+    "chr17",
+    "chr18",
+    "chr19",
+    "chr20",
+    "chr21",
+    "chr22"
+  ],
+  "artifacts": [
+    {
+      "role": "truth_vcf",
+      "url": "https://giab.s3.amazonaws.com/release/AshkenazimTrio/HG002_NA24385_son/NISTv4.2.1/GRCh38/HG002_GRCh38_1_22_v4.2.1_benchmark.vcf.gz",
+      "path": "releases/giab/HG002/NISTv4.2.1/GRCh38/HG002_GRCh38_1_22_v4.2.1_benchmark.vcf.gz",
+      "size_bytes": 156252944,
+      "md5": "dc750b3807d4af1f7ffec852e9c2f771"
+    },
+    {
+      "role": "truth_tbi",
+      "url": "https://giab.s3.amazonaws.com/release/AshkenazimTrio/HG002_NA24385_son/NISTv4.2.1/GRCh38/HG002_GRCh38_1_22_v4.2.1_benchmark.vcf.gz.tbi",
+      "path": "releases/giab/HG002/NISTv4.2.1/GRCh38/HG002_GRCh38_1_22_v4.2.1_benchmark.vcf.gz.tbi",
+      "size_bytes": 1657747,
+      "md5": "121e2975fb3ff0317ae6a684d0ce6f2f"
+    },
+    {
+      "role": "confident_bed",
+      "url": "https://giab.s3.amazonaws.com/release/AshkenazimTrio/HG002_NA24385_son/NISTv4.2.1/GRCh38/HG002_GRCh38_1_22_v4.2.1_benchmark_noinconsistent.bed",
+      "path": "releases/giab/HG002/NISTv4.2.1/GRCh38/HG002_GRCh38_1_22_v4.2.1_benchmark_noinconsistent.bed",
+      "size_bytes": 11494021,
+      "md5": "97265e922a97c69a0391cf3f92a89b8b"
+    },
+    {
+      "role": "reference_fasta_bgzip",
+      "url": "https://giab.s3.amazonaws.com/release/references/GRCh38/GCA_000001405.15_GRCh38_no_alt_analysis_set.fasta.gz",
+      "path": "releases/giab/HG002/NISTv4.2.1/GRCh38/GCA_000001405.15_GRCh38_no_alt_analysis_set.fasta.gz",
+      "size_bytes": 886344618,
+      "md5": "3a3347eae0893f96ecf495d1c39e2284"
+    },
+    {
+      "role": "reference_fai",
+      "url": "https://giab.s3.amazonaws.com/release/references/GRCh38/GCA_000001405.15_GRCh38_no_alt_analysis_set.fasta.gz.fai",
+      "path": "releases/giab/HG002/NISTv4.2.1/GRCh38/GCA_000001405.15_GRCh38_no_alt_analysis_set.fasta.gz.fai",
+      "size_bytes": 7804,
+      "md5": "5fddbc109c82980f9436aa5c21a57c61"
+    },
+    {
+      "role": "reference_gzi",
+      "url": "https://giab.s3.amazonaws.com/release/references/GRCh38/GCA_000001405.15_GRCh38_no_alt_analysis_set.fasta.gz.gzi",
+      "path": "releases/giab/HG002/NISTv4.2.1/GRCh38/GCA_000001405.15_GRCh38_no_alt_analysis_set.fasta.gz.gzi",
+      "size_bytes": 770664,
+      "md5": "cfa1ee11b1ecb29f936578b27014fbe0"
+    }
+  ]
+}

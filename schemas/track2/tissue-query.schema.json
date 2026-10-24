@@ -1,0 +1,99 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Track 2 tissue query",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "gene_id",
+    "tissue_id",
+    "method",
+    "required_modulation",
+    "membership_sha256",
+    "source_sha256",
+    "policy_sha256",
+    "scientific_code_sha256",
+    "contributors",
+    "excluded_signatures",
+    "genes",
+    "gene_count",
+    "state",
+    "reason",
+    "query_sha256"
+  ],
+  "properties": {
+    "schema": {
+      "const": "genosapiens.track2-tissue-query/v1"
+    },
+    "gene_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "tissue_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "method": {
+      "enum": [
+        "paired_oe_kd",
+        "oe_only_matching",
+        "kd_only_reversal",
+        null
+      ]
+    },
+    "required_modulation": {
+      "const": "increase"
+    },
+    "membership_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "source_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "policy_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "scientific_code_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "contributors": {
+      "type": "object"
+    },
+    "excluded_signatures": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "genes": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "gene_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "state": {
+      "enum": [
+        "ready",
+        "unavailable"
+      ]
+    },
+    "reason": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "query_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    }
+  }
+}

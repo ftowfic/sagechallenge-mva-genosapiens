@@ -1,0 +1,40 @@
+{
+  "schema": "genosapiens.track2-report-presentation-policy/v2",
+  "policy_id": "tissue-runtime-paper-v2",
+  "main_table_limit": 5,
+  "main_figure_limit": 3,
+  "score_unit": "exact_rational",
+  "mechanism_support": "reported_action_matches_objective_direction",
+  "weights": {
+    "I_M": 1,
+    "M": 2
+  },
+  "metrics": {
+    "combined": "S",
+    "lincs": "S_L",
+    "mechanism": "S_M"
+  },
+  "tie_order": [
+    "casefold_name",
+    "canonical_active_ingredient_id",
+    "objective_id"
+  ],
+  "rank": "competition",
+  "scope": "report_wide_distinct_ingredients",
+  "sections": [
+    "Gene and variant context",
+    "Abstract",
+    "Biological rationale",
+    "Combined medications",
+    "LINCS medications",
+    "Mechanism medications",
+    "Discussion",
+    "Methods",
+    "References",
+    "Glossary",
+    "Acknowledgement",
+    "Supplementary index"
+  ],
+  "lincs_formula": "(P-C)/N",
+  "unavailable_lincs_combined_contribution": 0
+}

@@ -1,0 +1,8 @@
+{
+  "schema": "genosapiens.track1-pipeline",
+  "reference_root": "/mnt/reference",
+  "work_root": "/work",
+  "output_root": "/output",
+  "submission_contig_prefix": "chr",
+  "maximum_submission_rows": 10
+}

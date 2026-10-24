@@ -1,0 +1,20 @@
+{
+  "schema": "genosapiens.track2-report-presentation-policy/v3",
+  "policy_id": "challenge-paper-v1",
+  "main_table_limit_per_group": 5,
+  "main_table_limit": 20,
+  "main_figure_limit": 3,
+  "group_order": ["paired_oe_kd", "oe_only_matching", "kd_only_reversal", "mechanism"],
+  "rank": "competition_within_method",
+  "rank_keys": ["exact_percentile_descending", "unrounded_strength_descending"],
+  "tie_order": ["casefold_name", "canonical_active_ingredient_id", "objective_id"],
+  "representative": "source_selected_objective",
+  "uncalibrated": "unranked_supplement",
+  "mechanism_merge": "same_ingredient_and_objective_only",
+  "sections": [
+    "Research question and findings", "Mechanism rationale", "Medication hypotheses",
+    "Research value and next experiment", "Methods and contribution", "Reuse and execution",
+    "References", "Glossary", "Disclosures", "Acknowledgement", "Supplementary index"
+  ],
+  "challenge_weights": {"Scientific Rigor": 35, "Potential Impact": 25, "Innovation": 25, "Scalability": 15}
+}

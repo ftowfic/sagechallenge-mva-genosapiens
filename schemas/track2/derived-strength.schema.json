@@ -1,0 +1,132 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "schema",
+    "policy_id",
+    "method",
+    "direction",
+    "status",
+    "strength",
+    "declared_tissues",
+    "contributing_tissues",
+    "missing_tissues",
+    "tissue_strengths",
+    "unavailable_conditions",
+    "n_conditions",
+    "n_valid",
+    "n_undefined",
+    "n_cells",
+    "n_times"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema": {
+      "const": "genosapiens.track2-derived-strength/v1"
+    },
+    "policy_id": {
+      "const": "increase-function-strength/v1"
+    },
+    "method": {
+      "enum": [
+        "paired_oe_kd",
+        "oe_only_matching",
+        "kd_only_reversal"
+      ]
+    },
+    "direction": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "complete",
+        "provisional",
+        "unavailable",
+        "unsupported_direction"
+      ]
+    },
+    "strength": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": -1,
+      "maximum": 1
+    },
+    "declared_tissues": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "contributing_tissues": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "missing_tissues": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "tissue_strengths": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "number",
+        "minimum": -1,
+        "maximum": 1
+      }
+    },
+    "unavailable_conditions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "query_sha256",
+          "sig_id",
+          "status"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "query_sha256": {
+            "type": "string"
+          },
+          "sig_id": {
+            "type": "string"
+          },
+          "status": {
+            "enum": [
+              "unavailable",
+              "unsupported_direction"
+            ]
+          }
+        }
+      }
+    },
+    "n_conditions": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "n_valid": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "n_undefined": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "n_cells": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "n_times": {
+      "type": "integer",
+      "minimum": 0
+    }
+  }
+}

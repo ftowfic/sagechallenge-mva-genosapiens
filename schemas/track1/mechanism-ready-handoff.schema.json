@@ -1,0 +1,469 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/ftowfic/sagechallenge-raredisease-genosapiens/schemas/track1/mechanism-ready-handoff.schema.json",
+  "title": "Genosapiens bounded Track 1 handoff manifest",
+  "description": "Complete normalized scientific evidence and all three orders are retained by authenticated roots. Bounded logical readers expose every observation and hypothesis without expanded hypothesis shards.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "classification",
+    "llm_policy",
+    "manifest"
+  ],
+  "properties": {
+    "classification": {
+      "const": "controlled"
+    },
+    "llm_policy": {
+      "const": "no-llm"
+    },
+    "manifest": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "producer_version",
+        "schema_sha256",
+        "contract_sha256",
+        "canonical_artifact_path",
+        "run",
+        "artifacts",
+        "observation_count",
+        "hypothesis_count_by_mode",
+        "schema",
+        "version",
+        "frozen",
+        "scientific_roots"
+      ],
+      "properties": {
+        "producer_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "schema_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "contract_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "canonical_artifact_path": {
+          "const": "controlled-work/track1/handoff/mechanism-ready-handoff.json"
+        },
+        "run": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "prepared_manifest_sha256",
+            "source_input_sha256",
+            "reference_manifest_sha256",
+            "concordance_report_sha256",
+            "configuration_sha256",
+            "release_manifest_sha256",
+            "output_manifest_sha256",
+            "run_id",
+            "reference_identity_id",
+            "image_digest",
+            "retention_scope"
+          ],
+          "properties": {
+            "prepared_manifest_sha256": {
+              "$ref": "#/$defs/sha256"
+            },
+            "source_input_sha256": {
+              "$ref": "#/$defs/sha256"
+            },
+            "reference_manifest_sha256": {
+              "$ref": "#/$defs/sha256"
+            },
+            "concordance_report_sha256": {
+              "$ref": "#/$defs/sha256"
+            },
+            "configuration_sha256": {
+              "$ref": "#/$defs/sha256"
+            },
+            "release_manifest_sha256": {
+              "$ref": "#/$defs/sha256"
+            },
+            "output_manifest_sha256": {
+              "$ref": "#/$defs/sha256"
+            },
+            "run_id": {
+              "$ref": "#/$defs/id"
+            },
+            "reference_identity_id": {
+              "$ref": "#/$defs/id"
+            },
+            "image_digest": {
+              "type": "string",
+              "pattern": "^sha256:[0-9a-f]{64}$"
+            },
+            "retention_scope": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "policy_sha256",
+                "profile_manifest_sha256",
+                "evaluated_universe",
+                "identities",
+                "source_occurrences",
+                "deferred_inventory",
+                "deferred_downstream_work",
+                "outside_partner_absence_established"
+              ],
+              "properties": {
+                "policy_sha256": {
+                  "$ref": "#/$defs/sha256"
+                },
+                "profile_manifest_sha256": {
+                  "$ref": "#/$defs/sha256"
+                },
+                "evaluated_universe": {
+                  "const": "retained_alleles_only"
+                },
+                "identities": {
+                  "$ref": "#/$defs/retentionCounts"
+                },
+                "source_occurrences": {
+                  "$ref": "#/$defs/retentionCounts"
+                },
+                "deferred_inventory": {
+                  "const": "ordered_profile_decision_shards"
+                },
+                "deferred_downstream_work": {
+                  "const": false
+                },
+                "outside_partner_absence_established": {
+                  "const": false
+                }
+              }
+            }
+          }
+        },
+        "artifacts": {
+          "type": "array",
+          "minItems": 25,
+          "maxItems": 26,
+          "contains": {
+            "type": "object",
+            "required": [
+              "role",
+              "relative_path"
+            ],
+            "properties": {
+              "role": {
+                "const": "analysis_profile"
+              },
+              "relative_path": {
+                "const": "analysis/profile/manifest.json"
+              }
+            }
+          },
+          "items": {
+            "$ref": "#/$defs/artifact"
+          }
+        },
+        "observation_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "hypothesis_count_by_mode": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 2,
+            "items": {
+              "anyOf": [
+                {
+                  "enum": [
+                    "diagnosis_blind_primary"
+                  ]
+                },
+                {
+                  "type": "integer",
+                  "minimum": 1
+                }
+              ]
+            }
+          },
+          "minItems": 1,
+          "maxItems": 1
+        },
+        "schema": {
+          "const": "genosapiens.track1-sharded-mechanism-ready-handoff"
+        },
+        "version": {
+          "const": 6
+        },
+        "frozen": {
+          "const": true
+        },
+        "scientific_roots": {
+          "type": "array",
+          "minItems": 7,
+          "maxItems": 7,
+          "items": {
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 2,
+            "items": {
+              "anyOf": [
+                {
+                  "enum": [
+                    "case",
+                    "primary",
+                    "primary_order",
+                    "reference",
+                    "resources",
+                    "selected",
+                    "selection"
+                  ]
+                },
+                {
+                  "$ref": "#/$defs/normalizedRoot"
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "evidenceReference": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "evidence_id",
+        "record_type",
+        "source_disease_id",
+        "mapped_disease_id",
+        "disease_specificity",
+        "source_record_id",
+        "lineage_key",
+        "dependency_key",
+        "assertion_key",
+        "source_dataset",
+        "source_release",
+        "manifest_sha256"
+      ],
+      "properties": {
+        "evidence_id": {
+          "$ref": "#/$defs/id"
+        },
+        "record_type": {
+          "enum": [
+            "disease",
+            "phenotype",
+            "prevalence",
+            "gene",
+            "target",
+            "clinical",
+            "molecular",
+            "population"
+          ]
+        },
+        "source_disease_id": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "mapped_disease_id": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "disease_specificity": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "source_record_id": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "lineage_key": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "dependency_key": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "assertion_key": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "source_dataset": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "source_release": {
+          "type": "string",
+          "minLength": 1
+        },
+        "manifest_sha256": {
+          "$ref": "#/$defs/sha256"
+        }
+      }
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$"
+    },
+    "nullableString": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "sourceBinding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_dataset",
+        "source_release",
+        "source_record_id",
+        "manifest_sha256"
+      ],
+      "properties": {
+        "source_dataset": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "source_release": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_record_id": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "manifest_sha256": {
+          "$ref": "#/$defs/sha256"
+        }
+      }
+    },
+    "artifact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "role",
+        "relative_path",
+        "sha256",
+        "size_bytes"
+      ],
+      "properties": {
+        "role": {
+          "enum": [
+            "prepared",
+            "early",
+            "source",
+            "source_accounting",
+            "source_audit",
+            "preparation_run_options",
+            "prepared_index",
+            "completed_source_input",
+            "prefilter",
+            "working",
+            "evidence",
+            "scientific",
+            "order",
+            "primary",
+            "selection",
+            "execution",
+            "release",
+            "run_evidence",
+            "preflight",
+            "case",
+            "concordance",
+            "output",
+            "epcr",
+            "csv",
+            "analysis_profile",
+            "read_intake"
+          ]
+        },
+        "relative_path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "size_bytes": {
+          "type": "integer",
+          "minimum": 1
+        }
+      }
+    },
+    "normalizedRoot": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "name",
+        "kind",
+        "sha256",
+        "manifest_sha256"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 512
+        },
+        "kind": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "manifest_sha256": {
+          "$ref": "#/$defs/sha256"
+        }
+      }
+    },
+    "retentionCounts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "retained",
+        "deferred_no_retention_evidence",
+        "not_applicable_upstream"
+      ],
+      "properties": {
+        "retained": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "deferred_no_retention_evidence": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "not_applicable_upstream": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    }
+  }
+}

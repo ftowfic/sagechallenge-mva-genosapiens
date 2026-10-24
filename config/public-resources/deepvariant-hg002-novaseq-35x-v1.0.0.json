@@ -1,0 +1,59 @@
+{
+  "schema": "genosapiens.deepvariant-caller-vcf",
+  "resource_id": "deepvariant-hg002-novaseq-35x-v1.0.0-grch38",
+  "release": "DeepVariant-1.0.0",
+  "sample": "HG002",
+  "assembly": "GRCh38-no-alt-analysis-set",
+  "reference_binding": {
+    "role": "public_annotation_benchmark",
+    "identity_id": "grch38-no-alt-hs38d1-public-native-v1"
+  },
+  "caller": "DeepVariant",
+  "caller_version": "1.0.0",
+  "model_type": "WGS",
+  "sequencing": "Illumina NovaSeq PCR-free 35x WGS",
+  "license": "DeepVariant code is Apache-2.0; publisher does not state a separate license for this case-study output",
+  "documentation": {
+    "url": "https://github.com/google/deepvariant/blob/r1.0/docs/deepvariant-case-study.md",
+    "git_blob_sha": "845c24235ed1b5840a037c90e4c0f24099bfc518"
+  },
+  "input_bam": {
+    "url": "https://storage.googleapis.com/deepvariant/case-study-testdata/HG002.novaseq.pcr-free.35x.dedup.grch38_no_alt.bam",
+    "size_bytes": 46033519192,
+    "md5": "c9e975a20fd6740af3db18271d75fe2b",
+    "object_generation": "1594940262604684"
+  },
+  "required_command_tokens": [
+    "google/deepvariant:1.0.0",
+    "--model_type=WGS",
+    "--ref=/input/GCA_000001405.15_GRCh38_no_alt_analysis_set.fna.gz",
+    "--reads=/input/HG002.novaseq.pcr-free.35x.dedup.grch38_no_alt.bam",
+    "--output_vcf=/output/HG002.output.vcf.gz"
+  ],
+  "artifacts": [
+    {
+      "role": "caller_vcf",
+      "url": "https://storage.googleapis.com/deepvariant/case-study-outputs/1.0.0/WGS/output/HG002.output.vcf.gz",
+      "path": "releases/deepvariant/HG002/1.0.0/GRCh38/HG002.novaseq.pcr-free.35x.deepvariant-1.0.0.vcf.gz",
+      "size_bytes": 136167438,
+      "md5": "29d00cf5e84ae8971cb868200b574268",
+      "object_generation": "1681847435883880"
+    },
+    {
+      "role": "caller_tbi",
+      "url": "https://storage.googleapis.com/deepvariant/case-study-outputs/1.0.0/WGS/output/HG002.output.vcf.gz.tbi",
+      "path": "releases/deepvariant/HG002/1.0.0/GRCh38/HG002.novaseq.pcr-free.35x.deepvariant-1.0.0.vcf.gz.tbi",
+      "size_bytes": 1646152,
+      "md5": "65a29492ded47349c3b781f631e64a63",
+      "object_generation": "1681847435769752"
+    },
+    {
+      "role": "execution_log",
+      "url": "https://storage.googleapis.com/deepvariant/case-study-outputs/1.0.0/WGS/wgs.log",
+      "path": "releases/deepvariant/HG002/1.0.0/GRCh38/deepvariant-1.0.0-wgs-execution.log",
+      "size_bytes": 9683659,
+      "md5": "6460f0ffd7f54eeb95b896b7389e29a0",
+      "object_generation": "1681847435871175"
+    }
+  ]
+}

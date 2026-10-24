@@ -1,0 +1,59 @@
+{
+  "schema": "genosapiens.challenge-evaluator-pin",
+  "task": "build-track1-wgs-prioritization/11.1",
+  "source": {
+    "repository_type": "space",
+    "repository": "SageBio/rare-disease-real-kid-mva-hackathon-2026",
+    "revision": "1c761cc23d90aebe6a011fd5b0b99517df42408c",
+    "path": "evaluation.py",
+    "url": "https://huggingface.co/spaces/SageBio/rare-disease-real-kid-mva-hackathon-2026/resolve/1c761cc23d90aebe6a011fd5b0b99517df42408c/evaluation.py",
+    "sha256": "6d18b581e65a45e1ccc120071d588e740c2e42e983ff50704c60a40232b19180",
+    "git_blob_sha1": "2aed492247fc98be1b775e646f9b75aadec9e999",
+    "size_bytes": 7503
+  },
+  "inspection": {
+    "retrieved_on": "2026-09-08",
+    "acquisition": "Unauthenticated hf 1.29.0 download of explicit revision and filenames only",
+    "inspected_lines": "1-196",
+    "format": "readable Python source; not minified, extracted, reformatted, or patched",
+    "transformation": "none",
+    "runtime_imports": ["__future__", "csv", "dataclasses"],
+    "additional_runtime_dependencies": [],
+    "validation_image": "sha256:8ffaca017df2dc9323c20ea8989aaab9d793f440506106359db9a3f9a7121463"
+  },
+  "license_review": {
+    "space_card_license": "cc-by-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "code_specific_notice": "No license notice in evaluation.py; none of the explicitly queried root license/notice paths exists at this revision",
+    "scope_caveat": "Space card declaration is recorded, not assumed to be a separate software-license grant or a change to this project's license",
+    "distribution": "external provisioning only; upstream code is not vendored or relicensed",
+    "attribution": "SageBio public challenge evaluator; upstream credits Stenton et al. (2024), CAGI6 RGP assessment methodology"
+  },
+  "inspection_metadata": {
+    "revision_card": {
+      "url": "https://huggingface.co/api/spaces/SageBio/rare-disease-real-kid-mva-hackathon-2026/revision/1c761cc23d90aebe6a011fd5b0b99517df42408c?expand[]=sha&expand[]=cardData",
+      "sha256": "9576625819b8cacc7872f4a21d3892d1a5917675ea9acfb3e24fa633285ac95a",
+      "scope": "revision and YAML card metadata only; no README body or linked dataset fetched"
+    },
+    "paths_info": {
+      "url": "https://huggingface.co/api/spaces/SageBio/rare-disease-real-kid-mva-hackathon-2026/paths-info/1c761cc23d90aebe6a011fd5b0b99517df42408c",
+      "method": "POST",
+      "paths": ["LICENSE", "LICENSE.md", "LICENSE.txt", "LICENSE.rst", "license", "license.md", "license.txt", "COPYING", "COPYING.md", "COPYING.txt", "NOTICE", "NOTICE.md", "NOTICE.txt", "evaluation.py", "requirements.txt"],
+      "returned_paths": ["evaluation.py", "requirements.txt"],
+      "sha256": "bb57d6923b3022418f20b192a125ea03ddf377e9c76cea44c3c3c03a19eec7b6"
+    },
+    "space_requirements": {
+      "path": "requirements.txt",
+      "sha256": "6ec7a88dfca282f83edf2a2de4f6920880f5f800090d2b2239c821dbde8fabcb",
+      "git_blob_sha1": "cfb69722a60f6e1e9a5de92881bebe3af2fb8373",
+      "size_bytes": 52,
+      "disposition": "Inspected only; UI requirements are not imported by evaluation.py and were not installed"
+    }
+  },
+  "limits": [
+    "Public parser/scorer conformance is not private-truth matching or submission readiness",
+    "No controlled inputs, private truth, real HPO/VCF, case narrative, or leaderboard submissions were used",
+    "Secondary rows affect scoring; competitive primary-only fallback remains required",
+    "Task 12.6 latest official-contract review and all other eligibility/freeze gates remain separate"
+  ]
+}

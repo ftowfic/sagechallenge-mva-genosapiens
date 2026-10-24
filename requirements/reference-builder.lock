@@ -1,0 +1,174 @@
+{
+  "schema": "genosapiens.dependency-lock",
+  "image_role": "reference-builder",
+  "python": "3.12.11",
+  "dependencies": [
+    {"name": "aiodns", "version": "2.0.0", "sha256": ["aaa5ac584f40fe778013df0aa6544bf157799bd3f608364b451840ed2c8688de"], "license": "MIT"},
+    {"name": "aiohappyeyeballs", "version": "2.7.1", "sha256": ["9243213661e29250eb41368e5daa826fc017156c3b8a11440826b2e3ed376472"], "license": "PSF-2.0"},
+    {"name": "aiohttp", "version": "3.14.3", "sha256": ["543906c127fb1d929b95076db19b83fa2d46751006ff1e23b093aa5ac4d8db42"], "license": "Apache-2.0 AND MIT"},
+    {"name": "aiosignal", "version": "1.4.0", "sha256": ["053243f8b92b990551949e63930a839ff0cf0b0ebbe0597b0f3fb19e1a0fe82e"], "license": "Apache-2.0"},
+    {"name": "annotated-doc", "version": "0.0.5", "sha256": ["117bac03a25ede5df5440e855b32d556049ca169ead221505badf432fed4b101"], "license": "MIT"},
+    {"name": "attrs", "version": "26.1.0", "sha256": ["c647aa4a12dfbad9333ca4e71fe62ddc36f4e63b2d260a37a8b83d2f043ac309"], "license": "MIT"},
+    {"name": "avro", "version": "1.11.5", "sha256": ["2ef83e3b2abc79592b77223101aa53d0dad1ba4e549a9c3aff9ff228d49bdc7a"], "license": "Apache-2.0"},
+    {"name": "azure-common", "version": "1.1.28", "sha256": ["5c12d3dcf4ec20599ca6b0d3e09e86e146353d443e7fcc050c9a19c1f9df20ad"], "license": "MIT"},
+    {"name": "azure-core", "version": "1.41.0", "sha256": ["522b4011e8180b1a3dcd2024396a4e7fe9ac37fb8597db47163d230b5efe892d"], "license": "MIT"},
+    {"name": "azure-identity", "version": "1.25.3", "sha256": ["f4d0b956a8146f30333e071374171f3cfa7bdb8073adb8c3814b65567aa7447c"], "license": "MIT"},
+    {"name": "azure-mgmt-core", "version": "1.6.0", "sha256": ["0460d11e85c408b71c727ee1981f74432bc641bb25dfcf1bb4e90a49e776dbc4"], "license": "MIT"},
+    {"name": "azure-mgmt-storage", "version": "20.1.0", "sha256": ["afdc830329c674d96a91c963fa03ac81a4e387dfbf9f5a4e823950dc1fe95659"], "license": "MIT"},
+    {"name": "azure-storage-blob", "version": "12.30.1", "sha256": ["7dc09c37f4f58508e20532b4b4c178f4763f41b01e0b9063835b994fd9d2a7b3"], "license": "MIT"},
+    {"name": "bokeh", "version": "3.10.0", "sha256": ["6bb8dbd4a555f71a921be5bd45c3bfaa15b390257fbadae76901927bd58629b7"], "license": "BSD-3-Clause"},
+    {"name": "boto3", "version": "1.43.87", "sha256": ["671cf88a353f887774603980898bc34249d05a994e1c5e24aba4f4e1bbef0951"], "license": "Apache-2.0"},
+    {"name": "botocore", "version": "1.43.87", "sha256": ["01e1e2255a8f4b959c19b210d74a5a916d13841c0344ceee15d8a3eaa4daa892"], "license": "Apache-2.0"},
+    {"name": "certifi", "version": "2026.7.22", "sha256": ["62f22742b58a1a33014a2b6b706588a8d7e2a88ae7bd1a6ebe8c992928483775"], "license": "MPL-2.0"},
+    {"name": "cffi", "version": "2.1.1", "sha256": ["c1453022f490d2459a11819d83ad1d586e9ff65a12ac3e705ffebd46d3685dcf"], "license": "MIT-0"},
+    {"name": "charset-normalizer", "version": "3.5.1", "sha256": ["b9af956078716df40d985fb0dfeb2c2120c5ca92ba4ff4b388acfd01cdc14d08"], "license": "MIT"},
+    {"name": "click", "version": "8.5.0", "sha256": ["255bc9599cf7748b4b1a446ccc735421bd08a2ae529a8b88597d3de5664ee360"], "license": "BSD-3-Clause"},
+    {"name": "commonmark", "version": "0.9.2", "sha256": ["cc7dfaea4557c79e32ce1ad36727185ea8cfe9c7e797cf79297c5cdffe6c7f5a"], "license": "BSD-3-Clause"},
+    {"name": "contourpy", "version": "1.3.2", "sha256": ["f26b383144cf2d2c29f01a1e8170f50dacf0eac02d64139dcd709a8ac4eb3cfe"], "license": "BSD-3-Clause"},
+    {"name": "cryptography", "version": "50.0.1", "sha256": ["51afcfceb15597cf2635068e4ac9a56b2abde622edde17f37d85fd7b5306497a"], "license": "Apache-2.0 OR BSD-3-Clause"},
+    {"name": "decorator", "version": "5.3.1", "sha256": ["f47fe6fdbd2edd623ecfe36875d37aba411624e2670dd395dddae1358689bb3c"], "license": "BSD-2-Clause"},
+    {"name": "deprecated", "version": "1.2.18", "sha256": ["bd5011788200372a32418f888e326a09ff80d0214bd961147cfed01b5c018eec"], "license": "MIT"},
+    {"name": "dill", "version": "0.4.1", "sha256": ["1e1ce33e978ae97fcfcff5638477032b801c46c7c65cf717f95fbc2248f79a9d"], "license": "BSD-3-Clause"},
+    {"name": "duckdb", "version": "1.4.2", "sha256": ["c6a21732dd52a76f1e61484c06d65800b18f57fe29e8102a7466c201a2221604"], "license": "MIT"},
+    {"name": "frozenlist", "version": "1.8.0", "sha256": ["494a5952b1c597ba44e0e78113a7266e656b9794eec897b19ead706bd7074383"], "license": "Apache-2.0"},
+    {"name": "google-auth", "version": "2.57.0", "sha256": ["180dafe015cfb62193bea26b677500fab5b9fd51a1e825ebf3ad9b182047ae59"], "license": "Apache-2.0"},
+    {"name": "google-auth-oauthlib", "version": "0.8.0", "sha256": ["40cc612a13c3336d5433e94e2adb42a0c88f6feb6c55769e44500fc70043a576"], "license": "Apache-2.0"},
+    {"name": "hail", "version": "0.2.139", "sha256": ["77068dcda0dfa027a01c1127cc30f9d18714c09050728d5baf75d82e3c756137"], "license": "MIT"},
+    {"name": "humanize", "version": "4.16.0", "sha256": ["353eb2f34c09d098b2880eee8bef21832eae6d174f48c5762fff7e5fcb74d01d"], "license": "MIT"},
+    {"name": "idna", "version": "3.19", "sha256": ["815e7be7a7806d54abb586dc943addc79e8b2ee16915059658cbeff4b1b43bf4"], "license": "BSD-3-Clause"},
+    {"name": "isodate", "version": "0.7.2", "sha256": ["28009937d8031054830160fce6d409ed342816b543597cece116d966c6d99e15"], "license": "BSD-3-Clause"},
+    {"name": "janus", "version": "1.0.0", "sha256": ["2596ea5482711c1ee3ef2df6c290aaf370a13c55a007826e8f7c32d696d1d00a"], "license": "Apache-2.0"},
+    {"name": "jinja2", "version": "3.1.6", "sha256": ["85ece4451f492d0c13c5dd7c13a64681a86afae63a5f347908daf103ce6d2f67"], "license": "BSD-3-Clause"},
+    {"name": "jmespath", "version": "1.1.0", "sha256": ["a5663118de4908c91729bea0acadca56526eb2698e83de10cd116ae0f4e97c64"], "license": "MIT"},
+    {"name": "jproperties", "version": "2.1.2", "sha256": ["4108e868353a9f4a12bb86a92df5462d0e18d00119169533972ce473029be79a"], "license": "BSD-3-Clause"},
+    {"name": "markupsafe", "version": "3.0.3", "sha256": ["d6dd0be5b5b189d31db7cda48b91d7e0a9795f31430b7f271219ab30f1d3ac9d"], "license": "BSD-3-Clause"},
+    {"name": "msal", "version": "1.38.0", "sha256": ["765b9b98b6aa380ee8b8f1c75636e08863edaf0a953498955bd668650dde5d49"], "license": "MIT"},
+    {"name": "msal-extensions", "version": "1.3.1", "sha256": ["96d3de4d034504e969ac5e85bae8106c8373b5c6568e4c8fa7af2eca9dbe6bca"], "license": "MIT"},
+    {"name": "msrest", "version": "0.7.1", "sha256": ["21120a810e1233e5e6cc7fe40b474eeb4ec6f757a15d7cf86702c369f9567c32"], "license": "MIT"},
+    {"name": "multidict", "version": "6.7.1", "sha256": ["bfde23ef6ed9db7eaee6c37dcec08524cb43903c60b285b172b6c094711b3961"], "license": "Apache-2.0"},
+    {"name": "narwhals", "version": "2.25.0", "sha256": ["1f0f403e8c7e4463cde9bfe78b12fdd809e3ae3dda6d9b2f802934fb9c7a6a8f"], "license": "MIT"},
+    {"name": "nest-asyncio", "version": "1.6.0", "sha256": ["87af6efd6b5e897c81050477ef65c62e2b2f35d51703cae01aff2905b1852e1c"], "license": "BSD-3-Clause"},
+    {"name": "numpy", "version": "2.5.2", "sha256": ["3cdec01fa790a186d430433fdd4d4ffb70eed6f0eeb4bf05c8dbe2dce0a9bcb8"], "license": "BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0"},
+    {"name": "oauthlib", "version": "3.3.1", "sha256": ["88119c938d2b8fb88561af5f6ee0eec8cc8d552b7bb1f712743136eb7523b7a1"], "license": "BSD-3-Clause"},
+    {"name": "orjson", "version": "3.12.0", "sha256": ["1192a7021b6d071aaf909864f6e924d6a2675ca360485b972b8401749311750b"], "license": "MPL-2.0 AND (Apache-2.0 OR MIT)"},
+    {"name": "packaging", "version": "26.3", "sha256": ["d7193f7c8e4e93f444fde0262bf90af30e16fa0ad0ad44cb553c87339b23cd1c"], "license": "Apache-2.0 OR BSD-2-Clause"},
+    {"name": "pandas", "version": "2.3.3", "sha256": ["b3d11d2fda7eb164ef27ffc14b4fcab16a80e1ce67e9f57e19ec0afaf715ba89"], "license": "BSD-3-Clause"},
+    {"name": "parsimonious", "version": "0.11.0", "sha256": ["32e3818abf9f05b3b9f3b6d87d128645e30177e91f614d2277d88a0aea98fae2"], "license": "MIT"},
+    {"name": "pillow", "version": "12.3.0", "sha256": ["78cb2c6865a35ab8ff8b75fd122f6033b92a62c82801110e48ddd6c936a45d91"], "license": "MIT-CMU"},
+    {"name": "plotly", "version": "5.24.1", "sha256": ["f67073a1e637eb0dc3e46324d9d51e2fe76e9727c892dde64ddf1e1b51f29089"], "license": "MIT"},
+    {"name": "propcache", "version": "0.5.2", "sha256": ["6f328175a2cde1f0ff2c4ed8ce968b9dcfb55f3a7153f39e2957ed994da13476"], "license": "Apache-2.0"},
+    {"name": "py4j", "version": "0.10.9.7", "sha256": ["85defdfd2b2376eb3abf5ca6474b51ab7e0de341c75a02f46dc9b5976f5a5c1b"], "license": "BSD-3-Clause"},
+    {"name": "pyasn1", "version": "0.6.4", "sha256": ["deda9277cfd454080ec40b207fb6df82206a3a2688735233cdcd8d3d565f088b"], "license": "BSD-2-Clause"},
+    {"name": "pyasn1-modules", "version": "0.4.2", "sha256": ["29253a9207ce32b64c3ac6600edc75368f98473906e8fd1043bd6b5b1de2c14a"], "license": "BSD-2-Clause"},
+    {"name": "pycares", "version": "5.0.1", "sha256": ["09ef90da8da3026fcba4ed223bd71e8057608d5b3fec4f5990b52ae1e8c855cc"], "license": "MIT"},
+    {"name": "pycparser", "version": "3.0", "sha256": ["b727414169a36b7d524c1c3e31839a521725078d7b2ff038656844266160a992"], "license": "BSD-3-Clause"},
+    {"name": "pygments", "version": "2.21.0", "sha256": ["2363c69b61c4a97c838da3b130dcd6468f4848992b21a82f2a63ec34377137d9"], "license": "BSD-2-Clause"},
+    {"name": "pyjwt", "version": "2.13.0", "sha256": ["66adcc2aff09b3f1bbd95fc1e1577df8ac8723c978552fd43304c8a290ac5728"], "license": "MIT"},
+    {"name": "pyspark", "version": "3.5.7", "sha256": ["80e36514e0c5c126d35a26adf4f405cd4a69de96a8ea8a3c1e9a65fce2fb4eaa"], "license": "Apache-2.0"},
+    {"name": "python-dateutil", "version": "2.9.0.post0", "sha256": ["a8b2bc7bffae282281c8140a97d3aa9c14da0b136dfe83f850eea9a5f7470427"], "license": "BSD-3-Clause"},
+    {"name": "python-json-logger", "version": "2.0.7", "sha256": ["f380b826a991ebbe3de4d897aeec42760035ac760345e57b812938dc8b35e2bd"], "license": "BSD-2-Clause"},
+    {"name": "pytz", "version": "2026.3.post1", "sha256": ["dd95840dd199baea12d9cc096a1d452caa6596a1c1e4b5f3dbd1541855d5e815"], "license": "MIT"},
+    {"name": "pyyaml", "version": "6.0.3", "sha256": ["ba1cc08a7ccde2d2ec775841541641e4548226580ab850948cbfda66a1befcdc"], "license": "MIT"},
+    {"name": "regex", "version": "2026.9.3", "sha256": ["665207e41bacd435db001099eeab44103197c2c1a729d73ade74688a905ed4ce"], "license": "Apache-2.0 AND CNRI-Python"},
+    {"name": "requests", "version": "2.34.2", "sha256": ["2a0d60c172f83ac6ab31e4554906c0f3b3588d37b5cb939b1c061f4907e278e0"], "license": "Apache-2.0"},
+    {"name": "requests-oauthlib", "version": "2.0.0", "sha256": ["7dd8a5c40426b779b0868c404bdef9768deccf22749cde15852df527e6269b36"], "license": "ISC"},
+    {"name": "rich", "version": "12.6.0", "sha256": ["a4eb26484f2c82589bd9a17c73d32a010b1e29d89f1604cd9bf3a2097b81bb5e"], "license": "MIT"},
+    {"name": "s3transfer", "version": "0.19.2", "sha256": ["d8168eccca828cbb2cd573675333f3bddd254313a9c42494b84c76b539e8ba25"], "license": "Apache-2.0"},
+    {"name": "scipy", "version": "1.18.1", "sha256": ["f55fa87b6c612ecd6b058f167c53231b1d14e412efe361d3d6e38b3631c73218"], "license": "BSD-3-Clause"},
+    {"name": "setuptools", "version": "81.0.0", "sha256": ["fdd925d5c5d9f62e4b74b30d6dd7828ce236fd6ed998a08d81de62ce5a6310d6"], "license": "MIT"},
+    {"name": "shellingham", "version": "1.5.4", "sha256": ["7ecfff8f2fd72616f7481040475a65b2bf8af90a56c89140852d1120324e8686"], "license": "ISC"},
+    {"name": "six", "version": "1.17.0", "sha256": ["4721f391ed90541fddacab5acf947aa0d3dc7d27b2e1e8eda2be8970586c3274"], "license": "MIT"},
+    {"name": "sortedcontainers", "version": "2.4.0", "sha256": ["a163dcaede0f1c021485e957a39245190e74249897e2ae4b2aa38595db237ee0"], "license": "Apache-2.0"},
+    {"name": "tabulate", "version": "0.10.0", "sha256": ["f0b0622e567335c8fabaaa659f1b33bcb6ddfe2e496071b743aa113f8774f2d3"], "license": "MIT"},
+    {"name": "tenacity", "version": "9.1.4", "sha256": ["6095a360c919085f28c6527de529e76a06ad89b23659fa881ae0649b867a9d55"], "license": "Apache-2.0"},
+    {"name": "tornado", "version": "6.5.8", "sha256": ["547d63f450d570c14fe0e8db2cfb14c9bbd1c2503b4a6612586267955aa47b58"], "license": "Apache-2.0"},
+    {"name": "typer", "version": "0.24.2", "sha256": ["b618bc3d721f9a8d30f3e05565be26416d06e9bcc29d49bc491dc26aba674fa8"], "license": "MIT"},
+    {"name": "typing-extensions", "version": "4.16.0", "sha256": ["481caa481374e813c1b176ada14e97f1f67a4539ce9cfeb3f350d78d6370c2e8"], "license": "PSF-2.0"},
+    {"name": "tzdata", "version": "2026.3", "sha256": ["dc096730c87af6cab1b171c9d532be840741ff5d459015e7f6947bd7d7e54931"], "license": "Apache-2.0"},
+    {"name": "urllib3", "version": "2.7.0", "sha256": ["9fb4c81ebbb1ce9531cce37674bbc6f1360472bc18ca9a553ede278ef7276897"], "license": "MIT"},
+    {"name": "uvloop", "version": "0.21.0", "sha256": ["86975dca1c773a2c9864f4c52c5a55631038e387b47eaf56210f873887b6c8dc"], "license": "MIT"},
+    {"name": "wheel", "version": "0.45.1", "sha256": ["708e7481cc80179af0e556bbf0cc00b8444c7321e2700b8d8580231d13017248"], "license": "MIT"},
+    {"name": "wrapt", "version": "1.17.3", "sha256": ["042ec3bb8f319c147b1301f2393bc19dba6e176b7da446853406d041c36c7828"], "license": "BSD-2-Clause"},
+    {"name": "xyzservices", "version": "2026.3.0", "sha256": ["503183d4b322bfebc3c50cdd21192aa3e81e36c5efbf9133d54ae82143e0576b"], "license": "BSD-3-Clause"},
+    {"name": "yarl", "version": "1.24.5", "sha256": ["f08c7513ecef5aad65687bfdf6bc601ae9fccd04a42904501f8f7141abad9eb9"], "license": "Apache-2.0"}
+  ],
+  "tools": [
+    {
+      "name": "bwa-mem2",
+      "version": "2.2.1+git.3c433d5cb6bac5c87e2b20279c090d0739da7210",
+      "sha256": [
+        "4ddaeb704f0e0acbb57c8b1565ddd10abff64c28f83a6ceee8601628b5ae392e",
+        "6dea4f4accdc14eea706c88bb11725e8c2cd69b0d8c5f5ee19a0669d1883a901",
+        "b4cfdbce8cc07cdf3f6a920facabc29c976cf77dd53573369508111d6d1c555b"
+      ],
+      "license": "MIT"
+    },
+    {
+      "name": "gcs-connector-hadoop3",
+      "version": "2.2.24",
+      "sha256": [
+        "340ee851d2abf55e428f4553b51882a2917cef14dd0fea397079d2c937b4e3c6"
+      ],
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "bcftools",
+      "version": "1.13",
+      "sha256": [
+        "5ab4909fc958af5a4871b309ac3affd4bd82e7d47a048bc575e93f991c148004"
+      ],
+      "license": "MIT"
+    },
+    {
+      "name": "htslib-runtime",
+      "version": "1.13+ds",
+      "sha256": [
+        "8e9d1437f218af8c80f851e63de1e19bfbd96741fd78ab442418cf4b0b997420"
+      ],
+      "license": "MIT"
+    },
+    {
+      "name": "eclipse-temurin-jre",
+      "version": "11.0.28+6",
+      "sha256": [
+        "fc451894669bc656f81082ced9daddfd8df0d8e8fea659dc26a232f0e0124837"
+      ],
+      "license": "GPL-2.0-only WITH Classpath-exception-2.0"
+    },
+    {
+      "name": "ensembl-vep",
+      "version": "116.2",
+      "sha256": [
+        "f22d1f89b28c6c4caf043ddb2269fdfff8940364da589cadbbabc6212a436949"
+      ],
+      "license": "Apache-2.0"
+    }
+  ],
+  "annotation_resources": [
+    {
+      "name": "ensembl-vep-cache",
+      "version": "116.0",
+      "distribution": "runtime-mount-only"
+    },
+    {
+      "name": "clinvar",
+      "version": "2026.08.22",
+      "distribution": "runtime-mount-only"
+    },
+    {
+      "name": "open-targets",
+      "version": "26.06",
+      "distribution": "runtime-mount-only"
+    },
+    {
+      "name": "orphadata",
+      "version": "2026.06.23",
+      "distribution": "runtime-mount-only"
+    },
+    {
+      "name": "gencc",
+      "version": "2026.08.30",
+      "distribution": "runtime-mount-only"
+    }
+  ]
+}

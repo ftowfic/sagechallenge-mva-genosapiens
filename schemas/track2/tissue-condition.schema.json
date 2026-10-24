@@ -1,0 +1,151 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Track 2 tissue condition",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "gene_id",
+    "tissue_id",
+    "method",
+    "query_sha256",
+    "medication_entity_key",
+    "sig_id",
+    "pert_id",
+    "pert_iname",
+    "cell_id",
+    "pert_dose",
+    "pert_dose_unit",
+    "pert_time",
+    "pert_time_unit",
+    "quality",
+    "gene_ids",
+    "values",
+    "r_oe",
+    "r_kd",
+    "r_desired",
+    "state",
+    "reason"
+  ],
+  "properties": {
+    "schema": {
+      "const": "genosapiens.track2-tissue-condition/v1"
+    },
+    "gene_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "tissue_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "method": {
+      "enum": [
+        "paired_oe_kd",
+        "kd_only_reversal",
+        "oe_only_matching",
+        null
+      ]
+    },
+    "query_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "medication_entity_key": {
+      "type": "string",
+      "minLength": 1
+    },
+    "sig_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "pert_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "pert_iname": {
+      "type": "string",
+      "minLength": 1
+    },
+    "cell_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "pert_dose": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "pert_dose_unit": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "pert_time": {
+      "type": "number"
+    },
+    "pert_time_unit": {
+      "type": "string",
+      "minLength": 1
+    },
+    "quality": {
+      "type": "object"
+    },
+    "gene_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+    "values": {
+      "type": "array",
+      "items": {
+        "type": [
+          "number",
+          "null"
+        ]
+      }
+    },
+    "r_oe": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": -1,
+      "maximum": 1
+    },
+    "r_kd": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": -1,
+      "maximum": 1
+    },
+    "r_desired": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": -1,
+      "maximum": 1
+    },
+    "state": {
+      "enum": [
+        "valid",
+        "undefined",
+        "unavailable"
+      ]
+    },
+    "reason": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Track 2 tissue membership",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "source_release",
+    "metadata_sha256",
+    "normalization_policy",
+    "cell_id",
+    "raw_primary_site",
+    "tissue_id",
+    "unresolved_reason",
+    "annotations"
+  ],
+  "properties": {
+    "schema": {
+      "const": "genosapiens.track2-tissue-membership/v1"
+    },
+    "source_release": {
+      "type": "string",
+      "minLength": 1
+    },
+    "metadata_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "normalization_policy": {
+      "const": "lincs-primary-site/case-whitespace-v1"
+    },
+    "cell_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "raw_primary_site": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "tissue_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "unresolved_reason": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "annotations": {
+      "type": "object"
+    }
+  }
+}

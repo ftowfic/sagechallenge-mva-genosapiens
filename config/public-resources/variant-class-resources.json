@@ -1,0 +1,333 @@
+{
+  "schema": "genosapiens.variant-class-resource-bundle",
+  "bundle_id": "variant-class-resources-v1",
+  "resources": [
+    {
+      "lane": "sv_cnv",
+      "resource_id": "gnomad-sv-v4.1",
+      "release": "v4.1",
+      "assembly": "GRCh38",
+      "sequence_identity": "GRCh38 chr-prefixed canonical contigs",
+      "license": "ODC-ODbL-1.0",
+      "license_url": "https://opendatacommons.org/licenses/odbl/1-0/",
+      "primary_artifact_role": "vcf",
+      "artifacts": [
+        {
+          "role": "vcf",
+          "url": "https://storage.googleapis.com/download/storage/v1/b/gcp-public-data--gnomad/o/release%2F4.1%2Fgenome_sv%2Fgnomad.v4.1.sv.sites.vcf.gz?generation=1713312040472933&alt=media",
+          "path": "releases/gnomad/4.1/genome-sv/gnomad.v4.1.sv.sites.vcf.gz",
+          "size_bytes": 1743544245,
+          "sha256": null,
+          "expected_md5": "3ee614951c2f0c36659842876f7ce0ba",
+          "object_generation": "1713312040472933"
+        },
+        {
+          "role": "tbi",
+          "url": "https://storage.googleapis.com/download/storage/v1/b/gcp-public-data--gnomad/o/release%2F4.1%2Fgenome_sv%2Fgnomad.v4.1.sv.sites.vcf.gz.tbi?generation=1713312039906181&alt=media",
+          "path": "releases/gnomad/4.1/genome-sv/gnomad.v4.1.sv.sites.vcf.gz.tbi",
+          "size_bytes": 511659,
+          "sha256": null,
+          "expected_md5": "9dcc8eeff3d236b3822abee9ec238240",
+          "object_generation": "1713312039906181"
+        }
+      ],
+      "validation": {
+        "kind": "vcf",
+        "artifact_role": "vcf",
+        "index_artifact_role": "tbi",
+        "required_info_fields": [
+          "END",
+          "SVTYPE",
+          "AC",
+          "AN",
+          "AF"
+        ],
+        "sentinel": {
+          "chromosome": "chr17",
+          "position": 43035605,
+          "id": "gnomAD-SV_v3_DEL_chr17_c521f148",
+          "reference": "N",
+          "alternate": "<DEL>",
+          "filter": "PASS",
+          "info": {
+            "END": "43046245",
+            "SVTYPE": "DEL",
+            "AC": "2",
+            "AN": "126090",
+            "AF": "1.6e-05"
+          }
+        }
+      }
+    },
+    {
+      "lane": "sv_cnv",
+      "resource_id": "gnomad-exome-cnv-v4.1",
+      "release": "v4.1",
+      "assembly": "GRCh38",
+      "sequence_identity": "GRCh38 chr-prefixed canonical contigs",
+      "license": "ODC-ODbL-1.0",
+      "license_url": "https://opendatacommons.org/licenses/odbl/1-0/",
+      "primary_artifact_role": "vcf",
+      "artifacts": [
+        {
+          "role": "vcf",
+          "url": "https://storage.googleapis.com/download/storage/v1/b/gcp-public-data--gnomad/o/release%2F4.1%2Fexome_cnv%2Fgnomad.v4.1.cnv.all.vcf.gz?generation=1714003218846811&alt=media",
+          "path": "releases/gnomad/4.1/exome-cnv/gnomad.v4.1.cnv.all.vcf.gz",
+          "size_bytes": 8917685,
+          "sha256": null,
+          "expected_md5": "74000fc29d0b9bc547859cfc2ba4ac84",
+          "object_generation": "1714003218846811"
+        }
+      ],
+      "validation": {
+        "kind": "vcf",
+        "artifact_role": "vcf",
+        "index_artifact_role": null,
+        "required_info_fields": [
+          "END",
+          "SVTYPE",
+          "Genes",
+          "SC",
+          "SN",
+          "SF"
+        ],
+        "sentinel": {
+          "chromosome": "chr1",
+          "position": 925634,
+          "id": "variant_is_80_2__DEL",
+          "reference": "N",
+          "alternate": "<DEL>",
+          "filter": "PASS",
+          "info": {
+            "END": "931187",
+            "SVTYPE": "DEL",
+            "Genes": "SAMD11",
+            "SC": "3",
+            "SN": "464277",
+            "SF": "6.46165974192131e-06"
+          }
+        }
+      }
+    },
+    {
+      "lane": "mitochondrial",
+      "resource_id": "gnomad-mtdna-v3.1",
+      "release": "v3.1",
+      "assembly": "GRCh38",
+      "sequence_identity": "NC_012920.1",
+      "license": "ODC-ODbL-1.0",
+      "license_url": "https://opendatacommons.org/licenses/odbl/1-0/",
+      "primary_artifact_role": "vcf",
+      "artifacts": [
+        {
+          "role": "vcf",
+          "url": "https://storage.googleapis.com/download/storage/v1/b/gcp-public-data--gnomad/o/release%2F3.1%2Fvcf%2Fgenomes%2Fgnomad.genomes.v3.1.sites.chrM.vcf.bgz?generation=1654560197852281&alt=media",
+          "path": "releases/gnomad/3.1/mitochondria/gnomad.genomes.v3.1.sites.chrM.vcf.bgz",
+          "size_bytes": 5150029,
+          "sha256": null,
+          "expected_md5": "d0ef2bd882ae44236897d743cb5528cf",
+          "object_generation": "1654560197852281"
+        },
+        {
+          "role": "tbi",
+          "url": "https://storage.googleapis.com/download/storage/v1/b/gcp-public-data--gnomad/o/release%2F3.1%2Fvcf%2Fgenomes%2Fgnomad.genomes.v3.1.sites.chrM.vcf.bgz.tbi?generation=1654560198443458&alt=media",
+          "path": "releases/gnomad/3.1/mitochondria/gnomad.genomes.v3.1.sites.chrM.vcf.bgz.tbi",
+          "size_bytes": 108,
+          "sha256": null,
+          "expected_md5": "14f18719f5d86a00a00c475368913f8f",
+          "object_generation": "1654560198443458"
+        }
+      ],
+      "validation": {
+        "kind": "vcf",
+        "artifact_role": "vcf",
+        "index_artifact_role": "tbi",
+        "required_info_fields": [
+          "AN",
+          "AC_hom",
+          "AC_het",
+          "AF_hom",
+          "AF_het",
+          "max_hl"
+        ],
+        "sentinel": {
+          "chromosome": "chrM",
+          "position": 3,
+          "id": ".",
+          "reference": "T",
+          "alternate": "C",
+          "filter": "PASS",
+          "info": {
+            "AN": "56434",
+            "AC_hom": "19",
+            "AC_het": "1",
+            "AF_hom": "0.000336676",
+            "AF_het": "1.77198e-05",
+            "max_hl": "0.997000"
+          }
+        }
+      }
+    },
+    {
+      "lane": "mosaic",
+      "resource_id": "encode-grch38-blacklist-encff356lfx",
+      "release": "ENCFF356LFX",
+      "assembly": "GRCh38",
+      "sequence_identity": "GRCh38 chr-prefixed canonical contigs",
+      "license": "ENCODE-DATA-USE",
+      "license_url": "https://www.encodeproject.org/help/citing-encode/",
+      "primary_artifact_role": "bed",
+      "artifacts": [
+        {
+          "role": "bed",
+          "url": "https://www.encodeproject.org/files/ENCFF356LFX/@@download/ENCFF356LFX.bed.gz",
+          "path": "releases/encode/blacklist/ENCFF356LFX/ENCFF356LFX.bed.gz",
+          "size_bytes": 8211,
+          "sha256": "a9d086ce90ca67f933b29adfbff56ea768bbce2ec4b0d51e2d405e5a1d61bb56",
+          "expected_md5": "393688b4f06c9ce26165d47433dd8c37",
+          "object_generation": null
+        }
+      ],
+      "validation": {
+        "kind": "bed",
+        "artifact_role": "bed",
+        "column_count": 3,
+        "interval_convention": "zero-based-half-open",
+        "interpretation": "artifact_warning",
+        "sentinel": {
+          "fields": [
+            "chr1",
+            "628903",
+            "635104"
+          ]
+        }
+      }
+    },
+    {
+      "lane": "regulatory",
+      "resource_id": "encode-registry-v4-ccre-grch38",
+      "release": "Registry-V4",
+      "assembly": "GRCh38",
+      "sequence_identity": "GRCh38 chr-prefixed canonical contigs",
+      "license": "ENCODE-DATA-USE",
+      "license_url": "https://www.encodeproject.org/help/citing-encode/",
+      "primary_artifact_role": "bed",
+      "artifacts": [
+        {
+          "role": "bed",
+          "url": "https://downloads.wenglab.org/Registry-V4/GRCh38-cCREs.bed",
+          "path": "releases/encode/registry-v4/GRCh38-cCREs.bed",
+          "size_bytes": 129083055,
+          "sha256": "a292aea64edea7efbef275140b78116efdef1bea5b729dc9e5513421dc868dda",
+          "expected_md5": null,
+          "object_generation": null
+        }
+      ],
+      "validation": {
+        "kind": "bed",
+        "artifact_role": "bed",
+        "column_count": 6,
+        "sentinel": {
+          "fields": [
+            "chr1",
+            "778570",
+            "778919",
+            "EH38D4327580",
+            "EH38E2776539",
+            "PLS"
+          ]
+        }
+      }
+    },
+    {
+      "lane": "regulatory",
+      "resource_id": "encode-re2g-registry-v4-grch38",
+      "release": "Registry-V4",
+      "assembly": "GRCh38",
+      "sequence_identity": "GRCh38 chr-prefixed canonical contigs",
+      "license": "ENCODE-DATA-USE",
+      "license_url": "https://www.encodeproject.org/help/citing-encode/",
+      "primary_artifact_role": "tsv",
+      "artifacts": [
+        {
+          "role": "tsv",
+          "url": "https://downloads.wenglab.org/V4-hg38.Gene-Links.Computational-Methods.rE2G.txt.gz",
+          "path": "releases/encode/re2g/Registry-V4/V4-hg38.Gene-Links.Computational-Methods.rE2G.txt.gz",
+          "size_bytes": 4712978021,
+          "sha256": "074820992b59f46273e650aabe6d8c96156e43b12ee5213f56a56f5815298d12",
+          "expected_md5": null,
+          "object_generation": null
+        }
+      ],
+      "validation": {
+        "kind": "tsv",
+        "artifact_role": "tsv",
+        "column_count": 9,
+        "sentinel": {
+          "fields": [
+            "EH38E2776539",
+            "ENSG00000225880",
+            "LINC00115",
+            "lncRNA",
+            "rE2G_(DNase_only)",
+            "chr1_778570_778919",
+            "ENCFF316GHN",
+            "neural_progenitor_cell",
+            "0.7939270488638362"
+          ]
+        }
+      }
+    },
+    {
+      "lane": "repeat_expansion",
+      "resource_id": "broad-str-analysis-disease-catalog-grch38-d41c85c",
+      "release": "commit.d41c85c97da3cd8c8ac9d7d47883570c95069874",
+      "assembly": "GRCh38",
+      "sequence_identity": "GRCh38 no-ALT-compatible chr-prefixed contigs",
+      "license": "MIT",
+      "license_url": "https://raw.githubusercontent.com/broadinstitute/str-analysis/d41c85c97da3cd8c8ac9d7d47883570c95069874/LICENSE",
+      "primary_artifact_role": "json",
+      "artifacts": [
+        {
+          "role": "json",
+          "url": "https://raw.githubusercontent.com/broadinstitute/str-analysis/d41c85c97da3cd8c8ac9d7d47883570c95069874/str_analysis/variant_catalogs/variant_catalog_without_offtargets.GRCh38.json",
+          "path": "releases/repeats/broad-str-analysis/d41c85c97da3cd8c8ac9d7d47883570c95069874/variant_catalog_without_offtargets.GRCh38.json",
+          "size_bytes": 63431,
+          "sha256": "6ad5c05b361899f9c6229aa841827cc00dedc7a9d5a9a35d8fac9e23710bd9cd",
+          "expected_md5": null,
+          "object_generation": null
+        }
+      ],
+      "validation": {
+        "kind": "repeat_catalog",
+        "artifact_role": "json",
+        "expected_record_count": 83,
+        "sentinel": {
+          "locus_id": "HTT",
+          "main_reference_region": "chr4:3074876-3074933",
+          "reference_regions": [
+            "chr4:3074876-3074933",
+            "chr4:3074939-3074966"
+          ],
+          "repeat_unit": "CAG",
+          "locus_structure": "(CAG)*CAACAG(CCG)*",
+          "variant_types": [
+            "Repeat",
+            "Repeat"
+          ],
+          "inheritance": "AD",
+          "disease_symbol": "HD",
+          "normal_max": 26,
+          "pathogenic_min": 36,
+          "intermediate_range": "27-35"
+        }
+      }
+    }
+  ],
+  "regulatory_join": {
+    "registry_resource_id": "encode-registry-v4-ccre-grch38",
+    "links_resource_id": "encode-re2g-registry-v4-grch38",
+    "registry_legacy_id_column": 4,
+    "links_legacy_id_column": 0
+  }
+}

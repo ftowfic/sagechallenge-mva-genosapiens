@@ -1,0 +1,6 @@
+{
+  "image": "genosapiens/track2-lincs@sha256:5f23dd9312c0521569a5ed2d4d5ee71e9173726daf7d581f91a33f13f7283ded",
+  "code_binding": "frozen_current_source_overlay",
+  "network": "none",
+  "source_case_mounts": false
+}

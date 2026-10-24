@@ -1,0 +1,127 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "state",
+    "invocation_id"
+  ],
+  "properties": {
+    "schema": {
+      "const": "genosapiens.track2-discovery-outcome/v1"
+    },
+    "state": {
+      "enum": [
+        "complete",
+        "partial",
+        "failed",
+        "interrupted"
+      ]
+    },
+    "invocation_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "plan_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "dependency_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "runtime": {
+      "type": "string"
+    },
+    "artifacts": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "reference_schema",
+          "path",
+          "role",
+          "schema",
+          "size",
+          "sha256",
+          "dependencies"
+        ],
+        "properties": {
+          "reference_schema": {
+            "const": "genosapiens.track2-artifact-reference/v1"
+          },
+          "path": {
+            "type": "string",
+            "minLength": 1
+          },
+          "role": {
+            "type": "string",
+            "minLength": 1
+          },
+          "schema": {
+            "type": "string",
+            "minLength": 1
+          },
+          "size": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "dependencies": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          }
+        }
+      }
+    },
+    "completion_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "diagnostic": {
+      "type": "object"
+    }
+  },
+  "anyOf": [
+    {
+      "properties": {
+        "state": {
+          "enum": [
+            "complete",
+            "partial"
+          ]
+        }
+      },
+      "required": [
+        "plan_sha256",
+        "dependency_sha256",
+        "runtime",
+        "artifacts",
+        "completion_sha256"
+      ]
+    },
+    {
+      "properties": {
+        "state": {
+          "enum": [
+            "failed",
+            "interrupted"
+          ]
+        }
+      },
+      "required": [
+        "diagnostic"
+      ]
+    }
+  ]
+}

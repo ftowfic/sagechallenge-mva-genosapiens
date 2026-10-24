@@ -1,0 +1,37 @@
+{
+  "schema": "genosapiens.challenge-shaped-fixture",
+  "resource_id": "challenge-shaped-public-small-variant-fixture-v2",
+  "release": "v2",
+  "sample": "SYNTHETIC",
+  "assembly": "GRCh38-masked-v2-no-alt-plus-hs38d1",
+  "reference_binding": {
+    "role": "challenge_alignment",
+    "identity_id": "challenge-grch38-masked-v2-hs38d1-unprefixed-v2"
+  },
+  "source_resource_id": "giab-hg002-nist-v4.2.1-grch38",
+  "source_release": "NISTv4.2.1",
+  "source_vcf_role": "truth_vcf",
+  "source_vcf_md5": "dc750b3807d4af1f7ffec852e9c2f771",
+  "source_manifest_path": "manifests/giab/giab-hg002-nist-v4.2.1-grch38.json",
+  "selection_policy": [
+    "first-autosomal-biallelic-snv",
+    "second-autosomal-biallelic-snv",
+    "first-autosomal-biallelic-insertion",
+    "first-autosomal-biallelic-deletion",
+    "first-autosomal-multiallelic-small-variant"
+  ],
+  "structural_basis": {
+    "source": "organizer-published challenge task structure frozen by build-track1-wgs-prioritization",
+    "facts": [
+      "GRCh38 small-variant VCF input",
+      "unprefixed contig identifiers",
+      "single sample column",
+      "record-level phased and unphased genotype interpretation"
+    ]
+  },
+  "outputs": {
+    "fixture_vcf": "releases/fixtures/challenge-shaped/v2/challenge-shaped.public.v2.vcf.gz",
+    "fixture_tbi": "releases/fixtures/challenge-shaped/v2/challenge-shaped.public.v2.vcf.gz.tbi",
+    "provenance": "releases/fixtures/challenge-shaped/v2/challenge-shaped.public.v2.provenance.json"
+  }
+}

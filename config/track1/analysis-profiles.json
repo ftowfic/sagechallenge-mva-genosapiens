@@ -1,0 +1,109 @@
+{
+  "schema": "genosapiens.track1-analysis-profiles",
+  "version": 2,
+  "default_profile": "focused",
+  "profiles": {
+    "focused": {
+      "target_scope": "direct_curated_catalog"
+    },
+    "exhaustive": {
+      "target_scope": "existing_supported_disease_gene_or_locus"
+    }
+  },
+  "molecular_consequences": [
+    "transcript_ablation",
+    "splice_acceptor_variant",
+    "splice_donor_variant",
+    "stop_gained",
+    "frameshift_variant",
+    "stop_lost",
+    "start_lost",
+    "transcript_amplification",
+    "inframe_insertion",
+    "inframe_deletion",
+    "missense_variant",
+    "protein_altering_variant",
+    "splice_region_variant",
+    "splice_donor_5th_base_variant",
+    "splice_donor_region_variant",
+    "splice_polypyrimidine_tract_variant"
+  ],
+  "catalog": {
+    "disease_specificity": [
+      "disorder",
+      "subtype"
+    ],
+    "association_scope": [
+      "source_direct",
+      "ot_mapped_evidence"
+    ],
+    "is_ontology_propagated": false,
+    "source_predicates": {
+      "gencc_submissions": {
+        "validity": [
+          "definitive",
+          "strong",
+          "moderate",
+          "supportive",
+          "limited"
+        ]
+      },
+      "evidence_clingen": {
+        "validity": [
+          "definitive",
+          "strong",
+          "moderate",
+          "supportive",
+          "limited"
+        ]
+      },
+      "evidence_gene2phenotype": {
+        "validity": [
+          "definitive",
+          "strong",
+          "moderate",
+          "supportive",
+          "limited"
+        ]
+      },
+      "evidence_genomics_england": {
+        "validity": [
+          "green",
+          "amber"
+        ]
+      },
+      "orphadata_product6": {
+        "validity": [
+          "assessed",
+          "validated"
+        ],
+        "association_type_prefix": "Disease-causing "
+      },
+      "evidence_orphanet": {
+        "validity": [
+          "assessed",
+          "validated"
+        ],
+        "consequence_requirement": [
+          "SO:0002053",
+          "SO:0002054"
+        ]
+      }
+    }
+  },
+  "routes": [
+    "molecular",
+    "clinical",
+    "native",
+    "regulatory"
+  ],
+  "route_combination": "union_all_applicable",
+  "target_scope": "eligible_route_for_each_target",
+  "clinical": "exact_pathogenic_likely_pathogenic_or_curated_damaging_allele",
+  "native": "scoped_structural_only_other_native_calls_require_an_independent_route",
+  "regulatory": "exact_curated_functional_evidence_required",
+  "unknown": "deferred_no_retention_evidence",
+  "required_resource_failure": "fail_closed",
+  "availability": "installed_resources_and_current_stage_dependencies",
+  "retention_policy": "shared-variant-retention/1.0.0"
+}

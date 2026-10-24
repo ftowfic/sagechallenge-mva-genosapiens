@@ -1,0 +1,47 @@
+{
+  "schema": "genosapiens.supply-chain-policy",
+  "allowed_dependency_licenses": [
+    "Apache-2.0 AND CNRI-Python",
+    "Apache-2.0 AND MIT",
+    "Apache-2.0 OR BSD-2-Clause",
+    "Apache-2.0 OR BSD-3-Clause",
+    "Apache-2.0",
+    "BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0",
+    "BSD-2-Clause",
+    "BSD-3-Clause",
+    "GPL-2.0-only WITH Classpath-exception-2.0",
+    "ISC",
+    "MIT",
+    "MIT-0",
+    "MIT-CMU",
+    "MPL-2.0 AND (Apache-2.0 OR MIT)",
+    "MPL-2.0",
+    "PSF-2.0"
+  ],
+  "annotation_resources": {
+    "clinvar": {
+      "allowed_distributions": ["runtime-mount-only"],
+      "license": "NCBI-DATA-USE"
+    },
+    "ensembl-vep-cache": {
+      "allowed_distributions": ["runtime-mount-only"],
+      "license": "ENSEMBL-DATA-USE"
+    },
+    "gencc": {
+      "allowed_distributions": ["runtime-mount-only"],
+      "license": "CC0-1.0"
+    },
+    "gnomad": {
+      "allowed_distributions": ["runtime-mount-only"],
+      "license": "ODC-ODbL-1.0"
+    },
+    "open-targets": {
+      "allowed_distributions": ["runtime-mount-only"],
+      "license": "CC-BY-4.0"
+    },
+    "orphadata": {
+      "allowed_distributions": ["runtime-mount-only"],
+      "license": "CC-BY-4.0"
+    }
+  }
+}

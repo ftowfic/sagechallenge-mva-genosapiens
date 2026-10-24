@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/ftowfic/sagechallenge-raredisease-genosapiens/schemas/track2/record-envelope-v1.schema.json",
+  "title": "Genosapiens Track 2 record envelope",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "record_type",
+    "record_id",
+    "classification",
+    "artifact_path",
+    "missing_state",
+    "payload",
+    "references",
+    "content_sha256"
+  ],
+  "properties": {
+    "schema": {"const": "genosapiens.track2-record/v1"},
+    "record_type": {"type": "string", "minLength": 1},
+    "record_id": {"type": "string", "pattern": "^[a-z][a-z0-9-]*:[0-9a-f]{24}$"},
+    "classification": {"enum": ["public", "controlled"]},
+    "artifact_path": {"type": "string", "minLength": 1},
+    "missing_state": {
+      "enum": [
+        "present",
+        "unknown",
+        "not_applicable",
+        "not_assessed",
+        "unavailable",
+        "absent_from_source",
+        "conflicting",
+        "contradicted"
+      ]
+    },
+    "payload": {"type": "object"},
+    "references": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["role", "target_type", "target_id", "external", "manifest_sha256"],
+        "properties": {
+          "role": {"type": "string", "minLength": 1},
+          "target_type": {"type": "string", "minLength": 1},
+          "target_id": {"type": "string", "minLength": 1},
+          "external": {"type": "boolean"},
+          "manifest_sha256": {"type": ["string", "null"], "pattern": "^[0-9a-f]{64}$"}
+        }
+      }
+    },
+    "content_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "schema": "genosapiens.track2-open-targets-drugs/v1",
+  "release": "26.06",
+  "base_url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/",
+  "output_prefix": "releases/open-targets/26.06",
+  "metadata": [
+    {
+      "name": "croissant.json",
+      "size_bytes": 640827,
+      "sha1": "5e87aa7e5a2c8c4dd23e505db14d84b657a3ec1f",
+      "sha256": "a05ab463995995e9f272560d4e27243784ece396d0b143838f15bc3cfdc268ae"
+    },
+    {
+      "name": "release_data_integrity",
+      "size_bytes": 4937279,
+      "sha1": "e49fc309e6039938e86ad763634abd85e470314e",
+      "sha256": "86aafe43072415c6e9f6aa2364b1893959b8aff492a0ced10c035631335a4d8a"
+    },
+    {
+      "name": "release_data_integrity.sha1",
+      "size_bytes": 65,
+      "sha1": "4948f3d7d6c1211942b10a8232ff330ff449bb56",
+      "sha256": "7adceb51e3ea9038a7b978caab5fb4fa57a4acc1368e39f097e6f8e5e52fd2ef"
+    }
+  ],
+  "partitions": [
+    {
+      "path": "drug_mechanism_of_action/part-00000-10b94b1b-f29a-440c-98e0-c91862b6d2a8-c000.snappy.parquet",
+      "sha1": "e8240d974015ba635934bfd851c05fe954db3559"
+    },
+    {
+      "path": "drug_mechanism_of_action/part-00001-10b94b1b-f29a-440c-98e0-c91862b6d2a8-c000.snappy.parquet",
+      "sha1": "9f02b33f3727e2d60d266c7b6761d88d051aff55"
+    },
+    {
+      "path": "drug_molecule/part-00000-5581d2c3-048b-4097-934f-51cec06d7ff0-c000.snappy.parquet",
+      "sha1": "776153af67920b1d6efdf32fcf18012190741d63"
+    }
+  ],
+  "required_fields": {
+    "drug_mechanism_of_action": [
+      "actionType",
+      "mechanismOfAction",
+      "chemblIds",
+      "targetName",
+      "targetType",
+      "targets",
+      "references"
+    ],
+    "drug_molecule": [
+      "id",
+      "canonicalSmiles",
+      "inchiKey",
+      "molblock",
+      "drugType",
+      "name",
+      "parentId",
+      "synonyms",
+      "tradeNames",
+      "crossReferences",
+      "childChemblIds",
+      "maximumClinicalStage",
+      "description"
+    ]
+  }
+}

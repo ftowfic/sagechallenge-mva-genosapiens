@@ -1,0 +1,16 @@
+{
+  "schema": "genosapiens.track1-early-scope-policy",
+  "version": 1,
+  "policy_id": "track1-early-scope/v1",
+  "catalog": "existing_track1_direct_catalog",
+  "gene_coordinates": "open_targets_target_genomicLocation",
+  "gene_padding_bases": 0,
+  "regulatory": "all_explicit_stable_catalog_gene_links",
+  "known_alleles": "global_exact_shared_known_disease_route",
+  "sequence_geometry": "source_or_normalized_ref_span",
+  "structural_geometry": "nominal_or_supplied_bounded_envelope",
+  "unknown_scope": "defer_before_expensive_processing",
+  "outside_scope": "defer_before_expensive_processing",
+  "phase_or_native_override": false,
+  "diagnosis_or_hpo_filter": false
+}

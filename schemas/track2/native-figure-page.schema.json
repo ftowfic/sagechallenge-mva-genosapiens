@@ -1,0 +1,175 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "cell_id",
+    "method",
+    "gene_id",
+    "query_sha256",
+    "gene_ids",
+    "top_n_display",
+    "palette",
+    "missing",
+    "expression_limit",
+    "clipping",
+    "id",
+    "kind",
+    "caption",
+    "alt"
+  ],
+  "properties": {
+    "schema": {
+      "const": "genosapiens.track2-native-figure-page/v1"
+    },
+    "cell_id": {
+      "type": "string"
+    },
+    "method": {
+      "enum": [
+        "paired_oe_kd",
+        "kd_only_reversal",
+        "oe_only_matching"
+      ]
+    },
+    "gene_id": {
+      "type": "string"
+    },
+    "query_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "gene_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "top_n_display": {
+      "const": 5
+    },
+    "palette": {
+      "const": [
+        "#2166AC",
+        "#F7F7F7",
+        "#D97706"
+      ]
+    },
+    "missing": {
+      "const": "gray labeled NA"
+    },
+    "expression_limit": {
+      "type": "number",
+      "minimum": 1
+    },
+    "clipping": {
+      "const": false
+    },
+    "id": {
+      "type": "string"
+    },
+    "kind": {
+      "enum": [
+        "selection",
+        "heatmap",
+        "ranking"
+      ]
+    },
+    "caption": {
+      "type": "string"
+    },
+    "alt": {
+      "type": "string"
+    },
+    "query": {
+      "type": "object"
+    },
+    "genes": {
+      "type": "array",
+      "maxItems": 24,
+      "items": {
+        "type": "object"
+      }
+    },
+    "gene_offset": {
+      "const": 0
+    },
+    "conditions": {
+      "type": "array",
+      "maxItems": 8,
+      "items": {
+        "type": "object"
+      }
+    },
+    "condition_ids": {
+      "type": "array",
+      "maxItems": 8,
+      "items": {
+        "type": "string"
+      }
+    },
+    "medications": {
+      "type": "array",
+      "maxItems": 5,
+      "items": {
+        "type": "object"
+      }
+    },
+    "n_tested": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "n_pass": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "n_fail": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "n_unassessed": {
+      "type": "integer",
+      "minimum": 0
+    }
+  },
+  "anyOf": [
+    {
+      "properties": {
+        "kind": {
+          "const": "selection"
+        }
+      },
+      "required": [
+        "query"
+      ]
+    },
+    {
+      "properties": {
+        "kind": {
+          "const": "heatmap"
+        }
+      },
+      "required": [
+        "genes",
+        "gene_offset",
+        "conditions",
+        "condition_ids"
+      ]
+    },
+    {
+      "properties": {
+        "kind": {
+          "const": "ranking"
+        }
+      },
+      "required": [
+        "medications",
+        "n_tested",
+        "n_pass",
+        "n_fail",
+        "n_unassessed"
+      ]
+    }
+  ]
+}

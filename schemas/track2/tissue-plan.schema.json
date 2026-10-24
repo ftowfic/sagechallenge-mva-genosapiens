@@ -1,0 +1,304 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "mode",
+    "policy",
+    "resources",
+    "objectives",
+    "routes",
+    "genetic_selections",
+    "scenario_job_bindings",
+    "excluded_scenarios",
+    "coverage",
+    "runtime_images",
+    "tissue_queries"
+  ],
+  "properties": {
+    "schema": {
+      "const": "genosapiens.track2-exploratory-plan/v2"
+    },
+    "mode": {
+      "const": "native_exploratory"
+    },
+    "policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "sha256"
+      ],
+      "properties": {
+        "path": {
+          "type": "string"
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      }
+    },
+    "resources": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "sha256",
+        "build_id"
+      ],
+      "properties": {
+        "path": {
+          "type": "string"
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "build_id": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      }
+    },
+    "objectives": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "objective_id",
+          "scenario_id",
+          "gene_id",
+          "gene_symbol",
+          "kind",
+          "mechanism",
+          "desired_modulation",
+          "authority",
+          "evidence_basis",
+          "mechanism_decision_sha256",
+          "source_evidence_ids",
+          "policy_sha256",
+          "assumptions",
+          "limitations",
+          "known_conflicts"
+        ],
+        "properties": {
+          "objective_id": {
+            "type": "string"
+          },
+          "scenario_id": {
+            "type": "string"
+          },
+          "gene_id": {
+            "type": "string"
+          },
+          "gene_symbol": {
+            "type": "string"
+          },
+          "kind": {
+            "const": "restoration_or_compensation_hypothesis"
+          },
+          "mechanism": {
+            "const": "loss_of_function"
+          },
+          "desired_modulation": {
+            "const": "increase"
+          },
+          "authority": {
+            "const": "machine"
+          },
+          "evidence_basis": {
+            "enum": [
+              "policy_prediction",
+              "curated_mechanism"
+            ]
+          },
+          "mechanism_decision_sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "source_evidence_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "policy_sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "assumptions": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "limitations": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "known_conflicts": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "routes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "objective_id",
+          "route",
+          "planned_state",
+          "reason_codes",
+          "request_id"
+        ],
+        "properties": {
+          "objective_id": {
+            "type": "string"
+          },
+          "route": {
+            "enum": [
+              "qualified_target_drug_linkage",
+              "lincs_cell_specific_expression"
+            ]
+          },
+          "planned_state": {
+            "enum": [
+              "executable",
+              "unavailable"
+            ]
+          },
+          "reason_codes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "request_id": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "genetic_selections": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "scenario_job_bindings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "scenario_id",
+          "objective_id",
+          "job_id"
+        ],
+        "properties": {
+          "scenario_id": {
+            "type": "string"
+          },
+          "objective_id": {
+            "type": "string"
+          },
+          "job_id": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "excluded_scenarios": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "scenario_id",
+          "gene_id",
+          "outcome",
+          "reasons",
+          "mechanism_decision_sha256",
+          "policy_sha256",
+          "objective_ids"
+        ],
+        "properties": {
+          "scenario_id": {
+            "type": "string"
+          },
+          "gene_id": {
+            "type": "string"
+          },
+          "outcome": {
+            "enum": [
+              "eligible",
+              "unresolved",
+              "excluded"
+            ]
+          },
+          "reasons": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "mechanism_decision_sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "policy_sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "objective_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "coverage": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "runtime_images": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "diagnosis",
+        "discovery"
+      ],
+      "properties": {
+        "diagnosis": {
+          "type": "string",
+          "pattern": "@sha256:[0-9a-f]{64}$"
+        },
+        "discovery": {
+          "type": "string",
+          "pattern": "@sha256:[0-9a-f]{64}$"
+        }
+      }
+    },
+    "tissue_queries": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    }
+  }
+}

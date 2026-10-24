@@ -1,0 +1,148 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "classification",
+    "dataset",
+    "maximum_input_bytes",
+    "inputs",
+    "provenance_inputs",
+    "terms",
+    "redistribution",
+    "runtime",
+    "cells"
+  ],
+  "properties": {
+    "schema": {
+      "const": "genosapiens.track2-lincs-source/v1"
+    },
+    "classification": {
+      "const": "public"
+    },
+    "dataset": {
+      "const": "GSE92742-Level5"
+    },
+    "maximum_input_bytes": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 33554432
+    },
+    "inputs": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "path",
+          "sha256"
+        ],
+        "properties": {
+          "path": {
+            "type": "string",
+            "minLength": 1
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          }
+        }
+      }
+    },
+    "provenance_inputs": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "terms": {
+      "type": "string",
+      "minLength": 1
+    },
+    "redistribution": {
+      "type": "string",
+      "minLength": 1
+    },
+    "runtime": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "image",
+        "signatureSearch",
+        "R",
+        "network"
+      ],
+      "properties": {
+        "image": {
+          "type": "string",
+          "minLength": 1
+        },
+        "signatureSearch": {
+          "const": "1.24.0"
+        },
+        "R": {
+          "const": "4.5.2"
+        },
+        "network": {
+          "const": "none"
+        }
+      }
+    },
+    "cells": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "cell_id",
+          "matrix",
+          "drug_metadata",
+          "genetic_values",
+          "genetic_metadata",
+          "maximum_drug_signatures",
+          "oe_signature",
+          "kd_signature"
+        ],
+        "properties": {
+          "cell_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "matrix": {
+            "type": "string",
+            "minLength": 1
+          },
+          "drug_metadata": {
+            "type": "string",
+            "minLength": 1
+          },
+          "genetic_values": {
+            "type": "string",
+            "minLength": 1
+          },
+          "genetic_metadata": {
+            "type": "string",
+            "minLength": 1
+          },
+          "maximum_drug_signatures": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 1000
+          },
+          "oe_signature": {
+            "type": "string",
+            "minLength": 1
+          },
+          "kd_signature": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

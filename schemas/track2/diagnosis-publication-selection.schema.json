@@ -1,0 +1,107 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "domains",
+    "fields"
+  ],
+  "properties": {
+    "domains": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "disease",
+        "gene",
+        "variant",
+        "genotype",
+        "age",
+        "phenotype",
+        "handoff",
+        "checksum",
+        "review",
+        "provenance"
+      ],
+      "properties": {
+        "disease": {
+          "enum": [
+            "omit",
+            "selected"
+          ]
+        },
+        "gene": {
+          "enum": [
+            "omit",
+            "selected"
+          ]
+        },
+        "variant": {
+          "const": "omit"
+        },
+        "genotype": {
+          "enum": [
+            "omit",
+            "selected"
+          ]
+        },
+        "age": {
+          "const": "omit"
+        },
+        "phenotype": {
+          "const": "omit"
+        },
+        "handoff": {
+          "const": "omit"
+        },
+        "checksum": {
+          "const": "omit"
+        },
+        "review": {
+          "const": "omit"
+        },
+        "provenance": {
+          "const": "omit"
+        }
+      }
+    },
+    "fields": {
+      "type": "array",
+      "maxItems": 1000,
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "domain",
+          "scenario_index",
+          "field"
+        ],
+        "properties": {
+          "domain": {
+            "enum": [
+              "disease",
+              "gene",
+              "genotype"
+            ]
+          },
+          "scenario_index": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "field": {
+            "enum": [
+              "resolved_diagnosis",
+              "gene_id",
+              "genotype_completeness",
+              "phase",
+              "direction"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

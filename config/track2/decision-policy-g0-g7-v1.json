@@ -1,0 +1,407 @@
+{
+  "schema": "genosapiens.track2-decision-policy/v1",
+  "policy_version": "1.0.0",
+  "source_matrix_schema": "genosapiens.track2-source-domain-matrix/v1",
+  "missing_data_default": "fail_closed",
+  "evidence_maturity": [
+    "human_interventional",
+    "human_observational",
+    "patient_derived_or_isogenic_rescue",
+    "in_vivo_animal_rescue",
+    "engineered_cell",
+    "computational_inference"
+  ],
+  "review": {
+    "roles": [
+      "curator",
+      "scientific_reviewer",
+      "safety_reviewer",
+      "release_approver"
+    ],
+    "independence_states": [
+      "independent",
+      "self_review_disclosed",
+      "not_reviewed"
+    ],
+    "overrides_require_prior_state_reason_time_and_evidence": true,
+    "blocking_facts_overridable": false
+  },
+  "input_definitions": {
+    "input_integrity": "gate-state",
+    "ingredient_identity": "evidence-state",
+    "current_market_approval": "evidence-state",
+    "named_jurisdiction": "value-state",
+    "exact_subtype_applicability": "evidence-state",
+    "mechanism_readiness": "evidence-state",
+    "lesion_qualification": "evidence-state",
+    "credible_mechanism_alternatives": "evidence-state",
+    "drug_action_direction": "evidence-state",
+    "direct_contradictions": "evidence-state",
+    "independent_pharmacology": "evidence-state",
+    "independent_rescue_lineage": "evidence-state",
+    "translational_maturity": "evidence-state",
+    "target_site_exposure": "evidence-state",
+    "effect_magnitude": "evidence-state",
+    "blocking_hazards": "evidence-state",
+    "child_applicability": "evidence-state",
+    "general_mva_applicability": "evidence-state",
+    "validation_plan": "evidence-state"
+  },
+  "reason_codes": [
+    "integrity_failure",
+    "identity_ambiguous",
+    "not_currently_marketed",
+    "non_us_reviewed_exception",
+    "umbrella_only",
+    "direction_unknown",
+    "direct_contradiction",
+    "copied_evidence",
+    "insufficient_directness",
+    "target_site_exposure_unknown",
+    "rescue_magnitude_unknown",
+    "exposure_infeasible",
+    "blocking_hazard",
+    "safety_evidence_incomplete",
+    "unqualified_model",
+    "validation_design_insufficient",
+    "frozen_envelope_incomplete",
+    "bounded_secondary_uncertainty",
+    "pass"
+  ],
+  "gates": {
+    "G0": {
+      "name": "input_integrity",
+      "required_sources": [
+        "input_identity"
+      ],
+      "required_inputs": [
+        "input_integrity"
+      ],
+      "reason_codes": [
+        "integrity_failure",
+        "pass"
+      ]
+    },
+    "G1": {
+      "name": "identity_approval",
+      "required_sources": [
+        "drug_identity",
+        "approval_marketing",
+        "current_label"
+      ],
+      "required_inputs": [
+        "ingredient_identity",
+        "current_market_approval",
+        "named_jurisdiction"
+      ],
+      "reason_codes": [
+        "identity_ambiguous",
+        "not_currently_marketed",
+        "non_us_reviewed_exception",
+        "pass"
+      ]
+    },
+    "G2": {
+      "name": "mechanism",
+      "required_sources": [
+        "disease_subtype",
+        "target_context"
+      ],
+      "required_inputs": [
+        "exact_subtype_applicability",
+        "mechanism_readiness",
+        "lesion_qualification",
+        "credible_mechanism_alternatives"
+      ],
+      "reason_codes": [
+        "umbrella_only",
+        "direction_unknown",
+        "direct_contradiction",
+        "unqualified_model",
+        "bounded_secondary_uncertainty",
+        "pass"
+      ]
+    },
+    "G3": {
+      "name": "direction",
+      "required_sources": [
+        "directional_pharmacology"
+      ],
+      "required_inputs": [
+        "drug_action_direction",
+        "direct_contradictions"
+      ],
+      "reason_codes": [
+        "direction_unknown",
+        "direct_contradiction",
+        "pass"
+      ]
+    },
+    "G4": {
+      "name": "evidence",
+      "required_sources": [
+        "directional_pharmacology",
+        "target_context"
+      ],
+      "required_inputs": [
+        "independent_pharmacology",
+        "independent_rescue_lineage",
+        "translational_maturity"
+      ],
+      "reason_codes": [
+        "copied_evidence",
+        "insufficient_directness",
+        "pass"
+      ]
+    },
+    "G5": {
+      "name": "exposure",
+      "required_sources": [
+        "exposure",
+        "directional_pharmacology"
+      ],
+      "required_inputs": [
+        "target_site_exposure",
+        "effect_magnitude"
+      ],
+      "reason_codes": [
+        "target_site_exposure_unknown",
+        "rescue_magnitude_unknown",
+        "exposure_infeasible",
+        "bounded_secondary_uncertainty",
+        "pass"
+      ]
+    },
+    "G6": {
+      "name": "safety",
+      "required_sources": [
+        "current_label",
+        "safety_pgx",
+        "target_context"
+      ],
+      "required_inputs": [
+        "blocking_hazards",
+        "child_applicability",
+        "general_mva_applicability"
+      ],
+      "reason_codes": [
+        "blocking_hazard",
+        "safety_evidence_incomplete",
+        "pass"
+      ]
+    },
+    "G7": {
+      "name": "validation",
+      "required_sources": [
+        "disease_subtype",
+        "directional_pharmacology"
+      ],
+      "required_inputs": [
+        "validation_plan",
+        "lesion_qualification"
+      ],
+      "reason_codes": [
+        "unqualified_model",
+        "validation_design_insufficient",
+        "pass"
+      ]
+    }
+  },
+  "blocking_precedence": [
+    "G0:fail",
+    "G6:contraindicating",
+    "G3:fail",
+    "G5:fail",
+    "G1:fail",
+    "G2:fail",
+    "G4:fail",
+    "G7:fail"
+  ],
+  "tier_transitions": {
+    "supported": {
+      "all_gates": "pass"
+    },
+    "conditional": {
+      "required_pass": [
+        "G0",
+        "G1",
+        "G3",
+        "G4",
+        "G6",
+        "G7"
+      ],
+      "bounded_uncertainty_only": [
+        "G2",
+        "G5"
+      ],
+      "forbidden_reasons": [
+        "direct_contradiction",
+        "target_site_exposure_unknown",
+        "rescue_magnitude_unknown",
+        "blocking_hazard"
+      ]
+    },
+    "exploratory": {
+      "any_gate": "not_evaluable",
+      "without_blocking_fact": true
+    },
+    "excluded": {
+      "any_gate": "fail"
+    },
+    "contraindicated": {
+      "any_gate": "contraindicating"
+    }
+  },
+  "route_completeness": {
+    "scope": "predeclared_selected_routes",
+    "milestone_blocking_states": [
+      "unattempted",
+      "unimplemented",
+      "deferred"
+    ],
+    "coverage_limiting_states": [
+      "unavailable",
+      "truncated"
+    ],
+    "affected_candidate_tier_ceiling": "exploratory",
+    "limited_coverage_claim": "incomplete",
+    "limited_no_candidate_claim": "not_exhaustive"
+  },
+  "candidate_generation_constraints": {
+    "prohibited_internal_methods": [
+      "generalized_network_proximity",
+      "broad_signature_reversal",
+      "language_model_candidate_generation"
+    ],
+    "external_computational_tier_ceiling": "exploratory",
+    "required_external_metadata": [
+      "model_name",
+      "model_version",
+      "model_parameters",
+      "input_provenance",
+      "output_provenance"
+    ],
+    "cannot_be_sole_primary_support": true,
+    "score_substitution_allowed": false
+  },
+  "g5_exposure_policy": {
+    "minimum_potency_exposure_ratio": 1.0,
+    "bounded_secondary_uncertainties": [
+      "interindividual_variability",
+      "protein_binding_estimate",
+      "tissue_partition_estimate"
+    ],
+    "material_unknowns": [
+      "target_site_exposure",
+      "rescue_magnitude"
+    ]
+  },
+  "route_bounds": {
+    "direct_target_modulation": {
+      "max_depth": 1,
+      "max_results": 100,
+      "lookback_years": 20,
+      "screening": "all",
+      "stopping": "configured_bound_or_exhausted"
+    },
+    "product_restoration_or_stabilization": {
+      "max_depth": 2,
+      "max_results": 100,
+      "lookback_years": 20,
+      "screening": "all",
+      "stopping": "configured_bound_or_exhausted"
+    },
+    "transcript_rescue": {
+      "max_depth": 2,
+      "max_results": 100,
+      "lookback_years": 20,
+      "screening": "all",
+      "stopping": "configured_bound_or_exhausted"
+    },
+    "upstream_regulation": {
+      "max_depth": 2,
+      "max_results": 100,
+      "lookback_years": 20,
+      "screening": "signed_only",
+      "stopping": "configured_bound_or_exhausted"
+    },
+    "downstream_compensation": {
+      "max_depth": 2,
+      "max_results": 100,
+      "lookback_years": 20,
+      "screening": "signed_only",
+      "stopping": "configured_bound_or_exhausted"
+    },
+    "substrate_or_cofactor_modulation": {
+      "max_depth": 2,
+      "max_results": 100,
+      "lookback_years": 20,
+      "screening": "signed_only",
+      "stopping": "configured_bound_or_exhausted"
+    },
+    "pathway_bypass": {
+      "max_depth": 3,
+      "max_results": 100,
+      "lookback_years": 20,
+      "screening": "signed_only",
+      "stopping": "configured_bound_or_exhausted"
+    },
+    "qualified_target_drug_linkage": {
+      "max_depth": 1,
+      "max_results": 200,
+      "lookback_years": 20,
+      "screening": "qualified_targets_only",
+      "stopping": "configured_bound_or_exhausted"
+    },
+    "intervention_literature": {
+      "max_depth": 1,
+      "max_results": 200,
+      "lookback_years": 20,
+      "screening": "dual_rescue_harm_review",
+      "stopping": "configured_bound_or_exhausted"
+    },
+    "lincs_cell_specific_expression": {
+      "max_depth": 1,
+      "max_results": 1079,
+      "lookback_years": 20,
+      "screening": "frozen_local_FDA_QC_same_cell",
+      "stopping": "all_declared_local_extract_conditions"
+    }
+  },
+  "research_submission": {
+    "required_pass": [
+      "G0",
+      "G1",
+      "G3",
+      "G4",
+      "G6",
+      "G7"
+    ],
+    "allowed_mechanism_outcomes": [
+      "pass",
+      "bounded_uncertainty"
+    ],
+    "allowed_exploratory_reasons": [
+      "target_site_exposure_unknown",
+      "rescue_magnitude_unknown"
+    ],
+    "required_review_domains": [
+      "approval",
+      "claims",
+      "current_warnings",
+      "drug_action",
+      "harmful_alternatives",
+      "mechanism",
+      "negative_evidence",
+      "target_liabilities",
+      "validation"
+    ],
+    "allowed_gap_fields": [
+      "target_site_exposure",
+      "rescue_magnitude",
+      "pediatric_applicability"
+    ],
+    "tier_override_allowed": false,
+    "lincs_alternative": "lincs-research-eligibility/v1:repeated_consistent"
+  }
+}

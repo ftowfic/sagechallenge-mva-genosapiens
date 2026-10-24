@@ -1,0 +1,9 @@
+{
+  "schema": "genosapiens.track1-handoff-pin",
+  "canonical_schema_path": "schemas/track1/mechanism-ready-handoff.schema.json",
+  "canonical_schema_sha256": "77844f4b935b7515fe177624684f39181866d1b613352743c725a51f38fa2e04",
+  "contract_path": "config/track1/handoff-contract.json",
+  "contract_sha256": "4d1d4c62497936e4266bfaf29420111526e0ebd43ea2678d9d4e13fac682bf4d",
+  "synthetic_example_path": "tests/fixtures/track1/current-handoff-metadata.synthetic.json",
+  "synthetic_example_sha256": "22cb806732f8a8a9071d7a8ba6679321f124aee6746b2d4ed0d2a6c2ec28a1fa"
+}

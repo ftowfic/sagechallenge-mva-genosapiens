@@ -1,0 +1,74 @@
+{
+  "classification": "public",
+  "manifest_path": "manifests/model-loci/grch38-authoritative-model-loci.22b69fc15bbb.json",
+  "manifest_sha256": "b8442cac9dcf9068ef263deab3f453a5fb8425eb8b9fd758236efd5ab5ab1eb5",
+  "output_path": "derived/model-loci/22b69fc15bbbb97dfeac76209e57be0962270ca6a1eaa8011151c9daa2b9fcaf/regions.json",
+  "reference": {
+    "identity_path": "config/reference-identities/challenge-grch38-masked-v2-hs38d1.json",
+    "identity_sha256": "a92c50f61c1b149e635656a54086e671f3f27f09b97002309ff68a9ded1d3b62",
+    "manifest_path": "manifests/grch38/challenge-grch38-masked-v2-plus-hs38d1.a92c50f61c1b.json",
+    "manifest_sha256": "27eaf00fde35e5fa83f945c63e5dee871960374d90488cc0797b5ebea2fb1c25"
+  },
+  "release": "grch38-ensembl-116-nhgri-retrieved-2026-09-16",
+  "resource_id": "grch38-authoritative-model-loci",
+  "schema": "genosapiens.grch38-model-locus-resource",
+  "sources": {
+    "assembly_regions": {
+      "path": "releases/model-loci/grc-ensembl-nhgri/grch38-ensembl-116-nhgri-retrieved-2026-09-16/ncbi-assembly-regions.txt",
+      "release": "GRCh38-GCA_000001405.15",
+      "sha256": "6b91d2c7961a322936db8fd09b7fb4a9143a590882f28c0a628a4ef26897f6c7",
+      "size_bytes": 25524,
+      "url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/001/405/GCA_000001405.15_GRCh38/GCA_000001405.15_GRCh38_assembly_regions.txt"
+    },
+    "assembly_report": {
+      "path": "releases/model-loci/grc-ensembl-nhgri/grch38-ensembl-116-nhgri-retrieved-2026-09-16/ncbi-assembly-report.txt",
+      "release": "GRCh38-GCA_000001405.15",
+      "sha256": "aa733ce92719f6339b3a4540137d4322894434363314c4b7704ba6691e9eab66",
+      "size_bytes": 54101,
+      "url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/001/405/GCA_000001405.15_GRCh38/GCA_000001405.15_GRCh38_assembly_report.txt"
+    },
+    "ensembl_coordinates": {
+      "path": "releases/model-loci/grc-ensembl-nhgri/grch38-ensembl-116-nhgri-retrieved-2026-09-16/ensembl-coordinates.html",
+      "release": "Ensembl-116-June-2026",
+      "sha256": "c337c38c60717875d456b37ced15ab5ba970b3f0565cdd5ac902d02b9f9402aa",
+      "size_bytes": 27887,
+      "url": "https://jun2026.archive.ensembl.org/info/data/index.html"
+    },
+    "ensembl_par": {
+      "path": "releases/model-loci/grc-ensembl-nhgri/grch38-ensembl-116-nhgri-retrieved-2026-09-16/ensembl-par.html",
+      "release": "Ensembl-116-June-2026",
+      "sha256": "7ba7fdc30271b0ca0274acb06d8373308211445b31121bf6a62579a024d3bab4",
+      "size_bytes": 27545,
+      "url": "https://jun2026.archive.ensembl.org/info/docs/genebuild/human_PARS.html"
+    },
+    "ensembl_permission": {
+      "path": "releases/model-loci/grc-ensembl-nhgri/grch38-ensembl-116-nhgri-retrieved-2026-09-16/ensembl-legal.html",
+      "release": "Ensembl-116-June-2026",
+      "sha256": "5597f27d036161aacef9550ace2bf2956ea761423039a50595903e2931aeeb77",
+      "size_bytes": 24845,
+      "url": "https://jun2026.archive.ensembl.org/info/about/legal/disclaimer.html"
+    },
+    "ncbi_permission": {
+      "path": "releases/model-loci/grc-ensembl-nhgri/grch38-ensembl-116-nhgri-retrieved-2026-09-16/ncbi-policy.html",
+      "release": "retrieved-2026-09-16",
+      "sha256": "8ad8f6f186ca51ec73a5fb8935ecfa17b8cbaad300b7025b381898ab72621869",
+      "size_bytes": 38936,
+      "url": "https://www.ncbi.nlm.nih.gov/home/about/policies/"
+    },
+    "nhgri_autosome": {
+      "path": "releases/model-loci/grc-ensembl-nhgri/grch38-ensembl-116-nhgri-retrieved-2026-09-16/nhgri-autosome.html",
+      "release": "retrieved-2026-09-16",
+      "sha256": "f5e224be7ebd58b0ffb5e865382152347f23bf1d3e9d03792a97347e5a6bd6e4",
+      "size_bytes": 197740,
+      "url": "https://www.genome.gov/genetics-glossary/Autosome"
+    },
+    "nhgri_permission": {
+      "path": "releases/model-loci/grc-ensembl-nhgri/grch38-ensembl-116-nhgri-retrieved-2026-09-16/nhgri-policy.html",
+      "release": "retrieved-2026-09-16",
+      "sha256": "3f66f7557437fcd78899ef5b1e1e8ba94e90c771e844392331a3bd1ca7898f76",
+      "size_bytes": 197049,
+      "url": "https://www.genome.gov/about-nhgri/Policies-Guidance/Copyright"
+    }
+  },
+  "transformation_sha256": "5fb9c99bf5cb71f13f07c3276561d3ae39cafafcfa95531d3b287e1b58b47279"
+}

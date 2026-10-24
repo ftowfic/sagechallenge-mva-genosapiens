@@ -1,0 +1,5 @@
+#!/bin/bash
+# Docker remains under host control, as in Track 1.
+set -euo pipefail
+root=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd -P)
+exec python3 "$root/scripts/run_track2.py" "$@"

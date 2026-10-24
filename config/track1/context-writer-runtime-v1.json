@@ -1,0 +1,1 @@
+{"audit_index":"when_audited","autocheckpoint_bytes":536870912,"cache_bytes":536870912,"max_wal_bytes":2147483648,"schema":"genosapiens.wgs-context-writer-profile","sparse_batch_commit":false,"synchronous":"FULL","transaction_bytes":67108864,"transaction_changes":65536,"truncate_bytes":1073741824,"version":1}

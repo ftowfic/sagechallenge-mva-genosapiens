@@ -1,0 +1,93 @@
+{
+  "schema": "genosapiens.track2-methods-form/v1",
+  "source": {
+    "space_revision": "1c761cc23d90aebe6a011fd5b0b99517df42408c",
+    "source_id": "c7b0d295dee93a4f324c51549e464d3b9487e8e2",
+    "sha256": "61aab080a2868a3b724e76692b83c24812112e305cd3a8b03f8f91a6b2414441",
+    "size_bytes": 14784,
+    "path": "static/templates/methods_description_form.xlsx",
+    "sheet_name": "Track 2 methods",
+    "template_updated_on": "2026-08-28"
+  },
+  "questions": [
+    {
+      "key": "team_name",
+      "question_cell": "A7",
+      "answer_cell": "B7",
+      "prompt": "Team name",
+      "requirement": "voluntary"
+    },
+    {
+      "key": "detailed_approach",
+      "question_cell": "A8",
+      "answer_cell": "B8",
+      "prompt": "Please describe your approach in detail (how you went from variant/mechanism to candidate medication(s)).",
+      "requirement": "voluntary"
+    },
+    {
+      "key": "commercial_generative_ai_disclosure",
+      "question_cell": "A9",
+      "answer_cell": "B9",
+      "prompt": "(required) If commercially-available Generative AI was used, record the provider, the plan or tier, and the relevant setting in your methods description. A line is enough, for example, \"Anthropic API, Claude Sonnet, commercial terms, no training on customer content.\"",
+      "requirement": "conditional_required"
+    },
+    {
+      "key": "candidate_identification_mode",
+      "question_cell": "A10",
+      "answer_cell": "B10",
+      "prompt": "Was candidate identification automated (e.g., via a drug-target database query or LLM-assisted search), or primarily manual literature review and expert curation?",
+      "requirement": "voluntary"
+    },
+    {
+      "key": "manual_literature_review",
+      "question_cell": "A11",
+      "answer_cell": "B11",
+      "prompt": "Please describe any manual literature review or expert curation in detail.",
+      "requirement": "voluntary"
+    },
+    {
+      "key": "source_availability",
+      "question_cell": "A12",
+      "answer_cell": "B12",
+      "prompt": "Please state whether you relied solely on publicly available drug/target databases and literature (preferred), or whether proprietary data sources were also used.",
+      "requirement": "voluntary"
+    },
+    {
+      "key": "public_data_sources",
+      "question_cell": "A13",
+      "answer_cell": "B13",
+      "prompt": "Please describe the public data sources used in detail (e.g., DrugBank, ChEMBL, ClinicalTrials.gov, OMIM, PubMed literature search).",
+      "requirement": "voluntary"
+    },
+    {
+      "key": "proprietary_data_sources",
+      "question_cell": "A14",
+      "answer_cell": "B14",
+      "prompt": "Please describe any proprietary data sources used in detail.",
+      "requirement": "voluntary"
+    },
+    {
+      "key": "variant_mechanism_characterization",
+      "question_cell": "A15",
+      "answer_cell": "B15",
+      "prompt": "How did you characterize the variant's mechanism (e.g., loss-of-function vs. gain-of-function, pathway disrupted, downstream biological consequence)?",
+      "requirement": "voluntary"
+    },
+    {
+      "key": "time_or_effort",
+      "question_cell": "A16",
+      "answer_cell": "B16",
+      "prompt": "Please provide an estimate of time or effort spent on this analysis (if possible).",
+      "requirement": "voluntary"
+    },
+    {
+      "key": "method_abstract",
+      "question_cell": "A17",
+      "answer_cell": "B17",
+      "prompt": "Provide a method abstract (up to 500 words). Please include strengths and limitations of your approach as well as methodological detail.",
+      "requirement": "voluntary"
+    }
+  ],
+  "abstract_word_limit": 500,
+  "abstract_word_counting": "Unicode NFKC normalization followed by Unicode-whitespace splitting"
+}

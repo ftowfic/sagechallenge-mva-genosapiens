@@ -1,0 +1,6 @@
+{
+  "schema": "genosapiens.reference-builder",
+  "reference_root": "/mnt/reference",
+  "scratch_root": "/mnt/reference/scratch/public-build",
+  "minimum_free_gb": 100
+}

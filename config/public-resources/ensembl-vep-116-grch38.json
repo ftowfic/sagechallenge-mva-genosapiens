@@ -1,0 +1,85 @@
+{
+  "schema": "genosapiens.ensembl-vep-bundle",
+  "bundle_id": "ensembl-vep-116-grch38",
+  "tool_version": "116.2",
+  "tool_image": "ensemblorg/ensembl-vep:release_116.2",
+  "tool_image_digest": "sha256:f22d1f89b28c6c4caf043ddb2269fdfff8940364da589cadbbabc6212a436949",
+  "cache": {
+    "source": {
+      "resource_id": "ensembl-vep-cache-116-grch38",
+      "release": "116",
+      "url": "https://ftp.ensembl.org/pub/release-116/variation/indexed_vep_cache/homo_sapiens_vep_116_GRCh38.tar.gz",
+      "filename": "homo_sapiens_vep_116_GRCh38.tar.gz",
+      "size_bytes": 27644657162,
+      "sha256": "014c7dd9bb5ad06665866d62eb80f31ca761197bcb9b59280300676f996e600d",
+      "publisher_checksum_url": "https://ftp.ensembl.org/pub/release-116/variation/indexed_vep_cache/CHECKSUMS",
+      "publisher_bsd_sum": 56036,
+      "publisher_blocks": 26996736,
+      "license": "ENSEMBL-DATA-USE",
+      "license_url": "https://www.ensembl.org/info/about/legal/disclaimer.html"
+    },
+    "output_root": "releases/ensembl/vep/116_GRCh38",
+    "cache_root": "releases/ensembl/vep/116_GRCh38/homo_sapiens/116_GRCh38",
+    "info_path": "releases/ensembl/vep/116_GRCh38/homo_sapiens/116_GRCh38/info.txt",
+    "info_sha256": "b7298ffe9c8aba8e283d2e647a28a8345e6b7c4cd71e8d42eae66acfb94dd3ad",
+    "member_count": 15827,
+    "regular_file_count": 13922,
+    "directory_count": 1905,
+    "materialized_directory_count": 1906,
+    "total_file_bytes": 27673136989,
+    "maximum_file_bytes": 2038347460
+  },
+  "fasta": {
+    "source": {
+      "resource_id": "ensembl-grch38-primary-assembly-fasta-116",
+      "release": "116",
+      "url": "https://ftp.ensembl.org/pub/release-116/fasta/homo_sapiens/dna/Homo_sapiens.GRCh38.dna.primary_assembly.fa.gz",
+      "filename": "Homo_sapiens.GRCh38.dna.primary_assembly.fa.gz",
+      "size_bytes": 881964081,
+      "sha256": "d8c3af0094a7bba6125763bad779ec18a81483c739c6ed122094bdf86c187b92",
+      "publisher_checksum_url": "https://ftp.ensembl.org/pub/release-116/fasta/homo_sapiens/dna/CHECKSUMS",
+      "publisher_bsd_sum": 22450,
+      "publisher_blocks": 861294,
+      "license": "ENSEMBL-DATA-USE",
+      "license_url": "https://www.ensembl.org/info/about/legal/disclaimer.html"
+    },
+    "output_path": "releases/ensembl/vep/116_GRCh38/Homo_sapiens.GRCh38.dna.primary_assembly.fa",
+    "output_size_bytes": 3151425851,
+    "output_sha256": "1e74081a49ceb9739cc14c812fbb8b3db978eb80ba8e5350beb80d8ad8dfef3b",
+    "fai_size_bytes": 6406,
+    "fai_sha256": "0998f61682f4041b11f0d156e1db6dae3e4c743e26643a3f45ea7faea70cb604",
+    "sequence_count": 194,
+    "required_sequence_lengths": {
+      "1": 248956422,
+      "19": 58617616,
+      "X": 156040895,
+      "Y": 57227415,
+      "MT": 16569
+    }
+  },
+  "versions": {
+    "cache": "116",
+    "assembly": "GRCh38",
+    "source_assembly": "GRCh38.p14",
+    "mane": "1.5",
+    "mane_source_url": "https://ftp.ncbi.nlm.nih.gov/refseq/MANE/MANE_human/release_1.5/README_versions.txt",
+    "genebuild": "GENCODE50",
+    "gencode": "GENCODE 50",
+    "clinvar": "202509",
+    "gnomad_exomes": "v4.1",
+    "gnomad_genomes": "v4.1"
+  },
+  "sentinel": {
+    "chromosome": "19",
+    "position": 44908684,
+    "identifier": "rs429358",
+    "reference": "T",
+    "alternate": "C",
+    "gene_symbol": "APOE",
+    "gene_id": "ENSG00000130203",
+    "transcript_id": "ENST00000252486",
+    "consequence": "missense_variant",
+    "existing_variation": "rs429358",
+    "mane_select": "NM_000041.4"
+  }
+}

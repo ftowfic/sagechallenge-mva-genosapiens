@@ -1,0 +1,99 @@
+{
+  "schema": "genosapiens.core-ontology-bundle",
+  "bundle_id": "core-ontology-references-v1",
+  "artifacts": [
+    {
+      "role": "hpo_ontology",
+      "resource_id": "hpo-ontology-2026-06-23",
+      "release": "v2026-06-23",
+      "url": "https://github.com/obophenotype/human-phenotype-ontology/releases/download/v2026-06-23/hp.obo",
+      "path": "releases/ontologies/core-ontology-references-v1/hpo/v2026-06-23/hp.obo",
+      "size_bytes": 11222341,
+      "sha256": "a5092cbdf605f568403cf7380d9173014015692433b2cc631bc5c1b053876b1b",
+      "license": "LicenseRef-HPO-Terms",
+      "license_url": "https://web.archive.org/web/20240418143652/https://hpo.jax.org/app/license"
+    },
+    {
+      "role": "hpo_disease_annotations",
+      "resource_id": "hpo-disease-annotations-2026-06-23",
+      "release": "v2026-06-23",
+      "url": "https://github.com/obophenotype/human-phenotype-ontology/releases/download/v2026-06-23/phenotype.hpoa",
+      "path": "releases/ontologies/core-ontology-references-v1/hpo/v2026-06-23/phenotype.hpoa",
+      "size_bytes": 35672303,
+      "sha256": "89004f85b253f980ffe84218d2c080665cbf67a57bbb322111d6a2db5eb31dff",
+      "license": "LicenseRef-HPO-Terms",
+      "license_url": "https://web.archive.org/web/20240418143652/https://hpo.jax.org/app/license"
+    },
+    {
+      "role": "mondo_efo_mappings",
+      "resource_id": "mondo-efo-exact-mappings-2026-09-01",
+      "release": "v2026-09-01",
+      "url": "https://raw.githubusercontent.com/monarch-initiative/mondo/v2026-09-01/src/ontology/mappings/mondo_exactmatch_efo.sssom.tsv",
+      "path": "releases/ontologies/core-ontology-references-v1/mondo/v2026-09-01/mondo_exactmatch_efo.sssom.tsv",
+      "size_bytes": 230039,
+      "sha256": "7f4e2c0e27e3657885b7032a97aaab0186365b62922308434ff88c8c308defb9",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    {
+      "role": "sequence_ontology",
+      "resource_id": "sequence-ontology-2026-08-07",
+      "release": "2026-08-07+commit.4340c143bac3578bba0c013d02e8c5f0e51ad14a",
+      "url": "https://raw.githubusercontent.com/The-Sequence-Ontology/SO-Ontologies/4340c143bac3578bba0c013d02e8c5f0e51ad14a/Ontology_Files/so.obo",
+      "path": "releases/ontologies/core-ontology-references-v1/so/2026-08-07/so.obo",
+      "size_bytes": 1058091,
+      "sha256": "22a8f3ec2b49125dbb6cee8456f0bca86dd8c98f433165ffa4b554da4f155204",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "hpo_ontology": {
+    "artifact_role": "hpo_ontology",
+    "ontology_id": "hp.obo",
+    "data_version": "hp/releases/2026-06-23",
+    "identifier_prefix": "HP:",
+    "root_id": "HP:0000001",
+    "sentinel_term_id": "HP:0000118",
+    "sentinel_parent_id": "HP:0000001",
+    "obsolete_term_id": "HP:0005540",
+    "replaced_by": "HP:0004447"
+  },
+  "hpo_annotations": {
+    "artifact_role": "hpo_disease_annotations",
+    "version": "2026-06-23",
+    "hpo_version": "http://purl.obolibrary.org/obo/hp/releases/2026-06-23/hp.json",
+    "required_database_prefixes": [
+      "OMIM",
+      "ORPHA",
+      "DECIPHER"
+    ]
+  },
+  "mondo_efo_mappings": {
+    "artifact_role": "mondo_efo_mappings",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "mapping_set_id": "http://purl.obolibrary.org/obo/mondo/mappings/mondo_exactmatch_efo.sssom.tsv",
+    "mapping_set_version": "http://purl.obolibrary.org/obo/mondo/releases/2026-09-01/mappings/mondo_exactmatch_efo.sssom.tsv",
+    "subject_source": "infores:mondo",
+    "object_source": "infores:efo"
+  },
+  "sequence_ontology": {
+    "artifact_role": "sequence_ontology",
+    "ontology_id": "so",
+    "data_version": "2026-08-07",
+    "identifier_prefix": "SO:",
+    "root_id": "SO:0000110",
+    "sentinel_term_id": "SO:0000001",
+    "sentinel_parent_id": "SO:0000110",
+    "obsolete_term_id": "SO:0000053",
+    "replaced_by": "SO:0001556"
+  },
+  "information_content_corpus": {
+    "source_artifact_role": "hpo_disease_annotations",
+    "included_aspects": [
+      "P"
+    ],
+    "excluded_qualifiers": [
+      "NOT"
+    ]
+  }
+}

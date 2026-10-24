@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools==80.9.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "genosapiens-track1"
+version = "0.1.0"
+description = "Reproducible rare-disease WGS prioritization for Track 1"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+license = {file = "LICENSE"}
+dependencies = ["duckdb==1.4.2"]
+
+[project.scripts]
+genosapiens = "genosapiens.cli:main"
+genosapiens-reference = "genosapiens.cli:reference_main"
+genosapiens-track1 = "genosapiens.cli:track1_main"
+genosapiens-track2 = "genosapiens.track2_cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.coverage.run]
+branch = true
+source = ["genosapiens"]

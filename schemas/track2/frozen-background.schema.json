@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "schema",
+    "method",
+    "direction",
+    "entry_key",
+    "draw_count",
+    "draws",
+    "numerical_contract"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema": {
+      "const": "genosapiens.track2-frozen-background/v1"
+    },
+    "method": {
+      "enum": [
+        "paired_oe_kd",
+        "oe_only_matching",
+        "kd_only_reversal"
+      ]
+    },
+    "direction": {
+      "const": "increase"
+    },
+    "entry_key": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "draw_count": {
+      "const": 10000
+    },
+    "draws": {
+      "type": "array",
+      "minItems": 10000,
+      "maxItems": 10000,
+      "items": {
+        "type": "number",
+        "minimum": -1,
+        "maximum": 1
+      }
+    },
+    "numerical_contract": {
+      "const": "python-binary64-spearman-retained-ranks/v1"
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "schema": "genosapiens.track1-epcr-numerical-suitability",
+  "task": "build-track1-wgs-prioritization/11.3",
+  "scope": "independently_synthetic",
+  "source_score_domain": {
+    "policy_id": "synthetic-evidence-fusion",
+    "policy_sha256": "24ae4ae007a744cad85cda74e2dc79a819837a790408e5c74b5cfa13c38eb2ab",
+    "derivation_sha256": "abb847ce42a6900c8dc40f0ca22b1dc4dd4d50f71b933a5c4211a31ba16267a9",
+    "lower_bound": "-20",
+    "upper_bound": "60",
+    "maximum_gap": "80",
+    "basis": "Unit-weight independently synthetic fusion clamps: phenotype, disease-gene, molecular, inheritance, and clinical each [0,10], population [-10,10], and the subtracted technical/conflict component [0,10]."
+  },
+  "supported_contract": {
+    "minimum_score_gap": "0",
+    "maximum_score_gap": "100",
+    "maximum_rows": 10,
+    "margin_over_synthetic_maximum_gap": "20"
+  },
+  "selected_parameters": {
+    "score_gap_scale": "1/100",
+    "rank_decay": "9/10",
+    "minimum_serialized_epcr": "1/10",
+    "decimal_precision": 80,
+    "tie_rule": "fixed-multiplicative-rank-decay"
+  },
+  "evaluator": {
+    "pin_path": "config/track1/challenge-evaluator.json",
+    "pin_sha256": "ea83b88d1c9c31626a6cb301633687407a1edddfb8bf98fde8d586551bf61ccd",
+    "revision": "1c761cc23d90aebe6a011fd5b0b99517df42408c",
+    "source_sha256": "6d18b581e65a45e1ccc120071d588e740c2e42e983ff50704c60a40232b19180",
+    "source_git_blob_sha1": "2aed492247fc98be1b775e646f9b75aadec9e999",
+    "source_size_bytes": 7503,
+    "numeric_parser": "Python float"
+  },
+  "verification_cases": [
+    "zero and maximum supported score-gap endpoints",
+    "one through ten retained rows",
+    "equal scores and deterministic tie order",
+    "tiny unequal exact score gaps",
+    "unsupported score gap rejection",
+    "serialization floor and underflow rejection",
+    "evaluator-visible strict range and order",
+    "weaker-tail invariance",
+    "rank-points and F-max invariance under alternative distinct EPCR values"
+  ],
+  "limits": [
+    "Numerical presentation suitability only; no causal-performance fitting",
+    "Uncalibrated relative confidence; not a clinical probability",
+    "Task 9.6 must bind this policy before held-out execution",
+    "Task 13.1 must bind the accepted policy and results before controlled use"
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Track 2 report presentation",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "policy",
+    "policy_sha256",
+    "input_origin",
+    "classification",
+    "sources",
+    "context",
+    "scores",
+    "selections",
+    "captions",
+    "figures",
+    "supplements",
+    "coverage",
+    "disclosure"
+  ],
+  "properties": {
+    "schema": {
+      "enum": [
+        "genosapiens.track2-report-presentation/v1",
+        "genosapiens.track2-report-presentation/v2"
+      ]
+    },
+    "policy": {
+      "type": "object"
+    },
+    "policy_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "input_origin": {
+      "enum": [
+        "published_patient_genotype",
+        "diagnosis_guided_vcf"
+      ]
+    },
+    "classification": {
+      "type": "string"
+    },
+    "sources": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string",
+        "pattern": "^[0-9a-f]{64}$"
+      }
+    },
+    "context": {
+      "type": "object"
+    },
+    "scores": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "selections": {
+      "type": "object",
+      "required": [
+        "combined",
+        "lincs",
+        "mechanism"
+      ]
+    },
+    "captions": {
+      "type": "object"
+    },
+    "figures": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "label",
+          "main",
+          "caption",
+          "png",
+          "svg",
+          "data",
+          "provenance"
+        ]
+      }
+    },
+    "supplements": {
+      "type": "array"
+    },
+    "coverage": {
+      "type": "array"
+    },
+    "disclosure": {
+      "type": "object",
+      "required": [
+        "methods",
+        "overview_state"
+      ],
+      "properties": {
+        "methods": {
+          "type": "object"
+        },
+        "overview_state": {
+          "enum": [
+            "pending",
+            "complete"
+          ]
+        }
+      }
+    }
+  }
+}
